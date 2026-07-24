@@ -6,13 +6,14 @@ A GeoAI-powered hiking safety companion built with [Expo](https://expo.dev) and 
 
 - **Framework:** Expo SDK 54 (`expo ~54.0.35`), React Native 0.81.5, React 19.1
 - **Routing:** Expo Router (file-based routing, typed routes enabled)
-- **UI:** Custom-built components — `expo-linear-gradient`, `expo-blur` (glassmorphism), `lottie-react-native` (animated illustrations), `react-native-reanimated` + `react-native-worklets` (gesture/animation), `@expo/vector-icons`
+- **UI Library:** [HeroUI Native](./.heroui-docs/native) (`heroui-native ^1.0.6`) — component docs are indexed locally under `.heroui-docs/native`; always check them before using or modifying a component
+- **Supporting UI:** `expo-linear-gradient`, `expo-blur` (glassmorphism), `lottie-react-native` (animated illustrations), `react-native-reanimated` + `react-native-worklets` (gesture/animation), `@expo/vector-icons`
 - **Navigation:** `@react-navigation/native`, `@react-navigation/bottom-tabs`
 - **Other:** `expo-haptics`, `expo-image`, `expo-splash-screen`, `expo-system-ui`, `react-native-svg`, `react-native-gesture-handler`, `react-native-screens`, `react-native-safe-area-context`
 - **New Architecture:** enabled (`newArchEnabled: true`), React Compiler experiment enabled
 - **Language:** TypeScript
 
-> Note: [HeroUI Native](./.heroui-docs/native) docs are indexed in this repo for future adoption, but the component library is not yet installed — current screens (e.g. [app/index.tsx](app/index.tsx)) use hand-rolled components on top of the packages above.
+> Note: some existing screens (e.g. [app/index.tsx](app/index.tsx)) predate the HeroUI Native install and still use hand-rolled components — plan to migrate these to HeroUI Native components as screens are touched.
 
 ## Get started
 
