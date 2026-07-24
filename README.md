@@ -1,6 +1,18 @@
-# Welcome to your Expo app 👋
+# HikerGuard GeoAI 🥾
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A GeoAI-powered hiking safety companion built with [Expo](https://expo.dev) and [Expo Router](https://docs.expo.dev/router/introduction).
+
+## Tech stack
+
+- **Framework:** Expo SDK 54 (`expo ~54.0.35`), React Native 0.81.5, React 19.1
+- **Routing:** Expo Router (file-based routing, typed routes enabled)
+- **UI:** Custom-built components — `expo-linear-gradient`, `expo-blur` (glassmorphism), `lottie-react-native` (animated illustrations), `react-native-reanimated` + `react-native-worklets` (gesture/animation), `@expo/vector-icons`
+- **Navigation:** `@react-navigation/native`, `@react-navigation/bottom-tabs`
+- **Other:** `expo-haptics`, `expo-image`, `expo-splash-screen`, `expo-system-ui`, `react-native-svg`, `react-native-gesture-handler`, `react-native-screens`, `react-native-safe-area-context`
+- **New Architecture:** enabled (`newArchEnabled: true`), React Compiler experiment enabled
+- **Language:** TypeScript
+
+> Note: [HeroUI Native](./.heroui-docs/native) docs are indexed in this repo for future adoption, but the component library is not yet installed — current screens (e.g. [app/index.tsx](app/index.tsx)) use hand-rolled components on top of the packages above.
 
 ## Get started
 
@@ -24,6 +36,20 @@ In the output, you'll find options to open the app in a
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Project structure
+
+```
+app/
+  index.tsx          # Landing / login screen (Lottie background, animated login buttons)
+  (tabs)/            # Tab navigator
+    index.tsx
+    explore.tsx
+  modal.tsx
+components/          # Shared UI building blocks (themed text/view, parallax scroll, icons, etc.)
+constants/           # Theme constants
+hooks/               # Shared hooks
+```
 
 ## Get a fresh project
 
