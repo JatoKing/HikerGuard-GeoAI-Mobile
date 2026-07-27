@@ -1,320 +1,252 @@
 /**
  * app/index.tsx
  *
- * HikerGuard GeoAI — Landing / Login Screen
+ * HikerGuard GeoAI — Loading / Splash Screen
  * -------------------------------------------------
- * Background is now the traveler.json Lottie animation
- * (hiker walking cycle + trail + rocks + plants, looping).
+ * This IS the app's root route ("/") — Expo Router always opens
+ * app/index.tsx first on a cold start, regardless of anchor settings.
+ * That's why the splash content lives here, and the actual landing UI
+ * has been moved to app/home.tsx (navigated to below).
  *
- * Required packages (run in your project root):
- *   npx expo install expo-linear-gradient react-native-reanimated expo-blur lottie-react-native
- *   npx expo install @expo/vector-icons
+ * Centerpiece: a 3D-styled location pin standing above a flattened
+ * elliptical "disc" — the disc IS the 0–100% progress indicator (not a
+ * ring wrapping the pin). Then navigates to /home.
  *
- * If react-native-reanimated is not yet configured, add this to babel.config.js
- * plugins array: 'react-native-reanimated/plugin'  (must be listed LAST)
- *
- * traveler.json should live at: assets/traveler.json
- * (relative to project root — matches the require() path below)
+ * Required packages:
+ *   npx expo install react-native-svg
  */
 
-import React, { useEffect } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  Dimensions,
-  Platform,
-} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { BlurView } from 'expo-blur';
-import LottieView from 'lottie-react-native';
-import { Ionicons } from '@expo/vector-icons';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import Svg, { Circle, Path, Ellipse, G, Defs, LinearGradient, RadialGradient, Stop } from 'react-native-svg';
 import { useRouter } from 'expo-router';
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-  withRepeat,
-  withSequence,
-  withDelay,
-  Easing,
-} from 'react-native-reanimated';
-
-const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 
 const COLORS = {
-  overlayTop: 'rgba(15, 27, 46, 0.55)',
-  overlayBottom: 'rgba(11, 21, 36, 0.92)',
-  accent: '#4ADE80', // GeoAI signal green
-  accentSoft: 'rgba(74, 222, 128, 0.35)',
-  glass: 'rgba(255, 255, 255, 0.08)',
-  glassBorder: 'rgba(255, 255, 255, 0.18)',
-  textPrimary: '#F5F7FA',
-  textMuted: 'rgba(245, 247, 250, 0.65)',
+  bg: '#FFFFFF',
+  textPrimary: '#0F1B2E',
+  textMuted: 'rgba(15, 27, 46, 0.55)',
+  accent: '#4ADE80',
+  trackBg: '#D8DEE5',
 };
 
+const PIN_SIZE = 140;
+
+// The disc is a perfect circle, flattened visually via a Y-scale transform
+// (giving the "viewed from a slight angle, lying flat on the ground" look).
+// Progress math is computed on the UNSCALED circle radius, so the percentage
+// stays perfectly accurate regardless of how flat the ellipse looks.
+const DISC_CANVAS = 200;
+const DISC_STROKE = 16;
+const DISC_RADIUS = (DISC_CANVAS - DISC_STROKE) / 2 - 20; // small margin so stroke isn't clipped
+const DISC_CIRCUMFERENCE = 2 * Math.PI * DISC_RADIUS;
+const DISC_FLATTEN = 0.32; // how "flat" the ellipse looks — lower = flatter
+
 /* -------------------------------------------------------------------------- */
-/* Animated Login Button                                                      */
+/* 3D-styled location pin (gradient body + glossy highlight + drop shadow)    */
 /* -------------------------------------------------------------------------- */
-function LoginButton({ onPress, label, filled = true }: { onPress: () => void; label: string; filled?: boolean }) {
-  const scale = useSharedValue(1);
-  const glow = useSharedValue(0.4);
-
-  useEffect(() => {
-    if (filled) {
-      glow.value = withRepeat(
-        withSequence(
-          withTiming(0.85, { duration: 1400, easing: Easing.inOut(Easing.ease) }),
-          withTiming(0.4, { duration: 1400, easing: Easing.inOut(Easing.ease) })
-        ),
-        -1,
-        true
-      );
-    }
-  }, []);
-
-  const style = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
-  }));
-
-  const glowStyle = useAnimatedStyle(() => ({
-    opacity: glow.value,
-  }));
-
+function Pin3D({ size = PIN_SIZE }: { size?: number }) {
   return (
-    <Animated.View style={style}>
-      {filled && (
-        <Animated.View style={[styles.buttonGlow, glowStyle]} pointerEvents="none" />
-      )}
-      <Pressable
-        onPressIn={() => (scale.value = withTiming(0.96, { duration: 100 }))}
-        onPressOut={() => (scale.value = withTiming(1, { duration: 150 }))}
-        onPress={onPress}
-        style={({ pressed }) => [
-          filled ? styles.buttonFilled : styles.buttonGhost,
-          pressed && { opacity: 0.9 },
-        ]}
-      >
-        {filled ? (
-          <>
-            <Ionicons name="log-in-outline" size={20} color="#0B1524" style={{ marginRight: 8 }} />
-            <Text style={styles.buttonFilledText}>{label}</Text>
-          </>
-        ) : (
-          <Text style={styles.buttonGhostText}>{label}</Text>
-        )}
-      </Pressable>
-    </Animated.View>
+    <Svg width={size} height={size} viewBox="0 0 100 110">
+      <Defs>
+        {/* main body — light green top-left to deep green bottom-right, gives volume */}
+        <LinearGradient id="pinBody" x1="20%" y1="10%" x2="80%" y2="95%">
+          <Stop offset="0%" stopColor="#86EFAC" />
+          <Stop offset="45%" stopColor="#4ADE80" />
+          <Stop offset="100%" stopColor="#15803D" />
+        </LinearGradient>
+
+        {/* inner hole — recessed, darker center fading to a lighter rim */}
+        <RadialGradient id="pinHole" cx="40%" cy="35%" r="70%">
+          <Stop offset="0%" stopColor="#F0FDF4" />
+          <Stop offset="55%" stopColor="#DCFCE7" />
+          <Stop offset="100%" stopColor="#86EFAC" />
+        </RadialGradient>
+      </Defs>
+
+      {/* pin body (teardrop) */}
+      <Path
+        d="M50,8 C31,8 16,23 16,42 C16,66 50,100 50,100 C50,100 84,66 84,42 C84,23 69,8 50,8 Z"
+        fill="url(#pinBody)"
+      />
+
+      {/* glossy highlight near the top-left of the pin's head */}
+      <Ellipse cx="36" cy="28" rx="12" ry="8" fill="#FFFFFF" opacity={0.35} />
+
+      {/* inner circle (the classic pin "hole"), recessed 3D look */}
+      <Circle cx="50" cy="42" r="16" fill="url(#pinHole)" />
+      <Circle cx="50" cy="42" r="16" fill="none" stroke="#15803D" strokeWidth={1} strokeOpacity={0.3} />
+    </Svg>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/* Main Screen                                                                 */
+/* 3D flattened disc — doubles as the 0–100% progress indicator              */
 /* -------------------------------------------------------------------------- */
-export default function LandingScreen() {
-  const router = useRouter();
+function Disc3D({ progress }: { progress: number }) {
+  const strokeDashoffset = DISC_CIRCUMFERENCE - (DISC_CIRCUMFERENCE * progress) / 100;
+  const center = DISC_CANVAS / 2;
 
-  // entrance animations
-  const titleOpacity = useSharedValue(0);
-  const titleTranslate = useSharedValue(20);
-  const cardOpacity = useSharedValue(0);
-  const cardTranslate = useSharedValue(30);
+  return (
+    <Svg width={DISC_CANVAS} height={DISC_CANVAS * DISC_FLATTEN + DISC_STROKE * 2}>
+      <Defs>
+        {/* disc surface — light top edge fading to a darker bottom, like a lit coin */}
+        <LinearGradient id="discGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <Stop offset="0%" stopColor="#F0F2F5" />
+          <Stop offset="55%" stopColor="#D8DEE5" />
+          <Stop offset="100%" stopColor="#B7BFC9" />
+        </LinearGradient>
+
+        {/* progress fill — glossy green */}
+        <LinearGradient id="discProgressGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <Stop offset="0%" stopColor="#86EFAC" />
+          <Stop offset="55%" stopColor="#4ADE80" />
+          <Stop offset="100%" stopColor="#22A85C" />
+        </LinearGradient>
+
+        {/* soft shadow under the whole disc */}
+        <RadialGradient id="discShadow" cx="50%" cy="50%" r="50%">
+          <Stop offset="55%" stopColor="#0F1B2E" stopOpacity={0.18} />
+          <Stop offset="100%" stopColor="#0F1B2E" stopOpacity={0} />
+        </RadialGradient>
+      </Defs>
+
+      {/* the flattening happens here — everything inside this <G> is drawn as
+          a perfect circle, then squashed vertically to read as a 3D ellipse */}
+      <G transform={`translate(${center}, ${(DISC_CANVAS * DISC_FLATTEN) / 2 + DISC_STROKE}) scale(1, ${DISC_FLATTEN})`}>
+        {/* ground shadow, sits just beneath the disc */}
+        <Circle cx={0} cy={DISC_STROKE * 2.5} r={DISC_RADIUS + DISC_STROKE} fill="url(#discShadow)" />
+
+        {/* track — the un-filled part of the disc */}
+        <Circle
+          cx={0}
+          cy={0}
+          r={DISC_RADIUS}
+          stroke="url(#discGradient)"
+          strokeWidth={DISC_STROKE}
+          fill="none"
+        />
+
+        {/* progress fill */}
+        <Circle
+          cx={0}
+          cy={0}
+          r={DISC_RADIUS}
+          stroke="url(#discProgressGradient)"
+          strokeWidth={DISC_STROKE}
+          strokeLinecap="round"
+          strokeDasharray={DISC_CIRCUMFERENCE}
+          strokeDashoffset={strokeDashoffset}
+          fill="none"
+          rotation={-90}
+          origin="0, 0"
+        />
+
+        {/* glossy highlight following the progress fill */}
+        <Circle
+          cx={0}
+          cy={0}
+          r={DISC_RADIUS - DISC_STROKE / 2 + 2}
+          stroke="#FFFFFF"
+          strokeOpacity={0.4}
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeDasharray={DISC_CIRCUMFERENCE}
+          strokeDashoffset={strokeDashoffset}
+          fill="none"
+          rotation={-90}
+          origin="0, 0"
+        />
+      </G>
+    </Svg>
+  );
+}
+
+export default function SplashScreen() {
+  const router = useRouter();
+  const [progress, setProgress] = useState(0);
+  const hasNavigated = useRef(false);
 
   useEffect(() => {
-    titleOpacity.value = withDelay(150, withTiming(1, { duration: 600 }));
-    titleTranslate.value = withDelay(150, withTiming(0, { duration: 600, easing: Easing.out(Easing.cubic) }));
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        // slightly uneven increments so it doesn't feel robotic
+        const next = prev + Math.floor(Math.random() * 8) + 4;
+        return next >= 100 ? 100 : next;
+      });
+    }, 90);
 
-    cardOpacity.value = withDelay(500, withTiming(1, { duration: 700 }));
-    cardTranslate.value = withDelay(500, withTiming(0, { duration: 700, easing: Easing.out(Easing.cubic) }));
+    return () => clearInterval(interval);
   }, []);
 
-  const titleStyle = useAnimatedStyle(() => ({
-    opacity: titleOpacity.value,
-    transform: [{ translateY: titleTranslate.value }],
-  }));
-
-  const cardStyle = useAnimatedStyle(() => ({
-    opacity: cardOpacity.value,
-    transform: [{ translateY: cardTranslate.value }],
-  }));
-
-  const handleLogin = () => {
-    // TODO: wire up your real auth flow, then:
-    router.replace('/(tabs)');
-  };
-
-  const handleGuest = () => {
-    router.replace('/(tabs)');
-  };
+  useEffect(() => {
+    if (progress >= 100 && !hasNavigated.current) {
+      hasNavigated.current = true;
+      const timeout = setTimeout(() => {
+        router.replace('/home');
+      }, 350);
+      return () => clearTimeout(timeout);
+    }
+  }, [progress]);
 
   return (
     <View style={styles.container}>
-      {/* Lottie animation as full-screen background, zoomed out to show more of the scene */}
-      <View style={[StyleSheet.absoluteFill, styles.lottieClip]}>
-        <LottieView
-          source={require('../assets/traveler.json')}
-          autoPlay
-          loop
-          speed={0.5}
-          resizeMode="contain"
-          style={styles.lottie}
-        />
+      <View style={styles.pinWrap}>
+        <Pin3D />
       </View>
 
-      {/* Dark gradient overlay so text/buttons stay legible over the animation */}
-      <LinearGradient
-        colors={[COLORS.overlayTop, 'rgba(15,27,46,0.25)', COLORS.overlayBottom]}
-        locations={[0, 0.45, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
-      <View style={styles.content}>
-        {/* title block */}
-        <Animated.View style={[styles.titleBlock, titleStyle]}>
-          <Text style={styles.brandName}>
-            Hiker<Text style={{ color: COLORS.accent }}>Guard</Text>
-          </Text>
-          <View style={styles.tagRow}>
-            <Text style={styles.tagline}>GeoAI Trail Safety, in your pocket</Text>
-          </View>
-        </Animated.View>
-
-        {/* glass login card */}
-        <Animated.View style={cardStyle}>
-          <BlurView intensity={Platform.OS === 'ios' ? 40 : 60} tint="dark" style={styles.card}>
-            <View style={styles.cardInner}>
-              <Text style={styles.cardTitle}>Ready for the trail?</Text>
-              <Text style={styles.cardSubtitle}>
-                Real-time terrain AI, offline maps, and emergency geo-alerts —
-                sign in to sync your route.
-              </Text>
-
-              <View style={{ height: 20 }} />
-
-              <LoginButton label="Sign In" onPress={handleLogin} filled />
-              <View style={{ height: 12 }} />
-              <LoginButton label="Continue as Guest" onPress={handleGuest} filled={false} />
-
-              <Text style={styles.footNote}>
-                By continuing, you agree to our Terms & Privacy Policy.
-              </Text>
-            </View>
-          </BlurView>
-        </Animated.View>
+      {/* the disc sits BELOW the pin, not around it */}
+      <View style={styles.discWrap}>
+        <Disc3D progress={progress} />
       </View>
+
+      <Text style={styles.progressPercent}>{progress}%</Text>
+
+      <View style={{ height: 28 }} />
+
+      <Text style={styles.brandName}>
+        Hiker<Text style={{ color: COLORS.accent }}>Guard</Text>
+      </Text>
+      <Text style={styles.tagline}>GeoAI Trail Safety</Text>
     </View>
   );
 }
 
-/* -------------------------------------------------------------------------- */
-/* Styles                                                                      */
-/* -------------------------------------------------------------------------- */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0B1524',
-  },
-  lottieClip: {
-    overflow: 'hidden',
+    backgroundColor: COLORS.bg,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 32,
   },
-  lottie: {
-    // Bump this up/down to zoom in/out further.
-    // 1.0 = exact "contain" fit (most zoomed out, may show letterbox gaps).
-    // Higher values crop more but fill more of the screen.
-    width: SCREEN_W * 1.6,
-    height: SCREEN_H * 1.6,
+  pinWrap: {
+    marginBottom: -22, // pulls the pin's point slightly into the disc
+    zIndex: 2,
   },
-  content: {
-    flex: 1,
-    paddingHorizontal: 24,
-    justifyContent: 'space-between',
-    paddingTop: 110,
-    paddingBottom: 40,
+  discWrap: {
+    zIndex: 1,
   },
-  titleBlock: {
-    alignItems: 'center',
-    marginTop: 0,
+  progressPercent: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: COLORS.textMuted,
+    marginTop: 12,
+    letterSpacing: 0.5,
   },
   brandName: {
-    fontSize: 40,
+    fontSize: 30,
     fontWeight: '800',
     color: COLORS.textPrimary,
     letterSpacing: 0.5,
   },
-  tagRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 8,
-    gap: 6,
-  },
   tagline: {
-    fontSize: 14,
+    fontSize: 13,
     color: COLORS.textMuted,
-  },
-  card: {
-    borderRadius: 28,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: COLORS.glassBorder,
-  },
-  cardInner: {
-    padding: 24,
-    backgroundColor: COLORS.glass,
-  },
-  cardTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: COLORS.textPrimary,
-    marginBottom: 6,
-  },
-  cardSubtitle: {
-    fontSize: 13.5,
-    lineHeight: 19,
-    color: COLORS.textMuted,
-  },
-  buttonGlow: {
-    position: 'absolute',
-    top: -6,
-    left: -6,
-    right: -6,
-    bottom: -6,
-    borderRadius: 22,
-    backgroundColor: COLORS.accentSoft,
-  },
-  buttonFilled: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: COLORS.accent,
-    paddingVertical: 15,
-    borderRadius: 16,
-  },
-  buttonFilledText: {
-    color: '#0B1524',
-    fontSize: 16,
-    fontWeight: '700',
-  },
-  buttonGhost: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 15,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: COLORS.glassBorder,
-    backgroundColor: 'rgba(255,255,255,0.03)',
-  },
-  buttonGhostText: {
-    color: COLORS.textPrimary,
-    fontSize: 15,
-    fontWeight: '600',
-  },
-  footNote: {
-    fontSize: 11,
-    color: 'rgba(245,247,250,0.4)',
-    textAlign: 'center',
-    marginTop: 16,
+    marginTop: 6,
+    letterSpacing: 0.5,
   },
 });
