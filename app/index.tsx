@@ -207,10 +207,10 @@ export default function SplashScreen() {
 
       <View style={{ height: 28 }} />
 
-      <Text style={styles.brandName}>
-        Hiker<Text style={{ color: COLORS.accent }}>Guard</Text>
+      <Text style={styles.brandName}>JEJAK</Text>
+      <Text style={styles.tagline}>
+        <Text style={{ color: COLORS.accent }}>GeoAI</Text> Connectivity Intelligence
       </Text>
-      <Text style={styles.tagline}>GeoAI Trail Safety</Text>
     </View>
   );
 }

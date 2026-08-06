@@ -38,7 +38,7 @@ import {
 import { BlurView } from 'expo-blur';
 import LottieView from 'lottie-react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -122,6 +122,7 @@ function LoginButton({ onPress, label, filled = true }: { onPress: () => void; l
 /* -------------------------------------------------------------------------- */
 export default function LandingScreen() {
   const router = useRouter();
+  const params = useLocalSearchParams<{ openLogin?: string }>();
 
   // entrance animations
   const titleOpacity = useSharedValue(0);
@@ -134,13 +135,40 @@ export default function LandingScreen() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
   const loginTranslateY = useSharedValue(SCREEN_H);
 
+  // compass needle wobble — base heading is -45deg (pointing up), oscillates
+  // a few degrees either side so it reads as a compass settling/searching.
+  const compassRotate = useSharedValue(-45);
+
   useEffect(() => {
     titleOpacity.value = withDelay(150, withTiming(1, { duration: 600 }));
     titleTranslate.value = withDelay(150, withTiming(0, { duration: 600, easing: Easing.out(Easing.cubic) }));
 
     cardOpacity.value = withDelay(500, withTiming(1, { duration: 700 }));
     cardTranslate.value = withDelay(500, withTiming(0, { duration: 700, easing: Easing.out(Easing.cubic) }));
+
+    compassRotate.value = withRepeat(
+      withSequence(
+        withTiming(-30, { duration: 900, easing: Easing.inOut(Easing.sin) }),
+        withTiming(-60, { duration: 900, easing: Easing.inOut(Easing.sin) })
+      ),
+      -1,
+      true
+    );
   }, []);
+
+  const compassStyle = useAnimatedStyle(() => ({
+    transform: [{ rotate: `${compassRotate.value}deg` }],
+  }));
+
+  // If we arrived here with ?openLogin=true (e.g. from the app-info page's
+  // "Continue" button), auto-open the login overlay instead of waiting for
+  // the user to tap "Sign In" themselves.
+  useEffect(() => {
+    if (params.openLogin === 'true') {
+      openLogin();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.openLogin]);
 
   const titleStyle = useAnimatedStyle(() => ({
     opacity: titleOpacity.value,
@@ -208,11 +236,22 @@ export default function LandingScreen() {
       <View style={styles.content}>
         {/* title block */}
         <Animated.View style={[styles.titleBlock, titleStyle]}>
-          <Text style={styles.brandName}>
-            Hiker<Text style={{ color: COLORS.accent }}>Guard</Text>
-          </Text>
+          <View style={styles.brandNameRow}>
+            <Text style={styles.brandName}>JEJ</Text>
+            <View style={styles.brandBadge}>
+              <View style={styles.brandBadgeRing}>
+                <Animated.View style={compassStyle}>
+                  <Ionicons name="navigate" size={22} color={COLORS.accent} />
+                </Animated.View>
+              </View>
+            </View>
+            <Text style={styles.brandName}>K</Text>
+          </View>
+
           <View style={styles.tagRow}>
-            <Text style={styles.tagline}>GeoAI Trail Safety, in your pocket</Text>
+            <Text style={styles.tagline}>
+              <Text style={{ color: COLORS.accent }}>GeoAI</Text>-Powered Hiking Connectivity Intelligence
+            </Text>
           </View>
         </Animated.View>
 
@@ -294,11 +333,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 0,
   },
+  brandNameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  brandBadge: {
+    width: 30,
+    height: 42,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: -3,
+    marginRight: 3,
+    marginTop: 2,
+  },
+  brandBadgeRing: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    borderWidth: 1.5,
+    borderColor: COLORS.accent,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   brandName: {
     fontSize: 40,
     fontWeight: '800',
     color: COLORS.textPrimary,
-    letterSpacing: 0.5,
+    letterSpacing: 6,
   },
   tagRow: {
     flexDirection: 'row',
