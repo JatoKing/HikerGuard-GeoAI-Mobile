@@ -66,10 +66,13 @@ function FormField({
 /* -------------------------------------------------------------------------- */
 function SocialButton({ provider, onPress }: { provider: 'google' | 'apple'; onPress: () => void }) {
   const isGoogle = provider === 'google';
+  const [pressed, setPressed] = useState(false);
   return (
     <Pressable
       onPress={onPress}
-      style={({ pressed }) => [styles.socialButton, pressed && { opacity: 0.85 }]}
+      onPressIn={() => setPressed(true)}
+      onPressOut={() => setPressed(false)}
+      style={[styles.socialButton, pressed && styles.pressedDim]}
     >
       <Ionicons
         name={isGoogle ? 'logo-google' : 'logo-apple'}
@@ -80,6 +83,24 @@ function SocialButton({ provider, onPress }: { provider: 'google' | 'apple'; onP
       <Text style={styles.socialButtonText}>
         Continue with {isGoogle ? 'Google' : 'Apple'}
       </Text>
+    </Pressable>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Login submit button                                                       */
+/* -------------------------------------------------------------------------- */
+function LoginSubmitButton({ onPress }: { onPress: () => void }) {
+  const [pressed, setPressed] = useState(false);
+  return (
+    <Pressable
+      onPress={onPress}
+      onPressIn={() => setPressed(true)}
+      onPressOut={() => setPressed(false)}
+      style={[styles.loginButton, pressed && styles.pressedDim]}
+    >
+      <Ionicons name="log-in-outline" size={20} color="#0B1524" style={{ marginRight: 8 }} />
+      <Text style={styles.loginButtonText}>Login</Text>
     </Pressable>
   );
 }
@@ -130,13 +151,7 @@ export default function LoginForm({
         <Text style={styles.forgotText}>Forgot password?</Text>
       </Pressable>
 
-      <Pressable
-        onPress={onSubmit}
-        style={({ pressed }) => [styles.loginButton, pressed && { opacity: 0.9 }]}
-      >
-        <Ionicons name="log-in-outline" size={20} color="#0B1524" style={{ marginRight: 8 }} />
-        <Text style={styles.loginButtonText}>Login</Text>
-      </Pressable>
+      <LoginSubmitButton onPress={onSubmit} />
 
       <View style={styles.dividerRow}>
         <View style={styles.dividerLine} />
@@ -163,6 +178,9 @@ export default function LoginForm({
 /* Styles                                                                      */
 /* -------------------------------------------------------------------------- */
 const styles = StyleSheet.create({
+  pressedDim: {
+    opacity: 0.85,
+  },
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',

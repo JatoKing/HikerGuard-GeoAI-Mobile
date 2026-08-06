@@ -68,6 +68,7 @@ const COLORS = {
 function LoginButton({ onPress, label, filled = true }: { onPress: () => void; label: string; filled?: boolean }) {
   const scale = useSharedValue(1);
   const glow = useSharedValue(0.4);
+  const [pressed, setPressed] = useState(false);
 
   useEffect(() => {
     if (filled) {
@@ -96,12 +97,18 @@ function LoginButton({ onPress, label, filled = true }: { onPress: () => void; l
         <Animated.View style={[styles.buttonGlow, glowStyle]} pointerEvents="none" />
       )}
       <Pressable
-        onPressIn={() => (scale.value = withTiming(0.96, { duration: 100 }))}
-        onPressOut={() => (scale.value = withTiming(1, { duration: 150 }))}
+        onPressIn={() => {
+          scale.value = withTiming(0.96, { duration: 100 });
+          setPressed(true);
+        }}
+        onPressOut={() => {
+          scale.value = withTiming(1, { duration: 150 });
+          setPressed(false);
+        }}
         onPress={onPress}
-        style={({ pressed }) => [
+        style={[
           filled ? styles.buttonFilled : styles.buttonGhost,
-          pressed && { opacity: 0.9 },
+          pressed && styles.pressedDim,
         ]}
       >
         {filled ? (
@@ -307,6 +314,9 @@ export default function LandingScreen() {
 /* Styles                                                                      */
 /* -------------------------------------------------------------------------- */
 const styles = StyleSheet.create({
+  pressedDim: {
+    opacity: 0.9,
+  },
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
