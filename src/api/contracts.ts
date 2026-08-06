@@ -154,11 +154,18 @@ export const TrailSummarySchema = z
     predictionAvailable: s.prediction_available,
   }));
 
+const RejectedBatchEventSchema = z
+  .object({
+    event_id: z.string(),
+    reason: z.string(),
+  })
+  .transform((r) => ({ eventId: r.event_id, reason: r.reason }));
+
 export const BatchAcknowledgementSchema = z
   .object({
     server_session_id: z.string(),
     acknowledged_event_ids: z.array(z.string()),
-    rejected_events: z.array(z.unknown()),
+    rejected_events: z.array(RejectedBatchEventSchema),
     server_received_at: z.string(),
   })
   .transform((a) => ({
@@ -167,6 +174,31 @@ export const BatchAcknowledgementSchema = z
     rejectedEvents: a.rejected_events,
     serverReceivedAt: a.server_received_at,
   }));
+
+export function parseBatchAcknowledgement(raw: unknown) {
+  return BatchAcknowledgementSchema.parse(raw);
+}
+
+/**
+ * Wire (snake_case) shape for the outgoing batch request — Section 12's
+ * proposed batch request example.
+ */
+export function toBatchRequestWire(request: {
+  deviceId: string;
+  localSessionId: string;
+  events: { eventId: string; type: string; recordedAt: string; payload: Record<string, unknown> }[];
+}) {
+  return {
+    device_id: request.deviceId,
+    local_session_id: request.localSessionId,
+    events: request.events.map((e) => ({
+      event_id: e.eventId,
+      type: e.type,
+      recorded_at: e.recordedAt,
+      payload: e.payload,
+    })),
+  };
+}
 
 export class TrailPackValidationError extends Error {
   constructor(issues: z.ZodIssue[]) {

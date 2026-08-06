@@ -1,4 +1,5 @@
 import { MIGRATION_001_INITIAL } from '@/src/storage/migrations/001-initial';
+import { MIGRATION_002_SYNC_META } from '@/src/storage/migrations/002-sync-meta';
 
 describe('MIGRATION_001_INITIAL', () => {
   const REQUIRED_TABLES = ['route_pack', 'hike_session', 'location_point', 'hike_event'];
@@ -19,5 +20,16 @@ describe('MIGRATION_001_INITIAL', () => {
     expect(MIGRATION_001_INITIAL).toMatch(
       /state IN \(\s*'prepared', 'active', 'paused', 'completed', 'sync_pending', 'synced'\s*\)/
     );
+  });
+});
+
+describe('MIGRATION_002_SYNC_META', () => {
+  it('adds sync bookkeeping columns to hike_session', () => {
+    expect(MIGRATION_002_SYNC_META).toMatch(/ADD COLUMN last_sync_attempt_at/);
+    expect(MIGRATION_002_SYNC_META).toMatch(/ADD COLUMN last_acknowledged_at/);
+  });
+
+  it('creates a single-row device_identity table', () => {
+    expect(MIGRATION_002_SYNC_META).toMatch(/CREATE TABLE IF NOT EXISTS device_identity/);
   });
 });

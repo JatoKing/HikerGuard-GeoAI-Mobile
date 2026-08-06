@@ -13,9 +13,14 @@ export type BatchRequest = {
   events: BatchEvent[];
 };
 
+export type RejectedBatchEvent = {
+  eventId: string;
+  reason: string;
+};
+
 export type BatchAcknowledgement = {
   serverSessionId: string;
   acknowledgedEventIds: string[];
-  rejectedEvents: unknown[];
+  rejectedEvents: RejectedBatchEvent[];
   serverReceivedAt: string;
 };

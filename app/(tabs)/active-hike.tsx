@@ -7,9 +7,10 @@
  * run reliably (Section 7), so it isn't implemented yet.
  */
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, Pressable, ActivityIndicator, Linking, ScrollView } from 'react-native';
+import { View, Text, Pressable, ActivityIndicator, Linking, ScrollView, AppState } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import NetInfo from '@react-native-community/netinfo';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { LocationSubscription } from 'expo-location';
 
@@ -20,7 +21,8 @@ import {
   getResumableHikeSession,
   insertHikeEvent,
   insertLocationPoint,
-  countPendingLocationPoints,
+  getSyncMeta,
+  type SyncMeta,
 } from '@/src/repositories/hike-repository';
 import { requestForegroundPermission } from '@/src/location/permissions';
 import { startForegroundRecording, stopForegroundRecording } from '@/src/location/recorder';
@@ -29,6 +31,12 @@ import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/s
 import type { GapWarning } from '@/src/domain/warnings';
 import type { TrailPack } from '@/src/domain/trail';
 import type { HikeSession } from '@/src/domain/hike';
+import { MockSyncApiClient } from '@/src/api/client';
+import { attemptSync } from '@/src/sync/worker';
+
+const syncApiClient = new MockSyncApiClient();
+
+type PreGapSyncStatus = 'syncing' | 'acknowledged' | 'queued';
 
 /**
  * A point somewhere before the pack's first predicted_gap group, so the
@@ -59,14 +67,34 @@ export default function ActiveHikeScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [downloadedPacks, setDownloadedPacks] = useState<TrailPack[]>([]);
   const [session, setSession] = useState<HikeSession | null>(null);
-  const [pendingCount, setPendingCount] = useState(0);
+  const [syncMeta, setSyncMeta] = useState<SyncMeta>({
+    lastSyncAttemptAt: null,
+    lastAcknowledgedAt: null,
+    pendingCount: 0,
+  });
+  const [isSyncing, setIsSyncing] = useState(false);
   const [lastPointAt, setLastPointAt] = useState<string | null>(null);
   const [permissionState, setPermissionState] = useState<PermissionState>('unknown');
   const [startingTrailId, setStartingTrailId] = useState<string | null>(null);
   const [gapWarning, setGapWarning] = useState<GapWarning | null>(null);
+  const [preGapSyncStatus, setPreGapSyncStatus] = useState<PreGapSyncStatus | null>(null);
   const subscriptionRef = useRef<LocationSubscription | null>(null);
   const acknowledgedGapIdsRef = useRef<Set<string>>(new Set());
   const activePackRef = useRef<TrailPack | null>(null);
+
+  const refreshSyncMeta = async (localSessionId: string) => {
+    setSyncMeta(await getSyncMeta(localSessionId));
+  };
+
+  const runSync = async (localSessionId: string) => {
+    setIsSyncing(true);
+    try {
+      return await attemptSync(localSessionId, syncApiClient);
+    } finally {
+      await refreshSyncMeta(localSessionId);
+      setIsSyncing(false);
+    }
+  };
 
   const handleRecordedPoint = async (
     localSessionId: string,
@@ -83,7 +111,7 @@ export default function ActiveHikeScreen() {
       observedNetworkState: 'unknown',
     });
     setLastPointAt(new Date(point.recordedAtMs).toISOString());
-    setPendingCount(await countPendingLocationPoints(localSessionId));
+    await refreshSyncMeta(localSessionId);
 
     const evaluation = evaluateGapWarning({
       location: { latitude: point.latitude, longitude: point.longitude },
@@ -103,6 +131,12 @@ export default function ActiveHikeScreen() {
           distanceToGapM: evaluation.warning.distanceToGapM,
         },
       });
+
+      // Section 11: "Before entering the gap, the app should attempt a
+      // sync" and show one of these three states.
+      setPreGapSyncStatus('syncing');
+      const result = await runSync(localSessionId);
+      setPreGapSyncStatus(result.status === 'acknowledged' ? 'acknowledged' : 'queued');
     }
   };
 
@@ -137,7 +171,7 @@ export default function ActiveHikeScreen() {
       if (resumable) {
         const resumedPack = packs.find((p) => p.trailId === resumable.trailId);
         setSession(resumable);
-        setPendingCount(await countPendingLocationPoints(resumable.localSessionId));
+        await refreshSyncMeta(resumable.localSessionId);
         if (resumedPack) {
           // App/process restarted — resume foreground recording now that
           // we're back in the foreground (Section 10 restore requirement).
@@ -153,6 +187,34 @@ export default function ActiveHikeScreen() {
       }
     };
   }, []);
+
+  // Retry triggers (Section 12): network return, app foreground, and the
+  // manual "Retry sync" button below. Reachability is only a trigger to
+  // try — attemptSync()'s server acknowledgement is what actually matters.
+  useEffect(() => {
+    if (!session) return;
+    const localSessionId = session.localSessionId;
+    let wasConnected: boolean | null = null;
+
+    const netInfoUnsubscribe = NetInfo.addEventListener((state) => {
+      const isConnected = Boolean(state.isConnected);
+      if (isConnected && wasConnected === false) {
+        runSync(localSessionId);
+      }
+      wasConnected = isConnected;
+    });
+
+    const appStateSubscription = AppState.addEventListener('change', (nextState) => {
+      if (nextState === 'active') {
+        runSync(localSessionId);
+      }
+    });
+
+    return () => {
+      netInfoUnsubscribe();
+      appStateSubscription.remove();
+    };
+  }, [session]);
 
   const handleStartHike = async (pack: TrailPack) => {
     setStartingTrailId(pack.trailId);
@@ -174,8 +236,9 @@ export default function ActiveHikeScreen() {
     await beginRecording(newSession.localSessionId, pack);
 
     setSession(newSession);
-    setPendingCount(0);
+    setSyncMeta({ lastSyncAttemptAt: null, lastAcknowledgedAt: null, pendingCount: 0 });
     setGapWarning(null);
+    setPreGapSyncStatus(null);
     setStartingTrailId(null);
   };
 
@@ -191,10 +254,14 @@ export default function ActiveHikeScreen() {
       payload: {},
     });
     await endHikeSession(session.localSessionId);
+    // Best-effort final flush — anything still pending after this keeps its
+    // pending sync_state and would need a background sync worker (not yet
+    // built) or the user reopening this hike to retry further.
+    await runSync(session.localSessionId);
     setSession(null);
-    setPendingCount(0);
     setLastPointAt(null);
     setGapWarning(null);
+    setPreGapSyncStatus(null);
   };
 
   if (isLoading) {
@@ -252,6 +319,19 @@ export default function ActiveHikeScreen() {
                   • {action}
                 </Text>
               ))}
+              {preGapSyncStatus && (
+                <Text className="text-[11.5px] font-semibold text-[#B45309] mt-2">
+                  {preGapSyncStatus === 'syncing' && 'Syncing current position…'}
+                  {preGapSyncStatus === 'acknowledged' &&
+                    `Current position acknowledged at ${
+                      syncMeta.lastAcknowledgedAt
+                        ? new Date(syncMeta.lastAcknowledgedAt).toLocaleTimeString()
+                        : new Date().toLocaleTimeString()
+                    }`}
+                  {preGapSyncStatus === 'queued' &&
+                    'Could not confirm sync; position remains queued on this phone'}
+                </Text>
+              )}
               <Pressable onPress={() => setGapWarning(null)} className="mt-3">
                 <Text className="text-[12px] font-bold text-[#B45309]">Dismiss</Text>
               </Pressable>
@@ -271,13 +351,46 @@ export default function ActiveHikeScreen() {
                 {lastPointAt ? new Date(lastPointAt).toLocaleTimeString() : 'Waiting…'}
               </Text>
             </View>
-            <View className="flex-row justify-between">
+            <View className="flex-row justify-between mb-1.5">
               <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Pending sync</Text>
               <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
-                {pendingCount} point{pendingCount === 1 ? '' : 's'}
+                {syncMeta.pendingCount} item{syncMeta.pendingCount === 1 ? '' : 's'}
+              </Text>
+            </View>
+            <View className="flex-row justify-between mb-1.5">
+              <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Last sync attempt</Text>
+              <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
+                {syncMeta.lastSyncAttemptAt
+                  ? new Date(syncMeta.lastSyncAttemptAt).toLocaleTimeString()
+                  : 'Never'}
+              </Text>
+            </View>
+            <View className="flex-row justify-between">
+              <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">
+                Last acknowledged location
+              </Text>
+              <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
+                {syncMeta.lastAcknowledgedAt
+                  ? new Date(syncMeta.lastAcknowledgedAt).toLocaleTimeString()
+                  : 'None yet'}
               </Text>
             </View>
           </View>
+
+          <Pressable
+            onPress={() => runSync(session.localSessionId)}
+            disabled={isSyncing || syncMeta.pendingCount === 0}
+            className="flex-row items-center justify-center gap-2 border border-[rgba(15,27,46,0.15)] rounded-full py-3 px-6 mb-3"
+          >
+            {isSyncing ? (
+              <ActivityIndicator size="small" color="#0F1B2E" />
+            ) : (
+              <Ionicons name="sync-outline" size={15} color="#0F1B2E" />
+            )}
+            <Text className="text-[12.5px] font-bold text-[#0F1B2E]">
+              {isSyncing ? 'Syncing…' : 'Retry sync'}
+            </Text>
+          </Pressable>
 
           <Pressable
             onPress={handleEndHike}

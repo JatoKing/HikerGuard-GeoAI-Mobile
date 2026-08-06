@@ -8,6 +8,7 @@ import type {
   LocationPoint,
   NetworkObservationState,
 } from '@/src/domain/hike';
+import type { BatchEvent } from '@/src/domain/sync';
 
 type HikeSessionRow = {
   local_session_id: string;
@@ -171,4 +172,173 @@ export async function countPendingLocationPoints(localSessionId: string): Promis
     [localSessionId]
   );
   return row?.count ?? 0;
+}
+
+/**
+ * Stable per-install id for the batch request's `device_id` field
+ * (Section 12) — generated once, persisted in a single-row table.
+ */
+export async function getOrCreateDeviceId(): Promise<string> {
+  const db = await getDatabase();
+  const existing = await db.getFirstAsync<{ device_id: string }>(
+    'SELECT device_id FROM device_identity WHERE id = 1'
+  );
+  if (existing) return existing.device_id;
+
+  const deviceId = generateUuidV4();
+  await db.runAsync('INSERT INTO device_identity (id, device_id) VALUES (1, ?)', [deviceId]);
+  return deviceId;
+}
+
+export async function countPendingSyncItems(localSessionId: string): Promise<number> {
+  const db = await getDatabase();
+  const locationCount = await db.getFirstAsync<{ count: number }>(
+    `SELECT COUNT(*) as count FROM location_point WHERE local_session_id = ? AND sync_state = 'pending'`,
+    [localSessionId]
+  );
+  const eventCount = await db.getFirstAsync<{ count: number }>(
+    `SELECT COUNT(*) as count FROM hike_event WHERE local_session_id = ? AND sync_state = 'pending'`,
+    [localSessionId]
+  );
+  return (locationCount?.count ?? 0) + (eventCount?.count ?? 0);
+}
+
+/** Oldest-first pending location points + hike events, combined into one
+ * batch-ready list — Section 12: "Batch pending events in recorded order." */
+export async function listPendingBatchEvents(
+  localSessionId: string,
+  limit = 50
+): Promise<BatchEvent[]> {
+  const db = await getDatabase();
+
+  const locationRows = await db.getAllAsync<{
+    event_id: string;
+    recorded_at: string;
+    latitude: number;
+    longitude: number;
+    horizontal_accuracy_m: number;
+    segment_id: string | null;
+  }>(
+    `SELECT event_id, recorded_at, latitude, longitude, horizontal_accuracy_m, segment_id
+     FROM location_point WHERE local_session_id = ? AND sync_state = 'pending'`,
+    [localSessionId]
+  );
+  const eventRows = await db.getAllAsync<{
+    event_id: string;
+    recorded_at: string;
+    type: string;
+    payload_json: string;
+  }>(
+    `SELECT event_id, recorded_at, type, payload_json
+     FROM hike_event WHERE local_session_id = ? AND sync_state = 'pending'`,
+    [localSessionId]
+  );
+
+  const batchEvents: BatchEvent[] = [
+    ...locationRows.map((row) => ({
+      eventId: row.event_id,
+      type: 'location_point',
+      recordedAt: row.recorded_at,
+      payload: {
+        latitude: row.latitude,
+        longitude: row.longitude,
+        horizontal_accuracy_m: row.horizontal_accuracy_m,
+        segment_id: row.segment_id,
+      },
+    })),
+    ...eventRows.map((row) => ({
+      eventId: row.event_id,
+      type: row.type,
+      recordedAt: row.recorded_at,
+      payload: JSON.parse(row.payload_json) as Record<string, unknown>,
+    })),
+  ];
+
+  return batchEvents
+    .sort((a, b) => a.recordedAt.localeCompare(b.recordedAt))
+    .slice(0, limit);
+}
+
+async function updateSyncStateForIds(
+  eventIds: string[],
+  syncState: 'acknowledged' | 'failed'
+): Promise<void> {
+  if (eventIds.length === 0) return;
+  const db = await getDatabase();
+  const placeholders = eventIds.map(() => '?').join(', ');
+  await db.runAsync(
+    `UPDATE location_point SET sync_state = ? WHERE event_id IN (${placeholders})`,
+    [syncState, ...eventIds]
+  );
+  await db.runAsync(
+    `UPDATE hike_event SET sync_state = ? WHERE event_id IN (${placeholders})`,
+    [syncState, ...eventIds]
+  );
+}
+
+export async function markEventsAcknowledged(eventIds: string[]): Promise<void> {
+  await updateSyncStateForIds(eventIds, 'acknowledged');
+}
+
+/** Section 12: "Do not retry permanent validation/authentication failures
+ * forever" — marks these ineligible for further retry. */
+export async function markEventsFailed(eventIds: string[]): Promise<void> {
+  await updateSyncStateForIds(eventIds, 'failed');
+}
+
+export async function incrementAttemptCount(eventIds: string[]): Promise<void> {
+  if (eventIds.length === 0) return;
+  const db = await getDatabase();
+  const placeholders = eventIds.map(() => '?').join(', ');
+  await db.runAsync(
+    `UPDATE location_point SET attempt_count = attempt_count + 1 WHERE event_id IN (${placeholders})`,
+    eventIds
+  );
+  await db.runAsync(
+    `UPDATE hike_event SET attempt_count = attempt_count + 1 WHERE event_id IN (${placeholders})`,
+    eventIds
+  );
+}
+
+export async function updateSyncMeta(
+  localSessionId: string,
+  meta: { lastSyncAttemptAt?: string; lastAcknowledgedAt?: string }
+): Promise<void> {
+  const db = await getDatabase();
+  if (meta.lastSyncAttemptAt) {
+    await db.runAsync(
+      'UPDATE hike_session SET last_sync_attempt_at = ? WHERE local_session_id = ?',
+      [meta.lastSyncAttemptAt, localSessionId]
+    );
+  }
+  if (meta.lastAcknowledgedAt) {
+    await db.runAsync(
+      'UPDATE hike_session SET last_acknowledged_at = ? WHERE local_session_id = ?',
+      [meta.lastAcknowledgedAt, localSessionId]
+    );
+  }
+}
+
+export type SyncMeta = {
+  lastSyncAttemptAt: string | null;
+  lastAcknowledgedAt: string | null;
+  pendingCount: number;
+};
+
+export async function getSyncMeta(localSessionId: string): Promise<SyncMeta> {
+  const db = await getDatabase();
+  const row = await db.getFirstAsync<{
+    last_sync_attempt_at: string | null;
+    last_acknowledged_at: string | null;
+  }>(
+    'SELECT last_sync_attempt_at, last_acknowledged_at FROM hike_session WHERE local_session_id = ?',
+    [localSessionId]
+  );
+  const pendingCount = await countPendingSyncItems(localSessionId);
+
+  return {
+    lastSyncAttemptAt: row?.last_sync_attempt_at ?? null,
+    lastAcknowledgedAt: row?.last_acknowledged_at ?? null,
+    pendingCount,
+  };
 }
