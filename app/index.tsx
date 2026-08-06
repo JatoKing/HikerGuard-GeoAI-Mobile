@@ -20,6 +20,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Svg, { Circle, Path, Ellipse, G, Defs, LinearGradient, RadialGradient, Stop } from 'react-native-svg';
 import { useRouter } from 'expo-router';
+import { FootstepsBlinkIcon } from '../components/footsteps-blink-icon';
 
 const COLORS = {
   bg: '#FFFFFF',
@@ -207,7 +208,13 @@ export default function SplashScreen() {
 
       <View style={{ height: 28 }} />
 
-      <Text style={styles.brandName}>JEJAK</Text>
+      <View style={styles.brandNameRow}>
+        <Text style={styles.brandName}>JEJ</Text>
+        <View style={styles.brandBadge}>
+          <FootstepsBlinkIcon size={22} accentColor={COLORS.accent} />
+        </View>
+        <Text style={styles.brandName}>K</Text>
+      </View>
       <Text style={styles.tagline}>
         <Text style={{ color: COLORS.accent }}>GeoAI</Text> Connectivity Intelligence
       </Text>
@@ -236,6 +243,13 @@ const styles = StyleSheet.create({
     color: COLORS.textMuted,
     marginTop: 12,
     letterSpacing: 0.5,
+  },
+  brandNameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  brandBadge: {
+    marginHorizontal: 2,
   },
   brandName: {
     fontSize: 30,

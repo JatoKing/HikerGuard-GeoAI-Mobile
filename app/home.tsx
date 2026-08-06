@@ -50,6 +50,7 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 import LoginForm from '../components/login-form';
+import { FootstepsBlinkIcon } from '../components/footsteps-blink-icon';
 
 const { width: SCREEN_W, height: SCREEN_H } = Dimensions.get('window');
 
@@ -142,30 +143,13 @@ export default function LandingScreen() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
   const loginTranslateY = useSharedValue(SCREEN_H);
 
-  // compass needle wobble — base heading is -45deg (pointing up), oscillates
-  // a few degrees either side so it reads as a compass settling/searching.
-  const compassRotate = useSharedValue(-45);
-
   useEffect(() => {
     titleOpacity.value = withDelay(150, withTiming(1, { duration: 600 }));
     titleTranslate.value = withDelay(150, withTiming(0, { duration: 600, easing: Easing.out(Easing.cubic) }));
 
     cardOpacity.value = withDelay(500, withTiming(1, { duration: 700 }));
     cardTranslate.value = withDelay(500, withTiming(0, { duration: 700, easing: Easing.out(Easing.cubic) }));
-
-    compassRotate.value = withRepeat(
-      withSequence(
-        withTiming(-30, { duration: 900, easing: Easing.inOut(Easing.sin) }),
-        withTiming(-60, { duration: 900, easing: Easing.inOut(Easing.sin) })
-      ),
-      -1,
-      true
-    );
   }, []);
-
-  const compassStyle = useAnimatedStyle(() => ({
-    transform: [{ rotate: `${compassRotate.value}deg` }],
-  }));
 
   // If we arrived here with ?openLogin=true (e.g. from the app-info page's
   // "Continue" button), auto-open the login overlay instead of waiting for
@@ -246,11 +230,7 @@ export default function LandingScreen() {
           <View style={styles.brandNameRow}>
             <Text style={styles.brandName}>JEJ</Text>
             <View style={styles.brandBadge}>
-              <View style={styles.brandBadgeRing}>
-                <Animated.View style={compassStyle}>
-                  <Ionicons name="navigate" size={22} color={COLORS.accent} />
-                </Animated.View>
-              </View>
+              <FootstepsBlinkIcon size={30} accentColor={COLORS.accent} />
             </View>
             <Text style={styles.brandName}>K</Text>
           </View>
@@ -357,15 +337,6 @@ const styles = StyleSheet.create({
     marginLeft: -3,
     marginRight: 3,
     marginTop: 2,
-  },
-  brandBadgeRing: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
-    borderWidth: 1.5,
-    borderColor: COLORS.accent,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   brandName: {
     fontSize: 40,

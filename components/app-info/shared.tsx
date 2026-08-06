@@ -14,20 +14,14 @@
  * and content data so nothing is duplicated between the two route files.
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-  withRepeat,
-  withSequence,
-  Easing,
-} from 'react-native-reanimated';
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
+import { FootstepsBlinkIcon } from '@/components/footsteps-blink-icon';
 
 export const COLORS = {
   bg: '#FFFFFF',
@@ -163,27 +157,6 @@ export const FEATURES: Feature[] = [
 /* Shared header — wordmark + big heading, identical on both routes         */
 /* -------------------------------------------------------------------------- */
 export function AppInfoHeader() {
-  // compass needle wobble — base heading is -45deg (pointing up), oscillates
-  // a few degrees either side so it reads as a compass settling/searching.
-  // Same wordmark as the login page's "JEJAK" — JE + this animated ring
-  // icon standing in for the "A" + K.
-  const compassRotate = useSharedValue(-45);
-
-  useEffect(() => {
-    compassRotate.value = withRepeat(
-      withSequence(
-        withTiming(-30, { duration: 900, easing: Easing.inOut(Easing.sin) }),
-        withTiming(-60, { duration: 900, easing: Easing.inOut(Easing.sin) })
-      ),
-      -1,
-      true
-    );
-  }, []);
-
-  const compassStyle = useAnimatedStyle(() => ({
-    transform: [{ rotate: `${compassRotate.value}deg` }],
-  }));
-
   return (
     <>
       {/* eyebrow tag — small context label above the wordmark */}
@@ -195,12 +168,7 @@ export function AppInfoHeader() {
       <View style={sharedStyles.brandNameRow}>
         <Text style={sharedStyles.brandName}>JEJ</Text>
         <View style={sharedStyles.brandBadge}>
-          <View style={sharedStyles.brandBadgeGlow} />
-          <View style={sharedStyles.brandBadgeRing}>
-            <Animated.View style={compassStyle}>
-              <Ionicons name="navigate" size={22} color={COLORS.accent} />
-            </Animated.View>
-          </View>
+          <FootstepsBlinkIcon size={30} accentColor={COLORS.accent} />
         </View>
         <Text style={sharedStyles.brandName}>K</Text>
       </View>
@@ -386,24 +354,6 @@ export const sharedStyles = StyleSheet.create({
     marginLeft: -3,
     marginRight: 3,
     marginTop: 2,
-    position: 'relative',
-  },
-  brandBadgeGlow: {
-    position: 'absolute',
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: 'rgba(74,222,128,0.18)',
-  },
-  brandBadgeRing: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
-    borderWidth: 1.5,
-    borderColor: COLORS.accent,
-    backgroundColor: COLORS.bg,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   brandName: {
     fontSize: 40,
