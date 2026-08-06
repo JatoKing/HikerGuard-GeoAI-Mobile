@@ -9,6 +9,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Pressable, ActivityIndicator, Linking, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { LocationSubscription } from 'expo-location';
 
@@ -93,6 +94,7 @@ export default function ActiveHikeScreen() {
     if (evaluation.shouldWarn) {
       acknowledgedGapIdsRef.current.add(evaluation.warning.gapGroup.id);
       setGapWarning(evaluation.warning);
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
       await insertHikeEvent({
         localSessionId,
         type: 'gap_warning_shown',
