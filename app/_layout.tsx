@@ -20,6 +20,7 @@ export default function RootLayout() {
         <Stack.Screen name="home" options={{ headerShown: false }} />
         <Stack.Screen name="app-info/index" options={{ headerShown: false }} />
         <Stack.Screen name="app-info/map" options={{ headerShown: false }} />
+        <Stack.Screen name="trails/[trailId]" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>

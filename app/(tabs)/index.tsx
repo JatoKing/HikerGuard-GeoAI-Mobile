@@ -18,15 +18,49 @@
  * small plain StyleSheet just for sizing/margins.
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS } from '@/components/app-info/shared';
+import { FixtureTrailRepository } from '@/src/repositories/fixture-trail-repository';
+
+const trailRepository = new FixtureTrailRepository();
+
+type SummaryTileProps = {
+  icon: keyof typeof Ionicons.glyphMap;
+  label: string;
+  value: string;
+  onPress: () => void;
+};
+
+function SummaryTile({ icon, label, value, onPress }: SummaryTileProps) {
+  return (
+    <Pressable
+      onPress={onPress}
+      className="flex-1 bg-[rgba(15,27,46,0.04)] border border-[rgba(15,27,46,0.1)] rounded-[16px] p-3"
+    >
+      <View className="w-[30px] h-[30px] rounded-[9px] bg-[rgba(74,222,128,0.15)] items-center justify-center mb-2">
+        <Ionicons name={icon} size={15} color={COLORS.accent} />
+      </View>
+      <Text className="text-[11px] font-bold text-[rgba(15,27,46,0.5)] tracking-[0.4px] mb-0.5">
+        {label}
+      </Text>
+      <Text className="text-[12.5px] font-bold text-[#0F1B2E]">{value}</Text>
+    </Pressable>
+  );
+}
 
 export default function DashboardScreen() {
   const insets = useSafeAreaInsets();
+  const router = useRouter();
+  const [trailCount, setTrailCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    trailRepository.listTrails().then((trails) => setTrailCount(trails.length));
+  }, []);
 
   return (
     <View className="flex-1 bg-white">
@@ -55,14 +89,20 @@ export default function DashboardScreen() {
           </View>
 
           <View className="flex-row flex-wrap gap-2">
-            <View className="flex-row items-center gap-[5px] bg-white/[0.08] border border-white/[0.15] rounded-full py-[7px] px-3">
+            <Pressable
+              onPress={() => router.push('/trails')}
+              className="flex-row items-center gap-[5px] bg-white/[0.08] border border-white/[0.15] rounded-full py-[7px] px-3"
+            >
               <Ionicons name="map-outline" size={13} color={COLORS.accent} />
               <Text className="text-[11.5px] font-semibold text-white">3 Trails Ready</Text>
-            </View>
-            <View className="flex-row items-center gap-[5px] bg-white/[0.08] border border-white/[0.15] rounded-full py-[7px] px-3">
+            </Pressable>
+            <Pressable
+              onPress={() => router.push('/downloads')}
+              className="flex-row items-center gap-[5px] bg-white/[0.08] border border-white/[0.15] rounded-full py-[7px] px-3"
+            >
               <Ionicons name="sync-outline" size={13} color={COLORS.accent} />
               <Text className="text-[11.5px] font-semibold text-white">Synced 2m ago</Text>
-            </View>
+            </Pressable>
             <View className="flex-row items-center gap-[5px] bg-white/[0.08] border border-white/[0.15] rounded-full py-[7px] px-3">
               <Ionicons name="cellular-outline" size={13} color={COLORS.accent} />
               <Text className="text-[11.5px] font-semibold text-white">Signal: Strong</Text>
@@ -70,11 +110,37 @@ export default function DashboardScreen() {
           </View>
         </LinearGradient>
 
+        {/* quick-access summary — one tile per main tab, each showing the
+            current status of that page rather than duplicating its content */}
+        <View className="flex-row gap-2 mx-6 mb-[14px]">
+          <SummaryTile
+            icon="map-outline"
+            label="TRAILS"
+            value={trailCount === null ? 'Loading…' : `${trailCount} available`}
+            onPress={() => router.push('/trails')}
+          />
+          <SummaryTile
+            icon="footsteps-outline"
+            label="ACTIVE HIKE"
+            value="No active hike"
+            onPress={() => router.push('/active-hike')}
+          />
+          <SummaryTile
+            icon="cloud-download-outline"
+            label="DOWNLOADS"
+            value="0 packs saved"
+            onPress={() => router.push('/downloads')}
+          />
+        </View>
+
         {/* primary CTA — start a hike. Deliberately a different shape from
             every other card on this screen (gradient banner, oversized
             bleeding icon, pill button) so it reads as THE action to take,
             not just another info tile. */}
-        <Pressable className="rounded-[22px] overflow-hidden mx-6 mb-[14px]">
+        <Pressable
+          onPress={() => router.push('/active-hike')}
+          className="rounded-[22px] overflow-hidden mx-6 mb-[14px]"
+        >
           <LinearGradient
             colors={['#1B4332', '#0B1524']}
             start={{ x: 0, y: 0 }}
