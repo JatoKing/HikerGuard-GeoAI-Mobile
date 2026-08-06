@@ -43,6 +43,13 @@ export type TrailPack = {
 
 export type RoutePackStatus = 'downloading' | 'ready' | 'failed' | 'stale';
 
+/**
+ * Storage metadata for a downloaded pack — Section 9's route_pack table.
+ * The pack content itself (model + segments) is stored as one JSON blob
+ * rather than a separate file, so there's no filePath field — that's the
+ * "or normalised segment reference" half of Section 9's "file_path or
+ * normalised segment reference" wording.
+ */
 export type RoutePackRecord = {
   trailId: string;
   packVersion: string;
@@ -50,6 +57,5 @@ export type RoutePackRecord = {
   modelVersion: string;
   downloadedAt: string;
   checksum: string;
-  filePath: string;
   status: RoutePackStatus;
 };

@@ -20,7 +20,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FixtureTrailRepository } from '@/src/repositories/fixture-trail-repository';
 import { TrailPackValidationError } from '@/src/api/contracts';
 import type { TrailPack } from '@/src/domain/trail';
-import { loadStoredPack, saveStoredPack, removeStoredPack } from '@/src/storage/route-pack-store';
+import {
+  loadStoredPack,
+  saveStoredPack,
+  removeStoredPack,
+  getStoredPackMetadata,
+} from '@/src/storage/route-pack-store';
 import { ConnectivityLegend, RISK_CLASS_META } from '@/src/components/ConnectivityLegend';
 import { OfflinePackStatus } from '@/src/components/OfflinePackStatus';
 
@@ -32,13 +37,17 @@ export default function TrailDetailScreen() {
   const { trailId } = useLocalSearchParams<{ trailId: string }>();
 
   const [pack, setPack] = useState<TrailPack | null>(null);
+  const [downloadedAt, setDownloadedAt] = useState<string | undefined>(undefined);
   const [isRestoringPack, setIsRestoringPack] = useState(true);
   const [isDownloading, setIsDownloading] = useState(false);
   const [message, setMessage] = useState<{ tone: 'error' | 'info'; text: string } | null>(null);
 
   useEffect(() => {
-    loadStoredPack(trailId)
-      .then(setPack)
+    Promise.all([loadStoredPack(trailId), getStoredPackMetadata(trailId)])
+      .then(([storedPack, metadata]) => {
+        setPack(storedPack);
+        setDownloadedAt(metadata?.downloadedAt);
+      })
       .finally(() => setIsRestoringPack(false));
   }, [trailId]);
 
@@ -58,6 +67,7 @@ export default function TrailDetailScreen() {
 
       await saveStoredPack(candidate);
       setPack(candidate);
+      setDownloadedAt((await getStoredPackMetadata(trailId))?.downloadedAt);
     } catch (err) {
       // Any failure here leaves `pack` (and its persisted copy) untouched.
       setMessage({
@@ -75,6 +85,7 @@ export default function TrailDetailScreen() {
   const handleRemove = async () => {
     await removeStoredPack(trailId);
     setPack(null);
+    setDownloadedAt(undefined);
     setMessage(null);
   };
 
@@ -136,7 +147,7 @@ export default function TrailDetailScreen() {
               </View>
 
               <View className="mb-4">
-                <OfflinePackStatus pack={pack} />
+                <OfflinePackStatus pack={pack} downloadedAt={downloadedAt} />
               </View>
 
               {message && (

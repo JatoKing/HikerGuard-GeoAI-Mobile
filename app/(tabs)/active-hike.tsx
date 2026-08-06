@@ -19,6 +19,7 @@ import {
   startHikeSession,
   endHikeSession,
   getResumableHikeSession,
+  setHikeSessionState,
   insertHikeEvent,
   insertLocationPoint,
   getSyncMeta,
@@ -172,10 +173,13 @@ export default function ActiveHikeScreen() {
         const resumedPack = packs.find((p) => p.trailId === resumable.trailId);
         setSession(resumable);
         await refreshSyncMeta(resumable.localSessionId);
-        if (resumedPack) {
-          // App/process restarted — resume foreground recording now that
-          // we're back in the foreground (Section 10 restore requirement).
+        // Only restart the GPS watch for a session that was actively
+        // recording — a paused session stays paused until the user
+        // explicitly resumes it (Section 10 restore requirement).
+        if (resumedPack && resumable.state === 'active') {
           await beginRecording(resumable.localSessionId, resumedPack);
+        } else if (resumedPack) {
+          activePackRef.current = resumedPack;
         }
       }
       setIsLoading(false);
@@ -242,6 +246,23 @@ export default function ActiveHikeScreen() {
     setStartingTrailId(null);
   };
 
+  const handlePauseHike = async () => {
+    if (!session) return;
+    if (subscriptionRef.current) {
+      stopForegroundRecording(subscriptionRef.current);
+      subscriptionRef.current = null;
+    }
+    await setHikeSessionState(session.localSessionId, 'paused');
+    setSession({ ...session, state: 'paused' });
+  };
+
+  const handleResumeHike = async () => {
+    if (!session || !activePackRef.current) return;
+    await setHikeSessionState(session.localSessionId, 'active');
+    await beginRecording(session.localSessionId, activePackRef.current);
+    setSession({ ...session, state: 'active' });
+  };
+
   const handleEndHike = async () => {
     if (!session) return;
     if (subscriptionRef.current) {
@@ -258,6 +279,11 @@ export default function ActiveHikeScreen() {
     // pending sync_state and would need a background sync worker (not yet
     // built) or the user reopening this hike to retry further.
     await runSync(session.localSessionId);
+    const finalMeta = await getSyncMeta(session.localSessionId);
+    await setHikeSessionState(
+      session.localSessionId,
+      finalMeta.pendingCount === 0 ? 'synced' : 'sync_pending'
+    );
     setSession(null);
     setLastPointAt(null);
     setGapWarning(null);
@@ -280,15 +306,24 @@ export default function ActiveHikeScreen() {
       <View className="flex-1 bg-white" style={{ paddingTop: insets.top + 16 }}>
         <ScrollView contentContainerStyle={{ paddingHorizontal: 24, paddingBottom: insets.bottom + 24 }}>
           <View className="flex-row items-center gap-2 mb-4">
-            <View className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
-            <Text className="text-[13px] font-bold text-[#EF4444] tracking-[0.5px]">
-              RECORDING — {session.trailId}
+            <View
+              className={`w-2.5 h-2.5 rounded-full ${
+                session.state === 'paused' ? 'bg-[rgba(15,27,46,0.35)]' : 'bg-[#EF4444]'
+              }`}
+            />
+            <Text
+              className={`text-[13px] font-bold tracking-[0.5px] ${
+                session.state === 'paused' ? 'text-[rgba(15,27,46,0.55)]' : 'text-[#EF4444]'
+              }`}
+            >
+              {session.state === 'paused' ? 'PAUSED' : 'RECORDING'} — {session.trailId}
             </Text>
           </View>
 
           <Text className="text-[12px] text-[rgba(15,27,46,0.55)] mb-1">
-            Phone is recording locally. Points sync automatically once
-            connectivity returns.
+            {session.state === 'paused'
+              ? 'Recording is paused. Resume to keep tracking your position.'
+              : 'Phone is recording locally. Points sync automatically once connectivity returns.'}
           </Text>
           <Text className="text-[12px] text-[rgba(15,27,46,0.55)] mb-6">
             Foreground only right now — keep the app open while hiking.
@@ -391,6 +426,24 @@ export default function ActiveHikeScreen() {
               {isSyncing ? 'Syncing…' : 'Retry sync'}
             </Text>
           </Pressable>
+
+          {session.state === 'paused' ? (
+            <Pressable
+              onPress={handleResumeHike}
+              className="flex-row items-center justify-center gap-2 bg-[#4ADE80] rounded-full py-3 px-6 mb-3"
+            >
+              <Ionicons name="play-outline" size={16} color="#0B1524" />
+              <Text className="text-[13px] font-bold text-[#0B1524]">Resume hike</Text>
+            </Pressable>
+          ) : (
+            <Pressable
+              onPress={handlePauseHike}
+              className="flex-row items-center justify-center gap-2 border border-[rgba(15,27,46,0.15)] rounded-full py-3 px-6 mb-3"
+            >
+              <Ionicons name="pause-outline" size={16} color="#0F1B2E" />
+              <Text className="text-[13px] font-bold text-[#0F1B2E]">Pause hike</Text>
+            </Pressable>
+          )}
 
           <Pressable
             onPress={handleEndHike}

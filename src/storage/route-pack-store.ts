@@ -1,5 +1,5 @@
 import { getDatabase } from '@/src/storage/database';
-import type { TrailPack } from '@/src/domain/trail';
+import type { RoutePackRecord, RoutePackStatus, TrailPack } from '@/src/domain/trail';
 
 /**
  * Durable storage for downloaded trail packs — the `route_pack` table from
@@ -12,6 +12,28 @@ type RoutePackRow = {
   pack_version: string;
   payload_json: string;
 };
+
+type RoutePackMetadataRow = {
+  trail_id: string;
+  pack_version: string;
+  schema_version: string;
+  model_version: string;
+  downloaded_at: string;
+  checksum: string;
+  status: RoutePackStatus;
+};
+
+function rowToMetadata(row: RoutePackMetadataRow): RoutePackRecord {
+  return {
+    trailId: row.trail_id,
+    packVersion: row.pack_version,
+    schemaVersion: row.schema_version,
+    modelVersion: row.model_version,
+    downloadedAt: row.downloaded_at,
+    checksum: row.checksum,
+    status: row.status,
+  };
+}
 
 export async function loadStoredPack(trailId: string): Promise<TrailPack | null> {
   const db = await getDatabase();
@@ -46,6 +68,19 @@ export async function saveStoredPack(pack: TrailPack): Promise<void> {
       JSON.stringify(pack),
     ]
   );
+}
+
+/** Download timestamp, checksum, and status — distinct from the pack's own
+ * `generated_at` (that's when JEJAK produced the pack; this is when this
+ * device fetched it). */
+export async function getStoredPackMetadata(trailId: string): Promise<RoutePackRecord | null> {
+  const db = await getDatabase();
+  const row = await db.getFirstAsync<RoutePackMetadataRow>(
+    `SELECT trail_id, pack_version, schema_version, model_version, downloaded_at, checksum, status
+     FROM route_pack WHERE trail_id = ?`,
+    [trailId]
+  );
+  return row ? rowToMetadata(row) : null;
 }
 
 export async function listStoredPacks(): Promise<TrailPack[]> {

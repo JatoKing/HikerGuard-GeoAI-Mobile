@@ -17,7 +17,16 @@ function formatAge(fromIso: string): string {
  * proxy/planning status, and field-validation status — never presented as
  * confirmed coverage.
  */
-export function OfflinePackStatus({ pack }: { pack: TrailPack }) {
+export function OfflinePackStatus({
+  pack,
+  downloadedAt,
+}: {
+  pack: TrailPack;
+  /** When THIS device fetched the pack — distinct from `pack.generatedAt`,
+   * which is when JEJAK produced it. Omitted while a fresh download hasn't
+   * been persisted to route_pack yet. */
+  downloadedAt?: string;
+}) {
   const { model } = pack;
 
   return (
@@ -32,6 +41,14 @@ export function OfflinePackStatus({ pack }: { pack: TrailPack }) {
           {formatAge(pack.generatedAt)}
         </Text>
       </View>
+      {downloadedAt && (
+        <View className="flex-row justify-between mb-1.5">
+          <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Downloaded to this device</Text>
+          <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
+            {formatAge(downloadedAt)}
+          </Text>
+        </View>
+      )}
       <View className="flex-row justify-between mb-1.5">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Model version</Text>
         <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">{model.modelVersion}</Text>

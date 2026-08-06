@@ -165,15 +165,6 @@ export async function insertHikeEvent(event: {
   };
 }
 
-export async function countPendingLocationPoints(localSessionId: string): Promise<number> {
-  const db = await getDatabase();
-  const row = await db.getFirstAsync<{ count: number }>(
-    `SELECT COUNT(*) as count FROM location_point WHERE local_session_id = ? AND sync_state = 'pending'`,
-    [localSessionId]
-  );
-  return row?.count ?? 0;
-}
-
 /**
  * Stable per-install id for the batch request's `device_id` field
  * (Section 12) — generated once, persisted in a single-row table.
