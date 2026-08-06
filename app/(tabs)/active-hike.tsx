@@ -23,6 +23,9 @@ import {
 } from '@/src/repositories/hike-repository';
 import { requestForegroundPermission } from '@/src/location/permissions';
 import { startForegroundRecording, stopForegroundRecording } from '@/src/location/recorder';
+import { evaluateGapWarning } from '@/src/warnings/gap-warning-engine';
+import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/src/domain/warnings';
+import type { GapWarning } from '@/src/domain/warnings';
 import type { TrailPack } from '@/src/domain/trail';
 import type { HikeSession } from '@/src/domain/hike';
 
@@ -37,9 +40,11 @@ export default function ActiveHikeScreen() {
   const [lastPointAt, setLastPointAt] = useState<string | null>(null);
   const [permissionState, setPermissionState] = useState<PermissionState>('unknown');
   const [startingTrailId, setStartingTrailId] = useState<string | null>(null);
+  const [gapWarning, setGapWarning] = useState<GapWarning | null>(null);
   const subscriptionRef = useRef<LocationSubscription | null>(null);
+  const acknowledgedGapIdsRef = useRef<Set<string>>(new Set());
 
-  const beginRecording = async (localSessionId: string) => {
+  const beginRecording = async (localSessionId: string, pack: TrailPack) => {
     const subscription = await startForegroundRecording(async (point) => {
       await insertLocationPoint({
         localSessionId,
@@ -52,6 +57,25 @@ export default function ActiveHikeScreen() {
       });
       setLastPointAt(new Date(point.recordedAtMs).toISOString());
       setPendingCount(await countPendingLocationPoints(localSessionId));
+
+      const evaluation = evaluateGapWarning({
+        location: { latitude: point.latitude, longitude: point.longitude },
+        segments: pack.segments,
+        config: DEFAULT_GAP_WARNING_CONFIG,
+        acknowledgedGapGroupIds: acknowledgedGapIdsRef.current,
+      });
+      if (evaluation.shouldWarn) {
+        acknowledgedGapIdsRef.current.add(evaluation.warning.gapGroup.id);
+        setGapWarning(evaluation.warning);
+        await insertHikeEvent({
+          localSessionId,
+          type: 'gap_warning_shown',
+          payload: {
+            gapGroupId: evaluation.warning.gapGroup.id,
+            distanceToGapM: evaluation.warning.distanceToGapM,
+          },
+        });
+      }
     });
     subscriptionRef.current = subscription;
   };
@@ -64,11 +88,14 @@ export default function ActiveHikeScreen() {
       ]);
       setDownloadedPacks(packs);
       if (resumable) {
+        const resumedPack = packs.find((p) => p.trailId === resumable.trailId);
         setSession(resumable);
         setPendingCount(await countPendingLocationPoints(resumable.localSessionId));
-        // App/process restarted — resume foreground recording now that
-        // we're back in the foreground (Section 10 restore requirement).
-        await beginRecording(resumable.localSessionId);
+        if (resumedPack) {
+          // App/process restarted — resume foreground recording now that
+          // we're back in the foreground (Section 10 restore requirement).
+          await beginRecording(resumable.localSessionId, resumedPack);
+        }
       }
       setIsLoading(false);
     })();
@@ -90,16 +117,18 @@ export default function ActiveHikeScreen() {
     }
     setPermissionState('unknown');
 
+    acknowledgedGapIdsRef.current = new Set();
     const newSession = await startHikeSession(pack.trailId, pack.packVersion);
     await insertHikeEvent({
       localSessionId: newSession.localSessionId,
       type: 'hike_started',
       payload: { trailId: pack.trailId },
     });
-    await beginRecording(newSession.localSessionId);
+    await beginRecording(newSession.localSessionId, pack);
 
     setSession(newSession);
     setPendingCount(0);
+    setGapWarning(null);
     setStartingTrailId(null);
   };
 
@@ -118,6 +147,7 @@ export default function ActiveHikeScreen() {
     setSession(null);
     setPendingCount(0);
     setLastPointAt(null);
+    setGapWarning(null);
   };
 
   if (isLoading) {
@@ -149,6 +179,37 @@ export default function ActiveHikeScreen() {
           <Text className="text-[12px] text-[rgba(15,27,46,0.55)] mb-6">
             Foreground only right now — keep the app open while hiking.
           </Text>
+
+          {gapWarning && (
+            <View className="bg-[rgba(251,191,36,0.1)] border border-[rgba(251,191,36,0.4)] rounded-[16px] p-4 mb-6">
+              <View className="flex-row items-center gap-2 mb-2">
+                <Ionicons name="warning-outline" size={16} color="#B45309" />
+                <Text className="text-[12.5px] font-bold text-[#B45309]">
+                  Predicted gap ahead — planning prediction, not confirmed zero
+                  coverage
+                </Text>
+              </View>
+              <Text className="text-[12px] text-[#0F1B2E] mb-1">
+                About {Math.round(gapWarning.distanceToGapM)}m away · roughly{' '}
+                {Math.round(gapWarning.gapGroup.totalLengthM)}m long · confidence{' '}
+                {Math.round(gapWarning.gapGroup.averageConfidence * 100)}%
+              </Text>
+              {gapWarning.distanceToNextCoveredM !== null && (
+                <Text className="text-[12px] text-[#0F1B2E] mb-2">
+                  Likely covered again in about{' '}
+                  {Math.round(gapWarning.distanceToNextCoveredM)}m after the gap.
+                </Text>
+              )}
+              {GAP_WARNING_RECOMMENDED_ACTIONS.map((action) => (
+                <Text key={action} className="text-[11.5px] text-[rgba(15,27,46,0.6)]">
+                  • {action}
+                </Text>
+              ))}
+              <Pressable onPress={() => setGapWarning(null)} className="mt-3">
+                <Text className="text-[12px] font-bold text-[#B45309]">Dismiss</Text>
+              </Pressable>
+            </View>
+          )}
 
           <View className="bg-[rgba(15,27,46,0.04)] border border-[rgba(15,27,46,0.1)] rounded-[16px] p-4 mb-6">
             <View className="flex-row justify-between mb-1.5">
