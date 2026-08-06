@@ -1,0 +1,103 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "jalan-bukit-larut",
+  "name": "Jalan Bukit Larut",
+  "pack_version": "2026-08-06T00:00:00Z",
+  "generated_at": "2026-08-06T00:00:00Z",
+  "model": {
+    "model_version": "connectivity-proxy-v0.1.0",
+    "validation_level": "proxy",
+    "intended_use": "planning_only",
+    "field_validated": false,
+    "label_source": "FAO Mobile Broadband Coverage",
+    "label_release": "2024",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000
+  },
+  "segments": [
+    {
+      "segment_id": "jalan-bukit-larut-0001",
+      "segment_order": 1,
+      "segment_length_m": 250.0,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[100.0, 4.0], [100.001, 4.001]]
+      },
+      "risk_score": 0.08,
+      "risk_class": "likely_covered",
+      "confidence": 0.86,
+      "model_version": "connectivity-proxy-v0.1.0",
+      "top_factors": [
+        {
+          "feature": "distance_to_cell_tower",
+          "contribution": 0.22,
+          "direction": "decreases_risk"
+        }
+      ]
+    },
+    {
+      "segment_id": "jalan-bukit-larut-0002",
+      "segment_order": 2,
+      "segment_length_m": 250.0,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[100.001, 4.001], [100.002, 4.002]]
+      },
+      "risk_score": 0.47,
+      "risk_class": "uncertain",
+      "confidence": 0.52,
+      "model_version": "connectivity-proxy-v0.1.0",
+      "top_factors": [
+        {
+          "feature": "vegetation_density",
+          "contribution": 0.18,
+          "direction": "increases_risk"
+        }
+      ]
+    },
+    {
+      "segment_id": "jalan-bukit-larut-0003",
+      "segment_order": 3,
+      "segment_length_m": 250.0,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[100.002, 4.002], [100.003, 4.003]]
+      },
+      "risk_score": 0.82,
+      "risk_class": "predicted_gap",
+      "confidence": 0.71,
+      "model_version": "connectivity-proxy-v0.1.0",
+      "top_factors": [
+        {
+          "feature": "terrain_obstruction",
+          "contribution": 0.31,
+          "direction": "increases_risk"
+        }
+      ]
+    },
+    {
+      "segment_id": "jalan-bukit-larut-0004",
+      "segment_order": 4,
+      "segment_length_m": 250.0,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[100.003, 4.003], [100.004, 4.004]]
+      },
+      "risk_score": 0.79,
+      "risk_class": "predicted_gap",
+      "confidence": 0.68,
+      "model_version": "connectivity-proxy-v0.1.0",
+      "top_factors": [
+        {
+          "feature": "terrain_obstruction",
+          "contribution": 0.29,
+          "direction": "increases_risk"
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "checksum": "replace-with-server-generated-checksum"
+  }
+}
