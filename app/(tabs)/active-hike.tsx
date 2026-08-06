@@ -23,11 +23,33 @@ import {
 } from '@/src/repositories/hike-repository';
 import { requestForegroundPermission } from '@/src/location/permissions';
 import { startForegroundRecording, stopForegroundRecording } from '@/src/location/recorder';
-import { evaluateGapWarning } from '@/src/warnings/gap-warning-engine';
+import { evaluateGapWarning, groupContiguousGapSegments } from '@/src/warnings/gap-warning-engine';
 import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/src/domain/warnings';
 import type { GapWarning } from '@/src/domain/warnings';
 import type { TrailPack } from '@/src/domain/trail';
 import type { HikeSession } from '@/src/domain/hike';
+
+/**
+ * A point somewhere before the pack's first predicted_gap group, so the
+ * dev-only "Simulate GPS near gap" button below exercises the exact same
+ * evaluateGapWarning() code path a real GPS fix would — just without
+ * needing to physically be near this fixture's real-world coordinates.
+ */
+function pointApproachingFirstGap(pack: TrailPack) {
+  const gapGroups = groupContiguousGapSegments(pack.segments);
+  const firstGap = gapGroups[0];
+  if (!firstGap) return null;
+
+  const ordered = pack.segments.slice().sort((a, b) => a.segmentOrder - b.segmentOrder);
+  const approachSegment =
+    ordered.find((s) => s.segmentOrder === firstGap.startOrder - 1) ??
+    ordered.find((s) => s.segmentOrder === firstGap.startOrder);
+  if (!approachSegment) return null;
+
+  const [lon1, lat1] = approachSegment.geometry.coordinates[0];
+  const [lon2, lat2] = approachSegment.geometry.coordinates[1];
+  return { latitude: (lat1 + lat2) / 2, longitude: (lon1 + lon2) / 2 };
+}
 
 type PermissionState = 'unknown' | 'denied' | 'denied_permanently';
 
@@ -43,41 +65,64 @@ export default function ActiveHikeScreen() {
   const [gapWarning, setGapWarning] = useState<GapWarning | null>(null);
   const subscriptionRef = useRef<LocationSubscription | null>(null);
   const acknowledgedGapIdsRef = useRef<Set<string>>(new Set());
+  const activePackRef = useRef<TrailPack | null>(null);
+
+  const handleRecordedPoint = async (
+    localSessionId: string,
+    pack: TrailPack,
+    point: { latitude: number; longitude: number; horizontalAccuracyM: number; altitudeM: number | null; recordedAtMs: number }
+  ) => {
+    await insertLocationPoint({
+      localSessionId,
+      latitude: point.latitude,
+      longitude: point.longitude,
+      horizontalAccuracyM: point.horizontalAccuracyM,
+      altitudeM: point.altitudeM,
+      batteryLevel: null,
+      observedNetworkState: 'unknown',
+    });
+    setLastPointAt(new Date(point.recordedAtMs).toISOString());
+    setPendingCount(await countPendingLocationPoints(localSessionId));
+
+    const evaluation = evaluateGapWarning({
+      location: { latitude: point.latitude, longitude: point.longitude },
+      segments: pack.segments,
+      config: DEFAULT_GAP_WARNING_CONFIG,
+      acknowledgedGapGroupIds: acknowledgedGapIdsRef.current,
+    });
+    if (evaluation.shouldWarn) {
+      acknowledgedGapIdsRef.current.add(evaluation.warning.gapGroup.id);
+      setGapWarning(evaluation.warning);
+      await insertHikeEvent({
+        localSessionId,
+        type: 'gap_warning_shown',
+        payload: {
+          gapGroupId: evaluation.warning.gapGroup.id,
+          distanceToGapM: evaluation.warning.distanceToGapM,
+        },
+      });
+    }
+  };
 
   const beginRecording = async (localSessionId: string, pack: TrailPack) => {
-    const subscription = await startForegroundRecording(async (point) => {
-      await insertLocationPoint({
-        localSessionId,
-        latitude: point.latitude,
-        longitude: point.longitude,
-        horizontalAccuracyM: point.horizontalAccuracyM,
-        altitudeM: point.altitudeM,
-        batteryLevel: null,
-        observedNetworkState: 'unknown',
-      });
-      setLastPointAt(new Date(point.recordedAtMs).toISOString());
-      setPendingCount(await countPendingLocationPoints(localSessionId));
-
-      const evaluation = evaluateGapWarning({
-        location: { latitude: point.latitude, longitude: point.longitude },
-        segments: pack.segments,
-        config: DEFAULT_GAP_WARNING_CONFIG,
-        acknowledgedGapGroupIds: acknowledgedGapIdsRef.current,
-      });
-      if (evaluation.shouldWarn) {
-        acknowledgedGapIdsRef.current.add(evaluation.warning.gapGroup.id);
-        setGapWarning(evaluation.warning);
-        await insertHikeEvent({
-          localSessionId,
-          type: 'gap_warning_shown',
-          payload: {
-            gapGroupId: evaluation.warning.gapGroup.id,
-            distanceToGapM: evaluation.warning.distanceToGapM,
-          },
-        });
-      }
-    });
+    activePackRef.current = pack;
+    const subscription = await startForegroundRecording((point) =>
+      handleRecordedPoint(localSessionId, pack, point)
+    );
     subscriptionRef.current = subscription;
+  };
+
+  const handleSimulateApproachToGap = async () => {
+    if (!session || !activePackRef.current) return;
+    const location = pointApproachingFirstGap(activePackRef.current);
+    if (!location) return;
+    await handleRecordedPoint(session.localSessionId, activePackRef.current, {
+      latitude: location.latitude,
+      longitude: location.longitude,
+      horizontalAccuracyM: 8,
+      altitudeM: null,
+      recordedAtMs: Date.now(),
+    });
   };
 
   useEffect(() => {
@@ -234,11 +279,23 @@ export default function ActiveHikeScreen() {
 
           <Pressable
             onPress={handleEndHike}
-            className="flex-row items-center justify-center gap-2 bg-[#E23744] rounded-full py-3 px-6"
+            className="flex-row items-center justify-center gap-2 bg-[#E23744] rounded-full py-3 px-6 mb-3"
           >
             <Ionicons name="stop-circle-outline" size={16} color="#FFFFFF" />
             <Text className="text-[13px] font-bold text-white">End hike</Text>
           </Pressable>
+
+          {__DEV__ && (
+            <Pressable
+              onPress={handleSimulateApproachToGap}
+              className="flex-row items-center justify-center gap-2 border border-dashed border-[rgba(15,27,46,0.25)] rounded-full py-2.5 px-6"
+            >
+              <Ionicons name="flask-outline" size={14} color="rgba(15,27,46,0.5)" />
+              <Text className="text-[12px] font-semibold text-[rgba(15,27,46,0.5)]">
+                Simulate GPS near gap (dev)
+              </Text>
+            </Pressable>
+          )}
         </ScrollView>
       </View>
     );
