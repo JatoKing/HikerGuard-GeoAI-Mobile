@@ -38,6 +38,13 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "JEJAK records your location locally during a hike so it can show your route and sync it once connectivity returns. This does not send your location anywhere while you're offline."
+        }
       ]
     ],
     "experiments": {
