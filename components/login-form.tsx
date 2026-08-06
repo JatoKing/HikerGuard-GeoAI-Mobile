@@ -150,7 +150,7 @@ export default function LoginForm({
       </View>
 
       <View style={styles.footerRow}>
-        <Text style={styles.footerText}>Don't have an account? </Text>
+        <Text style={styles.footerText}>Dont have an account? </Text>
         <Pressable>
           <Text style={styles.footerLink}>Sign up</Text>
         </Pressable>
