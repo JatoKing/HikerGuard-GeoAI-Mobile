@@ -51,18 +51,16 @@ export default function AppInfoHomeScreen() {
                 <Ionicons name="sparkles-outline" size={18} color={COLORS.accent} />
               </View>
               <Text style={styles.objectiveText}>
-                JEJAK is a GeoAI-powered platform that predicts communication
-                dead zones along hiking trails using terrain, vegetation, and
-                telecommunications data. It empowers hikers with offline
-                connectivity awareness while helping authorities identify
-                optimal LoRa gateway deployment locations to improve coverage.
-                During emergencies, JEJAK provides Search and Rescue (SAR)
-                teams with connectivity intelligence and last-known
-                connectivity information to reduce search areas and
-                accelerate rescue operations — combining geospatial AI, Earth
-                Observation, and telecommunications analytics into an
-                explainable decision-support system for safer outdoor
-                adventures.
+                JEJAK is a GeoAI-powered platform that predicts likely
+                communication connectivity gaps along hiking trails using
+                terrain, vegetation, and telecommunications data. It empowers
+                hikers with offline connectivity planning predictions so they
+                can prepare before a hike, rather than a guarantee of
+                coverage. Collected location and event data may later support
+                Search and Rescue (SAR) efforts with last-known connectivity
+                information — combining geospatial AI, Earth Observation, and
+                telecommunications analytics into an explainable
+                decision-support system for safer outdoor adventures.
               </Text>
             </View>
           </View>
@@ -123,10 +121,11 @@ export default function AppInfoHomeScreen() {
           </View>
 
           <Text style={[sharedStyles.infoBody, { marginTop: 18 }]}>
-            Together, these outcomes improve hiking safety, support faster
-            SAR decision-making, and enable authorities to optimize
-            telecommunications infrastructure planning in remote
-            recreational areas through explainable GeoAI analytics.
+            Together, these outcomes improve hiking safety and offline
+            connectivity planning, may later support Search and Rescue
+            efforts, and enable authorities to optimize telecommunications
+            infrastructure planning in remote recreational areas through
+            explainable GeoAI analytics.
           </Text>
         </View>
 

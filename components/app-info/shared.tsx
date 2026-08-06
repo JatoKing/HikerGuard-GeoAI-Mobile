@@ -98,30 +98,25 @@ export const PHASES: Phase[] = [
   {
     title: 'Consumer Empowerment',
     short: 'Bonus',
-    body: 'JEJAK delivers predictive communication dead-zone maps, AI-based LoRa gateway placement recommendations, and offline connectivity awareness for hikers.',
+    body: 'JEJAK delivers predictive connectivity-gap planning maps and offline connectivity awareness for hikers.',
     icon: 'people-outline',
   },
 ];
 
 export const OUTCOMES: Outcome[] = [
   {
-    label: 'Predictive Dead-Zone Maps',
-    description: 'Visualise coverage gaps along every trail segment',
+    label: 'Predictive Connectivity-Gap Maps',
+    description: 'Visualise predicted coverage gaps along every trail segment',
     icon: 'map-outline',
   },
   {
-    label: 'AI LoRa Gateway Placement',
-    description: 'Optimal sites recommended for signal boosters',
-    icon: 'radio-outline',
-  },
-  {
     label: 'Offline Connectivity Awareness',
-    description: 'Hikers know exactly where signal will drop',
+    description: 'Plan ahead with connectivity predictions before you hike',
     icon: 'cloud-offline-outline',
   },
   {
-    label: 'Faster SAR Decision-Making',
-    description: 'Last-known location narrows the search area',
+    label: 'Search-Support Evidence',
+    description: 'Last-known location may help narrow a future search area',
     icon: 'medkit-outline',
   },
   {
@@ -157,8 +152,8 @@ export const FEATURES: Feature[] = [
     colors: ['#233A5C', '#0B1524'],
   },
   {
-    title: 'Emergency / SAR Support',
-    subtitle: 'SOS button with an offline queue — sends instantly, or queues and retries once signal returns',
+    title: 'Emergency Preparation',
+    subtitle: 'Emergency-contact panel with an offline queue — requests are queued locally and marked acknowledged only once the server confirms receipt',
     icon: 'medkit-outline',
     colors: ['#3A1F3A', '#0B1524'],
   },

@@ -95,7 +95,7 @@ export default function AppInfoMapScreen() {
           </View>
           <Text style={sharedStyles.infoBody}>
             Five core building blocks that keep hikers connected and safe,
-            from pre-hike prediction download to emergency SAR support.
+            from pre-hike prediction download to emergency preparation.
             Swipe to explore each one.
           </Text>
 

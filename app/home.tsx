@@ -261,7 +261,7 @@ export default function LandingScreen() {
             <View style={styles.cardInner}>
               <Text style={styles.cardTitle}>Ready for the trail?</Text>
               <Text style={styles.cardSubtitle}>
-                Real-time terrain AI, offline maps, and emergency geo-alerts —
+                Offline trail maps and connectivity planning predictions —
                 sign in to sync your route.
               </Text>
 
@@ -272,7 +272,8 @@ export default function LandingScreen() {
               <LoginButton label="Continue as Guest" onPress={handleGuest} filled={false} />
 
               <Text style={styles.footNote}>
-                By continuing, you agree to our Terms & Privacy Policy.
+                Demo mode — no account required yet. By continuing, you agree
+                to our Terms & Privacy Policy.
               </Text>
             </View>
           </BlurView>
