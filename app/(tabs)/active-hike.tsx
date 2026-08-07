@@ -6,13 +6,15 @@
  * expo-task-manager wired into a development build, which Expo Go cannot
  * run reliably (Section 7), so it isn't implemented yet.
  */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { View, Text, Pressable, ActivityIndicator, Linking, ScrollView, AppState } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import NetInfo from '@react-native-community/netinfo';
+import { useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { LocationSubscription } from 'expo-location';
+import type { LatLng } from 'react-native-maps';
 
 import { listStoredPacks } from '@/src/storage/route-pack-store';
 import {
@@ -22,6 +24,7 @@ import {
   setHikeSessionState,
   insertHikeEvent,
   insertLocationPoint,
+  listLocationPointsForSession,
   getSyncMeta,
   type SyncMeta,
 } from '@/src/repositories/hike-repository';
@@ -34,6 +37,8 @@ import type { TrailPack } from '@/src/domain/trail';
 import type { HikeSession } from '@/src/domain/hike';
 import { MockSyncApiClient } from '@/src/api/client';
 import { attemptSync } from '@/src/sync/worker';
+import { LiveHikeMap } from '@/src/components/LiveHikeMap';
+import { TrailMap } from '@/src/components/TrailMap';
 
 const syncApiClient = new MockSyncApiClient();
 
@@ -79,6 +84,8 @@ export default function ActiveHikeScreen() {
   const [startingTrailId, setStartingTrailId] = useState<string | null>(null);
   const [gapWarning, setGapWarning] = useState<GapWarning | null>(null);
   const [preGapSyncStatus, setPreGapSyncStatus] = useState<PreGapSyncStatus | null>(null);
+  const [walkedPath, setWalkedPath] = useState<LatLng[]>([]);
+  const [currentPosition, setCurrentPosition] = useState<LatLng | null>(null);
   const subscriptionRef = useRef<LocationSubscription | null>(null);
   const acknowledgedGapIdsRef = useRef<Set<string>>(new Set());
   const activePackRef = useRef<TrailPack | null>(null);
@@ -112,6 +119,9 @@ export default function ActiveHikeScreen() {
       observedNetworkState: 'unknown',
     });
     setLastPointAt(new Date(point.recordedAtMs).toISOString());
+    const newPosition = { latitude: point.latitude, longitude: point.longitude };
+    setCurrentPosition(newPosition);
+    setWalkedPath((prev) => [...prev, newPosition]);
     await refreshSyncMeta(localSessionId);
 
     const evaluation = evaluateGapWarning({
@@ -173,6 +183,13 @@ export default function ActiveHikeScreen() {
         const resumedPack = packs.find((p) => p.trailId === resumable.trailId);
         setSession(resumable);
         await refreshSyncMeta(resumable.localSessionId);
+
+        const priorPoints = await listLocationPointsForSession(resumable.localSessionId);
+        if (priorPoints.length > 0) {
+          const path = priorPoints.map((p) => ({ latitude: p.latitude, longitude: p.longitude }));
+          setWalkedPath(path);
+          setCurrentPosition(path[path.length - 1]);
+        }
         // Only restart the GPS watch for a session that was actively
         // recording — a paused session stays paused until the user
         // explicitly resumes it (Section 10 restore requirement).
@@ -191,6 +208,16 @@ export default function ActiveHikeScreen() {
       }
     };
   }, []);
+
+  // Downloaded packs can change on another tab (Trails) that stays mounted
+  // in Expo Router's tab navigator, so the mount-once effect above never
+  // sees a newly downloaded pack. Re-fetch just the pack list on every
+  // focus, without touching the session-restore/GPS-resume logic above.
+  useFocusEffect(
+    useCallback(() => {
+      listStoredPacks().then(setDownloadedPacks);
+    }, [])
+  );
 
   // Retry triggers (Section 12): network return, app foreground, and the
   // manual "Retry sync" button below. Reachability is only a trigger to
@@ -243,6 +270,8 @@ export default function ActiveHikeScreen() {
     setSyncMeta({ lastSyncAttemptAt: null, lastAcknowledgedAt: null, pendingCount: 0 });
     setGapWarning(null);
     setPreGapSyncStatus(null);
+    setWalkedPath([]);
+    setCurrentPosition(null);
     setStartingTrailId(null);
   };
 
@@ -288,6 +317,8 @@ export default function ActiveHikeScreen() {
     setLastPointAt(null);
     setGapWarning(null);
     setPreGapSyncStatus(null);
+    setWalkedPath([]);
+    setCurrentPosition(null);
   };
 
   if (isLoading) {
@@ -305,6 +336,14 @@ export default function ActiveHikeScreen() {
     return (
       <View className="flex-1 bg-white" style={{ paddingTop: insets.top + 16 }}>
         <ScrollView contentContainerStyle={{ paddingHorizontal: 24, paddingBottom: insets.bottom + 24 }}>
+          <View className="mb-4">
+            <LiveHikeMap
+              segments={activePackRef.current?.segments ?? []}
+              walkedPath={walkedPath}
+              currentPosition={currentPosition}
+            />
+          </View>
+
           <View className="flex-row items-center gap-2 mb-4">
             <View
               className={`w-2.5 h-2.5 rounded-full ${
@@ -505,6 +544,9 @@ export default function ActiveHikeScreen() {
               className="border border-[rgba(15,27,46,0.1)] rounded-[18px] p-4 mb-3"
             >
               <Text className="text-[15px] font-bold text-[#0F1B2E] mb-3">{pack.name}</Text>
+              <View className="mb-3">
+                <TrailMap segments={pack.segments} />
+              </View>
               <Pressable
                 onPress={() => handleStartHike(pack)}
                 disabled={startingTrailId === pack.trailId}
