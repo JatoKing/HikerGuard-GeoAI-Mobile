@@ -1,9 +1,44 @@
 [
   {
-    "trail_id": "jalan-bukit-larut",
-    "name": "Jalan Bukit Larut",
-    "distance_m": 13250.0,
-    "pack_version": "2026-08-06T00:00:00Z",
-    "prediction_available": true
+    "trail_id": "gunung-batu-putih",
+    "name": "Gunung Batu Putih",
+    "distance_m": 19872.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
+  },
+  {
+    "trail_id": "gopeng-ultra-trail-gua-tempurung",
+    "name": "Gua Tempurung",
+    "distance_m": 313.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
+  },
+  {
+    "trail_id": "bukit-wawasan-puchong",
+    "name": "Bukit Wawasan, Puchong",
+    "distance_m": 7159.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
+  },
+  {
+    "trail_id": "gunung-panti",
+    "name": "Gunung Panti",
+    "distance_m": 15072.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
+  },
+  {
+    "trail_id": "gunung-korbu",
+    "name": "Gunung Korbu",
+    "distance_m": 20187.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
+  },
+  {
+    "trail_id": "bukit-tabur",
+    "name": "Bukit Tabur",
+    "distance_m": 6523.0,
+    "pack_version": "2026-08-07T00:00:00Z",
+    "prediction_available": false
   }
 ]

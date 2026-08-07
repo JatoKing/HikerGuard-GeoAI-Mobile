@@ -1,0 +1,201 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "gopeng-ultra-trail-gua-tempurung",
+  "name": "Gua Tempurung",
+  "pack_version": "2026-08-07T00:00:00Z",
+  "generated_at": "2026-08-07T00:00:00Z",
+  "model": {
+    "model_version": "gpx-import-unscored-v0",
+    "validation_level": "unscored",
+    "intended_use": "geometry_only",
+    "field_validated": false,
+    "label_source": "AllTrails GPX export",
+    "label_release": "2026",
+    "label_resolution_m": 0,
+    "prediction_support_m": 0
+  },
+  "segments": [
+    {
+      "segment_id": "gopeng-ultra-trail-gua-tempurung-0001",
+      "segment_order": 1,
+      "segment_length_m": 252.4,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.1874,
+            4.41614
+          ],
+          [
+            101.18742,
+            4.4163
+          ],
+          [
+            101.18749,
+            4.41644
+          ],
+          [
+            101.18748,
+            4.41661
+          ],
+          [
+            101.18752,
+            4.41662
+          ],
+          [
+            101.18756,
+            4.41665
+          ],
+          [
+            101.18761,
+            4.41666
+          ],
+          [
+            101.18766,
+            4.41668
+          ],
+          [
+            101.1877,
+            4.41668
+          ],
+          [
+            101.18775,
+            4.4167
+          ],
+          [
+            101.18779,
+            4.41672
+          ],
+          [
+            101.18782,
+            4.41674
+          ],
+          [
+            101.18786,
+            4.41679
+          ],
+          [
+            101.1879,
+            4.41682
+          ],
+          [
+            101.18789,
+            4.41687
+          ],
+          [
+            101.1879,
+            4.41691
+          ],
+          [
+            101.18793,
+            4.41699
+          ],
+          [
+            101.18818,
+            4.41701
+          ],
+          [
+            101.18793,
+            4.41699
+          ],
+          [
+            101.1879,
+            4.41691
+          ],
+          [
+            101.18789,
+            4.41687
+          ],
+          [
+            101.1879,
+            4.41682
+          ],
+          [
+            101.18786,
+            4.41679
+          ],
+          [
+            101.18782,
+            4.41674
+          ],
+          [
+            101.18779,
+            4.41672
+          ],
+          [
+            101.18775,
+            4.4167
+          ],
+          [
+            101.1877,
+            4.41668
+          ],
+          [
+            101.18766,
+            4.41668
+          ],
+          [
+            101.18761,
+            4.41666
+          ],
+          [
+            101.18756,
+            4.41665
+          ],
+          [
+            101.18752,
+            4.41662
+          ]
+        ]
+      },
+      "risk_score": 0.5,
+      "risk_class": "uncertain",
+      "confidence": 0.3,
+      "model_version": "gpx-import-unscored-v0",
+      "top_factors": []
+    },
+    {
+      "segment_id": "gopeng-ultra-trail-gua-tempurung-0002",
+      "segment_order": 2,
+      "segment_length_m": 61,
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.18752,
+            4.41662
+          ],
+          [
+            101.18748,
+            4.41661
+          ],
+          [
+            101.18749,
+            4.41644
+          ],
+          [
+            101.18742,
+            4.4163
+          ],
+          [
+            101.1874,
+            4.41613
+          ],
+          [
+            101.1874,
+            4.41614
+          ]
+        ]
+      },
+      "risk_score": 0.5,
+      "risk_class": "uncertain",
+      "confidence": 0.3,
+      "model_version": "gpx-import-unscored-v0",
+      "top_factors": []
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "checksum": "replace-with-server-generated-checksum"
+  }
+}

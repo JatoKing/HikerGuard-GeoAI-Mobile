@@ -1,6 +1,12 @@
 import { parseTrailPack, parseTrailSummary, TrailPackValidationError } from '@/src/api/contracts';
 
 import validPack from '@/src/repositories/fixtures/jalan-bukit-larut.trail-pack.json';
+import gunungBatuPutih from '@/src/repositories/fixtures/gunung-batu-putih.trail-pack.json';
+import gopengUltraTrailGuaTempurung from '@/src/repositories/fixtures/gopeng-ultra-trail-gua-tempurung.trail-pack.json';
+import bukitWawasanPuchong from '@/src/repositories/fixtures/bukit-wawasan-puchong.trail-pack.json';
+import gunungPanti from '@/src/repositories/fixtures/gunung-panti.trail-pack.json';
+import gunungKorbu from '@/src/repositories/fixtures/gunung-korbu.trail-pack.json';
+import bukitTabur from '@/src/repositories/fixtures/bukit-tabur.trail-pack.json';
 import trailSummaries from '@/src/repositories/fixtures/trail-summaries.fixture.json';
 import badChecksumPack from '@/src/repositories/fixtures/invalid/bad-checksum.trail-pack.json';
 import wrongSchemaPack from '@/src/repositories/fixtures/invalid/wrong-schema-version.trail-pack.json';
@@ -25,6 +31,35 @@ describe('parseTrailPack — valid fixture', () => {
   });
 });
 
+describe('parseTrailPack — all trail-selection fixtures are valid', () => {
+  it.each([
+    ['Gunung Batu Putih', gunungBatuPutih],
+    ['Gua Tempurung', gopengUltraTrailGuaTempurung],
+    ['Bukit Wawasan, Puchong', bukitWawasanPuchong],
+    ['Gunung Panti', gunungPanti],
+    ['Gunung Korbu', gunungKorbu],
+    ['Bukit Tabur', bukitTabur],
+  ])('%s parses without throwing', (_label, raw) => {
+    expect(() => parseTrailPack(raw)).not.toThrow();
+  });
+
+  it('every summary fixture has a matching downloadable pack', () => {
+    const packsByTrailId: Record<string, unknown> = {
+      'jalan-bukit-larut': validPack,
+      'gunung-batu-putih': gunungBatuPutih,
+      'gopeng-ultra-trail-gua-tempurung': gopengUltraTrailGuaTempurung,
+      'bukit-wawasan-puchong': bukitWawasanPuchong,
+      'gunung-panti': gunungPanti,
+      'gunung-korbu': gunungKorbu,
+      'bukit-tabur': bukitTabur,
+    };
+    const summaries = trailSummaries.map(parseTrailSummary);
+    for (const summary of summaries) {
+      expect(packsByTrailId[summary.trailId]).toBeDefined();
+    }
+  });
+});
+
 describe('parseTrailPack — malformed fixtures are rejected', () => {
   it.each([
     ['bad checksum', badChecksumPack],
@@ -40,7 +75,7 @@ describe('parseTrailPack — malformed fixtures are rejected', () => {
 describe('parseTrailSummary', () => {
   it('parses the fixture trail summary list', () => {
     const summaries = trailSummaries.map(parseTrailSummary);
-    expect(summaries[0].trailId).toBe('jalan-bukit-larut');
-    expect(summaries[0].predictionAvailable).toBe(true);
+    expect(summaries[0].trailId).toBe('gunung-batu-putih');
+    expect(typeof summaries[0].predictionAvailable).toBe('boolean');
   });
 });

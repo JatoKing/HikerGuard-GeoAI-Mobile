@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="AllTrails.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name><![CDATA[Tempurung Cave]]></name>
+    <desc><![CDATA[]]></desc>
+    <link href="http://www.alltrails.com">
+      <text>AllTrails, LLC</text>
+    </link>
+    <bounds minlat="4.41613" minlon="101.1874" maxlat="4.41701" maxlon="101.18818"/>
+  </metadata>
+  <trk>
+    <name><![CDATA[Tempurung Cave]]></name>
+    <src>AllTrails</src>
+    <trkseg>
+      <trkpt lat="4.41614" lon="101.1874">
+        <ele>57.15</ele>
+      </trkpt>
+      <trkpt lat="4.4163" lon="101.18742">
+        <ele>56.56</ele>
+      </trkpt>
+      <trkpt lat="4.41644" lon="101.18749">
+        <ele>58.07</ele>
+      </trkpt>
+      <trkpt lat="4.41661" lon="101.18748">
+        <ele>55.99</ele>
+      </trkpt>
+      <trkpt lat="4.41662" lon="101.18752">
+        <ele>57.54</ele>
+      </trkpt>
+      <trkpt lat="4.41665" lon="101.18756">
+        <ele>59.37</ele>
+      </trkpt>
+      <trkpt lat="4.41666" lon="101.18761">
+        <ele>61.97</ele>
+      </trkpt>
+      <trkpt lat="4.41668" lon="101.18766">
+        <ele>64.86</ele>
+      </trkpt>
+      <trkpt lat="4.41668" lon="101.1877">
+        <ele>67.03</ele>
+      </trkpt>
+      <trkpt lat="4.4167" lon="101.18775">
+        <ele>70.09</ele>
+      </trkpt>
+      <trkpt lat="4.41672" lon="101.18779">
+        <ele>73.36</ele>
+      </trkpt>
+      <trkpt lat="4.41674" lon="101.18782">
+        <ele>77.19</ele>
+      </trkpt>
+      <trkpt lat="4.41679" lon="101.18786">
+        <ele>82.92</ele>
+      </trkpt>
+      <trkpt lat="4.41682" lon="101.1879">
+        <ele>88.37</ele>
+      </trkpt>
+      <trkpt lat="4.41687" lon="101.18789">
+        <ele>88.37</ele>
+      </trkpt>
+      <trkpt lat="4.41691" lon="101.1879">
+        <ele>90.56</ele>
+      </trkpt>
+      <trkpt lat="4.41699" lon="101.18793">
+        <ele>98.46</ele>
+      </trkpt>
+      <trkpt lat="4.41701" lon="101.18818">
+        <ele>135.03</ele>
+      </trkpt>
+      <trkpt lat="4.41699" lon="101.18793">
+        <ele>98.46</ele>
+      </trkpt>
+      <trkpt lat="4.41691" lon="101.1879">
+        <ele>90.56</ele>
+      </trkpt>
+      <trkpt lat="4.41687" lon="101.18789">
+        <ele>88.37</ele>
+      </trkpt>
+      <trkpt lat="4.41682" lon="101.1879">
+        <ele>88.37</ele>
+      </trkpt>
+      <trkpt lat="4.41679" lon="101.18786">
+        <ele>82.92</ele>
+      </trkpt>
+      <trkpt lat="4.41674" lon="101.18782">
+        <ele>77.19</ele>
+      </trkpt>
+      <trkpt lat="4.41672" lon="101.18779">
+        <ele>73.36</ele>
+      </trkpt>
+      <trkpt lat="4.4167" lon="101.18775">
+        <ele>70.09</ele>
+      </trkpt>
+      <trkpt lat="4.41668" lon="101.1877">
+        <ele>67.03</ele>
+      </trkpt>
+      <trkpt lat="4.41668" lon="101.18766">
+        <ele>64.86</ele>
+      </trkpt>
+      <trkpt lat="4.41666" lon="101.18761">
+        <ele>61.97</ele>
+      </trkpt>
+      <trkpt lat="4.41665" lon="101.18756">
+        <ele>59.37</ele>
+      </trkpt>
+      <trkpt lat="4.41662" lon="101.18752">
+        <ele>57.54</ele>
+      </trkpt>
+      <trkpt lat="4.41661" lon="101.18748">
+        <ele>55.99</ele>
+      </trkpt>
+      <trkpt lat="4.41644" lon="101.18749">
+        <ele>58.07</ele>
+      </trkpt>
+      <trkpt lat="4.4163" lon="101.18742">
+        <ele>56.56</ele>
+      </trkpt>
+      <trkpt lat="4.41613" lon="101.1874">
+        <ele>57.24</ele>
+      </trkpt>
+      <trkpt lat="4.41614" lon="101.1874">
+        <ele>57.15</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
