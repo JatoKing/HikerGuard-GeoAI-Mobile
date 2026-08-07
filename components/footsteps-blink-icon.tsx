@@ -53,7 +53,7 @@ export function FootstepsBlinkIcon({
   const half = size / 2;
 
   return (
-    <View style={{ width: size, height: size, flexDirection: 'row' }}>
+    <View style={{ width: size, height: size, flexDirection: 'row', transform: [{ rotate: '180deg' }] }}>
       <View style={{ width: half, height: size, overflow: 'hidden' }}>
         <View style={{ width: size, height: size }}>
           <Ionicons name="footsteps" size={size} color={dimColor} />
