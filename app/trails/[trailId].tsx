@@ -3,13 +3,16 @@
  *
  * WP2 trail-detail screen: download the fixture trail pack, persist it so
  * it survives an app restart / airplane-mode reopen, then render its
- * ordered segments coloured by risk_class + the offline-pack status panel.
+ * ordered segments as coloured polylines on a real map plus a detail list,
+ * next to the offline-pack status panel.
  *
- * NOTE: this renders segments as an ordered schematic strip, not a
- * georeferenced map. Section 7's native map + offline-basemap spike (ADR)
- * hasn't happened yet, so there is no map library wired up. Once that spike
- * picks a library, this list can be replaced by a real GeoJSON-rendered map
- * without touching the repository/domain/storage layers below it.
+ * NOTE: TrailMap uses react-native-maps' default online provider (Apple/
+ * Google Maps tiles), so it needs a network connection — it does not yet
+ * satisfy "reopen the downloaded route without a network connection"
+ * (Section 15). That needs an offline basemap strategy, which is still the
+ * open decision from Section 7's map spike (ADR); this is a first working
+ * map, not that spike. The segment list below it works fully offline
+ * already, same as before.
  */
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Pressable, ActivityIndicator } from 'react-native';
@@ -23,11 +26,11 @@ import type { TrailPack } from '@/src/domain/trail';
 import {
   loadStoredPack,
   saveStoredPack,
-  removeStoredPack,
   getStoredPackMetadata,
 } from '@/src/storage/route-pack-store';
 import { ConnectivityLegend, RISK_CLASS_META } from '@/src/components/ConnectivityLegend';
 import { OfflinePackStatus } from '@/src/components/OfflinePackStatus';
+import { TrailMap } from '@/src/components/TrailMap';
 
 const trailRepository = new FixtureTrailRepository();
 
@@ -82,20 +85,13 @@ export default function TrailDetailScreen() {
     }
   };
 
-  const handleRemove = async () => {
-    await removeStoredPack(trailId);
-    setPack(null);
-    setDownloadedAt(undefined);
-    setMessage(null);
-  };
-
   return (
     <View className="flex-1 bg-white" style={{ paddingTop: insets.top }}>
       <View className="flex-row items-center px-6 py-3">
         <Pressable onPress={() => router.back()} className="p-1 -ml-1 mr-2">
           <Ionicons name="chevron-back" size={24} color="#0F1B2E" />
         </Pressable>
-        <Text className="text-[16px] font-bold text-[#0F1B2E]">{trailId}</Text>
+        <Text className="text-[16px] font-bold text-[#0F1B2E]">{pack?.name ?? trailId}</Text>
       </View>
 
       {isRestoringPack ? (
@@ -141,6 +137,10 @@ export default function TrailDetailScreen() {
           ) : (
             <View>
               <Text className="text-[15px] font-bold text-[#0F1B2E] mb-3">{pack.name}</Text>
+
+              <View className="mb-4">
+                <TrailMap segments={pack.segments} />
+              </View>
 
               <View className="mb-4">
                 <ConnectivityLegend />
@@ -199,15 +199,6 @@ export default function TrailDetailScreen() {
                 </Text>
               </Pressable>
 
-              <Pressable
-                onPress={handleRemove}
-                className="flex-row items-center justify-center gap-2 py-3"
-              >
-                <Ionicons name="trash-outline" size={14} color="rgba(15,27,46,0.5)" />
-                <Text className="text-[12.5px] font-semibold text-[rgba(15,27,46,0.5)]">
-                  Remove downloaded pack
-                </Text>
-              </Pressable>
             </View>
           )}
         </ScrollView>

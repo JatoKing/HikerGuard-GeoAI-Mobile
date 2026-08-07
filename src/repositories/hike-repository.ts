@@ -333,3 +333,57 @@ export async function getSyncMeta(localSessionId: string): Promise<SyncMeta> {
     pendingCount,
   };
 }
+
+export type LastAcknowledgedLocation = {
+  trailId: string;
+  latitude: number;
+  longitude: number;
+  recordedAt: string;
+};
+
+/**
+ * The newest location by recorded_at whose event_id has been acknowledged,
+ * across every hike session — not the phone's current GPS position, the
+ * newest queued point, or the last network check (Section 12).
+ */
+export async function getLastAcknowledgedLocation(): Promise<LastAcknowledgedLocation | null> {
+  const db = await getDatabase();
+  const row = await db.getFirstAsync<{
+    trail_id: string;
+    latitude: number;
+    longitude: number;
+    recorded_at: string;
+  }>(
+    `SELECT hs.trail_id, lp.latitude, lp.longitude, lp.recorded_at
+     FROM location_point lp
+     JOIN hike_session hs ON hs.local_session_id = lp.local_session_id
+     WHERE lp.sync_state = 'acknowledged'
+     ORDER BY lp.recorded_at DESC
+     LIMIT 1`
+  );
+  if (!row) return null;
+  return {
+    trailId: row.trail_id,
+    latitude: row.latitude,
+    longitude: row.longitude,
+    recordedAt: row.recorded_at,
+  };
+}
+
+/** Oldest-first path for one session — used to redraw the walked-so-far
+ * line on the live map after a restart/resume, not just new points. */
+export async function listLocationPointsForSession(
+  localSessionId: string
+): Promise<{ latitude: number; longitude: number; recordedAt: string }[]> {
+  const db = await getDatabase();
+  const rows = await db.getAllAsync<{ latitude: number; longitude: number; recorded_at: string }>(
+    `SELECT latitude, longitude, recorded_at FROM location_point
+     WHERE local_session_id = ? ORDER BY recorded_at ASC`,
+    [localSessionId]
+  );
+  return rows.map((row) => ({
+    latitude: row.latitude,
+    longitude: row.longitude,
+    recordedAt: row.recorded_at,
+  }));
+}
