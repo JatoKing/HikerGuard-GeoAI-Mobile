@@ -14,6 +14,12 @@ export type HikeSession = {
   startedAt: string;
   endedAt: string | null;
   state: HikeSessionState;
+  /** Consecutive transient sync failures since the last acknowledgement —
+   * drives the persisted backoff window (Section 12). */
+  syncFailureStreak: number;
+  /** ISO timestamp before which a non-forced sync attempt should be
+   * skipped; null once backoff has cleared. */
+  nextRetryAt: string | null;
 };
 
 export type NetworkObservationState = 'online' | 'offline' | 'unknown';

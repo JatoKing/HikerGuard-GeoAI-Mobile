@@ -18,6 +18,8 @@ type HikeSessionRow = {
   started_at: string;
   ended_at: string | null;
   state: HikeSessionState;
+  sync_failure_streak: number;
+  next_retry_at: string | null;
 };
 
 function rowToSession(row: HikeSessionRow): HikeSession {
@@ -29,6 +31,8 @@ function rowToSession(row: HikeSessionRow): HikeSession {
     startedAt: row.started_at,
     endedAt: row.ended_at,
     state: row.state,
+    syncFailureStreak: row.sync_failure_streak,
+    nextRetryAt: row.next_retry_at,
   };
 }
 
@@ -58,6 +62,8 @@ export async function startHikeSession(
     startedAt,
     endedAt: null,
     state: 'active',
+    syncFailureStreak: 0,
+    nextRetryAt: null,
   };
 }
 
@@ -308,6 +314,50 @@ export async function updateSyncMeta(
       [meta.lastAcknowledgedAt, localSessionId]
     );
   }
+}
+
+export type SyncBackoffState = {
+  syncFailureStreak: number;
+  nextRetryAt: string | null;
+};
+
+export async function getSyncBackoffState(localSessionId: string): Promise<SyncBackoffState> {
+  const db = await getDatabase();
+  const row = await db.getFirstAsync<{ sync_failure_streak: number; next_retry_at: string | null }>(
+    'SELECT sync_failure_streak, next_retry_at FROM hike_session WHERE local_session_id = ?',
+    [localSessionId]
+  );
+  return {
+    syncFailureStreak: row?.sync_failure_streak ?? 0,
+    nextRetryAt: row?.next_retry_at ?? null,
+  };
+}
+
+/** A transient failure bumps the streak and persists the caller-computed
+ * next_retry_at, so the backoff window survives an app restart. */
+export async function recordSyncTransientFailure(
+  localSessionId: string,
+  nextRetryAt: string
+): Promise<number> {
+  const db = await getDatabase();
+  await db.runAsync(
+    `UPDATE hike_session SET sync_failure_streak = sync_failure_streak + 1, next_retry_at = ?
+     WHERE local_session_id = ?`,
+    [nextRetryAt, localSessionId]
+  );
+  const state = await getSyncBackoffState(localSessionId);
+  return state.syncFailureStreak;
+}
+
+/** Any acknowledgement (even partial) clears the backoff — the server is
+ * reachable, so there's nothing left to back off from. */
+export async function resetSyncBackoff(localSessionId: string): Promise<void> {
+  const db = await getDatabase();
+  await db.runAsync(
+    `UPDATE hike_session SET sync_failure_streak = 0, next_retry_at = NULL
+     WHERE local_session_id = ?`,
+    [localSessionId]
+  );
 }
 
 export type SyncMeta = {

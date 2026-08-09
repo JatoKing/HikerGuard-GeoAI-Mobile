@@ -25,3 +25,14 @@ export function computeBackoffMs(attempt: number, options: BackoffOptions = {}):
   const jitterFactor = 0.8 + Math.random() * 0.4; // 0.8x .. 1.2x
   return Math.min(maxMs, Math.round(exponential * jitterFactor));
 }
+
+/**
+ * Whether a non-forced sync attempt should be skipped because it's still
+ * inside the persisted backoff window from a prior transient failure.
+ * `nextRetryAt`/`nowIso` are both ISO 8601 UTC, so lexicographic comparison
+ * is chronological (same trick as route-pack-update.ts's pack_version check).
+ */
+export function isBackoffActive(nextRetryAt: string | null, nowIso: string): boolean {
+  if (!nextRetryAt) return false;
+  return nextRetryAt > nowIso;
+}

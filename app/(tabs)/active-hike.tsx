@@ -33,7 +33,7 @@ import { evaluateGapWarning, groupContiguousGapSegments } from '@/src/warnings/g
 import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/src/domain/warnings';
 import type { GapWarning } from '@/src/domain/warnings';
 import type { TrailPack } from '@/src/domain/trail';
-import type { HikeSession } from '@/src/domain/hike';
+import type { HikeSession, NetworkObservationState } from '@/src/domain/hike';
 import { MockSyncApiClient } from '@/src/api/client';
 import { attemptSync } from '@/src/sync/worker';
 import { LiveHikeMap, type LatLng } from '@/src/components/LiveHikeMap';
@@ -88,15 +88,16 @@ export default function ActiveHikeScreen() {
   const subscriptionRef = useRef<LocationSubscription | null>(null);
   const acknowledgedGapIdsRef = useRef<Set<string>>(new Set());
   const activePackRef = useRef<TrailPack | null>(null);
+  const networkStateRef = useRef<NetworkObservationState>('unknown');
 
   const refreshSyncMeta = async (localSessionId: string) => {
     setSyncMeta(await getSyncMeta(localSessionId));
   };
 
-  const runSync = async (localSessionId: string) => {
+  const runSync = async (localSessionId: string, options: { force?: boolean } = {}) => {
     setIsSyncing(true);
     try {
-      return await attemptSync(localSessionId, syncApiClient);
+      return await attemptSync(localSessionId, syncApiClient, options);
     } finally {
       await refreshSyncMeta(localSessionId);
       setIsSyncing(false);
@@ -115,7 +116,7 @@ export default function ActiveHikeScreen() {
       horizontalAccuracyM: point.horizontalAccuracyM,
       altitudeM: point.altitudeM,
       batteryLevel: null,
-      observedNetworkState: 'unknown',
+      observedNetworkState: networkStateRef.current,
     });
     setLastPointAt(new Date(point.recordedAtMs).toISOString());
     const newPosition = { latitude: point.latitude, longitude: point.longitude };
@@ -144,9 +145,10 @@ export default function ActiveHikeScreen() {
       });
 
       // Section 11: "Before entering the gap, the app should attempt a
-      // sync" and show one of these three states.
+      // sync" and show one of these three states. This is safety-critical
+      // enough to override a persisted backoff from an earlier failure.
       setPreGapSyncStatus('syncing');
-      const result = await runSync(localSessionId);
+      const result = await runSync(localSessionId, { force: true });
       setPreGapSyncStatus(result.status === 'acknowledged' ? 'acknowledged' : 'queued');
     }
   };
@@ -219,9 +221,30 @@ export default function ActiveHikeScreen() {
     }, [])
   );
 
+  // Tracks the phone's current reachability independently of whether a hike
+  // is active, so a location point recorded the instant connectivity drops
+  // (or returns) is stamped with what was actually observed — not a stale
+  // guess from the last time this listener happened to fire (Section 13).
+  useEffect(() => {
+    const toObservationState = (isConnected: boolean | null): NetworkObservationState =>
+      isConnected === null ? 'unknown' : isConnected ? 'online' : 'offline';
+
+    NetInfo.fetch().then((state) => {
+      networkStateRef.current = toObservationState(state.isConnected);
+    });
+
+    const unsubscribe = NetInfo.addEventListener((state) => {
+      networkStateRef.current = toObservationState(state.isConnected);
+    });
+
+    return unsubscribe;
+  }, []);
+
   // Retry triggers (Section 12): network return, app foreground, and the
   // manual "Retry sync" button below. Reachability is only a trigger to
   // try — attemptSync()'s server acknowledgement is what actually matters.
+  // Both triggers respect the persisted backoff (attemptSync's default);
+  // only the manual button below and the pre-gap sync above force through it.
   useEffect(() => {
     if (!session) return;
     const localSessionId = session.localSessionId;
@@ -306,8 +329,10 @@ export default function ActiveHikeScreen() {
     await endHikeSession(session.localSessionId);
     // Best-effort final flush — anything still pending after this keeps its
     // pending sync_state and would need a background sync worker (not yet
-    // built) or the user reopening this hike to retry further.
-    await runSync(session.localSessionId);
+    // built) or the user reopening this hike to retry further. Ending the
+    // hike is a one-off event, not a repeated trigger, so it's worth forcing
+    // through any backoff from an earlier failure.
+    await runSync(session.localSessionId, { force: true });
     const finalMeta = await getSyncMeta(session.localSessionId);
     await setHikeSessionState(
       session.localSessionId,
@@ -452,7 +477,7 @@ export default function ActiveHikeScreen() {
           </View>
 
           <Pressable
-            onPress={() => runSync(session.localSessionId)}
+            onPress={() => runSync(session.localSessionId, { force: true })}
             disabled={isSyncing || syncMeta.pendingCount === 0}
             className="flex-row items-center justify-center gap-2 border border-[rgba(15,27,46,0.15)] rounded-full py-3 px-6 mb-3"
           >

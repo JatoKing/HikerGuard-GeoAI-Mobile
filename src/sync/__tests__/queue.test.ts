@@ -1,4 +1,4 @@
-import { buildBatchRequest, computeBackoffMs } from '@/src/sync/queue';
+import { buildBatchRequest, computeBackoffMs, isBackoffActive } from '@/src/sync/queue';
 
 describe('buildBatchRequest', () => {
   it('carries device id, session id, and events straight through', () => {
@@ -31,5 +31,20 @@ describe('computeBackoffMs', () => {
     }
     // not literally identical every time
     expect(new Set(samples).size).toBeGreaterThan(1);
+  });
+});
+
+describe('isBackoffActive', () => {
+  it('is inactive when there is no persisted next_retry_at', () => {
+    expect(isBackoffActive(null, '2026-08-10T00:00:00.000Z')).toBe(false);
+  });
+
+  it('is active while now is before next_retry_at', () => {
+    expect(isBackoffActive('2026-08-10T00:00:10.000Z', '2026-08-10T00:00:00.000Z')).toBe(true);
+  });
+
+  it('clears once now reaches or passes next_retry_at', () => {
+    expect(isBackoffActive('2026-08-10T00:00:00.000Z', '2026-08-10T00:00:00.000Z')).toBe(false);
+    expect(isBackoffActive('2026-08-10T00:00:00.000Z', '2026-08-10T00:00:10.000Z')).toBe(false);
   });
 });

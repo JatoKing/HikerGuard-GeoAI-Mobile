@@ -3,6 +3,7 @@ import * as SQLite from 'expo-sqlite';
 import { MIGRATION_001_INITIAL } from '@/src/storage/migrations/001-initial';
 import { MIGRATION_002_SYNC_META } from '@/src/storage/migrations/002-sync-meta';
 import { MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION } from '@/src/storage/migrations/003-nullable-route-pack-model-version';
+import { MIGRATION_004_SYNC_BACKOFF } from '@/src/storage/migrations/004-sync-backoff';
 
 /**
  * Ordered, versioned migrations (Section 9: "Every database migration must
@@ -13,6 +14,7 @@ const MIGRATIONS: string[] = [
   MIGRATION_001_INITIAL,
   MIGRATION_002_SYNC_META,
   MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION,
+  MIGRATION_004_SYNC_BACKOFF,
 ];
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;

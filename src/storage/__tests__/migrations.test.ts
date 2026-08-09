@@ -1,6 +1,7 @@
 import { MIGRATION_001_INITIAL } from '@/src/storage/migrations/001-initial';
 import { MIGRATION_002_SYNC_META } from '@/src/storage/migrations/002-sync-meta';
 import { MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION } from '@/src/storage/migrations/003-nullable-route-pack-model-version';
+import { MIGRATION_004_SYNC_BACKOFF } from '@/src/storage/migrations/004-sync-backoff';
 
 describe('MIGRATION_001_INITIAL', () => {
   const REQUIRED_TABLES = ['route_pack', 'hike_session', 'location_point', 'hike_event'];
@@ -47,5 +48,14 @@ describe('MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION', () => {
     expect(MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION).toMatch(
       /ALTER TABLE route_pack_new RENAME TO route_pack;/
     );
+  });
+});
+
+describe('MIGRATION_004_SYNC_BACKOFF', () => {
+  it('adds persisted backoff columns to hike_session', () => {
+    expect(MIGRATION_004_SYNC_BACKOFF).toMatch(
+      /ADD COLUMN sync_failure_streak INTEGER NOT NULL DEFAULT 0/
+    );
+    expect(MIGRATION_004_SYNC_BACKOFF).toMatch(/ADD COLUMN next_retry_at TEXT/);
   });
 });
