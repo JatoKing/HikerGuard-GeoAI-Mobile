@@ -14,7 +14,6 @@ import NetInfo from '@react-native-community/netinfo';
 import { useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { LocationSubscription } from 'expo-location';
-import type { LatLng } from 'react-native-maps';
 
 import { listStoredPacks } from '@/src/storage/route-pack-store';
 import {
@@ -37,7 +36,7 @@ import type { TrailPack } from '@/src/domain/trail';
 import type { HikeSession } from '@/src/domain/hike';
 import { MockSyncApiClient } from '@/src/api/client';
 import { attemptSync } from '@/src/sync/worker';
-import { LiveHikeMap } from '@/src/components/LiveHikeMap';
+import { LiveHikeMap, type LatLng } from '@/src/components/LiveHikeMap';
 import { TrailMap } from '@/src/components/TrailMap';
 
 const syncApiClient = new MockSyncApiClient();

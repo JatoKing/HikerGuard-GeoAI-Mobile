@@ -1,9 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { View, StyleSheet } from 'react-native';
-import MapView, { Polyline, Marker, type LatLng } from 'react-native-maps';
+import type { CameraRef, LngLat } from '@maplibre/maplibre-react-native';
 
 import type { TrailSegment } from '@/src/domain/trail';
 import { RISK_CLASS_META } from '@/src/components/ConnectivityLegend';
+import { isExpoGo } from '@/src/lib/expo-go';
+import { MapUnavailablePlaceholder } from '@/src/components/MapUnavailablePlaceholder';
+
+// Expo Go doesn't have MapLibre's native module compiled in, so importing it
+// there crashes at module-load time and takes the whole screen down with it
+// (see TrailMap.tsx for the same guard). Only require it in builds that
+// actually have the native code.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const MapLibre: any = isExpoGo ? null : require('@maplibre/maplibre-react-native');
+
+export type LatLng = { latitude: number; longitude: number };
+
+const MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
+
+const toLngLat = (point: LatLng): LngLat => [point.longitude, point.latitude];
 
 /**
  * A Strava-style live tracking map for Active Hike: the planned route
@@ -24,70 +39,89 @@ export function LiveHikeMap({
   walkedPath: LatLng[];
   currentPosition: LatLng | null;
 }) {
-  const mapRef = useRef<MapView>(null);
+  const cameraRef = useRef<CameraRef>(null);
   const hasCenteredRef = useRef(false);
 
+  const currentLngLat = currentPosition ? toLngLat(currentPosition) : null;
+
   useEffect(() => {
-    if (!currentPosition) return;
-    mapRef.current?.animateToRegion(
-      {
-        latitude: currentPosition.latitude,
-        longitude: currentPosition.longitude,
-        latitudeDelta: 0.006,
-        longitudeDelta: 0.006,
-      },
-      hasCenteredRef.current ? 450 : 0
-    );
+    if (isExpoGo) return;
+    if (!currentLngLat) return;
+    cameraRef.current?.easeTo({
+      center: currentLngLat,
+      zoom: 16,
+      pitch: 55,
+      duration: hasCenteredRef.current ? 450 : 0,
+    });
     hasCenteredRef.current = true;
-  }, [currentPosition]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPosition?.latitude, currentPosition?.longitude]);
+
+  const walkedLngLats = useMemo(() => walkedPath.map(toLngLat), [walkedPath]);
+
+  if (isExpoGo) return <MapUnavailablePlaceholder />;
+
+  const { Map, Camera, GeoJSONSource, Layer, Marker } = MapLibre;
 
   const fallback = segments[0]?.geometry.coordinates[0];
-  const initialRegion = currentPosition
-    ? { ...currentPosition, latitudeDelta: 0.006, longitudeDelta: 0.006 }
-    : fallback
-      ? { latitude: fallback[1], longitude: fallback[0], latitudeDelta: 0.01, longitudeDelta: 0.01 }
-      : { latitude: 0, longitude: 0, latitudeDelta: 1, longitudeDelta: 1 };
+  const initialCenter: LngLat = currentLngLat ?? fallback ?? [0, 0];
+
+  const sortedSegments = segments.slice().sort((a, b) => a.segmentOrder - b.segmentOrder);
 
   return (
     <View style={styles.container}>
-      <MapView
-        ref={mapRef}
-        style={styles.map}
-        initialRegion={initialRegion}
-        scrollEnabled={false}
-        zoomEnabled={false}
-        rotateEnabled={false}
-        pitchEnabled={false}
-        toolbarEnabled={false}
-      >
-        {segments
-          .slice()
-          .sort((a, b) => a.segmentOrder - b.segmentOrder)
-          .map((segment) => (
-            <Polyline
-              key={segment.segmentId}
-              coordinates={segment.geometry.coordinates.map(([longitude, latitude]) => ({
-                latitude,
-                longitude,
-              }))}
-              strokeColor={RISK_CLASS_META[segment.riskClass].color}
-              strokeWidth={3}
-              lineDashPattern={[6, 5]}
-            />
-          ))}
+      <Map style={styles.map} mapStyle={MAP_STYLE_URL}>
+        <Camera ref={cameraRef} initialViewState={{ center: initialCenter, zoom: 16, pitch: 55 }} />
 
-        {walkedPath.length > 1 && (
-          <Polyline coordinates={walkedPath} strokeColor="#2563EB" strokeWidth={5} />
+        {sortedSegments.map((segment) => (
+          <GeoJSONSource
+            key={segment.segmentId}
+            id={`planned-${segment.segmentId}`}
+            data={{
+              type: 'Feature',
+              properties: {},
+              geometry: { type: 'LineString', coordinates: segment.geometry.coordinates },
+            }}
+          >
+            <Layer
+              id={`planned-line-${segment.segmentId}`}
+              type="line"
+              layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+              paint={{
+                'line-color': RISK_CLASS_META[segment.riskClass].color,
+                'line-width': 3,
+                'line-dasharray': [2, 1.5],
+              }}
+            />
+          </GeoJSONSource>
+        ))}
+
+        {walkedLngLats.length > 1 && (
+          <GeoJSONSource
+            id="walked-path"
+            data={{
+              type: 'Feature',
+              properties: {},
+              geometry: { type: 'LineString', coordinates: walkedLngLats },
+            }}
+          >
+            <Layer
+              id="walked-path-line"
+              type="line"
+              layout={{ 'line-cap': 'round', 'line-join': 'round' }}
+              paint={{ 'line-color': '#2563EB', 'line-width': 5 }}
+            />
+          </GeoJSONSource>
         )}
 
-        {currentPosition && (
-          <Marker coordinate={currentPosition} anchor={{ x: 0.5, y: 0.5 }}>
+        {currentLngLat && (
+          <Marker id="current-position" lngLat={currentLngLat} anchor="center">
             <View style={styles.currentDotRing}>
               <View style={styles.currentDot} />
             </View>
           </Marker>
         )}
-      </MapView>
+      </Map>
     </View>
   );
 }
