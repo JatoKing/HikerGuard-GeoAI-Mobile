@@ -24,3 +24,18 @@ export async function getForegroundPermissionStatus(): Promise<ForegroundPermiss
   }
   return { granted: false, canAskAgain };
 }
+
+/**
+ * Requests background permission — Section 10: "Request background
+ * permission only when the user enables active-hike background
+ * recording," never up front alongside the foreground request. Callers
+ * must show the safety/battery-impact explanation copy before calling
+ * this, same as requestForegroundPermission.
+ */
+export async function requestBackgroundPermission(): Promise<ForegroundPermissionResult> {
+  const { status, canAskAgain } = await Location.requestBackgroundPermissionsAsync();
+  if (status === 'granted') {
+    return { granted: true };
+  }
+  return { granted: false, canAskAgain };
+}

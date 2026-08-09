@@ -24,6 +24,18 @@ export type HikeSession = {
 
 export type NetworkObservationState = 'online' | 'offline' | 'unknown';
 
+/**
+ * Maps NetInfo's tri-state `isConnected` (true/false/null) to Section 13's
+ * observation vocabulary. Shared by the foreground NetInfo listener
+ * (app/(tabs)/active-hike.tsx) and the background location task
+ * (src/location/background-task.ts) so both stamp `observed_network_state`
+ * the same way.
+ */
+export function toNetworkObservationState(isConnected: boolean | null): NetworkObservationState {
+  if (isConnected === null) return 'unknown';
+  return isConnected ? 'online' : 'offline';
+}
+
 export type SyncState = 'pending' | 'in_flight' | 'acknowledged' | 'failed';
 
 export type LocationPoint = {

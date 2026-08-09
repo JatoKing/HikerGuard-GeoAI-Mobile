@@ -2,9 +2,12 @@
  * app/(tabs)/active-hike.tsx
  *
  * WP3: start/end a hike and record GPS locally (handoff contract Section
- * 10). Foreground recording only — background recording needs
- * expo-task-manager wired into a development build, which Expo Go cannot
- * run reliably (Section 7), so it isn't implemented yet.
+ * 10). Foreground recording (src/location/recorder.ts) always runs while a
+ * hike is active; background recording (src/location/background-task.ts)
+ * is an opt-in toggle the user enables explicitly, since it needs
+ * background location permission and a persistent notification (Android)
+ * — it needs a development build to actually run (expo-task-manager's
+ * native module isn't present in Expo Go).
  */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { View, Text, Pressable, ActivityIndicator, Linking, ScrollView, AppState } from 'react-native';
@@ -27,14 +30,20 @@ import {
   getSyncMeta,
   type SyncMeta,
 } from '@/src/repositories/hike-repository';
-import { requestForegroundPermission } from '@/src/location/permissions';
+import { requestForegroundPermission, requestBackgroundPermission } from '@/src/location/permissions';
 import { startForegroundRecording, stopForegroundRecording } from '@/src/location/recorder';
+import {
+  startBackgroundRecording,
+  stopBackgroundRecording,
+  isBackgroundRecordingActive,
+} from '@/src/location/background-task';
 import { getBatteryLevel } from '@/src/location/battery';
+import { isExpoGo } from '@/src/lib/expo-go';
 import { evaluateGapWarning, groupContiguousGapSegments } from '@/src/warnings/gap-warning-engine';
 import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/src/domain/warnings';
 import type { GapWarning } from '@/src/domain/warnings';
 import type { TrailPack } from '@/src/domain/trail';
-import type { HikeSession, NetworkObservationState } from '@/src/domain/hike';
+import { toNetworkObservationState, type HikeSession, type NetworkObservationState } from '@/src/domain/hike';
 import { MockSyncApiClient } from '@/src/api/client';
 import { attemptSync } from '@/src/sync/worker';
 import { LiveHikeMap, type LatLng } from '@/src/components/LiveHikeMap';
@@ -67,6 +76,7 @@ function pointApproachingFirstGap(pack: TrailPack) {
 }
 
 type PermissionState = 'unknown' | 'denied' | 'denied_permanently';
+type BackgroundRecordingState = 'off' | 'on' | 'denied' | 'denied_permanently';
 
 export default function ActiveHikeScreen() {
   const insets = useSafeAreaInsets();
@@ -81,6 +91,8 @@ export default function ActiveHikeScreen() {
   const [isSyncing, setIsSyncing] = useState(false);
   const [lastPointAt, setLastPointAt] = useState<string | null>(null);
   const [permissionState, setPermissionState] = useState<PermissionState>('unknown');
+  const [backgroundRecordingState, setBackgroundRecordingState] = useState<BackgroundRecordingState>('off');
+  const [isTogglingBackgroundRecording, setIsTogglingBackgroundRecording] = useState(false);
   const [startingTrailId, setStartingTrailId] = useState<string | null>(null);
   const [gapWarning, setGapWarning] = useState<GapWarning | null>(null);
   const [preGapSyncStatus, setPreGapSyncStatus] = useState<PreGapSyncStatus | null>(null);
@@ -187,6 +199,14 @@ export default function ActiveHikeScreen() {
         setSession(resumable);
         await refreshSyncMeta(resumable.localSessionId);
 
+        // The OS keeps delivering to a started background task across app
+        // restarts on its own — this just re-syncs the toggle's displayed
+        // state with what's actually still running (Section 10: "Recover
+        // an active session after application or phone-process restart").
+        if (!isExpoGo && (await isBackgroundRecordingActive())) {
+          setBackgroundRecordingState('on');
+        }
+
         const priorPoints = await listLocationPointsForSession(resumable.localSessionId);
         if (priorPoints.length > 0) {
           const path = priorPoints.map((p) => ({ latitude: p.latitude, longitude: p.longitude }));
@@ -227,15 +247,12 @@ export default function ActiveHikeScreen() {
   // (or returns) is stamped with what was actually observed — not a stale
   // guess from the last time this listener happened to fire (Section 13).
   useEffect(() => {
-    const toObservationState = (isConnected: boolean | null): NetworkObservationState =>
-      isConnected === null ? 'unknown' : isConnected ? 'online' : 'offline';
-
     NetInfo.fetch().then((state) => {
-      networkStateRef.current = toObservationState(state.isConnected);
+      networkStateRef.current = toNetworkObservationState(state.isConnected);
     });
 
     const unsubscribe = NetInfo.addEventListener((state) => {
-      networkStateRef.current = toObservationState(state.isConnected);
+      networkStateRef.current = toNetworkObservationState(state.isConnected);
     });
 
     return unsubscribe;
@@ -280,6 +297,7 @@ export default function ActiveHikeScreen() {
       return;
     }
     setPermissionState('unknown');
+    setBackgroundRecordingState('off');
 
     acknowledgedGapIdsRef.current = new Set();
     const newSession = await startHikeSession(pack.trailId, pack.packVersion);
@@ -299,11 +317,45 @@ export default function ActiveHikeScreen() {
     setStartingTrailId(null);
   };
 
+  /**
+   * Section 10: "Request background permission only when the user enables
+   * active-hike background recording" and "Explain the safety value and
+   * battery impact before the platform permission dialog" — the copy
+   * explaining that trade-off is rendered persistently next to this toggle
+   * (below), so it's already visible before this ever fires.
+   */
+  const handleToggleBackgroundRecording = async () => {
+    if (isExpoGo) return;
+    if (backgroundRecordingState === 'on') {
+      setIsTogglingBackgroundRecording(true);
+      await stopBackgroundRecording();
+      setBackgroundRecordingState('off');
+      setIsTogglingBackgroundRecording(false);
+      return;
+    }
+
+    setIsTogglingBackgroundRecording(true);
+    const permission = await requestBackgroundPermission();
+    if (!permission.granted) {
+      setBackgroundRecordingState(permission.canAskAgain ? 'denied' : 'denied_permanently');
+      setIsTogglingBackgroundRecording(false);
+      return;
+    }
+    if (session?.state === 'active') {
+      await startBackgroundRecording();
+    }
+    setBackgroundRecordingState('on');
+    setIsTogglingBackgroundRecording(false);
+  };
+
   const handlePauseHike = async () => {
     if (!session) return;
     if (subscriptionRef.current) {
       stopForegroundRecording(subscriptionRef.current);
       subscriptionRef.current = null;
+    }
+    if (backgroundRecordingState === 'on') {
+      await stopBackgroundRecording();
     }
     await setHikeSessionState(session.localSessionId, 'paused');
     setSession({ ...session, state: 'paused' });
@@ -313,6 +365,9 @@ export default function ActiveHikeScreen() {
     if (!session || !activePackRef.current) return;
     await setHikeSessionState(session.localSessionId, 'active');
     await beginRecording(session.localSessionId, activePackRef.current);
+    if (backgroundRecordingState === 'on') {
+      await startBackgroundRecording();
+    }
     setSession({ ...session, state: 'active' });
   };
 
@@ -322,6 +377,10 @@ export default function ActiveHikeScreen() {
       stopForegroundRecording(subscriptionRef.current);
       subscriptionRef.current = null;
     }
+    // Section 10: "Stop the background task when the hike ends" —
+    // unconditional, regardless of what the toggle currently shows.
+    await stopBackgroundRecording();
+    setBackgroundRecordingState('off');
     await insertHikeEvent({
       localSessionId: session.localSessionId,
       type: 'hike_ended',
@@ -390,9 +449,53 @@ export default function ActiveHikeScreen() {
               ? 'Recording is paused. Resume to keep tracking your position.'
               : 'Phone is recording locally. Points sync automatically once connectivity returns.'}
           </Text>
-          <Text className="text-[12px] text-[rgba(15,27,46,0.55)] mb-6">
-            Foreground only right now — keep the app open while hiking.
-          </Text>
+          <Pressable
+            onPress={handleToggleBackgroundRecording}
+            disabled={isTogglingBackgroundRecording || isExpoGo}
+            className="flex-row items-center justify-between border border-[rgba(15,27,46,0.1)] rounded-[14px] p-3 mb-2"
+          >
+            <View className="flex-1 pr-3">
+              <Text className="text-[12.5px] font-bold text-[#0F1B2E] mb-1">
+                Keep recording in the background
+              </Text>
+              <Text className="text-[11.5px] text-[rgba(15,27,46,0.55)]">
+                Continues tracking while your screen is locked or the app is minimised. Uses more
+                battery and shows a persistent notification.
+              </Text>
+            </View>
+            {isTogglingBackgroundRecording ? (
+              <ActivityIndicator size="small" color="#0F1B2E" />
+            ) : (
+              <View
+                className={`w-11 h-6 rounded-full justify-center px-0.5 ${
+                  backgroundRecordingState === 'on' ? 'bg-[#4ADE80]' : 'bg-[rgba(15,27,46,0.15)]'
+                }`}
+              >
+                <View
+                  className="w-5 h-5 rounded-full bg-white"
+                  style={{ marginLeft: backgroundRecordingState === 'on' ? 20 : 0 }}
+                />
+              </View>
+            )}
+          </Pressable>
+
+          {isExpoGo ? (
+            <Text className="text-[11.5px] text-[rgba(15,27,46,0.55)] mb-6">
+              Needs a development build — not available in Expo Go.
+            </Text>
+          ) : backgroundRecordingState === 'on' ? (
+            <Text className="text-[11.5px] text-[rgba(15,27,46,0.55)] mb-6">
+              Recording continues even if the app is backgrounded or the screen locks.
+            </Text>
+          ) : (
+            <Text className="text-[11.5px] text-[rgba(15,27,46,0.55)] mb-6">
+              {backgroundRecordingState === 'denied_permanently'
+                ? 'Background permission was denied. Enable "Allow all the time" location access in Settings to use this.'
+                : backgroundRecordingState === 'denied'
+                  ? 'Background permission was denied — try again to re-request it.'
+                  : 'Off — keep the app open while hiking, or turn this on above.'}
+            </Text>
+          )}
 
           {gapWarning && (
             <View className="bg-[rgba(251,191,36,0.1)] border border-[rgba(251,191,36,0.4)] rounded-[16px] p-4 mb-6">
