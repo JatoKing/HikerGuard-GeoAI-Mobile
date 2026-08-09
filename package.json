@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
     "test": "jest"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@react-navigation/elements": "^2.6.3",
     "@react-navigation/native": "^7.1.8",
     "expo": "~54.0.35",
+    "expo-battery": "~10.0.8",
     "expo-blur": "~15.0.8",
     "expo-constants": "~18.0.13",
     "expo-dev-client": "~6.0.21",

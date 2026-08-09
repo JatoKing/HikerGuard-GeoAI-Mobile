@@ -29,6 +29,7 @@ import {
 } from '@/src/repositories/hike-repository';
 import { requestForegroundPermission } from '@/src/location/permissions';
 import { startForegroundRecording, stopForegroundRecording } from '@/src/location/recorder';
+import { getBatteryLevel } from '@/src/location/battery';
 import { evaluateGapWarning, groupContiguousGapSegments } from '@/src/warnings/gap-warning-engine';
 import { DEFAULT_GAP_WARNING_CONFIG, GAP_WARNING_RECOMMENDED_ACTIONS } from '@/src/domain/warnings';
 import type { GapWarning } from '@/src/domain/warnings';
@@ -115,7 +116,7 @@ export default function ActiveHikeScreen() {
       longitude: point.longitude,
       horizontalAccuracyM: point.horizontalAccuracyM,
       altitudeM: point.altitudeM,
-      batteryLevel: null,
+      batteryLevel: await getBatteryLevel(),
       observedNetworkState: networkStateRef.current,
     });
     setLastPointAt(new Date(point.recordedAtMs).toISOString());
