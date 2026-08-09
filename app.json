@@ -51,7 +51,8 @@
           "locationWhenInUsePermission": "JEJAK records your location locally during a hike so it can show your route and sync it once connectivity returns. This does not send your location anywhere while you're offline."
         }
       ],
-      "@maplibre/maplibre-react-native"
+      "@maplibre/maplibre-react-native",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true,
