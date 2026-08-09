@@ -26,7 +26,7 @@ import Svg, { Path } from 'react-native-svg';
 import NetInfo from '@react-native-community/netinfo';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { FixtureTrailRepository } from '@/src/repositories/fixture-trail-repository';
+import { createTrailRepository } from '@/src/repositories/create-trail-repository';
 import { listStoredPacks } from '@/src/storage/route-pack-store';
 import {
   getResumableHikeSession,
@@ -39,7 +39,7 @@ const ACCENT = '#4ADE80';
 const INK = '#0F1B2E';
 const INK_MUTED = 'rgba(15,27,46,0.55)';
 
-const trailRepository = new FixtureTrailRepository();
+const trailRepository = createTrailRepository();
 
 function formatRelativeTime(iso: string): string {
   const minutes = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 60000));

@@ -17,11 +17,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { FixtureTrailRepository } from '@/src/repositories/fixture-trail-repository';
+import { createTrailRepository } from '@/src/repositories/create-trail-repository';
 import { listStoredPacks } from '@/src/storage/route-pack-store';
 import type { TrailSummary } from '@/src/domain/trail';
 
-const trailRepository = new FixtureTrailRepository();
+const trailRepository = createTrailRepository();
 
 const STATE_BY_TRAIL_ID: Record<string, string> = {
   'gunung-batu-putih': 'Perak',

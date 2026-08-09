@@ -20,7 +20,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { FixtureTrailRepository } from '@/src/repositories/fixture-trail-repository';
+import { createTrailRepository } from '@/src/repositories/create-trail-repository';
 import { TrailPackValidationError } from '@/src/api/contracts';
 import type { TrailPack } from '@/src/domain/trail';
 import {
@@ -32,7 +32,7 @@ import { ConnectivityLegend, RISK_CLASS_META } from '@/src/components/Connectivi
 import { OfflinePackStatus } from '@/src/components/OfflinePackStatus';
 import { TrailMap } from '@/src/components/TrailMap';
 
-const trailRepository = new FixtureTrailRepository();
+const trailRepository = createTrailRepository();
 
 export default function TrailDetailScreen() {
   const insets = useSafeAreaInsets();
