@@ -12,7 +12,8 @@
     "label_source": "AllTrails GPX export",
     "label_release": "2026",
     "label_resolution_m": 0,
-    "prediction_support_m": 0
+    "prediction_support_m": 0,
+    "approved_for_mobile_warning": false
   },
   "segments": [
     {
@@ -188,7 +189,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0002",
@@ -351,7 +353,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0003",
@@ -494,7 +497,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0004",
@@ -653,7 +657,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0005",
@@ -836,7 +841,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0006",
@@ -1035,7 +1041,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0007",
@@ -1198,7 +1205,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0008",
@@ -1385,7 +1393,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0009",
@@ -1568,7 +1577,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0010",
@@ -1779,7 +1789,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0011",
@@ -1994,7 +2005,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0012",
@@ -2133,7 +2145,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0013",
@@ -2260,7 +2273,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0014",
@@ -2383,7 +2397,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0015",
@@ -2530,7 +2545,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0016",
@@ -2753,7 +2769,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0017",
@@ -2956,7 +2973,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0018",
@@ -3143,7 +3161,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0019",
@@ -3306,7 +3325,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0020",
@@ -3489,7 +3509,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0021",
@@ -3676,7 +3697,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0022",
@@ -3855,7 +3877,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0023",
@@ -4018,7 +4041,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0024",
@@ -4181,7 +4205,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0025",
@@ -4324,7 +4349,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-tabur-0026",
@@ -4467,7 +4493,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     }
   ],
   "integrity": {

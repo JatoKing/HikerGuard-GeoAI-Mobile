@@ -10,7 +10,12 @@ import type { RiskClass } from '@/src/domain/connectivity';
 const BASE_LAT = 4.0;
 const LON_STEP = 0.001; // ~111m at this latitude — kept close to lengthM below
 
-function makeSegment(order: number, riskClass: RiskClass, lengthM = 100): TrailSegment {
+function makeSegment(
+  order: number,
+  riskClass: RiskClass,
+  lengthM = 100,
+  warningEligible = riskClass === 'predicted_gap'
+): TrailSegment {
   const startLon = 100 + order * LON_STEP;
   return {
     segmentId: `seg-${order}`,
@@ -28,6 +33,7 @@ function makeSegment(order: number, riskClass: RiskClass, lengthM = 100): TrailS
     confidence: 0.7,
     modelVersion: 'test-v0',
     topFactors: [],
+    warningEligible,
   };
 }
 
@@ -55,6 +61,19 @@ describe('groupContiguousGapSegments', () => {
     expect(groups).toHaveLength(2);
     expect(groups[0]).toMatchObject({ startOrder: 3, endOrder: 4, totalLengthM: 200 });
     expect(groups[1]).toMatchObject({ startOrder: 6, endOrder: 6, totalLengthM: 100 });
+  });
+
+  it('excludes a predicted_gap segment that is not warning_eligible', () => {
+    const segments = [
+      makeSegment(1, 'likely_covered'),
+      makeSegment(2, 'predicted_gap', 100, false),
+      makeSegment(3, 'predicted_gap', 100, true),
+    ];
+
+    const groups = groupContiguousGapSegments(segments);
+
+    expect(groups).toHaveLength(1);
+    expect(groups[0]).toMatchObject({ startOrder: 3, endOrder: 3 });
   });
 
   it('returns no groups when only uncertain/likely_covered segments exist', () => {
@@ -95,6 +114,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -107,6 +127,40 @@ describe('evaluateGapWarning', () => {
     }
   });
 
+  it('does not warn when the pack is not approved for mobile warning, even with an eligible gap ahead', () => {
+    const segments = [
+      makeSegment(1, 'likely_covered'),
+      makeSegment(2, 'predicted_gap'),
+    ];
+
+    const result = evaluateGapWarning({
+      location: locationInSegment(1),
+      segments,
+      config,
+      approvedForMobileWarning: false,
+      acknowledgedGapGroupIds: new Set(),
+    });
+
+    expect(result).toMatchObject({ shouldWarn: false, isOffRoute: false, reason: 'not_approved' });
+  });
+
+  it('does not warn from a predicted_gap segment that is not itself warning_eligible', () => {
+    const segments = [
+      makeSegment(1, 'likely_covered'),
+      makeSegment(2, 'predicted_gap', 100, false),
+    ];
+
+    const result = evaluateGapWarning({
+      location: locationInSegment(1),
+      segments,
+      config,
+      approvedForMobileWarning: true,
+      acknowledgedGapGroupIds: new Set(),
+    });
+
+    expect(result).toMatchObject({ shouldWarn: false, isOffRoute: false, reason: 'no_gap_ahead' });
+  });
+
   it('does not warn at the end of the route with no gap ahead', () => {
     const segments = [makeSegment(1, 'predicted_gap'), makeSegment(2, 'likely_covered')];
 
@@ -114,6 +168,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(2),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -127,6 +182,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -145,6 +201,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -164,6 +221,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -177,6 +235,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
     expect(first.shouldWarn).toBe(true);
@@ -185,6 +244,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(first.shouldWarn ? [first.warning.gapGroup.id] : []),
     });
 
@@ -198,6 +258,7 @@ describe('evaluateGapWarning', () => {
       location: { latitude: BASE_LAT + 5, longitude: 100 + 5 },
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 
@@ -216,6 +277,7 @@ describe('evaluateGapWarning', () => {
       location: locationInSegment(1),
       segments,
       config,
+      approvedForMobileWarning: true,
       acknowledgedGapGroupIds: new Set(),
     });
 

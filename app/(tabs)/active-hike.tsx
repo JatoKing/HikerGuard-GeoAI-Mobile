@@ -128,6 +128,7 @@ export default function ActiveHikeScreen() {
       location: { latitude: point.latitude, longitude: point.longitude },
       segments: pack.segments,
       config: DEFAULT_GAP_WARNING_CONFIG,
+      approvedForMobileWarning: pack.model.approvedForMobileWarning,
       acknowledgedGapGroupIds: acknowledgedGapIdsRef.current,
     });
     if (evaluation.shouldWarn) {

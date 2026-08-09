@@ -31,7 +31,11 @@ export type GapWarning = {
 export type GapWarningEvaluation =
   | { shouldWarn: true; isOffRoute: false; warning: GapWarning }
   | { shouldWarn: false; isOffRoute: true }
-  | { shouldWarn: false; isOffRoute: false; reason: 'no_gap_ahead' | 'too_far' | 'already_acknowledged' };
+  | {
+      shouldWarn: false;
+      isOffRoute: false;
+      reason: 'not_approved' | 'no_gap_ahead' | 'too_far' | 'already_acknowledged';
+    };
 
 /** Section 11: fixed recommended actions shown alongside every warning. */
 export const GAP_WARNING_RECOMMENDED_ACTIONS = [

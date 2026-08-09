@@ -12,7 +12,8 @@
     "label_source": "AllTrails GPX export",
     "label_release": "2026",
     "label_resolution_m": 0,
-    "prediction_support_m": 0
+    "prediction_support_m": 0,
+    "approved_for_mobile_warning": false
   },
   "segments": [
     {
@@ -100,7 +101,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0002",
@@ -183,7 +185,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0003",
@@ -250,7 +253,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0004",
@@ -305,7 +309,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0005",
@@ -360,7 +365,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0006",
@@ -431,7 +437,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0007",
@@ -490,7 +497,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0008",
@@ -557,7 +565,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0009",
@@ -620,7 +629,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0010",
@@ -691,7 +701,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0011",
@@ -782,7 +793,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0012",
@@ -845,7 +857,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0013",
@@ -904,7 +917,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0014",
@@ -979,7 +993,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0015",
@@ -1046,7 +1061,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0016",
@@ -1105,7 +1121,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0017",
@@ -1176,7 +1193,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0018",
@@ -1243,7 +1261,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0019",
@@ -1302,7 +1321,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0020",
@@ -1393,7 +1413,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0021",
@@ -1484,7 +1505,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0022",
@@ -1539,7 +1561,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0023",
@@ -1590,7 +1613,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0024",
@@ -1661,7 +1685,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0025",
@@ -1724,7 +1749,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0026",
@@ -1795,7 +1821,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0027",
@@ -1874,7 +1901,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0028",
@@ -1945,7 +1973,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0029",
@@ -2008,7 +2037,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0030",
@@ -2067,7 +2097,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0031",
@@ -2130,7 +2161,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0032",
@@ -2201,7 +2233,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0033",
@@ -2264,7 +2297,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0034",
@@ -2339,7 +2373,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0035",
@@ -2398,7 +2433,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0036",
@@ -2457,7 +2493,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0037",
@@ -2536,7 +2573,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0038",
@@ -2611,7 +2649,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0039",
@@ -2690,7 +2729,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0040",
@@ -2769,7 +2809,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0041",
@@ -2828,7 +2869,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0042",
@@ -2899,7 +2941,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0043",
@@ -2974,7 +3017,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0044",
@@ -3033,7 +3077,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0045",
@@ -3100,7 +3145,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0046",
@@ -3159,7 +3205,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0047",
@@ -3218,7 +3265,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0048",
@@ -3281,7 +3329,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0049",
@@ -3364,7 +3413,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0050",
@@ -3439,7 +3489,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0051",
@@ -3510,7 +3561,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0052",
@@ -3569,7 +3621,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0053",
@@ -3636,7 +3689,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0054",
@@ -3687,7 +3741,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0055",
@@ -3742,7 +3797,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0056",
@@ -3829,7 +3885,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0057",
@@ -3924,7 +3981,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0058",
@@ -3983,7 +4041,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0059",
@@ -4050,7 +4109,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0060",
@@ -4129,7 +4189,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0061",
@@ -4192,7 +4253,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0062",
@@ -4267,7 +4329,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0063",
@@ -4330,7 +4393,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0064",
@@ -4393,7 +4457,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0065",
@@ -4464,7 +4529,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0066",
@@ -4543,7 +4609,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0067",
@@ -4610,7 +4677,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0068",
@@ -4681,7 +4749,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0069",
@@ -4740,7 +4809,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0070",
@@ -4803,7 +4873,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0071",
@@ -4870,7 +4941,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0072",
@@ -4929,7 +5001,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0073",
@@ -4988,7 +5061,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0074",
@@ -5059,7 +5133,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0075",
@@ -5142,7 +5217,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gunung-batu-putih-0076",
@@ -5201,7 +5277,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     }
   ],
   "integrity": {

@@ -23,6 +23,10 @@ export type TrailSegment = {
   confidence: number;
   modelVersion: string;
   topFactors: TopFactor[];
+  /** Section 11's second gate: even on an approved pack, an individual
+   * segment must be explicitly marked eligible before it can trigger a gap
+   * warning — e.g. an OOD or evidence-thin predicted_gap should not warn. */
+  warningEligible: boolean;
 };
 
 export type TrailPackIntegrity = {

@@ -30,6 +30,7 @@ const ModelInfoSchema = z
     label_release: z.string(),
     label_resolution_m: z.number(),
     prediction_support_m: z.number(),
+    approved_for_mobile_warning: z.boolean(),
   })
   .transform((m) => ({
     modelVersion: m.model_version,
@@ -40,6 +41,7 @@ const ModelInfoSchema = z
     labelRelease: m.label_release,
     labelResolutionM: m.label_resolution_m,
     predictionSupportM: m.prediction_support_m,
+    approvedForMobileWarning: m.approved_for_mobile_warning,
   }));
 
 const LongitudeLatitudeSchema = z.tuple([
@@ -63,6 +65,7 @@ const TrailSegmentSchema = z
     confidence: z.number().min(0).max(1),
     model_version: z.string(),
     top_factors: z.array(TopFactorSchema),
+    warning_eligible: z.boolean(),
   })
   .transform((s) => ({
     segmentId: s.segment_id,
@@ -74,6 +77,7 @@ const TrailSegmentSchema = z
     confidence: s.confidence,
     modelVersion: s.model_version,
     topFactors: s.top_factors,
+    warningEligible: s.warning_eligible,
   }));
 
 const TrailPackIntegritySchema = z
@@ -113,6 +117,14 @@ export const TrailPackSchema = z
         });
       }
       seenSegmentIds.add(segment.segmentId);
+
+      if (segment.warningEligible && segment.riskClass !== 'predicted_gap') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Segment "${segment.segmentId}" cannot be warning_eligible unless risk_class is predicted_gap`,
+          path: ['segments'],
+        });
+      }
     }
 
     const orders = pack.segments.map((s) => s.segmentOrder).sort((a, b) => a - b);

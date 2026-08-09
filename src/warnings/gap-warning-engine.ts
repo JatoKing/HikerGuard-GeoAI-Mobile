@@ -67,9 +67,10 @@ export function matchLocationToRoute(location: GeoPoint, segments: TrailSegment[
 }
 
 /**
- * Contiguous runs of `predicted_gap` segments only — `uncertain` segments
- * never form a group, so they can never trigger a warning by themselves
- * (WP4 definition of done).
+ * Contiguous runs of `predicted_gap` segments that are also individually
+ * `warningEligible` — `uncertain` segments and non-eligible `predicted_gap`
+ * segments (e.g. OOD or evidence-thin, per Section 8) never form a group, so
+ * neither can ever trigger a warning by themselves (WP4 definition of done).
  */
 export function groupContiguousGapSegments(segments: TrailSegment[]): GapGroup[] {
   const ordered = segments.slice().sort((a, b) => a.segmentOrder - b.segmentOrder);
@@ -90,7 +91,7 @@ export function groupContiguousGapSegments(segments: TrailSegment[]): GapGroup[]
   };
 
   for (const segment of ordered) {
-    if (segment.riskClass !== 'predicted_gap') {
+    if (segment.riskClass !== 'predicted_gap' || !segment.warningEligible) {
       flush();
       continue;
     }
@@ -134,6 +135,10 @@ export type EvaluateGapWarningInput = {
   location: GeoPoint;
   segments: TrailSegment[];
   config: GapWarningConfig;
+  /** Section 11's first gate: the downloaded pack's model must be explicitly
+   * approved for mobile warnings. A Candidate/unapproved pack must never
+   * warn, no matter how confident its risk_score is. */
+  approvedForMobileWarning: boolean;
   /** gap_group ids already shown + acknowledged this hike session (Section
    * 11: "do not repeatedly interrupt the user for the same contiguous
    * gap"). Persist per session, not globally. */
@@ -141,11 +146,15 @@ export type EvaluateGapWarningInput = {
 };
 
 export function evaluateGapWarning(input: EvaluateGapWarningInput): GapWarningEvaluation {
-  const { location, segments, config, acknowledgedGapGroupIds } = input;
+  const { location, segments, config, approvedForMobileWarning, acknowledgedGapGroupIds } = input;
 
   const match = matchLocationToRoute(location, segments);
   if (!match || match.distanceM > config.offRouteToleranceM) {
     return { shouldWarn: false, isOffRoute: true };
+  }
+
+  if (!approvedForMobileWarning) {
+    return { shouldWarn: false, isOffRoute: false, reason: 'not_approved' };
   }
 
   const gapGroups = groupContiguousGapSegments(segments);

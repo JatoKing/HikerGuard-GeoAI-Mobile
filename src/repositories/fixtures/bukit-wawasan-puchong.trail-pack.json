@@ -12,7 +12,8 @@
     "label_source": "AllTrails GPX export",
     "label_release": "2026",
     "label_resolution_m": 0,
-    "prediction_support_m": 0
+    "prediction_support_m": 0,
+    "approved_for_mobile_warning": false
   },
   "segments": [
     {
@@ -164,7 +165,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0002",
@@ -383,7 +385,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0003",
@@ -562,7 +565,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0004",
@@ -753,7 +757,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0005",
@@ -932,7 +937,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0006",
@@ -1147,7 +1153,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0007",
@@ -1366,7 +1373,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0008",
@@ -1585,7 +1593,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0009",
@@ -1808,7 +1817,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0010",
@@ -2023,7 +2033,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0011",
@@ -2238,7 +2249,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0012",
@@ -2445,7 +2457,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0013",
@@ -2620,7 +2633,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0014",
@@ -2807,7 +2821,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0015",
@@ -2970,7 +2985,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0016",
@@ -3157,7 +3173,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0017",
@@ -3336,7 +3353,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0018",
@@ -3583,7 +3601,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0019",
@@ -3786,7 +3805,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0020",
@@ -3961,7 +3981,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0021",
@@ -4148,7 +4169,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0022",
@@ -4355,7 +4377,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0023",
@@ -4594,7 +4617,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0024",
@@ -4845,7 +4869,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0025",
@@ -5096,7 +5121,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0026",
@@ -5307,7 +5333,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0027",
@@ -5570,7 +5597,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0028",
@@ -5797,7 +5825,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "bukit-wawasan-puchong-0029",
@@ -5836,7 +5865,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     }
   ],
   "integrity": {

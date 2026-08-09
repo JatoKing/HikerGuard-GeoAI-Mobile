@@ -12,7 +12,8 @@
     "label_source": "AllTrails GPX export",
     "label_release": "2026",
     "label_resolution_m": 0,
-    "prediction_support_m": 0
+    "prediction_support_m": 0,
+    "approved_for_mobile_warning": false
   },
   "segments": [
     {
@@ -152,7 +153,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     },
     {
       "segment_id": "gopeng-ultra-trail-gua-tempurung-0002",
@@ -191,7 +193,8 @@
       "risk_class": "uncertain",
       "confidence": 0.3,
       "model_version": "gpx-import-unscored-v0",
-      "top_factors": []
+      "top_factors": [],
+      "warning_eligible": false
     }
   ],
   "integrity": {

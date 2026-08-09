@@ -99,6 +99,7 @@ export function gpxPointsToSegments(
         confidence: 0.3,
         modelVersion: 'gpx-import-unscored-v0',
         topFactors: [],
+        warningEligible: false,
       });
       order += 1;
       segmentStartIndex = i;

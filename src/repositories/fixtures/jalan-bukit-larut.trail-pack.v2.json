@@ -12,7 +12,8 @@
     "label_source": "FAO Mobile Broadband Coverage",
     "label_release": "2024",
     "label_resolution_m": 1000,
-    "prediction_support_m": 1000
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": true
   },
   "segments": [
     {
@@ -42,7 +43,8 @@
           "contribution": 0.22,
           "direction": "decreases_risk"
         }
-      ]
+      ],
+      "warning_eligible": false
     },
     {
       "segment_id": "jalan-bukit-larut-0002",
@@ -71,7 +73,8 @@
           "contribution": 0.18,
           "direction": "increases_risk"
         }
-      ]
+      ],
+      "warning_eligible": false
     },
     {
       "segment_id": "jalan-bukit-larut-0003",
@@ -100,7 +103,8 @@
           "contribution": 0.31,
           "direction": "increases_risk"
         }
-      ]
+      ],
+      "warning_eligible": true
     },
     {
       "segment_id": "jalan-bukit-larut-0004",
@@ -129,7 +133,8 @@
           "contribution": 0.29,
           "direction": "increases_risk"
         }
-      ]
+      ],
+      "warning_eligible": true
     }
   ],
   "integrity": {

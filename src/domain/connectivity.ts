@@ -21,4 +21,8 @@ export type ModelInfo = {
   labelRelease: string;
   labelResolutionM: number;
   predictionSupportM: number;
+  /** Section 11's first gate: a gap warning may only fire when the pack this
+   * came from has been explicitly approved for mobile warnings — a high
+   * transferred risk_score alone (Section 18) is not enough. */
+  approvedForMobileWarning: boolean;
 };
