@@ -26,8 +26,50 @@ describe('parseTrailPack — valid fixture', () => {
   it('maps snake_case wire fields to camelCase domain fields', () => {
     const pack = parseTrailPack(validPack);
     expect(pack.trailId).toBe('jalan-bukit-larut');
-    expect(pack.model.modelVersion).toBe('connectivity-proxy-v0.1.0');
+    expect(pack.model.modelVersion).toBe('fixture-connectivity-v0');
     expect(pack.segments[0].segmentId).toBe('jalan-bukit-larut-0001');
+  });
+
+  it('is stamped as a visibly-labelled fixture pack', () => {
+    const pack = parseTrailPack(validPack);
+    expect(pack.stage).toBe('fixture');
+  });
+});
+
+describe('parseTrailPack — route_only GPX fixtures', () => {
+  it('parses real GPX-derived trails as route_only with no fabricated prediction', () => {
+    const pack = parseTrailPack(bukitTabur);
+    expect(pack.stage).toBe('route_only');
+    expect(pack.predictionAvailable).toBe(false);
+    expect(pack.model.modelVersion).toBeNull();
+    for (const segment of pack.segments) {
+      expect(segment.riskClass).toBe('uncertain');
+      expect(segment.riskScore).toBeNull();
+      expect(segment.confidence).toBeNull();
+      expect(segment.modelVersion).toBeNull();
+      expect(segment.warningEligible).toBe(false);
+    }
+  });
+
+  it('rejects a route_only pack that fabricates a prediction on a segment', () => {
+    const tampered = JSON.parse(JSON.stringify(bukitTabur));
+    tampered.segments[0].risk_score = 0.9;
+    expect(() => parseTrailPack(tampered)).toThrow(TrailPackValidationError);
+  });
+});
+
+describe('parseTrailPack — stage/warning-eligibility invariants', () => {
+  it('rejects a segment marked out_of_distribution and warning_eligible at the same time', () => {
+    const tampered = JSON.parse(JSON.stringify(validPack));
+    tampered.segments[2].out_of_distribution = true;
+    expect(() => parseTrailPack(tampered)).toThrow(TrailPackValidationError);
+  });
+
+  it('rejects approved_for_mobile_warning=true on a model_backed pack whose model_stage is not Champion', () => {
+    const tampered = JSON.parse(JSON.stringify(validPack));
+    tampered.stage = 'model_backed';
+    tampered.model.model_stage = 'Candidate';
+    expect(() => parseTrailPack(tampered)).toThrow(TrailPackValidationError);
   });
 });
 

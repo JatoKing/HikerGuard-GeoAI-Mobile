@@ -60,11 +60,10 @@ export function haversineDistanceMeters(
  * pack shape trail-detail/gap-warning already expect.
  *
  * GPX only carries geometry — it has no GeoAI prediction for these exact
- * segments — so every segment defaults to 'uncertain' with low confidence.
- * Marking real trail geometry as 'likely_covered' or 'predicted_gap'
- * without an actual model behind it would be exactly the kind of unearned
- * confidence Section 3 rules out; 'uncertain' is the honest placeholder
- * until JEJAK's model actually scores these points.
+ * segments, so every segment is `route_only` (Section 8): 'uncertain' with
+ * null risk_score/confidence/model_version. Marking real trail geometry as
+ * 'likely_covered' or 'predicted_gap' without an actual model behind it
+ * would be exactly the kind of unearned confidence Section 3 rules out.
  */
 export function gpxPointsToSegments(
   trailId: string,
@@ -94,10 +93,10 @@ export function gpxPointsToSegments(
           type: 'LineString',
           coordinates: segmentPoints.map((p) => [p.longitude, p.latitude]),
         },
-        riskScore: 0.5,
+        riskScore: null,
         riskClass: placeholderRisk,
-        confidence: 0.3,
-        modelVersion: 'gpx-import-unscored-v0',
+        confidence: null,
+        modelVersion: null,
         topFactors: [],
         warningEligible: false,
       });

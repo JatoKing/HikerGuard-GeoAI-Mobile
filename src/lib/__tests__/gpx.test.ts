@@ -72,12 +72,15 @@ describe('gpxPointsToSegments', () => {
     });
   });
 
-  it('marks every imported segment as uncertain — no fabricated prediction', () => {
+  it('marks every imported segment as route_only — no fabricated prediction', () => {
     const points = parseGpxTrackPoints(SAMPLE_GPX);
     const segments = gpxPointsToSegments('sample-trail', points, 100);
     for (const segment of segments) {
       expect(segment.riskClass).toBe('uncertain');
-      expect(segment.confidence).toBeLessThan(0.5);
+      expect(segment.riskScore).toBeNull();
+      expect(segment.confidence).toBeNull();
+      expect(segment.modelVersion).toBeNull();
+      expect(segment.warningEligible).toBe(false);
     }
   });
 });

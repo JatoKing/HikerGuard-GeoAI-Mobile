@@ -51,7 +51,9 @@ export function OfflinePackStatus({
       )}
       <View className="flex-row justify-between mb-1.5">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Model version</Text>
-        <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">{model.modelVersion}</Text>
+        <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
+          {model.modelVersion ?? 'None — geometry only'}
+        </Text>
       </View>
       <View className="flex-row justify-between mb-1.5">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Validation level</Text>

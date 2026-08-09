@@ -5,9 +5,9 @@
   "pack_version": "2026-08-07T00:00:00Z",
   "generated_at": "2026-08-07T00:00:00Z",
   "model": {
-    "model_version": "gpx-import-unscored-v0",
-    "validation_level": "unscored",
-    "intended_use": "geometry_only",
+    "model_version": null,
+    "validation_level": "route_geometry_only",
+    "intended_use": "navigation_development",
     "field_validated": false,
     "label_source": "AllTrails GPX export",
     "label_release": "2026",
@@ -57,10 +57,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -109,10 +109,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -177,10 +177,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -241,10 +241,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -305,10 +305,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -377,10 +377,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -425,10 +425,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -453,10 +453,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -485,10 +485,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -521,10 +521,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -553,10 +553,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -593,10 +593,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -641,10 +641,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -701,10 +701,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -765,10 +765,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -825,10 +825,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -893,10 +893,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -985,10 +985,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1069,10 +1069,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1165,10 +1165,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1233,10 +1233,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1313,10 +1313,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1365,10 +1365,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1437,10 +1437,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1489,10 +1489,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1577,10 +1577,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1637,10 +1637,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1709,10 +1709,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1777,10 +1777,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1861,10 +1861,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -1925,10 +1925,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2013,10 +2013,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2113,10 +2113,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2201,10 +2201,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2289,10 +2289,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2373,10 +2373,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2465,10 +2465,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2533,10 +2533,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2601,10 +2601,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2697,10 +2697,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2777,10 +2777,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2857,10 +2857,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -2945,10 +2945,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3045,10 +3045,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3129,10 +3129,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3201,10 +3201,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3281,10 +3281,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3349,10 +3349,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3421,10 +3421,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3489,10 +3489,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3569,10 +3569,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3629,10 +3629,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3697,10 +3697,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3753,10 +3753,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3833,10 +3833,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3897,10 +3897,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -3997,10 +3997,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4081,10 +4081,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4177,10 +4177,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4249,10 +4249,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4309,10 +4309,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4373,10 +4373,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4433,10 +4433,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4481,10 +4481,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4517,10 +4517,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4553,10 +4553,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4589,10 +4589,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4621,10 +4621,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4649,10 +4649,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4693,10 +4693,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4765,10 +4765,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4825,10 +4825,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4889,10 +4889,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -4957,10 +4957,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -5009,10 +5009,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -5053,10 +5053,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     },
@@ -5085,10 +5085,10 @@
           ]
         ]
       },
-      "risk_score": 0.5,
+      "risk_score": null,
       "risk_class": "uncertain",
-      "confidence": 0.3,
-      "model_version": "gpx-import-unscored-v0",
+      "confidence": null,
+      "model_version": null,
       "top_factors": [],
       "warning_eligible": false
     }
@@ -5096,5 +5096,7 @@
   "integrity": {
     "algorithm": "sha256",
     "checksum": "replace-with-server-generated-checksum"
-  }
+  },
+  "stage": "route_only",
+  "prediction_available": false
 }

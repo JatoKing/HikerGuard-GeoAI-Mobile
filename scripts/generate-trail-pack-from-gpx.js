@@ -90,11 +90,12 @@ function gpxPointsToSegments(id, points, targetSegmentLengthM) {
             Math.round(p.latitude * 1e6) / 1e6,
           ]),
         },
-        risk_score: 0.5,
+        risk_score: null,
         risk_class: 'uncertain',
-        confidence: 0.3,
-        model_version: 'gpx-import-unscored-v0',
+        confidence: null,
+        model_version: null,
         top_factors: [],
+        warning_eligible: false,
       });
       order += 1;
       segmentStartIndex = i;
@@ -115,15 +116,18 @@ const pack = {
   name: trailName,
   pack_version: new Date().toISOString().slice(0, 10) + 'T00:00:00Z',
   generated_at: new Date().toISOString().slice(0, 10) + 'T00:00:00Z',
+  stage: 'route_only',
+  prediction_available: false,
   model: {
-    model_version: 'gpx-import-unscored-v0',
-    validation_level: 'unscored',
-    intended_use: 'geometry_only',
+    model_version: null,
+    validation_level: 'route_geometry_only',
+    intended_use: 'navigation_development',
     field_validated: false,
     label_source: 'AllTrails GPX export',
     label_release: String(new Date().getFullYear()),
     label_resolution_m: 0,
     prediction_support_m: 0,
+    approved_for_mobile_warning: false,
   },
   segments,
   integrity: {

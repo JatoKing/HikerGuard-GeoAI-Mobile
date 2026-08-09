@@ -181,8 +181,10 @@ export default function TrailDetailScreen() {
                         {RISK_CLASS_META[segment.riskClass].label}
                       </Text>
                       <Text className="text-[11px] text-[rgba(15,27,46,0.5)]">
-                        {segment.segmentLengthM.toFixed(0)}m · confidence{' '}
-                        {Math.round(segment.confidence * 100)}%
+                        {segment.segmentLengthM.toFixed(0)}m
+                        {segment.confidence !== null
+                          ? ` · confidence ${Math.round(segment.confidence * 100)}%`
+                          : ' · no prediction yet'}
                       </Text>
                     </View>
                   </View>

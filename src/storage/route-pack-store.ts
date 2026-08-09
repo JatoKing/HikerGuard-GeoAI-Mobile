@@ -17,7 +17,7 @@ type RoutePackMetadataRow = {
   trail_id: string;
   pack_version: string;
   schema_version: string;
-  model_version: string;
+  model_version: string | null;
   downloaded_at: string;
   checksum: string;
   status: RoutePackStatus;

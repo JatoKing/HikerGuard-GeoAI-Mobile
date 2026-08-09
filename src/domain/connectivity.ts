@@ -12,8 +12,14 @@ export type TopFactor = {
   direction: FactorDirection;
 };
 
+/** JEJAK's own registry promotion stage (Section 4/18) — distinct from the
+ * mobile pack's `route_only`/`fixture`/`model_backed` data-mode stage on
+ * TrailPack. Only a `Champion` may ever be approved for mobile warning. */
+export type ModelStage = 'Candidate' | 'Champion';
+
 export type ModelInfo = {
-  modelVersion: string;
+  /** null for `route_only` packs — GPX geometry import has no model behind it. */
+  modelVersion: string | null;
   validationLevel: string;
   intendedUse: string;
   fieldValidated: boolean;
@@ -25,4 +31,6 @@ export type ModelInfo = {
    * came from has been explicitly approved for mobile warnings — a high
    * transferred risk_score alone (Section 18) is not enough. */
   approvedForMobileWarning: boolean;
+  /** Present only on `model_backed` packs. */
+  modelStage?: ModelStage;
 };

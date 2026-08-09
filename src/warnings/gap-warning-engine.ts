@@ -85,7 +85,7 @@ export function groupContiguousGapSegments(segments: TrailSegment[]): GapGroup[]
       startOrder: current[0].segmentOrder,
       endOrder: current[current.length - 1].segmentOrder,
       totalLengthM: current.reduce((sum, s) => sum + s.segmentLengthM, 0),
-      averageConfidence: current.reduce((sum, s) => sum + s.confidence, 0) / current.length,
+      averageConfidence: current.reduce((sum, s) => sum + (s.confidence ?? 0), 0) / current.length,
     });
     current = [];
   };

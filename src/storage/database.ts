@@ -2,13 +2,18 @@ import * as SQLite from 'expo-sqlite';
 
 import { MIGRATION_001_INITIAL } from '@/src/storage/migrations/001-initial';
 import { MIGRATION_002_SYNC_META } from '@/src/storage/migrations/002-sync-meta';
+import { MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION } from '@/src/storage/migrations/003-nullable-route-pack-model-version';
 
 /**
  * Ordered, versioned migrations (Section 9: "Every database migration must
  * be versioned"). Applied against PRAGMA user_version — never edit an
  * already-shipped entry, only append new ones.
  */
-const MIGRATIONS: string[] = [MIGRATION_001_INITIAL, MIGRATION_002_SYNC_META];
+const MIGRATIONS: string[] = [
+  MIGRATION_001_INITIAL,
+  MIGRATION_002_SYNC_META,
+  MIGRATION_003_NULLABLE_ROUTE_PACK_MODEL_VERSION,
+];
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
 

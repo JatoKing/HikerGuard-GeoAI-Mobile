@@ -10,7 +10,14 @@ import { z } from 'zod';
 
 const SUPPORTED_SCHEMA_VERSION = 'trail-pack-v1';
 
+/** `true` in Expo/RN dev and in Jest (jest-expo defines it); `false` in a
+ * production build. Guards the `fixture` stage rejection below — Section 8:
+ * fixture mode "must be...impossible to enable accidentally in production." */
+const isDevBuild = typeof __DEV__ !== 'undefined' ? __DEV__ : true;
+
 const RiskClassSchema = z.enum(['likely_covered', 'uncertain', 'predicted_gap']);
+
+const StageSchema = z.enum(['route_only', 'fixture', 'model_backed']);
 
 const TopFactorSchema = z
   .object({
@@ -20,9 +27,11 @@ const TopFactorSchema = z
   })
   .transform((f) => f);
 
+const ModelStageSchema = z.enum(['Candidate', 'Champion']);
+
 const ModelInfoSchema = z
   .object({
-    model_version: z.string(),
+    model_version: z.string().nullable(),
     validation_level: z.string(),
     intended_use: z.string(),
     field_validated: z.boolean(),
@@ -31,6 +40,7 @@ const ModelInfoSchema = z
     label_resolution_m: z.number(),
     prediction_support_m: z.number(),
     approved_for_mobile_warning: z.boolean(),
+    model_stage: ModelStageSchema.optional(),
   })
   .transform((m) => ({
     modelVersion: m.model_version,
@@ -42,6 +52,7 @@ const ModelInfoSchema = z
     labelResolutionM: m.label_resolution_m,
     predictionSupportM: m.prediction_support_m,
     approvedForMobileWarning: m.approved_for_mobile_warning,
+    modelStage: m.model_stage,
   }));
 
 const LongitudeLatitudeSchema = z.tuple([
@@ -60,12 +71,15 @@ const TrailSegmentSchema = z
     segment_order: z.number().int().positive(),
     segment_length_m: z.number().nonnegative(),
     geometry: GeoLineStringSchema,
-    risk_score: z.number().min(0).max(1),
+    risk_score: z.number().min(0).max(1).nullable(),
     risk_class: RiskClassSchema,
-    confidence: z.number().min(0).max(1),
-    model_version: z.string(),
+    confidence: z.number().min(0).max(1).nullable(),
+    model_version: z.string().nullable(),
     top_factors: z.array(TopFactorSchema),
     warning_eligible: z.boolean(),
+    domain_similarity: z.number().min(0).max(1).optional(),
+    out_of_distribution: z.boolean().optional(),
+    evidence_completeness: z.number().min(0).max(1).optional(),
   })
   .transform((s) => ({
     segmentId: s.segment_id,
@@ -78,6 +92,9 @@ const TrailSegmentSchema = z
     modelVersion: s.model_version,
     topFactors: s.top_factors,
     warningEligible: s.warning_eligible,
+    domainSimilarity: s.domain_similarity,
+    outOfDistribution: s.out_of_distribution,
+    evidenceCompleteness: s.evidence_completeness,
   }));
 
 const TrailPackIntegritySchema = z
@@ -94,6 +111,8 @@ export const TrailPackSchema = z
     name: z.string(),
     pack_version: z.string(),
     generated_at: z.string(),
+    stage: StageSchema,
+    prediction_available: z.boolean(),
     model: ModelInfoSchema,
     segments: z.array(TrailSegmentSchema).min(1),
     integrity: TrailPackIntegritySchema,
@@ -104,6 +123,43 @@ export const TrailPackSchema = z
         code: z.ZodIssueCode.custom,
         message: `Unsupported schema_version "${pack.schema_version}"`,
         path: ['schema_version'],
+      });
+    }
+
+    if (pack.stage === 'fixture' && !isDevBuild) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Fixture-stage packs must never be accepted in a production build',
+        path: ['stage'],
+      });
+    }
+
+    if (pack.stage === 'route_only') {
+      if (pack.prediction_available) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: 'route_only packs must have prediction_available=false',
+          path: ['prediction_available'],
+        });
+      }
+      if (pack.model.modelVersion !== null || pack.model.approvedForMobileWarning) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: 'route_only packs must have a null model_version and approved_for_mobile_warning=false',
+          path: ['model'],
+        });
+      }
+    }
+
+    if (
+      pack.stage === 'model_backed' &&
+      pack.model.approvedForMobileWarning &&
+      pack.model.modelStage !== 'Champion'
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Only a model_stage="Champion" pack may set approved_for_mobile_warning=true',
+        path: ['model', 'approved_for_mobile_warning'],
       });
     }
 
@@ -122,6 +178,30 @@ export const TrailPackSchema = z
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
           message: `Segment "${segment.segmentId}" cannot be warning_eligible unless risk_class is predicted_gap`,
+          path: ['segments'],
+        });
+      }
+
+      if (segment.warningEligible && segment.outOfDistribution) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `Segment "${segment.segmentId}" cannot be warning_eligible while out_of_distribution`,
+          path: ['segments'],
+        });
+      }
+
+      if (
+        pack.stage === 'route_only' &&
+        (segment.riskScore !== null ||
+          segment.confidence !== null ||
+          segment.modelVersion !== null ||
+          segment.riskClass !== 'uncertain' ||
+          segment.topFactors.length > 0 ||
+          segment.warningEligible)
+      ) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `route_only segment "${segment.segmentId}" must have null risk_score/confidence/model_version, risk_class="uncertain", empty top_factors, and warning_eligible=false`,
           path: ['segments'],
         });
       }
@@ -145,6 +225,8 @@ export const TrailPackSchema = z
     name: pack.name,
     packVersion: pack.pack_version,
     generatedAt: pack.generated_at,
+    stage: pack.stage,
+    predictionAvailable: pack.prediction_available,
     model: pack.model,
     segments: pack.segments,
     integrity: pack.integrity,

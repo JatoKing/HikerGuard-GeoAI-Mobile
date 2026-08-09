@@ -4,10 +4,12 @@
   "name": "Jalan Bukit Larut",
   "pack_version": "2026-08-06T00:00:00Z",
   "generated_at": "2026-08-06T00:00:00Z",
+  "stage": "fixture",
+  "prediction_available": true,
   "model": {
-    "model_version": "connectivity-proxy-v0.1.0",
-    "validation_level": "proxy",
-    "intended_use": "planning_only",
+    "model_version": "fixture-connectivity-v0",
+    "validation_level": "fixture",
+    "intended_use": "development_only",
     "field_validated": false,
     "label_source": "FAO Mobile Broadband Coverage",
     "label_release": "2024",
@@ -27,7 +29,7 @@
       "risk_score": 0.08,
       "risk_class": "likely_covered",
       "confidence": 0.86,
-      "model_version": "connectivity-proxy-v0.1.0",
+      "model_version": "fixture-connectivity-v0",
       "top_factors": [
         {
           "feature": "distance_to_cell_tower",
@@ -48,7 +50,7 @@
       "risk_score": 0.47,
       "risk_class": "uncertain",
       "confidence": 0.52,
-      "model_version": "connectivity-proxy-v0.1.0",
+      "model_version": "fixture-connectivity-v0",
       "top_factors": [
         {
           "feature": "vegetation_density",
@@ -69,7 +71,7 @@
       "risk_score": 0.82,
       "risk_class": "predicted_gap",
       "confidence": 0.71,
-      "model_version": "connectivity-proxy-v0.1.0",
+      "model_version": "fixture-connectivity-v0",
       "top_factors": [
         {
           "feature": "terrain_obstruction",
@@ -90,7 +92,7 @@
       "risk_score": 0.79,
       "risk_class": "predicted_gap",
       "confidence": 0.68,
-      "model_version": "connectivity-proxy-v0.1.0",
+      "model_version": "fixture-connectivity-v0",
       "top_factors": [
         {
           "feature": "terrain_obstruction",
