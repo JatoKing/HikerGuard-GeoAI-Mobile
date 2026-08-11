@@ -1,0 +1,6170 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "jalan-kledang",
+  "name": "Jalan Kledang",
+  "pack_version": "2026-08-10T03:15:29.852Z",
+  "generated_at": "2026-08-10T03:15:29.852Z",
+  "stage": "model_backed",
+  "prediction_available": true,
+  "model": {
+    "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+    "validation_level": "cross_country_spatial_validation_planning_only",
+    "intended_use": "offline_hackathon_connectivity_planning_only",
+    "field_validated": false,
+    "label_source": "anatel_mobile_coverage_2026_07 + fcc_bdc_mobile_4g_lte_2025_06",
+    "label_release": "Anatel 2026-07 + FCC BDC 2025-06",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": false,
+    "model_stage": "Candidate"
+  },
+  "segments": [
+    {
+      "segment_id": "trail_jalan_kledang__s00000",
+      "segment_order": 1,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.030263,
+            4.576488
+          ],
+          [
+            101.030267,
+            4.576493
+          ],
+          [
+            101.030285,
+            4.576518
+          ],
+          [
+            101.030746,
+            4.577245
+          ],
+          [
+            101.030844,
+            4.577432
+          ],
+          [
+            101.030861,
+            4.577554
+          ],
+          [
+            101.030844,
+            4.577672
+          ],
+          [
+            101.030763,
+            4.577786
+          ],
+          [
+            101.030699,
+            4.577847
+          ],
+          [
+            101.030662,
+            4.577931
+          ],
+          [
+            101.030601,
+            4.57808
+          ],
+          [
+            101.03054,
+            4.578227
+          ],
+          [
+            101.03036419495214,
+            4.578427920125964
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00001",
+      "segment_order": 2,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.03036419495214,
+            4.578427920125964
+          ],
+          [
+            101.030204,
+            4.578611
+          ],
+          [
+            101.030162,
+            4.57873
+          ],
+          [
+            101.029965,
+            4.579005
+          ],
+          [
+            101.029925,
+            4.579193
+          ],
+          [
+            101.029899,
+            4.579493
+          ],
+          [
+            101.029985,
+            4.579673
+          ],
+          [
+            101.030106,
+            4.579847
+          ],
+          [
+            101.030295,
+            4.579986
+          ],
+          [
+            101.030402,
+            4.580034
+          ],
+          [
+            101.030454,
+            4.580111
+          ],
+          [
+            101.030502,
+            4.580142
+          ],
+          [
+            101.03062,
+            4.580181
+          ],
+          [
+            101.0306309512808,
+            4.580196905432879
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00002",
+      "segment_order": 3,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.0306309512808,
+            4.580196905432879
+          ],
+          [
+            101.030662,
+            4.580242
+          ],
+          [
+            101.030672,
+            4.58027
+          ],
+          [
+            101.030636,
+            4.580296
+          ],
+          [
+            101.0306,
+            4.580328
+          ],
+          [
+            101.030543,
+            4.58039
+          ],
+          [
+            101.030538,
+            4.580462
+          ],
+          [
+            101.030571,
+            4.580581
+          ],
+          [
+            101.030538,
+            4.580691
+          ],
+          [
+            101.030374,
+            4.580812
+          ],
+          [
+            101.030329,
+            4.580927
+          ],
+          [
+            101.03021,
+            4.581078
+          ],
+          [
+            101.030175,
+            4.58116
+          ],
+          [
+            101.030174,
+            4.581235
+          ],
+          [
+            101.030142,
+            4.581634
+          ],
+          [
+            101.030126,
+            4.581707
+          ],
+          [
+            101.030051,
+            4.581859
+          ],
+          [
+            101.029946,
+            4.581945
+          ],
+          [
+            101.029817,
+            4.58198
+          ],
+          [
+            101.02973260406894,
+            4.582008131985006
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00003",
+      "segment_order": 4,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02973260406894,
+            4.582008131985006
+          ],
+          [
+            101.029622,
+            4.582045
+          ],
+          [
+            101.029354,
+            4.58229
+          ],
+          [
+            101.029229,
+            4.582346
+          ],
+          [
+            101.028966,
+            4.582398
+          ],
+          [
+            101.02868,
+            4.582407
+          ],
+          [
+            101.028342,
+            4.582497
+          ],
+          [
+            101.028105,
+            4.58255
+          ],
+          [
+            101.027811,
+            4.58256
+          ],
+          [
+            101.027651,
+            4.58261
+          ],
+          [
+            101.02762834712355,
+            4.5826273718426185
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00004",
+      "segment_order": 5,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02762834712355,
+            4.5826273718426185
+          ],
+          [
+            101.027488,
+            4.582735
+          ],
+          [
+            101.027362,
+            4.582915
+          ],
+          [
+            101.027311,
+            4.583129
+          ],
+          [
+            101.027321,
+            4.583281
+          ],
+          [
+            101.027346,
+            4.583398
+          ],
+          [
+            101.027436,
+            4.583501
+          ],
+          [
+            101.027534,
+            4.583632
+          ],
+          [
+            101.027545,
+            4.583761
+          ],
+          [
+            101.027524,
+            4.58389
+          ],
+          [
+            101.027367,
+            4.584049
+          ],
+          [
+            101.027195,
+            4.58417
+          ],
+          [
+            101.026986,
+            4.584372
+          ],
+          [
+            101.02691203792486,
+            4.584412921654143
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.012678740546107292,
+      "risk_class": "uncertain",
+      "confidence": 0.00008230991079472005,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.03459,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.013133,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012521,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.01231,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.009411,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00009667826816439629,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00005",
+      "segment_order": 6,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02691203792486,
+            4.584412921654143
+          ],
+          [
+            101.026742,
+            4.584507
+          ],
+          [
+            101.026525,
+            4.584604
+          ],
+          [
+            101.026247,
+            4.584614
+          ],
+          [
+            101.025987,
+            4.584658
+          ],
+          [
+            101.02572,
+            4.584667
+          ],
+          [
+            101.025431,
+            4.584678
+          ],
+          [
+            101.025275,
+            4.584654
+          ],
+          [
+            101.025172,
+            4.58461
+          ],
+          [
+            101.025129,
+            4.584584
+          ],
+          [
+            101.025087,
+            4.584601
+          ],
+          [
+            101.025067,
+            4.584658
+          ],
+          [
+            101.025067,
+            4.584728
+          ],
+          [
+            101.025012,
+            4.584797
+          ],
+          [
+            101.02487332179929,
+            4.5848141308396935
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.012678740546107292,
+      "risk_class": "uncertain",
+      "confidence": 0.00008230991079472005,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.03459,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.013133,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012521,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.01231,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.009411,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00009667826816439629,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00006",
+      "segment_order": 7,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02487332179929,
+            4.5848141308396935
+          ],
+          [
+            101.024842,
+            4.584818
+          ],
+          [
+            101.024686,
+            4.584872
+          ],
+          [
+            101.02472,
+            4.584916
+          ],
+          [
+            101.024813,
+            4.585037
+          ],
+          [
+            101.024866,
+            4.585182
+          ],
+          [
+            101.024926,
+            4.585264
+          ],
+          [
+            101.024967,
+            4.585415
+          ],
+          [
+            101.024948,
+            4.585586
+          ],
+          [
+            101.024888,
+            4.585677
+          ],
+          [
+            101.024858,
+            4.585811
+          ],
+          [
+            101.024849,
+            4.585954
+          ],
+          [
+            101.024837,
+            4.586101
+          ],
+          [
+            101.024871,
+            4.586206
+          ],
+          [
+            101.024916,
+            4.586313
+          ],
+          [
+            101.024922,
+            4.586424
+          ],
+          [
+            101.024908,
+            4.586514
+          ],
+          [
+            101.024914,
+            4.586626
+          ],
+          [
+            101.024959,
+            4.586752
+          ],
+          [
+            101.02499889755806,
+            4.58679431559727
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.012678740546107292,
+      "risk_class": "uncertain",
+      "confidence": 0.00008230991079472005,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.03459,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.013133,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012521,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.01231,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.009411,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00009667826816439629,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00007",
+      "segment_order": 8,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02499889755806,
+            4.58679431559727
+          ],
+          [
+            101.025058,
+            4.586857
+          ],
+          [
+            101.025165,
+            4.586958
+          ],
+          [
+            101.025258,
+            4.587059
+          ],
+          [
+            101.025274,
+            4.587165
+          ],
+          [
+            101.025293,
+            4.587308
+          ],
+          [
+            101.025342,
+            4.587397
+          ],
+          [
+            101.025395,
+            4.587464
+          ],
+          [
+            101.025425,
+            4.587549
+          ],
+          [
+            101.025408,
+            4.587676
+          ],
+          [
+            101.025381,
+            4.5878
+          ],
+          [
+            101.025332,
+            4.587881
+          ],
+          [
+            101.025287,
+            4.587963
+          ],
+          [
+            101.025276,
+            4.58805
+          ],
+          [
+            101.025294,
+            4.588188
+          ],
+          [
+            101.025325,
+            4.588279
+          ],
+          [
+            101.025337,
+            4.588368
+          ],
+          [
+            101.025352,
+            4.588499
+          ],
+          [
+            101.025384,
+            4.588589
+          ],
+          [
+            101.025424,
+            4.588686
+          ],
+          [
+            101.025476,
+            4.588794
+          ],
+          [
+            101.02550456064512,
+            4.588837461853234
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.012678740546107292,
+      "risk_class": "uncertain",
+      "confidence": 0.00008230991079472005,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.03459,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.013133,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012521,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.01231,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.009411,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00009667826816439629,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00008",
+      "segment_order": 9,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02550456064512,
+            4.588837461853234
+          ],
+          [
+            101.025522,
+            4.588864
+          ],
+          [
+            101.025612,
+            4.588915
+          ],
+          [
+            101.02566,
+            4.588983
+          ],
+          [
+            101.025692,
+            4.589139
+          ],
+          [
+            101.025648,
+            4.589297
+          ],
+          [
+            101.02564,
+            4.589439
+          ],
+          [
+            101.025656,
+            4.589567
+          ],
+          [
+            101.025683,
+            4.589646
+          ],
+          [
+            101.025677,
+            4.589733
+          ],
+          [
+            101.025629,
+            4.589788
+          ],
+          [
+            101.025604,
+            4.589869
+          ],
+          [
+            101.025608,
+            4.589947
+          ],
+          [
+            101.025613,
+            4.590012
+          ],
+          [
+            101.025531,
+            4.590098
+          ],
+          [
+            101.02542,
+            4.590177
+          ],
+          [
+            101.025297,
+            4.590286
+          ],
+          [
+            101.025212,
+            4.590381
+          ],
+          [
+            101.025146,
+            4.59049
+          ],
+          [
+            101.02512,
+            4.590579
+          ],
+          [
+            101.025104,
+            4.590625
+          ],
+          [
+            101.025051,
+            4.590691
+          ],
+          [
+            101.02499551130832,
+            4.590739391303883
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.012678740546107292,
+      "risk_class": "uncertain",
+      "confidence": 0.00008230991079472005,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.03459,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.013133,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012521,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.01231,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.009411,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00009667826816439629,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00009",
+      "segment_order": 10,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02499551130832,
+            4.590739391303883
+          ],
+          [
+            101.024965,
+            4.590766
+          ],
+          [
+            101.024869,
+            4.59082
+          ],
+          [
+            101.024763,
+            4.590895
+          ],
+          [
+            101.024724,
+            4.590948
+          ],
+          [
+            101.024637,
+            4.591067
+          ],
+          [
+            101.024536,
+            4.59117
+          ],
+          [
+            101.024429,
+            4.591278
+          ],
+          [
+            101.024373,
+            4.591333
+          ],
+          [
+            101.0243,
+            4.591411
+          ],
+          [
+            101.024218,
+            4.591461
+          ],
+          [
+            101.02417,
+            4.591542
+          ],
+          [
+            101.024137,
+            4.591622
+          ],
+          [
+            101.024066,
+            4.591693
+          ],
+          [
+            101.024017,
+            4.591726
+          ],
+          [
+            101.02393,
+            4.591746
+          ],
+          [
+            101.023843,
+            4.591757
+          ],
+          [
+            101.023774,
+            4.59174
+          ],
+          [
+            101.023706,
+            4.59169
+          ],
+          [
+            101.023646,
+            4.591661
+          ],
+          [
+            101.023554,
+            4.591647
+          ],
+          [
+            101.023443,
+            4.591645
+          ],
+          [
+            101.02331,
+            4.591685
+          ],
+          [
+            101.023241,
+            4.591719
+          ],
+          [
+            101.02321605082737,
+            4.591722715835481
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.016161702573299408,
+      "risk_class": "uncertain",
+      "confidence": 0.00016523637168575078,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.043694,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.016249,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.016048,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.014373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.014246,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00019537976186256856,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8739686012268066
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00010",
+      "segment_order": 11,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02321605082737,
+            4.591722715835481
+          ],
+          [
+            101.023147,
+            4.591733
+          ],
+          [
+            101.023032,
+            4.59178
+          ],
+          [
+            101.022967,
+            4.59184
+          ],
+          [
+            101.022895,
+            4.5919
+          ],
+          [
+            101.022793,
+            4.591928
+          ],
+          [
+            101.022604,
+            4.591901
+          ],
+          [
+            101.022429,
+            4.591967
+          ],
+          [
+            101.022302,
+            4.591951
+          ],
+          [
+            101.022168,
+            4.591997
+          ],
+          [
+            101.022074,
+            4.592008
+          ],
+          [
+            101.021995,
+            4.592007
+          ],
+          [
+            101.021896,
+            4.592051
+          ],
+          [
+            101.021819,
+            4.592082
+          ],
+          [
+            101.02171,
+            4.592126
+          ],
+          [
+            101.021622,
+            4.592163
+          ],
+          [
+            101.021511,
+            4.592193
+          ],
+          [
+            101.02143,
+            4.592238
+          ],
+          [
+            101.021318,
+            4.592329
+          ],
+          [
+            101.02124,
+            4.592373
+          ],
+          [
+            101.02113655182993,
+            4.592390683448919
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.016161702573299408,
+      "risk_class": "uncertain",
+      "confidence": 0.00016523637168575078,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.043694,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.016249,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.016048,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.014373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.014246,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00019537976186256856,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8739686012268066
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00011",
+      "segment_order": 12,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02113655182993,
+            4.592390683448919
+          ],
+          [
+            101.021123,
+            4.592393
+          ],
+          [
+            101.021033,
+            4.592432
+          ],
+          [
+            101.020898,
+            4.592516
+          ],
+          [
+            101.020772,
+            4.592564
+          ],
+          [
+            101.020646,
+            4.592584
+          ],
+          [
+            101.0203,
+            4.592632
+          ],
+          [
+            101.020196,
+            4.592687
+          ],
+          [
+            101.019975,
+            4.592893
+          ],
+          [
+            101.019812,
+            4.593015
+          ],
+          [
+            101.01966,
+            4.593102
+          ],
+          [
+            101.019447,
+            4.593175
+          ],
+          [
+            101.019169,
+            4.593207
+          ],
+          [
+            101.01910649437099,
+            4.593234576019351
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.016161702573299408,
+      "risk_class": "uncertain",
+      "confidence": 0.00016523637168575078,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.043694,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.016249,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.016048,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.014373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.014246,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00019537976186256856,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8739686012268066
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00012",
+      "segment_order": 13,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01910649437099,
+            4.593234576019351
+          ],
+          [
+            101.018999,
+            4.593282
+          ],
+          [
+            101.018878,
+            4.593412
+          ],
+          [
+            101.018764,
+            4.593532
+          ],
+          [
+            101.018649,
+            4.593622
+          ],
+          [
+            101.018566,
+            4.593628
+          ],
+          [
+            101.018394,
+            4.593611
+          ],
+          [
+            101.01824,
+            4.593582
+          ],
+          [
+            101.018106,
+            4.593552
+          ],
+          [
+            101.018029,
+            4.593508
+          ],
+          [
+            101.017978,
+            4.593471
+          ],
+          [
+            101.017906,
+            4.593464
+          ],
+          [
+            101.017797,
+            4.59348
+          ],
+          [
+            101.017709,
+            4.59354
+          ],
+          [
+            101.017605,
+            4.59356
+          ],
+          [
+            101.017522,
+            4.593583
+          ],
+          [
+            101.017432,
+            4.593656
+          ],
+          [
+            101.017352,
+            4.593737
+          ],
+          [
+            101.017279,
+            4.593778
+          ],
+          [
+            101.017194,
+            4.593774
+          ],
+          [
+            101.01713068022075,
+            4.593753150805402
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00013",
+      "segment_order": 14,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01713068022075,
+            4.593753150805402
+          ],
+          [
+            101.017112,
+            4.593747
+          ],
+          [
+            101.017026,
+            4.593741
+          ],
+          [
+            101.016951,
+            4.593753
+          ],
+          [
+            101.016889,
+            4.593798
+          ],
+          [
+            101.016831,
+            4.593801
+          ],
+          [
+            101.016754,
+            4.593762
+          ],
+          [
+            101.016712,
+            4.593723
+          ],
+          [
+            101.016628,
+            4.593721
+          ],
+          [
+            101.016471,
+            4.59371
+          ],
+          [
+            101.016347,
+            4.593682
+          ],
+          [
+            101.016217,
+            4.59364
+          ],
+          [
+            101.016117,
+            4.593604
+          ],
+          [
+            101.016038,
+            4.593561
+          ],
+          [
+            101.015897,
+            4.593553
+          ],
+          [
+            101.015796,
+            4.593547
+          ],
+          [
+            101.01572,
+            4.593525
+          ],
+          [
+            101.015634,
+            4.593497
+          ],
+          [
+            101.015547,
+            4.593449
+          ],
+          [
+            101.015458,
+            4.593447
+          ],
+          [
+            101.015374,
+            4.593468
+          ],
+          [
+            101.015189,
+            4.593487
+          ],
+          [
+            101.015121,
+            4.593465
+          ],
+          [
+            101.015039,
+            4.593509
+          ],
+          [
+            101.015056,
+            4.593541
+          ],
+          [
+            101.01505028063829,
+            4.593558730021651
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00014",
+      "segment_order": 15,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01505028063829,
+            4.593558730021651
+          ],
+          [
+            101.015046,
+            4.593572
+          ],
+          [
+            101.015023,
+            4.59361
+          ],
+          [
+            101.014943,
+            4.593697
+          ],
+          [
+            101.014833,
+            4.593794
+          ],
+          [
+            101.014722,
+            4.593872
+          ],
+          [
+            101.014596,
+            4.593959
+          ],
+          [
+            101.014529,
+            4.594012
+          ],
+          [
+            101.014495,
+            4.594074
+          ],
+          [
+            101.014464,
+            4.594154
+          ],
+          [
+            101.014445,
+            4.594323
+          ],
+          [
+            101.01442,
+            4.594373
+          ],
+          [
+            101.014369,
+            4.594407
+          ],
+          [
+            101.014286,
+            4.594448
+          ],
+          [
+            101.014194,
+            4.594509
+          ],
+          [
+            101.014099,
+            4.59461
+          ],
+          [
+            101.013986,
+            4.594755
+          ],
+          [
+            101.013851,
+            4.594966
+          ],
+          [
+            101.013782,
+            4.59503
+          ],
+          [
+            101.013695,
+            4.595092
+          ],
+          [
+            101.013627,
+            4.595168
+          ],
+          [
+            101.0136063648305,
+            4.595198952757725
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00015",
+      "segment_order": 16,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.0136063648305,
+            4.595198952757725
+          ],
+          [
+            101.013563,
+            4.595264
+          ],
+          [
+            101.013481,
+            4.595435
+          ],
+          [
+            101.013353,
+            4.595701
+          ],
+          [
+            101.013283,
+            4.595791
+          ],
+          [
+            101.013217,
+            4.595837
+          ],
+          [
+            101.01315,
+            4.595847
+          ],
+          [
+            101.013076,
+            4.595833
+          ],
+          [
+            101.013002,
+            4.595784
+          ],
+          [
+            101.012943,
+            4.595703
+          ],
+          [
+            101.012792,
+            4.595454
+          ],
+          [
+            101.012707,
+            4.59527
+          ],
+          [
+            101.012644,
+            4.595164
+          ],
+          [
+            101.012486,
+            4.594961
+          ],
+          [
+            101.012445,
+            4.594885
+          ],
+          [
+            101.01238007784798,
+            4.594687441218334
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00016",
+      "segment_order": 17,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01238007784798,
+            4.594687441218334
+          ],
+          [
+            101.012352,
+            4.594602
+          ],
+          [
+            101.012303,
+            4.594515
+          ],
+          [
+            101.011986,
+            4.594191
+          ],
+          [
+            101.01185,
+            4.594079
+          ],
+          [
+            101.011739,
+            4.593959
+          ],
+          [
+            101.0117,
+            4.593874
+          ],
+          [
+            101.011643,
+            4.593675
+          ],
+          [
+            101.011613,
+            4.593621
+          ],
+          [
+            101.011487,
+            4.59347
+          ],
+          [
+            101.011333,
+            4.593353
+          ],
+          [
+            101.011186,
+            4.59327
+          ],
+          [
+            101.011119,
+            4.593224
+          ],
+          [
+            101.011088,
+            4.593158
+          ],
+          [
+            101.011084,
+            4.593078
+          ],
+          [
+            101.01110344041032,
+            4.592960061521487
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00017",
+      "segment_order": 18,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01110344041032,
+            4.592960061521487
+          ],
+          [
+            101.011114,
+            4.592896
+          ],
+          [
+            101.011128,
+            4.592721
+          ],
+          [
+            101.011118,
+            4.592586
+          ],
+          [
+            101.011075,
+            4.592466
+          ],
+          [
+            101.010943,
+            4.592286
+          ],
+          [
+            101.010913,
+            4.592207
+          ],
+          [
+            101.010879,
+            4.59208
+          ],
+          [
+            101.010854,
+            4.592021
+          ],
+          [
+            101.010806,
+            4.591991
+          ],
+          [
+            101.01073,
+            4.591978
+          ],
+          [
+            101.010576,
+            4.591979
+          ],
+          [
+            101.010486,
+            4.591972
+          ],
+          [
+            101.010414,
+            4.591932
+          ],
+          [
+            101.010372,
+            4.591879
+          ],
+          [
+            101.010354,
+            4.591803
+          ],
+          [
+            101.01036,
+            4.591689
+          ],
+          [
+            101.010358,
+            4.591575
+          ],
+          [
+            101.010324,
+            4.591486
+          ],
+          [
+            101.010251,
+            4.59137
+          ],
+          [
+            101.010133,
+            4.591236
+          ],
+          [
+            101.01012800720831,
+            4.591231702000742
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00018",
+      "segment_order": 19,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01012800720831,
+            4.591231702000742
+          ],
+          [
+            101.009824,
+            4.59097
+          ],
+          [
+            101.009651,
+            4.590818
+          ],
+          [
+            101.009586,
+            4.590778
+          ],
+          [
+            101.009485,
+            4.590746
+          ],
+          [
+            101.009407,
+            4.590723
+          ],
+          [
+            101.009335,
+            4.590678
+          ],
+          [
+            101.009265,
+            4.590584
+          ],
+          [
+            101.009189,
+            4.590453
+          ],
+          [
+            101.009105,
+            4.590378
+          ],
+          [
+            101.009014,
+            4.590313
+          ],
+          [
+            101.008937,
+            4.590261
+          ],
+          [
+            101.008871,
+            4.59016
+          ],
+          [
+            101.008818,
+            4.590032
+          ],
+          [
+            101.008693,
+            4.589729
+          ],
+          [
+            101.00864418028462,
+            4.589636908275078
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00019",
+      "segment_order": 20,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.00864418028462,
+            4.589636908275078
+          ],
+          [
+            101.008605,
+            4.589563
+          ],
+          [
+            101.008512,
+            4.589336
+          ],
+          [
+            101.008427,
+            4.589193
+          ],
+          [
+            101.008417,
+            4.589141
+          ],
+          [
+            101.008423,
+            4.589087
+          ],
+          [
+            101.008451,
+            4.589032
+          ],
+          [
+            101.008501,
+            4.588983
+          ],
+          [
+            101.008731,
+            4.58885
+          ],
+          [
+            101.008826,
+            4.588785
+          ],
+          [
+            101.008909,
+            4.5887
+          ],
+          [
+            101.009033,
+            4.58855
+          ],
+          [
+            101.009108,
+            4.588496
+          ],
+          [
+            101.009185,
+            4.588457
+          ],
+          [
+            101.009272,
+            4.588426
+          ],
+          [
+            101.009347,
+            4.588375
+          ],
+          [
+            101.009397,
+            4.588296
+          ],
+          [
+            101.009424,
+            4.588211
+          ],
+          [
+            101.009468,
+            4.588076
+          ],
+          [
+            101.009517,
+            4.587971
+          ],
+          [
+            101.00953428548037,
+            4.587950612000295
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.06550108641386032,
+      "risk_class": "uncertain",
+      "confidence": 0.0011934725334867835,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.243222,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.119823,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.050626,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.033508,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.03264,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00161142332945019,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8522835373878479
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00020",
+      "segment_order": 21,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.00953428548037,
+            4.587950612000295
+          ],
+          [
+            101.009595,
+            4.587879
+          ],
+          [
+            101.009677,
+            4.587809
+          ],
+          [
+            101.009848,
+            4.587687
+          ],
+          [
+            101.010029,
+            4.587568
+          ],
+          [
+            101.010171,
+            4.587502
+          ],
+          [
+            101.010286,
+            4.587477
+          ],
+          [
+            101.010401,
+            4.587479
+          ],
+          [
+            101.010468,
+            4.587506
+          ],
+          [
+            101.01053,
+            4.587546
+          ],
+          [
+            101.010609,
+            4.58762
+          ],
+          [
+            101.010863,
+            4.587828
+          ],
+          [
+            101.01097,
+            4.587886
+          ],
+          [
+            101.011091,
+            4.587921
+          ],
+          [
+            101.011179,
+            4.58793
+          ],
+          [
+            101.011264,
+            4.587923
+          ],
+          [
+            101.011373,
+            4.587896
+          ],
+          [
+            101.01148566639691,
+            4.587852143285481
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00021",
+      "segment_order": 22,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01148566639691,
+            4.587852143285481
+          ],
+          [
+            101.011522,
+            4.587838
+          ],
+          [
+            101.011592,
+            4.587819
+          ],
+          [
+            101.011675,
+            4.587824
+          ],
+          [
+            101.011726,
+            4.58786
+          ],
+          [
+            101.011803,
+            4.587921
+          ],
+          [
+            101.011974,
+            4.588054
+          ],
+          [
+            101.012065,
+            4.588099
+          ],
+          [
+            101.012169,
+            4.588119
+          ],
+          [
+            101.012284,
+            4.588106
+          ],
+          [
+            101.012683,
+            4.588009
+          ],
+          [
+            101.012788,
+            4.588006
+          ],
+          [
+            101.012876,
+            4.588025
+          ],
+          [
+            101.012931,
+            4.588087
+          ],
+          [
+            101.012975,
+            4.588168
+          ],
+          [
+            101.012982,
+            4.588264
+          ],
+          [
+            101.012989,
+            4.588588
+          ],
+          [
+            101.013003,
+            4.588666
+          ],
+          [
+            101.013054,
+            4.588718
+          ],
+          [
+            101.01306099897786,
+            4.588721039030331
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00022",
+      "segment_order": 23,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01306099897786,
+            4.588721039030331
+          ],
+          [
+            101.01313,
+            4.588751
+          ],
+          [
+            101.013205,
+            4.588744
+          ],
+          [
+            101.013273,
+            4.588704
+          ],
+          [
+            101.013511,
+            4.588419
+          ],
+          [
+            101.013575,
+            4.588304
+          ],
+          [
+            101.013626,
+            4.588176
+          ],
+          [
+            101.013664,
+            4.588043
+          ],
+          [
+            101.013713,
+            4.587931
+          ],
+          [
+            101.013781,
+            4.587811
+          ],
+          [
+            101.013908,
+            4.587641
+          ],
+          [
+            101.014023,
+            4.587513
+          ],
+          [
+            101.014143,
+            4.587428
+          ],
+          [
+            101.014236,
+            4.587392
+          ],
+          [
+            101.014317,
+            4.58739
+          ],
+          [
+            101.014407,
+            4.587382
+          ],
+          [
+            101.014446,
+            4.587365
+          ],
+          [
+            101.014467,
+            4.587331
+          ],
+          [
+            101.014456,
+            4.587288
+          ],
+          [
+            101.01442,
+            4.587259
+          ],
+          [
+            101.01440795727208,
+            4.5872543681835705
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00023",
+      "segment_order": 24,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01440795727208,
+            4.5872543681835705
+          ],
+          [
+            101.014225,
+            4.587184
+          ],
+          [
+            101.014172,
+            4.587152
+          ],
+          [
+            101.014135,
+            4.587109
+          ],
+          [
+            101.014108,
+            4.587048
+          ],
+          [
+            101.014104,
+            4.586969
+          ],
+          [
+            101.01417,
+            4.586331
+          ],
+          [
+            101.01414,
+            4.586167
+          ],
+          [
+            101.014049,
+            4.58594
+          ],
+          [
+            101.014043,
+            4.585859
+          ],
+          [
+            101.014078,
+            4.585771
+          ],
+          [
+            101.014159,
+            4.585668
+          ],
+          [
+            101.01432,
+            4.585535
+          ],
+          [
+            101.01451003553294,
+            4.585406153967862
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00024",
+      "segment_order": 25,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01451003553294,
+            4.585406153967862
+          ],
+          [
+            101.014702,
+            4.585276
+          ],
+          [
+            101.014972,
+            4.585113
+          ],
+          [
+            101.015133,
+            4.584974
+          ],
+          [
+            101.015244,
+            4.584905
+          ],
+          [
+            101.015628,
+            4.584727
+          ],
+          [
+            101.015786,
+            4.584578
+          ],
+          [
+            101.015844,
+            4.584493
+          ],
+          [
+            101.015937,
+            4.584229
+          ],
+          [
+            101.016033,
+            4.584035
+          ],
+          [
+            101.01608,
+            4.583962
+          ],
+          [
+            101.01610689748007,
+            4.583933319271097
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00025",
+      "segment_order": 26,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01610689748007,
+            4.583933319271097
+          ],
+          [
+            101.016261,
+            4.583769
+          ],
+          [
+            101.01638,
+            4.583708
+          ],
+          [
+            101.016502,
+            4.583675
+          ],
+          [
+            101.016698,
+            4.583675
+          ],
+          [
+            101.016792,
+            4.583664
+          ],
+          [
+            101.016887,
+            4.583632
+          ],
+          [
+            101.017065,
+            4.58352
+          ],
+          [
+            101.017168,
+            4.583472
+          ],
+          [
+            101.017477,
+            4.58344
+          ],
+          [
+            101.017615,
+            4.583394
+          ],
+          [
+            101.017738,
+            4.583327
+          ],
+          [
+            101.017817,
+            4.58325
+          ],
+          [
+            101.017832,
+            4.583167
+          ],
+          [
+            101.017841,
+            4.582986
+          ],
+          [
+            101.01784557689301,
+            4.58290304382138
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00026",
+      "segment_order": 27,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01784557689301,
+            4.58290304382138
+          ],
+          [
+            101.017849,
+            4.582841
+          ],
+          [
+            101.017889,
+            4.582584
+          ],
+          [
+            101.017901,
+            4.582356
+          ],
+          [
+            101.017914,
+            4.582161
+          ],
+          [
+            101.017932,
+            4.581985
+          ],
+          [
+            101.018,
+            4.581833
+          ],
+          [
+            101.01809,
+            4.581711
+          ],
+          [
+            101.018184,
+            4.581637
+          ],
+          [
+            101.018307,
+            4.581577
+          ],
+          [
+            101.018429,
+            4.581527
+          ],
+          [
+            101.018675,
+            4.581466
+          ],
+          [
+            101.01904560941269,
+            4.581412061555848
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.027815619483590126,
+      "risk_class": "uncertain",
+      "confidence": 0.0028877961449325085,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.077063,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.049899,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.030472,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.02006,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.017429,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.003675977699458599,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8318634629249573
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00027",
+      "segment_order": 28,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01904560941269,
+            4.581412061555848
+          ],
+          [
+            101.019101,
+            4.581404
+          ],
+          [
+            101.019423,
+            4.581365
+          ],
+          [
+            101.019575,
+            4.581345
+          ],
+          [
+            101.020116,
+            4.58121
+          ],
+          [
+            101.020248,
+            4.581178
+          ],
+          [
+            101.020385,
+            4.581164
+          ],
+          [
+            101.020516,
+            4.581205
+          ],
+          [
+            101.020678,
+            4.581318
+          ],
+          [
+            101.020809,
+            4.581368
+          ],
+          [
+            101.021013,
+            4.581428
+          ],
+          [
+            101.021186,
+            4.581478
+          ],
+          [
+            101.02120659800448,
+            4.5814824062799335
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00028",
+      "segment_order": 29,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02120659800448,
+            4.5814824062799335
+          ],
+          [
+            101.021574,
+            4.581561
+          ],
+          [
+            101.02176,
+            4.581597
+          ],
+          [
+            101.021938,
+            4.581609
+          ],
+          [
+            101.022066,
+            4.5816
+          ],
+          [
+            101.022341,
+            4.581557
+          ],
+          [
+            101.022494,
+            4.58153
+          ],
+          [
+            101.022631,
+            4.581516
+          ],
+          [
+            101.022764,
+            4.581521
+          ],
+          [
+            101.022897,
+            4.581556
+          ],
+          [
+            101.023052,
+            4.581607
+          ],
+          [
+            101.023193,
+            4.581643
+          ],
+          [
+            101.023404,
+            4.581714
+          ],
+          [
+            101.02341193969667,
+            4.581715095132036
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00029",
+      "segment_order": 30,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02341193969667,
+            4.581715095132036
+          ],
+          [
+            101.023665,
+            4.58175
+          ],
+          [
+            101.02388,
+            4.581799
+          ],
+          [
+            101.023991,
+            4.581848
+          ],
+          [
+            101.024135,
+            4.581953
+          ],
+          [
+            101.024366,
+            4.582105
+          ],
+          [
+            101.024589,
+            4.582143
+          ],
+          [
+            101.024692,
+            4.582141
+          ],
+          [
+            101.024748,
+            4.582121
+          ],
+          [
+            101.024785,
+            4.582059
+          ],
+          [
+            101.024785,
+            4.581991
+          ],
+          [
+            101.024751,
+            4.581921
+          ],
+          [
+            101.024683,
+            4.581845
+          ],
+          [
+            101.024666,
+            4.581777
+          ],
+          [
+            101.024659,
+            4.581689
+          ],
+          [
+            101.024691,
+            4.581469
+          ],
+          [
+            101.02466702272437,
+            4.58135684823221
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00030",
+      "segment_order": 31,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02466702272437,
+            4.58135684823221
+          ],
+          [
+            101.02466,
+            4.581324
+          ],
+          [
+            101.024583,
+            4.581255
+          ],
+          [
+            101.02449,
+            4.581222
+          ],
+          [
+            101.024325,
+            4.581229
+          ],
+          [
+            101.024251,
+            4.581235
+          ],
+          [
+            101.024201,
+            4.58122
+          ],
+          [
+            101.024172,
+            4.581185
+          ],
+          [
+            101.02417,
+            4.581145
+          ],
+          [
+            101.0242,
+            4.581111
+          ],
+          [
+            101.024281,
+            4.58108
+          ],
+          [
+            101.024369,
+            4.581026
+          ],
+          [
+            101.0245,
+            4.580908
+          ],
+          [
+            101.024592,
+            4.580863
+          ],
+          [
+            101.024677,
+            4.580836
+          ],
+          [
+            101.024777,
+            4.580843
+          ],
+          [
+            101.024888,
+            4.580893
+          ],
+          [
+            101.024947,
+            4.580942
+          ],
+          [
+            101.025188,
+            4.581279
+          ],
+          [
+            101.025243,
+            4.581423
+          ],
+          [
+            101.025246,
+            4.581568
+          ],
+          [
+            101.02525192307544,
+            4.581595499994642
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00031",
+      "segment_order": 32,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02525192307544,
+            4.581595499994642
+          ],
+          [
+            101.02526,
+            4.581633
+          ],
+          [
+            101.02533,
+            4.581651
+          ],
+          [
+            101.025398,
+            4.581633
+          ],
+          [
+            101.025434,
+            4.581599
+          ],
+          [
+            101.02545,
+            4.581557
+          ],
+          [
+            101.025455,
+            4.581514
+          ],
+          [
+            101.025437,
+            4.581453
+          ],
+          [
+            101.025401,
+            4.581372
+          ],
+          [
+            101.025399,
+            4.581296
+          ],
+          [
+            101.025387,
+            4.581197
+          ],
+          [
+            101.025369,
+            4.581098
+          ],
+          [
+            101.025334,
+            4.581028
+          ],
+          [
+            101.025258,
+            4.58088
+          ],
+          [
+            101.025257,
+            4.58078
+          ],
+          [
+            101.025278,
+            4.58069
+          ],
+          [
+            101.025331,
+            4.58057
+          ],
+          [
+            101.025367,
+            4.580458
+          ],
+          [
+            101.025354,
+            4.580415
+          ],
+          [
+            101.02543,
+            4.580393
+          ],
+          [
+            101.025876,
+            4.580181
+          ],
+          [
+            101.02603694105802,
+            4.580051449964276
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "likely_covered",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00032",
+      "segment_order": 33,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02603694105802,
+            4.580051449964276
+          ],
+          [
+            101.026199,
+            4.579921
+          ],
+          [
+            101.026434,
+            4.57971
+          ],
+          [
+            101.026677,
+            4.579584
+          ],
+          [
+            101.026841,
+            4.579523
+          ],
+          [
+            101.027015,
+            4.57941
+          ],
+          [
+            101.027324,
+            4.579131
+          ],
+          [
+            101.027353,
+            4.579068
+          ],
+          [
+            101.027336,
+            4.578977
+          ],
+          [
+            101.02734,
+            4.578908
+          ],
+          [
+            101.02743,
+            4.578812
+          ],
+          [
+            101.027521,
+            4.578661
+          ],
+          [
+            101.02752289676593,
+            4.578539606981665
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00033",
+      "segment_order": 34,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02752289676593,
+            4.578539606981665
+          ],
+          [
+            101.027523,
+            4.578533
+          ],
+          [
+            101.027557,
+            4.578302
+          ],
+          [
+            101.027646,
+            4.578117
+          ],
+          [
+            101.027733,
+            4.577755
+          ],
+          [
+            101.027776,
+            4.577683
+          ],
+          [
+            101.028062,
+            4.577386
+          ],
+          [
+            101.028161,
+            4.577259
+          ],
+          [
+            101.028231,
+            4.577232
+          ],
+          [
+            101.028336,
+            4.577231
+          ],
+          [
+            101.028478,
+            4.577211
+          ],
+          [
+            101.02854,
+            4.577243
+          ],
+          [
+            101.028666,
+            4.57732
+          ],
+          [
+            101.028776,
+            4.577323
+          ],
+          [
+            101.02890726621627,
+            4.577323000026946
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00034",
+      "segment_order": 35,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02890726621627,
+            4.577323000026946
+          ],
+          [
+            101.029201,
+            4.577323
+          ],
+          [
+            101.029437,
+            4.577215
+          ],
+          [
+            101.029489,
+            4.577216
+          ],
+          [
+            101.029538,
+            4.577219
+          ],
+          [
+            101.029682,
+            4.577201
+          ],
+          [
+            101.029738,
+            4.577204
+          ],
+          [
+            101.029822,
+            4.577261
+          ],
+          [
+            101.029882,
+            4.577317
+          ],
+          [
+            101.029901,
+            4.577352
+          ],
+          [
+            101.029948,
+            4.577383
+          ],
+          [
+            101.029996,
+            4.577399
+          ],
+          [
+            101.030071,
+            4.577389
+          ],
+          [
+            101.030102,
+            4.577137
+          ],
+          [
+            101.030116,
+            4.577018
+          ],
+          [
+            101.030236,
+            4.576451
+          ],
+          [
+            101.0302462459307,
+            4.57641022975423
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00035",
+      "segment_order": 36,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.0302462459307,
+            4.57641022975423
+          ],
+          [
+            101.030332,
+            4.576069
+          ],
+          [
+            101.03036,
+            4.57594
+          ],
+          [
+            101.03064272966894,
+            4.57418595583044
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00036",
+      "segment_order": 37,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.03064272966894,
+            4.57418595583044
+          ],
+          [
+            101.030713,
+            4.57375
+          ],
+          [
+            101.030755,
+            4.573493
+          ],
+          [
+            101.030306,
+            4.573585
+          ],
+          [
+            101.030343,
+            4.573783
+          ],
+          [
+            101.030293,
+            4.574122
+          ],
+          [
+            101.030195,
+            4.574655
+          ],
+          [
+            101.03019261592439,
+            4.5746674925653625
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006899606669321656,
+      "risk_class": "uncertain",
+      "confidence": 0.00010995296179316938,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000962,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.000604,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000251,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000215,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.000131,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00011010489834006876,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00037",
+      "segment_order": 38,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.03019261592439,
+            4.5746674925653625
+          ],
+          [
+            101.030095,
+            4.575179
+          ],
+          [
+            101.030023,
+            4.575625
+          ],
+          [
+            101.030002,
+            4.575663
+          ],
+          [
+            101.030251,
+            4.576052
+          ],
+          [
+            101.030332,
+            4.576069
+          ],
+          [
+            101.030236,
+            4.576451
+          ],
+          [
+            101.03017278096324,
+            4.576749710063588
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0007247368339449167,
+      "risk_class": "uncertain",
+      "confidence": 0.000006490610303444555,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001111,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000927,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000271,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000226,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.000006500031759060221,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00038",
+      "segment_order": 39,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.03017278096324,
+            4.576749710063588
+          ],
+          [
+            101.030116,
+            4.577018
+          ],
+          [
+            101.030102,
+            4.577137
+          ],
+          [
+            101.029994,
+            4.577128
+          ],
+          [
+            101.02992,
+            4.577125
+          ],
+          [
+            101.029846,
+            4.577138
+          ],
+          [
+            101.02979,
+            4.577169
+          ],
+          [
+            101.029738,
+            4.577204
+          ],
+          [
+            101.029682,
+            4.577201
+          ],
+          [
+            101.029538,
+            4.577219
+          ],
+          [
+            101.029489,
+            4.577216
+          ],
+          [
+            101.029437,
+            4.577215
+          ],
+          [
+            101.029201,
+            4.577323
+          ],
+          [
+            101.028776,
+            4.577323
+          ],
+          [
+            101.028666,
+            4.57732
+          ],
+          [
+            101.02854,
+            4.577243
+          ],
+          [
+            101.028478,
+            4.577211
+          ],
+          [
+            101.028336,
+            4.577231
+          ],
+          [
+            101.0283172874228,
+            4.57723117821615
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00039",
+      "segment_order": 40,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.0283172874228,
+            4.57723117821615
+          ],
+          [
+            101.028231,
+            4.577232
+          ],
+          [
+            101.028161,
+            4.577259
+          ],
+          [
+            101.028062,
+            4.577386
+          ],
+          [
+            101.027776,
+            4.577683
+          ],
+          [
+            101.027733,
+            4.577755
+          ],
+          [
+            101.027646,
+            4.578117
+          ],
+          [
+            101.027557,
+            4.578302
+          ],
+          [
+            101.027523,
+            4.578533
+          ],
+          [
+            101.027521,
+            4.578661
+          ],
+          [
+            101.02743,
+            4.578812
+          ],
+          [
+            101.02734,
+            4.578908
+          ],
+          [
+            101.027336,
+            4.578977
+          ],
+          [
+            101.027353,
+            4.579068
+          ],
+          [
+            101.02733986066175,
+            4.579096544081158
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00040",
+      "segment_order": 41,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02733986066175,
+            4.579096544081158
+          ],
+          [
+            101.027324,
+            4.579131
+          ],
+          [
+            101.027015,
+            4.57941
+          ],
+          [
+            101.026841,
+            4.579523
+          ],
+          [
+            101.026677,
+            4.579584
+          ],
+          [
+            101.026434,
+            4.57971
+          ],
+          [
+            101.026199,
+            4.579921
+          ],
+          [
+            101.025876,
+            4.580181
+          ],
+          [
+            101.02550154736319,
+            4.5803589909667
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00041",
+      "segment_order": 42,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02550154736319,
+            4.5803589909667
+          ],
+          [
+            101.02543,
+            4.580393
+          ],
+          [
+            101.025354,
+            4.580415
+          ],
+          [
+            101.025367,
+            4.580458
+          ],
+          [
+            101.025331,
+            4.58057
+          ],
+          [
+            101.025278,
+            4.58069
+          ],
+          [
+            101.025257,
+            4.58078
+          ],
+          [
+            101.025258,
+            4.58088
+          ],
+          [
+            101.025334,
+            4.581028
+          ],
+          [
+            101.025369,
+            4.581098
+          ],
+          [
+            101.025387,
+            4.581197
+          ],
+          [
+            101.025399,
+            4.581296
+          ],
+          [
+            101.025401,
+            4.581372
+          ],
+          [
+            101.025437,
+            4.581453
+          ],
+          [
+            101.025455,
+            4.581514
+          ],
+          [
+            101.02545,
+            4.581557
+          ],
+          [
+            101.025434,
+            4.581599
+          ],
+          [
+            101.025398,
+            4.581633
+          ],
+          [
+            101.02533,
+            4.581651
+          ],
+          [
+            101.02526,
+            4.581633
+          ],
+          [
+            101.025246,
+            4.581568
+          ],
+          [
+            101.025243,
+            4.581423
+          ],
+          [
+            101.025188,
+            4.581279
+          ],
+          [
+            101.02501634594151,
+            4.581038969262107
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00042",
+      "segment_order": 43,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02501634594151,
+            4.581038969262107
+          ],
+          [
+            101.024947,
+            4.580942
+          ],
+          [
+            101.024888,
+            4.580893
+          ],
+          [
+            101.024777,
+            4.580843
+          ],
+          [
+            101.024677,
+            4.580836
+          ],
+          [
+            101.024592,
+            4.580863
+          ],
+          [
+            101.0245,
+            4.580908
+          ],
+          [
+            101.024369,
+            4.581026
+          ],
+          [
+            101.024281,
+            4.58108
+          ],
+          [
+            101.0242,
+            4.581111
+          ],
+          [
+            101.02417,
+            4.581145
+          ],
+          [
+            101.024172,
+            4.581185
+          ],
+          [
+            101.024201,
+            4.58122
+          ],
+          [
+            101.024251,
+            4.581235
+          ],
+          [
+            101.024325,
+            4.581229
+          ],
+          [
+            101.02449,
+            4.581222
+          ],
+          [
+            101.024583,
+            4.581255
+          ],
+          [
+            101.02466,
+            4.581324
+          ],
+          [
+            101.024691,
+            4.581469
+          ],
+          [
+            101.024659,
+            4.581689
+          ],
+          [
+            101.024666,
+            4.581777
+          ],
+          [
+            101.024683,
+            4.581845
+          ],
+          [
+            101.024751,
+            4.581921
+          ],
+          [
+            101.02476202944361,
+            4.5819437076797085
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00043",
+      "segment_order": 44,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02476202944361,
+            4.5819437076797085
+          ],
+          [
+            101.024785,
+            4.581991
+          ],
+          [
+            101.024785,
+            4.582059
+          ],
+          [
+            101.024748,
+            4.582121
+          ],
+          [
+            101.024692,
+            4.582141
+          ],
+          [
+            101.024589,
+            4.582143
+          ],
+          [
+            101.024366,
+            4.582105
+          ],
+          [
+            101.024135,
+            4.581953
+          ],
+          [
+            101.023991,
+            4.581848
+          ],
+          [
+            101.02388,
+            4.581799
+          ],
+          [
+            101.023665,
+            4.58175
+          ],
+          [
+            101.023404,
+            4.581714
+          ],
+          [
+            101.023193,
+            4.581643
+          ],
+          [
+            101.023052,
+            4.581607
+          ],
+          [
+            101.022897,
+            4.581556
+          ],
+          [
+            101.02281817664218,
+            4.5815352570145
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00044",
+      "segment_order": 45,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02281817664218,
+            4.5815352570145
+          ],
+          [
+            101.022764,
+            4.581521
+          ],
+          [
+            101.022631,
+            4.581516
+          ],
+          [
+            101.022494,
+            4.58153
+          ],
+          [
+            101.022341,
+            4.581557
+          ],
+          [
+            101.022066,
+            4.5816
+          ],
+          [
+            101.021938,
+            4.581609
+          ],
+          [
+            101.02176,
+            4.581597
+          ],
+          [
+            101.021574,
+            4.581561
+          ],
+          [
+            101.021186,
+            4.581478
+          ],
+          [
+            101.021013,
+            4.581428
+          ],
+          [
+            101.020809,
+            4.581368
+          ],
+          [
+            101.020678,
+            4.581318
+          ],
+          [
+            101.02062312460181,
+            4.581279722724205
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00045",
+      "segment_order": 46,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.02062312460181,
+            4.581279722724205
+          ],
+          [
+            101.020516,
+            4.581205
+          ],
+          [
+            101.020385,
+            4.581164
+          ],
+          [
+            101.020248,
+            4.581178
+          ],
+          [
+            101.020116,
+            4.58121
+          ],
+          [
+            101.019575,
+            4.581345
+          ],
+          [
+            101.019423,
+            4.581365
+          ],
+          [
+            101.019101,
+            4.581404
+          ],
+          [
+            101.018675,
+            4.581466
+          ],
+          [
+            101.01843601372195,
+            4.581525260826361
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.01468274462968111,
+      "risk_class": "uncertain",
+      "confidence": 0.000807875010650605,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.039756,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.015146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.014658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.012212,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.01086,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009528193040750921,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8735301494598389
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00046",
+      "segment_order": 47,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01843601372195,
+            4.581525260826361
+          ],
+          [
+            101.018429,
+            4.581527
+          ],
+          [
+            101.018307,
+            4.581577
+          ],
+          [
+            101.018184,
+            4.581637
+          ],
+          [
+            101.01809,
+            4.581711
+          ],
+          [
+            101.018,
+            4.581833
+          ],
+          [
+            101.017932,
+            4.581985
+          ],
+          [
+            101.017914,
+            4.582161
+          ],
+          [
+            101.017901,
+            4.582356
+          ],
+          [
+            101.017889,
+            4.582584
+          ],
+          [
+            101.017849,
+            4.582841
+          ],
+          [
+            101.017841,
+            4.582986
+          ],
+          [
+            101.017832,
+            4.583167
+          ],
+          [
+            101.017817,
+            4.58325
+          ],
+          [
+            101.017738,
+            4.583327
+          ],
+          [
+            101.017615,
+            4.583394
+          ],
+          [
+            101.01759305478853,
+            4.58340131507267
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.027815619483590126,
+      "risk_class": "uncertain",
+      "confidence": 0.0028877961449325085,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.077063,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.049899,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.030472,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km_4g",
+          "contribution": -0.02006,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.017429,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.003675977699458599,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8318634629249573
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00047",
+      "segment_order": 48,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01759305478853,
+            4.58340131507267
+          ],
+          [
+            101.017477,
+            4.58344
+          ],
+          [
+            101.017168,
+            4.583472
+          ],
+          [
+            101.017065,
+            4.58352
+          ],
+          [
+            101.016887,
+            4.583632
+          ],
+          [
+            101.016792,
+            4.583664
+          ],
+          [
+            101.016698,
+            4.583675
+          ],
+          [
+            101.016502,
+            4.583675
+          ],
+          [
+            101.01638,
+            4.583708
+          ],
+          [
+            101.016261,
+            4.583769
+          ],
+          [
+            101.01608,
+            4.583962
+          ],
+          [
+            101.016033,
+            4.584035
+          ],
+          [
+            101.015937,
+            4.584229
+          ],
+          [
+            101.01584402771773,
+            4.584492921317453
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00048",
+      "segment_order": 49,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01584402771773,
+            4.584492921317453
+          ],
+          [
+            101.015844,
+            4.584493
+          ],
+          [
+            101.015786,
+            4.584578
+          ],
+          [
+            101.015628,
+            4.584727
+          ],
+          [
+            101.015244,
+            4.584905
+          ],
+          [
+            101.015133,
+            4.584974
+          ],
+          [
+            101.014972,
+            4.585113
+          ],
+          [
+            101.014702,
+            4.585276
+          ],
+          [
+            101.01432,
+            4.585535
+          ],
+          [
+            101.014159,
+            4.585668
+          ],
+          [
+            101.014078,
+            4.585771
+          ],
+          [
+            101.01405871482265,
+            4.585819488448795
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00049",
+      "segment_order": 50,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01405871482265,
+            4.585819488448795
+          ],
+          [
+            101.014043,
+            4.585859
+          ],
+          [
+            101.014049,
+            4.58594
+          ],
+          [
+            101.01414,
+            4.586167
+          ],
+          [
+            101.01417,
+            4.586331
+          ],
+          [
+            101.014104,
+            4.586969
+          ],
+          [
+            101.014108,
+            4.587048
+          ],
+          [
+            101.014135,
+            4.587109
+          ],
+          [
+            101.014172,
+            4.587152
+          ],
+          [
+            101.014225,
+            4.587184
+          ],
+          [
+            101.01442,
+            4.587259
+          ],
+          [
+            101.014456,
+            4.587288
+          ],
+          [
+            101.014467,
+            4.587331
+          ],
+          [
+            101.014446,
+            4.587365
+          ],
+          [
+            101.014407,
+            4.587382
+          ],
+          [
+            101.014317,
+            4.58739
+          ],
+          [
+            101.014236,
+            4.587392
+          ],
+          [
+            101.014143,
+            4.587428
+          ],
+          [
+            101.014023,
+            4.587513
+          ],
+          [
+            101.01401158993569,
+            4.587525699900544
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00050",
+      "segment_order": 51,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01401158993569,
+            4.587525699900544
+          ],
+          [
+            101.013908,
+            4.587641
+          ],
+          [
+            101.013781,
+            4.587811
+          ],
+          [
+            101.013713,
+            4.587931
+          ],
+          [
+            101.013664,
+            4.588043
+          ],
+          [
+            101.013626,
+            4.588176
+          ],
+          [
+            101.013575,
+            4.588304
+          ],
+          [
+            101.013511,
+            4.588419
+          ],
+          [
+            101.013273,
+            4.588704
+          ],
+          [
+            101.013205,
+            4.588744
+          ],
+          [
+            101.01313,
+            4.588751
+          ],
+          [
+            101.013054,
+            4.588718
+          ],
+          [
+            101.013003,
+            4.588666
+          ],
+          [
+            101.012989,
+            4.588588
+          ],
+          [
+            101.012982,
+            4.588264
+          ],
+          [
+            101.012975,
+            4.588168
+          ],
+          [
+            101.01295467147554,
+            4.588130577037146
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00051",
+      "segment_order": 52,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.01295467147554,
+            4.588130577037146
+          ],
+          [
+            101.012931,
+            4.588087
+          ],
+          [
+            101.012876,
+            4.588025
+          ],
+          [
+            101.012788,
+            4.588006
+          ],
+          [
+            101.012683,
+            4.588009
+          ],
+          [
+            101.012284,
+            4.588106
+          ],
+          [
+            101.012169,
+            4.588119
+          ],
+          [
+            101.012065,
+            4.588099
+          ],
+          [
+            101.011974,
+            4.588054
+          ],
+          [
+            101.011803,
+            4.587921
+          ],
+          [
+            101.011726,
+            4.58786
+          ],
+          [
+            101.011675,
+            4.587824
+          ],
+          [
+            101.011592,
+            4.587819
+          ],
+          [
+            101.011522,
+            4.587838
+          ],
+          [
+            101.011373,
+            4.587896
+          ],
+          [
+            101.011264,
+            4.587923
+          ],
+          [
+            101.011179,
+            4.58793
+          ],
+          [
+            101.011091,
+            4.587921
+          ],
+          [
+            101.01097,
+            4.587886
+          ],
+          [
+            101.0108926791499,
+            4.587844087766058
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00052",
+      "segment_order": 53,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.0108926791499,
+            4.587844087766058
+          ],
+          [
+            101.010863,
+            4.587828
+          ],
+          [
+            101.010609,
+            4.58762
+          ],
+          [
+            101.01053,
+            4.587546
+          ],
+          [
+            101.010468,
+            4.587506
+          ],
+          [
+            101.010401,
+            4.587479
+          ],
+          [
+            101.010286,
+            4.587477
+          ],
+          [
+            101.010171,
+            4.587502
+          ],
+          [
+            101.010029,
+            4.587568
+          ],
+          [
+            101.009848,
+            4.587687
+          ],
+          [
+            101.009677,
+            4.587809
+          ],
+          [
+            101.009595,
+            4.587879
+          ],
+          [
+            101.009517,
+            4.587971
+          ],
+          [
+            101.009468,
+            4.588076
+          ],
+          [
+            101.009424,
+            4.588211
+          ],
+          [
+            101.009397,
+            4.588296
+          ],
+          [
+            101.009347,
+            4.588375
+          ],
+          [
+            101.009272,
+            4.588426
+          ],
+          [
+            101.00921155862613,
+            4.588447536582905
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.026260167360305786,
+      "risk_class": "uncertain",
+      "confidence": 0.0008155294344760478,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.066033,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.049025,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.024245,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.022259,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021537,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0009986611548811197,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8618894815444946
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00053",
+      "segment_order": 54,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.00921155862613,
+            4.588447536582905
+          ],
+          [
+            101.009185,
+            4.588457
+          ],
+          [
+            101.009108,
+            4.588496
+          ],
+          [
+            101.009033,
+            4.58855
+          ],
+          [
+            101.008909,
+            4.5887
+          ],
+          [
+            101.008826,
+            4.588785
+          ],
+          [
+            101.008731,
+            4.58885
+          ],
+          [
+            101.008501,
+            4.588983
+          ],
+          [
+            101.008451,
+            4.589032
+          ],
+          [
+            101.008423,
+            4.589087
+          ],
+          [
+            101.008417,
+            4.589141
+          ],
+          [
+            101.008427,
+            4.589193
+          ],
+          [
+            101.008512,
+            4.589336
+          ],
+          [
+            101.008605,
+            4.589563
+          ],
+          [
+            101.008693,
+            4.589729
+          ],
+          [
+            101.008818,
+            4.590032
+          ],
+          [
+            101.008871,
+            4.59016
+          ],
+          [
+            101.00889939629124,
+            4.590203454934808
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.06550108641386032,
+      "risk_class": "uncertain",
+      "confidence": 0.0011934725334867835,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.243222,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.119823,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.050626,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.033508,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.03264,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.00161142332945019,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.8522835373878479
+    },
+    {
+      "segment_id": "trail_jalan_kledang__s00054",
+      "segment_order": 55,
+      "segment_length_m": 101.30177704761081,
+      "geometry": {
+        "coordinates": [
+          [
+            101.00889939629124,
+            4.590203454934808
+          ],
+          [
+            101.008937,
+            4.590261
+          ],
+          [
+            101.009014,
+            4.590313
+          ],
+          [
+            101.009105,
+            4.590378
+          ],
+          [
+            101.009189,
+            4.590453
+          ],
+          [
+            101.009265,
+            4.590584
+          ],
+          [
+            101.009335,
+            4.590678
+          ],
+          [
+            101.009407,
+            4.590723
+          ],
+          [
+            101.009485,
+            4.590746
+          ],
+          [
+            101.009574,
+            4.590774
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.021475886926054955,
+      "risk_class": "uncertain",
+      "confidence": 0.0010622014524415135,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.075772,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.03294,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.027732,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.021277,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.020016,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.001109872478991747,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256-canonical-json-without-integrity",
+    "checksum": "125e431c0c0469d6b91a1dffbad4ef5ff16d14db0ab324d90a5b4b65d4c8f478"
+  }
+}

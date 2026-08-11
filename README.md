@@ -38,6 +38,19 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Bundled JEJAK prediction packs
+
+The offline prototype bundles nine M9 v11 `model_backed` Malaysian trail packs under
+`src/repositories/fixtures/m9-v11/`. They contain the M8 v3 cross-country Candidate predictions
+and the positive-only JENDELA overlay. The packs are planning-only, are not field-validated, and
+keep `approved_for_mobile_warning=false` and `warning_eligible=false`.
+
+To regenerate them from the JEJAK ML outputs:
+
+```bash
+npm run import:m9-v11 -- <path-to-v11.geojson> <path-to-v11-manifest.json>
+```
+
 ## Project structure
 
 ```
