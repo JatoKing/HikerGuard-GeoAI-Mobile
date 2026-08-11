@@ -1,0 +1,3631 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "bukit-kerinchi",
+  "name": "Taman Rimba Bukit Kerinchi",
+  "pack_version": "2026-08-10T03:15:29.852Z",
+  "generated_at": "2026-08-10T03:15:29.852Z",
+  "stage": "model_backed",
+  "prediction_available": true,
+  "model": {
+    "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+    "validation_level": "cross_country_spatial_validation_planning_only",
+    "intended_use": "offline_hackathon_connectivity_planning_only",
+    "field_validated": false,
+    "label_source": "anatel_mobile_coverage_2026_07 + fcc_bdc_mobile_4g_lte_2025_06",
+    "label_release": "Anatel 2026-07 + FCC BDC 2025-06",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": false,
+    "model_stage": "Candidate"
+  },
+  "segments": [
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00000",
+      "segment_order": 1,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.656802,
+            3.094253
+          ],
+          [
+            101.656799,
+            3.094249
+          ],
+          [
+            101.656824,
+            3.094173
+          ],
+          [
+            101.656894,
+            3.094133
+          ],
+          [
+            101.656947,
+            3.094055
+          ],
+          [
+            101.657059,
+            3.094009
+          ],
+          [
+            101.657143,
+            3.09392
+          ],
+          [
+            101.657239,
+            3.093978
+          ],
+          [
+            101.657443,
+            3.094051
+          ],
+          [
+            101.657517,
+            3.093968
+          ],
+          [
+            101.657598,
+            3.093887
+          ],
+          [
+            101.657686,
+            3.093838
+          ],
+          [
+            101.657778,
+            3.093769
+          ],
+          [
+            101.657749,
+            3.093681
+          ],
+          [
+            101.657765,
+            3.0936
+          ],
+          [
+            101.657827,
+            3.093499
+          ],
+          [
+            101.657888,
+            3.093412
+          ],
+          [
+            101.657968,
+            3.093343
+          ],
+          [
+            101.657995,
+            3.093244
+          ],
+          [
+            101.657995,
+            3.093138
+          ],
+          [
+            101.658026,
+            3.09305
+          ],
+          [
+            101.658073,
+            3.092965
+          ],
+          [
+            101.658108,
+            3.092918
+          ],
+          [
+            101.65811975704405,
+            3.0929035556321067
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00001",
+      "segment_order": 2,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65811975704405,
+            3.0929035556321067
+          ],
+          [
+            101.658143,
+            3.092875
+          ],
+          [
+            101.658243,
+            3.092837
+          ],
+          [
+            101.658339,
+            3.092755
+          ],
+          [
+            101.658418,
+            3.092667
+          ],
+          [
+            101.658475,
+            3.092574
+          ],
+          [
+            101.658555,
+            3.092517
+          ],
+          [
+            101.658647,
+            3.092486
+          ],
+          [
+            101.658715,
+            3.092448
+          ],
+          [
+            101.658775,
+            3.092486
+          ],
+          [
+            101.658836,
+            3.092537
+          ],
+          [
+            101.658871,
+            3.092594
+          ],
+          [
+            101.65892,
+            3.092694
+          ],
+          [
+            101.658939,
+            3.092909
+          ],
+          [
+            101.658985,
+            3.093037
+          ],
+          [
+            101.659022,
+            3.093164
+          ],
+          [
+            101.659061,
+            3.093297
+          ],
+          [
+            101.659114,
+            3.093415
+          ],
+          [
+            101.659148,
+            3.093451
+          ],
+          [
+            101.659204,
+            3.09349
+          ],
+          [
+            101.65923,
+            3.093513
+          ],
+          [
+            101.659248,
+            3.09355
+          ],
+          [
+            101.659256,
+            3.093591
+          ],
+          [
+            101.65928223240948,
+            3.0937588874400386
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00002",
+      "segment_order": 3,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65928223240948,
+            3.0937588874400386
+          ],
+          [
+            101.659301,
+            3.093879
+          ],
+          [
+            101.659365,
+            3.093941
+          ],
+          [
+            101.659395,
+            3.09399
+          ],
+          [
+            101.659419,
+            3.09407
+          ],
+          [
+            101.65954,
+            3.094079
+          ],
+          [
+            101.659684,
+            3.094104
+          ],
+          [
+            101.6598,
+            3.094118
+          ],
+          [
+            101.659907,
+            3.094134
+          ],
+          [
+            101.660043,
+            3.094131
+          ],
+          [
+            101.660146,
+            3.094113
+          ],
+          [
+            101.660231,
+            3.09406
+          ],
+          [
+            101.66032,
+            3.094018
+          ],
+          [
+            101.660245,
+            3.09396
+          ],
+          [
+            101.660119,
+            3.093914
+          ],
+          [
+            101.660028,
+            3.093829
+          ],
+          [
+            101.659973,
+            3.093696
+          ],
+          [
+            101.659875,
+            3.093649
+          ],
+          [
+            101.659817,
+            3.093534
+          ],
+          [
+            101.659786,
+            3.093427
+          ],
+          [
+            101.659717,
+            3.093366
+          ],
+          [
+            101.65968969734381,
+            3.0933498304674147
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00003",
+      "segment_order": 4,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65968969734381,
+            3.0933498304674147
+          ],
+          [
+            101.659614,
+            3.093305
+          ],
+          [
+            101.659543,
+            3.093192
+          ],
+          [
+            101.659505,
+            3.093048
+          ],
+          [
+            101.659412,
+            3.09296
+          ],
+          [
+            101.659344,
+            3.092862
+          ],
+          [
+            101.659342,
+            3.092756
+          ],
+          [
+            101.659244,
+            3.09279
+          ],
+          [
+            101.659168,
+            3.092744
+          ],
+          [
+            101.65919,
+            3.09266
+          ],
+          [
+            101.65926,
+            3.092615
+          ],
+          [
+            101.65924,
+            3.092524
+          ],
+          [
+            101.659207,
+            3.09242
+          ],
+          [
+            101.659202,
+            3.092286
+          ],
+          [
+            101.659181,
+            3.092166
+          ],
+          [
+            101.659255,
+            3.092098
+          ],
+          [
+            101.659299,
+            3.092011
+          ],
+          [
+            101.659342,
+            3.091959
+          ],
+          [
+            101.659432,
+            3.09191
+          ],
+          [
+            101.659449,
+            3.091742
+          ],
+          [
+            101.659547,
+            3.091743
+          ],
+          [
+            101.65962407347382,
+            3.0917378185915387
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00004",
+      "segment_order": 5,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65962407347382,
+            3.0917378185915387
+          ],
+          [
+            101.659666,
+            3.091735
+          ],
+          [
+            101.659777,
+            3.091688
+          ],
+          [
+            101.659851,
+            3.091636
+          ],
+          [
+            101.659928,
+            3.091576
+          ],
+          [
+            101.659978,
+            3.091527
+          ],
+          [
+            101.660008,
+            3.091456
+          ],
+          [
+            101.660022,
+            3.091391
+          ],
+          [
+            101.660027,
+            3.091284
+          ],
+          [
+            101.660114,
+            3.091228
+          ],
+          [
+            101.660234,
+            3.091165
+          ],
+          [
+            101.660382,
+            3.091089
+          ],
+          [
+            101.660423,
+            3.091184
+          ],
+          [
+            101.660504,
+            3.091262
+          ],
+          [
+            101.660576,
+            3.091331
+          ],
+          [
+            101.660757,
+            3.091294
+          ],
+          [
+            101.660841,
+            3.091166
+          ],
+          [
+            101.660863,
+            3.091091
+          ],
+          [
+            101.660865,
+            3.091053
+          ],
+          [
+            101.6611,
+            3.091042
+          ],
+          [
+            101.661242,
+            3.091035
+          ],
+          [
+            101.66127166657363,
+            3.091032954035969
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00005",
+      "segment_order": 6,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66127166657363,
+            3.091032954035969
+          ],
+          [
+            101.661735,
+            3.091001
+          ],
+          [
+            101.661736,
+            3.090965
+          ],
+          [
+            101.661959,
+            3.090952
+          ],
+          [
+            101.662131,
+            3.090874
+          ],
+          [
+            101.662317,
+            3.090802
+          ],
+          [
+            101.66249,
+            3.09079
+          ],
+          [
+            101.662656,
+            3.09082
+          ],
+          [
+            101.662815,
+            3.090879
+          ],
+          [
+            101.662961,
+            3.090973
+          ],
+          [
+            101.663082,
+            3.091082
+          ],
+          [
+            101.663247,
+            3.091262
+          ],
+          [
+            101.66321487907346,
+            3.0912958115028326
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00006",
+      "segment_order": 7,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66321487907346,
+            3.0912958115028326
+          ],
+          [
+            101.66319,
+            3.091322
+          ],
+          [
+            101.663172,
+            3.091404
+          ],
+          [
+            101.663182,
+            3.09153
+          ],
+          [
+            101.663251,
+            3.09162
+          ],
+          [
+            101.663297,
+            3.091717
+          ],
+          [
+            101.663318,
+            3.091815
+          ],
+          [
+            101.663322,
+            3.091921
+          ],
+          [
+            101.663247,
+            3.092017
+          ],
+          [
+            101.663203,
+            3.09212
+          ],
+          [
+            101.663177,
+            3.092235
+          ],
+          [
+            101.663154,
+            3.092363
+          ],
+          [
+            101.663182,
+            3.092502
+          ],
+          [
+            101.663196,
+            3.092628
+          ],
+          [
+            101.663192,
+            3.092737
+          ],
+          [
+            101.663494,
+            3.092709
+          ],
+          [
+            101.663608,
+            3.092641
+          ],
+          [
+            101.663728,
+            3.092584
+          ],
+          [
+            101.663769,
+            3.092713
+          ],
+          [
+            101.66377914882231,
+            3.092730252999886
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00007",
+      "segment_order": 8,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66377914882231,
+            3.092730252999886
+          ],
+          [
+            101.663839,
+            3.092832
+          ],
+          [
+            101.663938,
+            3.092935
+          ],
+          [
+            101.664037,
+            3.093017
+          ],
+          [
+            101.664137,
+            3.093066
+          ],
+          [
+            101.664238,
+            3.093105
+          ],
+          [
+            101.664399,
+            3.093155
+          ],
+          [
+            101.664535,
+            3.093202
+          ],
+          [
+            101.664655,
+            3.09325
+          ],
+          [
+            101.664739,
+            3.093317
+          ],
+          [
+            101.664801,
+            3.093443
+          ],
+          [
+            101.664569,
+            3.093507
+          ],
+          [
+            101.664191,
+            3.093514
+          ],
+          [
+            101.66385716528006,
+            3.0935010892694392
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00008",
+      "segment_order": 9,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66385716528006,
+            3.0935010892694392
+          ],
+          [
+            101.663829,
+            3.0935
+          ],
+          [
+            101.663602,
+            3.093462
+          ],
+          [
+            101.663241,
+            3.093356
+          ],
+          [
+            101.662994,
+            3.0933
+          ],
+          [
+            101.66284,
+            3.093299
+          ],
+          [
+            101.662679,
+            3.093322
+          ],
+          [
+            101.66257,
+            3.093319
+          ],
+          [
+            101.662469,
+            3.093299
+          ],
+          [
+            101.66236,
+            3.093412
+          ],
+          [
+            101.662313,
+            3.093502
+          ],
+          [
+            101.662251,
+            3.09359
+          ],
+          [
+            101.662193,
+            3.093709
+          ],
+          [
+            101.662124,
+            3.093765
+          ],
+          [
+            101.662071,
+            3.093741
+          ],
+          [
+            101.662012,
+            3.093705
+          ],
+          [
+            101.661944,
+            3.093654
+          ],
+          [
+            101.66190902247035,
+            3.093648646297574
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00009",
+      "segment_order": 10,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66190902247035,
+            3.093648646297574
+          ],
+          [
+            101.661846,
+            3.093639
+          ],
+          [
+            101.661753,
+            3.093676
+          ],
+          [
+            101.661676,
+            3.093695
+          ],
+          [
+            101.66159,
+            3.093699
+          ],
+          [
+            101.661523,
+            3.093676
+          ],
+          [
+            101.661508,
+            3.093617
+          ],
+          [
+            101.661463,
+            3.09357
+          ],
+          [
+            101.661446,
+            3.093476
+          ],
+          [
+            101.661422,
+            3.093385
+          ],
+          [
+            101.661374,
+            3.093302
+          ],
+          [
+            101.661328,
+            3.093209
+          ],
+          [
+            101.661262,
+            3.093144
+          ],
+          [
+            101.661155,
+            3.093125
+          ],
+          [
+            101.661057,
+            3.093102
+          ],
+          [
+            101.660966,
+            3.093047
+          ],
+          [
+            101.660922,
+            3.092952
+          ],
+          [
+            101.660838,
+            3.0929
+          ],
+          [
+            101.660735,
+            3.092855
+          ],
+          [
+            101.660684,
+            3.092783
+          ],
+          [
+            101.660608,
+            3.09271
+          ],
+          [
+            101.66054,
+            3.092638
+          ],
+          [
+            101.660457,
+            3.092604
+          ],
+          [
+            101.660289,
+            3.092622
+          ],
+          [
+            101.66023525376782,
+            3.092589622752981
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00010",
+      "segment_order": 11,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66023525376782,
+            3.092589622752981
+          ],
+          [
+            101.660206,
+            3.092572
+          ],
+          [
+            101.660096,
+            3.092516
+          ],
+          [
+            101.659979,
+            3.092465
+          ],
+          [
+            101.659911,
+            3.092374
+          ],
+          [
+            101.659885,
+            3.092291
+          ],
+          [
+            101.659847,
+            3.092197
+          ],
+          [
+            101.659834,
+            3.092102
+          ],
+          [
+            101.659771,
+            3.092039
+          ],
+          [
+            101.659694,
+            3.091986
+          ],
+          [
+            101.659687,
+            3.091919
+          ],
+          [
+            101.659708,
+            3.091847
+          ],
+          [
+            101.659666,
+            3.091735
+          ],
+          [
+            101.659777,
+            3.091688
+          ],
+          [
+            101.659851,
+            3.091636
+          ],
+          [
+            101.659928,
+            3.091576
+          ],
+          [
+            101.659978,
+            3.091527
+          ],
+          [
+            101.660008,
+            3.091456
+          ],
+          [
+            101.660022,
+            3.091391
+          ],
+          [
+            101.660027,
+            3.091284
+          ],
+          [
+            101.660114,
+            3.091228
+          ],
+          [
+            101.660234,
+            3.091165
+          ],
+          [
+            101.660382,
+            3.091089
+          ],
+          [
+            101.66041892476382,
+            3.091174557380425
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00011",
+      "segment_order": 12,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66041892476382,
+            3.091174557380425
+          ],
+          [
+            101.660423,
+            3.091184
+          ],
+          [
+            101.660504,
+            3.091262
+          ],
+          [
+            101.660576,
+            3.091331
+          ],
+          [
+            101.660757,
+            3.091294
+          ],
+          [
+            101.660841,
+            3.091166
+          ],
+          [
+            101.660863,
+            3.091091
+          ],
+          [
+            101.660865,
+            3.091053
+          ],
+          [
+            101.6611,
+            3.091042
+          ],
+          [
+            101.661242,
+            3.091035
+          ],
+          [
+            101.661735,
+            3.091001
+          ],
+          [
+            101.661736,
+            3.090965
+          ],
+          [
+            101.661959,
+            3.090952
+          ],
+          [
+            101.662131,
+            3.090874
+          ],
+          [
+            101.662317,
+            3.090802
+          ],
+          [
+            101.66237235001576,
+            3.0907981606956585
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00012",
+      "segment_order": 13,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66237235001576,
+            3.0907981606956585
+          ],
+          [
+            101.66249,
+            3.09079
+          ],
+          [
+            101.662656,
+            3.09082
+          ],
+          [
+            101.662815,
+            3.090879
+          ],
+          [
+            101.662961,
+            3.090973
+          ],
+          [
+            101.663082,
+            3.091082
+          ],
+          [
+            101.663247,
+            3.091262
+          ],
+          [
+            101.66319,
+            3.091322
+          ],
+          [
+            101.663172,
+            3.091404
+          ],
+          [
+            101.663182,
+            3.09153
+          ],
+          [
+            101.663251,
+            3.09162
+          ],
+          [
+            101.663297,
+            3.091717
+          ],
+          [
+            101.663318,
+            3.091815
+          ],
+          [
+            101.663322,
+            3.091921
+          ],
+          [
+            101.663247,
+            3.092017
+          ],
+          [
+            101.663203,
+            3.09212
+          ],
+          [
+            101.663177,
+            3.092235
+          ],
+          [
+            101.663154,
+            3.092363
+          ],
+          [
+            101.66315737253288,
+            3.0923797422187183
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00013",
+      "segment_order": 14,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66315737253288,
+            3.0923797422187183
+          ],
+          [
+            101.663182,
+            3.092502
+          ],
+          [
+            101.663196,
+            3.092628
+          ],
+          [
+            101.663192,
+            3.092737
+          ],
+          [
+            101.663086,
+            3.092742
+          ],
+          [
+            101.662959,
+            3.092716
+          ],
+          [
+            101.662837,
+            3.092758
+          ],
+          [
+            101.662766,
+            3.092851
+          ],
+          [
+            101.662735,
+            3.092959
+          ],
+          [
+            101.662659,
+            3.09303
+          ],
+          [
+            101.662557,
+            3.093083
+          ],
+          [
+            101.662546,
+            3.093162
+          ],
+          [
+            101.662559,
+            3.09324
+          ],
+          [
+            101.66257,
+            3.093319
+          ],
+          [
+            101.662469,
+            3.093299
+          ],
+          [
+            101.66236,
+            3.093412
+          ],
+          [
+            101.662313,
+            3.093502
+          ],
+          [
+            101.662251,
+            3.09359
+          ],
+          [
+            101.662193,
+            3.093709
+          ],
+          [
+            101.662124,
+            3.093765
+          ],
+          [
+            101.662071,
+            3.093741
+          ],
+          [
+            101.66198494634244,
+            3.0937807882506707
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0013232550118118525,
+      "risk_class": "uncertain",
+      "confidence": 1.101184079535515e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.003867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.002177,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.00053,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000393,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000354,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 1.1041061380864684e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00014",
+      "segment_order": 15,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66198494634244,
+            3.0937807882506707
+          ],
+          [
+            101.661978,
+            3.093784
+          ],
+          [
+            101.66188,
+            3.093772
+          ],
+          [
+            101.661786,
+            3.093795
+          ],
+          [
+            101.661766,
+            3.093874
+          ],
+          [
+            101.661826,
+            3.09396
+          ],
+          [
+            101.661862,
+            3.094055
+          ],
+          [
+            101.66188,
+            3.094164
+          ],
+          [
+            101.661885,
+            3.094388
+          ],
+          [
+            101.661852,
+            3.094511
+          ],
+          [
+            101.661834,
+            3.094631
+          ],
+          [
+            101.661798,
+            3.094719
+          ],
+          [
+            101.661799,
+            3.094812
+          ],
+          [
+            101.661809,
+            3.094889
+          ],
+          [
+            101.661769,
+            3.094987
+          ],
+          [
+            101.661775,
+            3.095102
+          ],
+          [
+            101.661755,
+            3.095199
+          ],
+          [
+            101.661676,
+            3.095275
+          ],
+          [
+            101.661553,
+            3.095326
+          ],
+          [
+            101.661431,
+            3.095387
+          ],
+          [
+            101.661338,
+            3.095435
+          ],
+          [
+            101.66126319473966,
+            3.0955199640001902
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00015",
+      "segment_order": 16,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66126319473966,
+            3.0955199640001902
+          ],
+          [
+            101.661257,
+            3.095527
+          ],
+          [
+            101.661194,
+            3.095563
+          ],
+          [
+            101.661116,
+            3.095541
+          ],
+          [
+            101.661018,
+            3.095566
+          ],
+          [
+            101.660996,
+            3.095639
+          ],
+          [
+            101.661038,
+            3.095722
+          ],
+          [
+            101.661073,
+            3.095793
+          ],
+          [
+            101.661049,
+            3.095873
+          ],
+          [
+            101.660975,
+            3.095942
+          ],
+          [
+            101.66093,
+            3.096035
+          ],
+          [
+            101.660895,
+            3.096125
+          ],
+          [
+            101.660899,
+            3.096207
+          ],
+          [
+            101.660877,
+            3.09627
+          ],
+          [
+            101.660858,
+            3.096378
+          ],
+          [
+            101.660847,
+            3.096526
+          ],
+          [
+            101.660848,
+            3.096652
+          ],
+          [
+            101.660839,
+            3.096771
+          ],
+          [
+            101.6608,
+            3.096847
+          ],
+          [
+            101.660759,
+            3.09693
+          ],
+          [
+            101.660725,
+            3.096998
+          ],
+          [
+            101.660665,
+            3.097111
+          ],
+          [
+            101.660569,
+            3.097217
+          ],
+          [
+            101.660451,
+            3.097293
+          ],
+          [
+            101.66042092977276,
+            3.0973234658901285
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "likely_covered",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00016",
+      "segment_order": 17,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.66042092977276,
+            3.0973234658901285
+          ],
+          [
+            101.660375,
+            3.09737
+          ],
+          [
+            101.66033,
+            3.097467
+          ],
+          [
+            101.660304,
+            3.097568
+          ],
+          [
+            101.660333,
+            3.097685
+          ],
+          [
+            101.660335,
+            3.09771
+          ],
+          [
+            101.660338,
+            3.097731
+          ],
+          [
+            101.660343,
+            3.097793
+          ],
+          [
+            101.66033,
+            3.097893
+          ],
+          [
+            101.660262,
+            3.097978
+          ],
+          [
+            101.660129,
+            3.09806
+          ],
+          [
+            101.660017,
+            3.098177
+          ],
+          [
+            101.659946,
+            3.09831
+          ],
+          [
+            101.659899,
+            3.098481
+          ],
+          [
+            101.659881,
+            3.098596
+          ],
+          [
+            101.659826,
+            3.098706
+          ],
+          [
+            101.65977,
+            3.098806
+          ],
+          [
+            101.65973,
+            3.098851
+          ],
+          [
+            101.659706,
+            3.098942
+          ],
+          [
+            101.65972,
+            3.098994
+          ],
+          [
+            101.659766,
+            3.099052
+          ],
+          [
+            101.65985,
+            3.099041
+          ],
+          [
+            101.659923,
+            3.099128
+          ],
+          [
+            101.65996218336346,
+            3.0991753465665655
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00017",
+      "segment_order": 18,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65996218336346,
+            3.0991753465665655
+          ],
+          [
+            101.659995,
+            3.099215
+          ],
+          [
+            101.660069,
+            3.099255
+          ],
+          [
+            101.660166,
+            3.099304
+          ],
+          [
+            101.660259,
+            3.099359
+          ],
+          [
+            101.660339,
+            3.099447
+          ],
+          [
+            101.660398,
+            3.099526
+          ],
+          [
+            101.660474,
+            3.099595
+          ],
+          [
+            101.660533,
+            3.099655
+          ],
+          [
+            101.660553,
+            3.099736
+          ],
+          [
+            101.660481,
+            3.09982
+          ],
+          [
+            101.660472,
+            3.099894
+          ],
+          [
+            101.660483,
+            3.099972
+          ],
+          [
+            101.660478,
+            3.100067
+          ],
+          [
+            101.660485,
+            3.100164
+          ],
+          [
+            101.660432,
+            3.100228
+          ],
+          [
+            101.660353,
+            3.100284
+          ],
+          [
+            101.660244,
+            3.100354
+          ],
+          [
+            101.660121,
+            3.100401
+          ],
+          [
+            101.660047,
+            3.100486
+          ],
+          [
+            101.659983,
+            3.10053
+          ],
+          [
+            101.659888,
+            3.100606
+          ],
+          [
+            101.659862,
+            3.100696
+          ],
+          [
+            101.659814,
+            3.100782
+          ],
+          [
+            101.65980145393794,
+            3.1007876787445676
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00018",
+      "segment_order": 19,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65980145393794,
+            3.1007876787445676
+          ],
+          [
+            101.659719,
+            3.100825
+          ],
+          [
+            101.659661,
+            3.100888
+          ],
+          [
+            101.659568,
+            3.100969
+          ],
+          [
+            101.659472,
+            3.101035
+          ],
+          [
+            101.659371,
+            3.101042
+          ],
+          [
+            101.659251,
+            3.101059
+          ],
+          [
+            101.659281,
+            3.10114
+          ],
+          [
+            101.659302,
+            3.101234
+          ],
+          [
+            101.65932,
+            3.101332
+          ],
+          [
+            101.65935,
+            3.101424
+          ],
+          [
+            101.659393,
+            3.101508
+          ],
+          [
+            101.659434,
+            3.101602
+          ],
+          [
+            101.659437,
+            3.10172
+          ],
+          [
+            101.659444,
+            3.101816
+          ],
+          [
+            101.659467,
+            3.101923
+          ],
+          [
+            101.659517,
+            3.102024
+          ],
+          [
+            101.659609,
+            3.102094
+          ],
+          [
+            101.659709,
+            3.102147
+          ],
+          [
+            101.659751,
+            3.102231
+          ],
+          [
+            101.659751,
+            3.102331
+          ],
+          [
+            101.659735,
+            3.102424
+          ],
+          [
+            101.65967324593089,
+            3.1024877145158687
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00019",
+      "segment_order": 20,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65967324593089,
+            3.1024877145158687
+          ],
+          [
+            101.659672,
+            3.102489
+          ],
+          [
+            101.659656,
+            3.10258
+          ],
+          [
+            101.659633,
+            3.102653
+          ],
+          [
+            101.65958,
+            3.102718
+          ],
+          [
+            101.659549,
+            3.102777
+          ],
+          [
+            101.659565,
+            3.102847
+          ],
+          [
+            101.659625,
+            3.102916
+          ],
+          [
+            101.65971,
+            3.102944
+          ],
+          [
+            101.659711,
+            3.103073
+          ],
+          [
+            101.659713,
+            3.103205
+          ],
+          [
+            101.659751,
+            3.103311
+          ],
+          [
+            101.659813,
+            3.103393
+          ],
+          [
+            101.659879,
+            3.10345
+          ],
+          [
+            101.659904,
+            3.103506
+          ],
+          [
+            101.659899,
+            3.10358
+          ],
+          [
+            101.659866,
+            3.103663
+          ],
+          [
+            101.659844,
+            3.103737
+          ],
+          [
+            101.659831,
+            3.103826
+          ],
+          [
+            101.659826,
+            3.103921
+          ],
+          [
+            101.659818,
+            3.104013
+          ],
+          [
+            101.659822,
+            3.104123
+          ],
+          [
+            101.659805,
+            3.104221
+          ],
+          [
+            101.659728,
+            3.104467
+          ],
+          [
+            101.65969945413985,
+            3.1045359858340893
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00020",
+      "segment_order": 21,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65969945413985,
+            3.1045359858340893
+          ],
+          [
+            101.659668,
+            3.104612
+          ],
+          [
+            101.659621,
+            3.104758
+          ],
+          [
+            101.659597,
+            3.104888
+          ],
+          [
+            101.659564,
+            3.10502
+          ],
+          [
+            101.659543,
+            3.105127
+          ],
+          [
+            101.659519,
+            3.105271
+          ],
+          [
+            101.659485,
+            3.105422
+          ],
+          [
+            101.659464,
+            3.105531
+          ],
+          [
+            101.659438,
+            3.105623
+          ],
+          [
+            101.659361,
+            3.105716
+          ],
+          [
+            101.659245,
+            3.105739
+          ],
+          [
+            101.659142,
+            3.10572
+          ],
+          [
+            101.659109,
+            3.105615
+          ],
+          [
+            101.659054,
+            3.105542
+          ],
+          [
+            101.658991,
+            3.105485
+          ],
+          [
+            101.658889,
+            3.105425
+          ],
+          [
+            101.658863,
+            3.105322
+          ],
+          [
+            101.658843,
+            3.105209
+          ],
+          [
+            101.65879774179068,
+            3.1050469214966108
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00021",
+      "segment_order": 22,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65879774179068,
+            3.1050469214966108
+          ],
+          [
+            101.658726,
+            3.10479
+          ],
+          [
+            101.65869,
+            3.104715
+          ],
+          [
+            101.658697,
+            3.104656
+          ],
+          [
+            101.658716,
+            3.104569
+          ],
+          [
+            101.658743,
+            3.104478
+          ],
+          [
+            101.65883,
+            3.104444
+          ],
+          [
+            101.658888,
+            3.1044
+          ],
+          [
+            101.658959,
+            3.104327
+          ],
+          [
+            101.659074,
+            3.104253
+          ],
+          [
+            101.659172,
+            3.104203
+          ],
+          [
+            101.659267,
+            3.104148
+          ],
+          [
+            101.659315,
+            3.104073
+          ],
+          [
+            101.659311,
+            3.103996
+          ],
+          [
+            101.659323,
+            3.103891
+          ],
+          [
+            101.659325,
+            3.103799
+          ],
+          [
+            101.659342,
+            3.103692
+          ],
+          [
+            101.659313,
+            3.103584
+          ],
+          [
+            101.659249,
+            3.103504
+          ],
+          [
+            101.65918,
+            3.103403
+          ],
+          [
+            101.659175,
+            3.103297
+          ],
+          [
+            101.659203,
+            3.103179
+          ],
+          [
+            101.65920355903859,
+            3.103175506009248
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00022",
+      "segment_order": 23,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65920355903859,
+            3.103175506009248
+          ],
+          [
+            101.659223,
+            3.103054
+          ],
+          [
+            101.659225,
+            3.10295
+          ],
+          [
+            101.659243,
+            3.102848
+          ],
+          [
+            101.659295,
+            3.102766
+          ],
+          [
+            101.65928,
+            3.102683
+          ],
+          [
+            101.659339,
+            3.102626
+          ],
+          [
+            101.659431,
+            3.102591
+          ],
+          [
+            101.659555,
+            3.102558
+          ],
+          [
+            101.659672,
+            3.102489
+          ],
+          [
+            101.659735,
+            3.102424
+          ],
+          [
+            101.659751,
+            3.102331
+          ],
+          [
+            101.659751,
+            3.102231
+          ],
+          [
+            101.659709,
+            3.102147
+          ],
+          [
+            101.659609,
+            3.102094
+          ],
+          [
+            101.659517,
+            3.102024
+          ],
+          [
+            101.659467,
+            3.101923
+          ],
+          [
+            101.659444,
+            3.101816
+          ],
+          [
+            101.659437,
+            3.10172
+          ],
+          [
+            101.659434,
+            3.101602
+          ],
+          [
+            101.659393,
+            3.101508
+          ],
+          [
+            101.65935,
+            3.101424
+          ],
+          [
+            101.65933151162609,
+            3.101367302322029
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00023",
+      "segment_order": 24,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65933151162609,
+            3.101367302322029
+          ],
+          [
+            101.65932,
+            3.101332
+          ],
+          [
+            101.659302,
+            3.101234
+          ],
+          [
+            101.659281,
+            3.10114
+          ],
+          [
+            101.659251,
+            3.101059
+          ],
+          [
+            101.659104,
+            3.100933
+          ],
+          [
+            101.659026,
+            3.100816
+          ],
+          [
+            101.658931,
+            3.100754
+          ],
+          [
+            101.658822,
+            3.100687
+          ],
+          [
+            101.658734,
+            3.100607
+          ],
+          [
+            101.658687,
+            3.100497
+          ],
+          [
+            101.658664,
+            3.100392
+          ],
+          [
+            101.658635,
+            3.10029
+          ],
+          [
+            101.6586,
+            3.100219
+          ],
+          [
+            101.658566,
+            3.100153
+          ],
+          [
+            101.658496,
+            3.100067
+          ],
+          [
+            101.658415,
+            3.099992
+          ],
+          [
+            101.658337,
+            3.099917
+          ],
+          [
+            101.658267,
+            3.099847
+          ],
+          [
+            101.658234,
+            3.099757
+          ],
+          [
+            101.65822,
+            3.09965
+          ],
+          [
+            101.658286,
+            3.099546
+          ],
+          [
+            101.65828675535259,
+            3.0995453318035526
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00024",
+      "segment_order": 25,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65828675535259,
+            3.0995453318035526
+          ],
+          [
+            101.658364,
+            3.099477
+          ],
+          [
+            101.658489,
+            3.09931
+          ],
+          [
+            101.658546,
+            3.09924
+          ],
+          [
+            101.658572,
+            3.099131
+          ],
+          [
+            101.658624,
+            3.099056
+          ],
+          [
+            101.658685,
+            3.098961
+          ],
+          [
+            101.658708,
+            3.098866
+          ],
+          [
+            101.658677,
+            3.098755
+          ],
+          [
+            101.658671,
+            3.09872
+          ],
+          [
+            101.658661,
+            3.098659
+          ],
+          [
+            101.658659,
+            3.09858
+          ],
+          [
+            101.658651,
+            3.098477
+          ],
+          [
+            101.65861,
+            3.098401
+          ],
+          [
+            101.658527,
+            3.098342
+          ],
+          [
+            101.658436,
+            3.098276
+          ],
+          [
+            101.658333,
+            3.098208
+          ],
+          [
+            101.658236,
+            3.098153
+          ],
+          [
+            101.658154,
+            3.098083
+          ],
+          [
+            101.658066,
+            3.09803
+          ],
+          [
+            101.658011,
+            3.097943
+          ],
+          [
+            101.657989,
+            3.097844
+          ],
+          [
+            101.65794199807229,
+            3.0977609073078325
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0006942296167835593,
+      "risk_class": "uncertain",
+      "confidence": 2.3311398917837653e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.001824,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000957,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000448,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000189,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 2.33438102358257e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00025",
+      "segment_order": 26,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65794199807229,
+            3.0977609073078325
+          ],
+          [
+            101.657933,
+            3.097745
+          ],
+          [
+            101.657877,
+            3.097652
+          ],
+          [
+            101.657839,
+            3.097546
+          ],
+          [
+            101.657821,
+            3.097432
+          ],
+          [
+            101.657819,
+            3.097307
+          ],
+          [
+            101.657797,
+            3.097198
+          ],
+          [
+            101.657776,
+            3.09707
+          ],
+          [
+            101.657787,
+            3.096954
+          ],
+          [
+            101.657822,
+            3.09684
+          ],
+          [
+            101.657883,
+            3.096746
+          ],
+          [
+            101.657931,
+            3.096646
+          ],
+          [
+            101.657947,
+            3.096527
+          ],
+          [
+            101.657932,
+            3.096403
+          ],
+          [
+            101.657923,
+            3.096323
+          ],
+          [
+            101.657934,
+            3.09622
+          ],
+          [
+            101.657938,
+            3.096109
+          ],
+          [
+            101.657921,
+            3.096032
+          ],
+          [
+            101.657881,
+            3.095961
+          ],
+          [
+            101.657806,
+            3.095919
+          ],
+          [
+            101.657732,
+            3.095887
+          ],
+          [
+            101.6577,
+            3.095823
+          ],
+          [
+            101.657666,
+            3.095769
+          ],
+          [
+            101.657663,
+            3.095698
+          ],
+          [
+            101.65766375386961,
+            3.095691885280171
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00026",
+      "segment_order": 27,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65766375386961,
+            3.095691885280171
+          ],
+          [
+            101.657672,
+            3.095625
+          ],
+          [
+            101.657554,
+            3.095602
+          ],
+          [
+            101.657302,
+            3.095515
+          ],
+          [
+            101.657151,
+            3.095491
+          ],
+          [
+            101.657138,
+            3.095386
+          ],
+          [
+            101.65711,
+            3.095301
+          ],
+          [
+            101.657074,
+            3.095227
+          ],
+          [
+            101.656982,
+            3.095253
+          ],
+          [
+            101.656808,
+            3.095255
+          ],
+          [
+            101.656645,
+            3.095243
+          ],
+          [
+            101.656477,
+            3.09523
+          ],
+          [
+            101.656375,
+            3.09522
+          ],
+          [
+            101.656253,
+            3.095211
+          ],
+          [
+            101.656132,
+            3.09519
+          ],
+          [
+            101.656194,
+            3.094937
+          ],
+          [
+            101.65618919249404,
+            3.0947783523042895
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_taman_rimba_bukit_kerinchi_loop__s00027",
+      "segment_order": 28,
+      "segment_length_m": 3.6541093037230894,
+      "geometry": {
+        "coordinates": [
+          [
+            101.65618919249404,
+            3.0947783523042895
+          ],
+          [
+            101.656189,
+            3.094772
+          ],
+          [
+            101.656183,
+            3.094746
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.001066442346200347,
+      "risk_class": "uncertain",
+      "confidence": 4.1116567768704686e-32,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.006042,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.00092,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000867,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.000371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.000355,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 4.1204450665108037e-32,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256-canonical-json-without-integrity",
+    "checksum": "c228303764ac7fd2e359fa21ad37ec5429243c0705adfb8099d843119444bee8"
+  }
+}

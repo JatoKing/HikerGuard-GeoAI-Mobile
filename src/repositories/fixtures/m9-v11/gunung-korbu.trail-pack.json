@@ -1,0 +1,7804 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "gunung-korbu",
+  "name": "Gunung Korbu",
+  "pack_version": "2026-08-10T03:15:29.852Z",
+  "generated_at": "2026-08-10T03:15:29.852Z",
+  "stage": "model_backed",
+  "prediction_available": true,
+  "model": {
+    "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+    "validation_level": "cross_country_spatial_validation_planning_only",
+    "intended_use": "offline_hackathon_connectivity_planning_only",
+    "field_validated": false,
+    "label_source": "anatel_mobile_coverage_2026_07 + fcc_bdc_mobile_4g_lte_2025_06",
+    "label_release": "Anatel 2026-07 + FCC BDC 2025-06",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": false,
+    "model_stage": "Candidate"
+  },
+  "segments": [
+    {
+      "segment_id": "trail_gunung_korbu__s00000",
+      "segment_order": 1,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2409,
+            4.64963
+          ],
+          [
+            101.24097,
+            4.6496
+          ],
+          [
+            101.24129,
+            4.64948
+          ],
+          [
+            101.24157,
+            4.64921
+          ],
+          [
+            101.24191,
+            4.64868
+          ],
+          [
+            101.24221,
+            4.64839
+          ],
+          [
+            101.24259838566013,
+            4.6482846751389815
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00001",
+      "segment_order": 2,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24259838566013,
+            4.6482846751389815
+          ],
+          [
+            101.2428,
+            4.64823
+          ],
+          [
+            101.24312,
+            4.64797
+          ],
+          [
+            101.2432,
+            4.64774
+          ],
+          [
+            101.24343,
+            4.64749
+          ],
+          [
+            101.24381,
+            4.64716
+          ],
+          [
+            101.24412,
+            4.64679
+          ],
+          [
+            101.24416918343397,
+            4.646745287792935
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00002",
+      "segment_order": 3,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24416918343397,
+            4.646745287792935
+          ],
+          [
+            101.24423,
+            4.64669
+          ],
+          [
+            101.24444,
+            4.64671
+          ],
+          [
+            101.24468,
+            4.64666
+          ],
+          [
+            101.2449,
+            4.64674
+          ],
+          [
+            101.24511,
+            4.64665
+          ],
+          [
+            101.24533,
+            4.64663
+          ],
+          [
+            101.24539,
+            4.64672
+          ],
+          [
+            101.24537,
+            4.64692
+          ],
+          [
+            101.24541,
+            4.6471
+          ],
+          [
+            101.24553,
+            4.64717
+          ],
+          [
+            101.24563,
+            4.64715
+          ],
+          [
+            101.24582,
+            4.64704
+          ],
+          [
+            101.24589935729617,
+            4.647033895602894
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00003",
+      "segment_order": 4,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24589935729617,
+            4.647033895602894
+          ],
+          [
+            101.24608,
+            4.64702
+          ],
+          [
+            101.24666,
+            4.64703
+          ],
+          [
+            101.24676,
+            4.64701
+          ],
+          [
+            101.24687,
+            4.64697
+          ],
+          [
+            101.2471,
+            4.64672
+          ],
+          [
+            101.24717,
+            4.64665
+          ],
+          [
+            101.24728,
+            4.64662
+          ],
+          [
+            101.24748,
+            4.64666
+          ],
+          [
+            101.24777,
+            4.6468
+          ],
+          [
+            101.24786,
+            4.64692
+          ],
+          [
+            101.24789564202136,
+            4.646948513626582
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00004",
+      "segment_order": 5,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24789564202136,
+            4.646948513626582
+          ],
+          [
+            101.24806,
+            4.64708
+          ],
+          [
+            101.24817,
+            4.64731
+          ],
+          [
+            101.24831,
+            4.64759
+          ],
+          [
+            101.24854,
+            4.64777
+          ],
+          [
+            101.24869,
+            4.6478
+          ],
+          [
+            101.24884,
+            4.64788
+          ],
+          [
+            101.24904,
+            4.64794
+          ],
+          [
+            101.24919,
+            4.64809
+          ],
+          [
+            101.24934,
+            4.64816
+          ],
+          [
+            101.24947,
+            4.6483
+          ],
+          [
+            101.24951400573953,
+            4.648373342920967
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00005",
+      "segment_order": 6,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24951400573953,
+            4.648373342920967
+          ],
+          [
+            101.24962,
+            4.64855
+          ],
+          [
+            101.24967,
+            4.64879
+          ],
+          [
+            101.24967,
+            4.64904
+          ],
+          [
+            101.24979,
+            4.64941
+          ],
+          [
+            101.24986,
+            4.64967
+          ],
+          [
+            101.24997,
+            4.64985
+          ],
+          [
+            101.25003,
+            4.65002
+          ],
+          [
+            101.2501,
+            4.65015
+          ],
+          [
+            101.25024,
+            4.65025
+          ],
+          [
+            101.2504,
+            4.65027
+          ],
+          [
+            101.25042688235544,
+            4.6502646235314495
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00006",
+      "segment_order": 7,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25042688235544,
+            4.6502646235314495
+          ],
+          [
+            101.25055,
+            4.65024
+          ],
+          [
+            101.25084,
+            4.65031
+          ],
+          [
+            101.25101,
+            4.65024
+          ],
+          [
+            101.25113,
+            4.65026
+          ],
+          [
+            101.25141,
+            4.65018
+          ],
+          [
+            101.25157,
+            4.65012
+          ],
+          [
+            101.25186,
+            4.65013
+          ],
+          [
+            101.25213,
+            4.65009
+          ],
+          [
+            101.25233,
+            4.65007
+          ],
+          [
+            101.25252,
+            4.65003
+          ],
+          [
+            101.2526190801801,
+            4.649999037448845
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00007",
+      "segment_order": 8,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2526190801801,
+            4.649999037448845
+          ],
+          [
+            101.25268,
+            4.64998
+          ],
+          [
+            101.25347,
+            4.64995
+          ],
+          [
+            101.25433,
+            4.6501
+          ],
+          [
+            101.25485413129626,
+            4.65014307936226
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00008",
+      "segment_order": 9,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25485413129626,
+            4.65014307936226
+          ],
+          [
+            101.25506,
+            4.65016
+          ],
+          [
+            101.2569,
+            4.65029
+          ],
+          [
+            101.25707577734869,
+            4.6503899518944944
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00009",
+      "segment_order": 10,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25707577734869,
+            4.6503899518944944
+          ],
+          [
+            101.25741,
+            4.65058
+          ],
+          [
+            101.25813,
+            4.65061
+          ],
+          [
+            101.25918,
+            4.65058
+          ],
+          [
+            101.25927741030544,
+            4.6505902954782155
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00010",
+      "segment_order": 11,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25927741030544,
+            4.6505902954782155
+          ],
+          [
+            101.26041,
+            4.65071
+          ],
+          [
+            101.26049,
+            4.65072
+          ],
+          [
+            101.26151141771417,
+            4.650879303732357
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00011",
+      "segment_order": 12,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26151141771417,
+            4.650879303732357
+          ],
+          [
+            101.26158,
+            4.65089
+          ],
+          [
+            101.26236,
+            4.65098
+          ],
+          [
+            101.26352,
+            4.65104
+          ],
+          [
+            101.26375212094761,
+            4.650991641513654
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00012",
+      "segment_order": 13,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26375212094761,
+            4.650991641513654
+          ],
+          [
+            101.264,
+            4.65094
+          ],
+          [
+            101.26425,
+            4.65094
+          ],
+          [
+            101.26463,
+            4.65122
+          ],
+          [
+            101.26507,
+            4.65143
+          ],
+          [
+            101.26578989442596,
+            4.651759590299071
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00013",
+      "segment_order": 14,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26578989442596,
+            4.651759590299071
+          ],
+          [
+            101.2659,
+            4.65181
+          ],
+          [
+            101.26617,
+            4.65208
+          ],
+          [
+            101.26652,
+            4.65243
+          ],
+          [
+            101.26681,
+            4.6524
+          ],
+          [
+            101.26746,
+            4.65211
+          ],
+          [
+            101.26767,
+            4.65208
+          ],
+          [
+            101.26771171855928,
+            4.652077682306385
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00014",
+      "segment_order": 15,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26771171855928,
+            4.652077682306385
+          ],
+          [
+            101.26785,
+            4.65207
+          ],
+          [
+            101.26792,
+            4.65202
+          ],
+          [
+            101.26823,
+            4.652
+          ],
+          [
+            101.26847,
+            4.65186
+          ],
+          [
+            101.26883,
+            4.65188
+          ],
+          [
+            101.2692,
+            4.65183
+          ],
+          [
+            101.26943,
+            4.65188
+          ],
+          [
+            101.26962,
+            4.65186
+          ],
+          [
+            101.2698035108102,
+            4.652072486204402
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.511045515537262,
+      "risk_class": "uncertain",
+      "confidence": 0.009294910356402397,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.1326,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.121129,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.114475,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.076432,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037087,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.5610063672065735,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00015",
+      "segment_order": 16,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2698035108102,
+            4.652072486204402
+          ],
+          [
+            101.26981,
+            4.65208
+          ],
+          [
+            101.26989,
+            4.6521
+          ],
+          [
+            101.26996,
+            4.65207
+          ],
+          [
+            101.27006,
+            4.65208
+          ],
+          [
+            101.2704,
+            4.65248
+          ],
+          [
+            101.27047,
+            4.65264
+          ],
+          [
+            101.2705,
+            4.65307
+          ],
+          [
+            101.27041,
+            4.65334
+          ],
+          [
+            101.2704,
+            4.65359
+          ],
+          [
+            101.27031,
+            4.65384
+          ],
+          [
+            101.27031775419816,
+            4.653898156506512
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.511045515537262,
+      "risk_class": "uncertain",
+      "confidence": 0.009294910356402397,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.1326,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.121129,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.114475,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.076432,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037087,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.5610063672065735,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00016",
+      "segment_order": 17,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27031775419816,
+            4.653898156506512
+          ],
+          [
+            101.27035,
+            4.65414
+          ],
+          [
+            101.27042,
+            4.65426
+          ],
+          [
+            101.27054,
+            4.65433
+          ],
+          [
+            101.27063,
+            4.65436
+          ],
+          [
+            101.27071,
+            4.65444
+          ],
+          [
+            101.27078,
+            4.6545
+          ],
+          [
+            101.27089,
+            4.65451
+          ],
+          [
+            101.27095,
+            4.65461
+          ],
+          [
+            101.271,
+            4.6548
+          ],
+          [
+            101.27103,
+            4.65507
+          ],
+          [
+            101.27106,
+            4.65562
+          ],
+          [
+            101.27111,
+            4.65575
+          ],
+          [
+            101.27115373474271,
+            4.655777334220642
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00017",
+      "segment_order": 18,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27115373474271,
+            4.655777334220642
+          ],
+          [
+            101.27127,
+            4.65585
+          ],
+          [
+            101.27143,
+            4.65598
+          ],
+          [
+            101.27154,
+            4.65619
+          ],
+          [
+            101.27157,
+            4.65648
+          ],
+          [
+            101.27169,
+            4.65665
+          ],
+          [
+            101.27187,
+            4.65672
+          ],
+          [
+            101.27196,
+            4.65681
+          ],
+          [
+            101.27197,
+            4.6569
+          ],
+          [
+            101.27189,
+            4.6571
+          ],
+          [
+            101.2719,
+            4.65729
+          ],
+          [
+            101.27187,
+            4.65749
+          ],
+          [
+            101.27195,
+            4.65758
+          ],
+          [
+            101.2719777259169,
+            4.657607725922959
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00018",
+      "segment_order": 19,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2719777259169,
+            4.657607725922959
+          ],
+          [
+            101.27208,
+            4.65771
+          ],
+          [
+            101.27222,
+            4.65802
+          ],
+          [
+            101.27224,
+            4.65829
+          ],
+          [
+            101.27228,
+            4.6584
+          ],
+          [
+            101.27222,
+            4.6585
+          ],
+          [
+            101.27215,
+            4.6588
+          ],
+          [
+            101.2722,
+            4.65884
+          ],
+          [
+            101.27213,
+            4.659
+          ],
+          [
+            101.27214,
+            4.65912
+          ],
+          [
+            101.27211,
+            4.65927
+          ],
+          [
+            101.27206,
+            4.6594
+          ],
+          [
+            101.272,
+            4.65949
+          ],
+          [
+            101.27198,
+            4.65958
+          ],
+          [
+            101.27199,
+            4.65958
+          ],
+          [
+            101.27200801214029,
+            4.6596790667731645
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00019",
+      "segment_order": 20,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27200801214029,
+            4.6596790667731645
+          ],
+          [
+            101.27201,
+            4.65969
+          ],
+          [
+            101.2721,
+            4.65978
+          ],
+          [
+            101.27215,
+            4.65994
+          ],
+          [
+            101.27224,
+            4.66007
+          ],
+          [
+            101.27229,
+            4.66025
+          ],
+          [
+            101.27236,
+            4.66029
+          ],
+          [
+            101.2724,
+            4.66039
+          ],
+          [
+            101.27238,
+            4.66053
+          ],
+          [
+            101.2723,
+            4.66064
+          ],
+          [
+            101.2723,
+            4.66078
+          ],
+          [
+            101.27225,
+            4.66092
+          ],
+          [
+            101.27226,
+            4.66111
+          ],
+          [
+            101.27218,
+            4.66131
+          ],
+          [
+            101.27218,
+            4.66142
+          ],
+          [
+            101.27214,
+            4.66162
+          ],
+          [
+            101.27213104151811,
+            4.661754377231493
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00020",
+      "segment_order": 21,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27213104151811,
+            4.661754377231493
+          ],
+          [
+            101.27213,
+            4.66177
+          ],
+          [
+            101.27216,
+            4.66187
+          ],
+          [
+            101.27214,
+            4.66199
+          ],
+          [
+            101.27216,
+            4.66205
+          ],
+          [
+            101.27223,
+            4.66212
+          ],
+          [
+            101.27228,
+            4.66221
+          ],
+          [
+            101.27236,
+            4.66232
+          ],
+          [
+            101.27244,
+            4.66241
+          ],
+          [
+            101.27251,
+            4.66262
+          ],
+          [
+            101.27256,
+            4.66273
+          ],
+          [
+            101.27268,
+            4.66287
+          ],
+          [
+            101.27271,
+            4.66305
+          ],
+          [
+            101.27278,
+            4.66316
+          ],
+          [
+            101.27287,
+            4.6632
+          ],
+          [
+            101.27288,
+            4.66324
+          ],
+          [
+            101.27287,
+            4.66328
+          ],
+          [
+            101.27282,
+            4.66333
+          ],
+          [
+            101.27284,
+            4.66336
+          ],
+          [
+            101.27293,
+            4.66339
+          ],
+          [
+            101.27306,
+            4.6636
+          ],
+          [
+            101.27308288881079,
+            4.6636127160101415
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00021",
+      "segment_order": 22,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27308288881079,
+            4.6636127160101415
+          ],
+          [
+            101.27324,
+            4.6637
+          ],
+          [
+            101.27336,
+            4.66393
+          ],
+          [
+            101.27336,
+            4.66404
+          ],
+          [
+            101.27332,
+            4.66411
+          ],
+          [
+            101.27329,
+            4.66419
+          ],
+          [
+            101.27333,
+            4.66427
+          ],
+          [
+            101.27335,
+            4.66437
+          ],
+          [
+            101.27333,
+            4.66451
+          ],
+          [
+            101.27337,
+            4.66461
+          ],
+          [
+            101.27347,
+            4.66465
+          ],
+          [
+            101.27357,
+            4.66471
+          ],
+          [
+            101.27377,
+            4.66473
+          ],
+          [
+            101.27385,
+            4.66479
+          ],
+          [
+            101.27411,
+            4.66484
+          ],
+          [
+            101.27426,
+            4.66492
+          ],
+          [
+            101.27435318150334,
+            4.665025888102209
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00022",
+      "segment_order": 23,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27435318150334,
+            4.665025888102209
+          ],
+          [
+            101.27448,
+            4.66517
+          ],
+          [
+            101.27464,
+            4.66534
+          ],
+          [
+            101.27481,
+            4.66543
+          ],
+          [
+            101.27504,
+            4.66553
+          ],
+          [
+            101.27529,
+            4.66557
+          ],
+          [
+            101.27548,
+            4.66561
+          ],
+          [
+            101.27558,
+            4.66568
+          ],
+          [
+            101.27573,
+            4.66571
+          ],
+          [
+            101.27591,
+            4.66593
+          ],
+          [
+            101.27606,
+            4.66597
+          ],
+          [
+            101.27616,
+            4.66609
+          ],
+          [
+            101.27618851457785,
+            4.666152732075929
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00023",
+      "segment_order": 24,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27618851457785,
+            4.666152732075929
+          ],
+          [
+            101.27621,
+            4.6662
+          ],
+          [
+            101.27629,
+            4.66624
+          ],
+          [
+            101.27635,
+            4.66631
+          ],
+          [
+            101.27644,
+            4.6663
+          ],
+          [
+            101.27669,
+            4.66622
+          ],
+          [
+            101.27693,
+            4.66617
+          ],
+          [
+            101.27704,
+            4.66618
+          ],
+          [
+            101.2771,
+            4.66627
+          ],
+          [
+            101.27713,
+            4.6664
+          ],
+          [
+            101.2772,
+            4.6665
+          ],
+          [
+            101.2774,
+            4.66665
+          ],
+          [
+            101.27765,
+            4.667
+          ],
+          [
+            101.27781,
+            4.66716
+          ],
+          [
+            101.27784191000849,
+            4.667190459565649
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00024",
+      "segment_order": 25,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27784191000849,
+            4.667190459565649
+          ],
+          [
+            101.27803,
+            4.66737
+          ],
+          [
+            101.27837,
+            4.66786
+          ],
+          [
+            101.27848,
+            4.66801
+          ],
+          [
+            101.2786,
+            4.66814
+          ],
+          [
+            101.27868,
+            4.66839
+          ],
+          [
+            101.27871,
+            4.66858
+          ],
+          [
+            101.27875,
+            4.66863
+          ],
+          [
+            101.27884,
+            4.66863
+          ],
+          [
+            101.2789,
+            4.66862
+          ],
+          [
+            101.27896,
+            4.66866
+          ],
+          [
+            101.27903,
+            4.66878
+          ],
+          [
+            101.27906620697783,
+            4.668933879659411
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00025",
+      "segment_order": 26,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27906620697783,
+            4.668933879659411
+          ],
+          [
+            101.27907,
+            4.66895
+          ],
+          [
+            101.27919,
+            4.66911
+          ],
+          [
+            101.27928,
+            4.66951
+          ],
+          [
+            101.27948,
+            4.66976
+          ],
+          [
+            101.2795,
+            4.66995
+          ],
+          [
+            101.27957,
+            4.67012
+          ],
+          [
+            101.27966,
+            4.67026
+          ],
+          [
+            101.27989,
+            4.67042
+          ],
+          [
+            101.28003,
+            4.67065
+          ],
+          [
+            101.28005132754602,
+            4.670870384670559
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00026",
+      "segment_order": 27,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28005132754602,
+            4.670870384670559
+          ],
+          [
+            101.28006,
+            4.67096
+          ],
+          [
+            101.28003,
+            4.67142
+          ],
+          [
+            101.28009,
+            4.67183
+          ],
+          [
+            101.28011,
+            4.67209
+          ],
+          [
+            101.28004,
+            4.6722
+          ],
+          [
+            101.27991,
+            4.67229
+          ],
+          [
+            101.2798,
+            4.67235
+          ],
+          [
+            101.27976,
+            4.6724
+          ],
+          [
+            101.27973,
+            4.67253
+          ],
+          [
+            101.27967,
+            4.67269
+          ],
+          [
+            101.2796,
+            4.67291
+          ],
+          [
+            101.27959871916529,
+            4.672930493359375
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00027",
+      "segment_order": 28,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27959871916529,
+            4.672930493359375
+          ],
+          [
+            101.27959,
+            4.67307
+          ],
+          [
+            101.27961,
+            4.67323
+          ],
+          [
+            101.27958,
+            4.67334
+          ],
+          [
+            101.27948,
+            4.67353
+          ],
+          [
+            101.27942,
+            4.67364
+          ],
+          [
+            101.27943,
+            4.67374
+          ],
+          [
+            101.27948,
+            4.67384
+          ],
+          [
+            101.27951,
+            4.67394
+          ],
+          [
+            101.27956,
+            4.67409
+          ],
+          [
+            101.2797,
+            4.6744
+          ],
+          [
+            101.27973,
+            4.67459
+          ],
+          [
+            101.2797,
+            4.67479
+          ],
+          [
+            101.27963,
+            4.67498
+          ],
+          [
+            101.27960555505894,
+            4.675069631453259
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00028",
+      "segment_order": 29,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27960555505894,
+            4.675069631453259
+          ],
+          [
+            101.2796,
+            4.67509
+          ],
+          [
+            101.27962,
+            4.67519
+          ],
+          [
+            101.27974,
+            4.67531
+          ],
+          [
+            101.27991,
+            4.67554
+          ],
+          [
+            101.28024,
+            4.67616
+          ],
+          [
+            101.2803,
+            4.6763
+          ],
+          [
+            101.28036,
+            4.67643
+          ],
+          [
+            101.28035,
+            4.67667
+          ],
+          [
+            101.28038,
+            4.67678
+          ],
+          [
+            101.28043,
+            4.67686
+          ],
+          [
+            101.2805,
+            4.67697
+          ],
+          [
+            101.28051703110377,
+            4.67707218662528
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00029",
+      "segment_order": 30,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28051703110377,
+            4.67707218662528
+          ],
+          [
+            101.28052,
+            4.67709
+          ],
+          [
+            101.28065,
+            4.67727
+          ],
+          [
+            101.28074,
+            4.6775
+          ],
+          [
+            101.28078,
+            4.67774
+          ],
+          [
+            101.28091,
+            4.67796
+          ],
+          [
+            101.28101,
+            4.67808
+          ],
+          [
+            101.28109,
+            4.67825
+          ],
+          [
+            101.28119,
+            4.67842
+          ],
+          [
+            101.28118,
+            4.67858
+          ],
+          [
+            101.2812,
+            4.67866
+          ],
+          [
+            101.28126,
+            4.67871
+          ],
+          [
+            101.28137,
+            4.6787
+          ],
+          [
+            101.28159,
+            4.67872
+          ],
+          [
+            101.2816686166686,
+            4.678717687759742
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00030",
+      "segment_order": 31,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2816686166686,
+            4.678717687759742
+          ],
+          [
+            101.28193,
+            4.67871
+          ],
+          [
+            101.28216,
+            4.67879
+          ],
+          [
+            101.28241,
+            4.6788
+          ],
+          [
+            101.28269,
+            4.67879
+          ],
+          [
+            101.28278,
+            4.6788
+          ],
+          [
+            101.28287,
+            4.67891
+          ],
+          [
+            101.28301,
+            4.67901
+          ],
+          [
+            101.28328,
+            4.67924
+          ],
+          [
+            101.2834,
+            4.67934
+          ],
+          [
+            101.28346,
+            4.67945
+          ],
+          [
+            101.28352,
+            4.67952
+          ],
+          [
+            101.28360432252292,
+            4.679539459046796
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00031",
+      "segment_order": 32,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28360432252292,
+            4.679539459046796
+          ],
+          [
+            101.28365,
+            4.67955
+          ],
+          [
+            101.2838,
+            4.67959
+          ],
+          [
+            101.28393,
+            4.67966
+          ],
+          [
+            101.28406,
+            4.67971
+          ],
+          [
+            101.2842,
+            4.67976
+          ],
+          [
+            101.28433,
+            4.67977
+          ],
+          [
+            101.28442,
+            4.67985
+          ],
+          [
+            101.2846,
+            4.67996
+          ],
+          [
+            101.28476,
+            4.68003
+          ],
+          [
+            101.28489,
+            4.68009
+          ],
+          [
+            101.28507,
+            4.68012
+          ],
+          [
+            101.28521,
+            4.68014
+          ],
+          [
+            101.28538,
+            4.6801
+          ],
+          [
+            101.28552,
+            4.68008
+          ],
+          [
+            101.28567,
+            4.6801
+          ],
+          [
+            101.28571259349263,
+            4.680116226099013
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00032",
+      "segment_order": 33,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28571259349263,
+            4.680116226099013
+          ],
+          [
+            101.28588,
+            4.68018
+          ],
+          [
+            101.28605,
+            4.68024
+          ],
+          [
+            101.28635,
+            4.6803
+          ],
+          [
+            101.28674,
+            4.68036
+          ],
+          [
+            101.28699,
+            4.68039
+          ],
+          [
+            101.2871,
+            4.68045
+          ],
+          [
+            101.28722,
+            4.68049
+          ],
+          [
+            101.28744,
+            4.6805
+          ],
+          [
+            101.2876,
+            4.68058
+          ],
+          [
+            101.28771,
+            4.68066
+          ],
+          [
+            101.28782,
+            4.68067
+          ],
+          [
+            101.28784692360247,
+            4.680705898139541
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00033",
+      "segment_order": 34,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28784692360247,
+            4.680705898139541
+          ],
+          [
+            101.28788,
+            4.68075
+          ],
+          [
+            101.28795,
+            4.68088
+          ],
+          [
+            101.28804,
+            4.68093
+          ],
+          [
+            101.28809,
+            4.68105
+          ],
+          [
+            101.28816,
+            4.68116
+          ],
+          [
+            101.28819,
+            4.68134
+          ],
+          [
+            101.28824,
+            4.6816
+          ],
+          [
+            101.28829,
+            4.68173
+          ],
+          [
+            101.28827,
+            4.68185
+          ],
+          [
+            101.28825,
+            4.6819
+          ],
+          [
+            101.28825,
+            4.68198
+          ],
+          [
+            101.28827,
+            4.68207
+          ],
+          [
+            101.28836,
+            4.68216
+          ],
+          [
+            101.28852,
+            4.68232
+          ],
+          [
+            101.28868,
+            4.68247
+          ],
+          [
+            101.28874,
+            4.6826
+          ],
+          [
+            101.28876548329272,
+            4.6826339777289805
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00034",
+      "segment_order": 35,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28876548329272,
+            4.6826339777289805
+          ],
+          [
+            101.28883,
+            4.68272
+          ],
+          [
+            101.28892,
+            4.68276
+          ],
+          [
+            101.28903,
+            4.68281
+          ],
+          [
+            101.28913,
+            4.68287
+          ],
+          [
+            101.28929,
+            4.68292
+          ],
+          [
+            101.28941,
+            4.68291
+          ],
+          [
+            101.28956,
+            4.68289
+          ],
+          [
+            101.28972,
+            4.68292
+          ],
+          [
+            101.28987,
+            4.68298
+          ],
+          [
+            101.28995,
+            4.68304
+          ],
+          [
+            101.29003,
+            4.68308
+          ],
+          [
+            101.2901,
+            4.68309
+          ],
+          [
+            101.29018,
+            4.68308
+          ],
+          [
+            101.29025,
+            4.68301
+          ],
+          [
+            101.29034,
+            4.68289
+          ],
+          [
+            101.29038,
+            4.6828
+          ],
+          [
+            101.29042,
+            4.68275
+          ],
+          [
+            101.29048,
+            4.68273
+          ],
+          [
+            101.29054,
+            4.68272
+          ],
+          [
+            101.29067,
+            4.68274
+          ],
+          [
+            101.2907050552114,
+            4.682759121027398
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00035",
+      "segment_order": 36,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2907050552114,
+            4.682759121027398
+          ],
+          [
+            101.29078,
+            4.6828
+          ],
+          [
+            101.29092,
+            4.68286
+          ],
+          [
+            101.29109,
+            4.6829
+          ],
+          [
+            101.29122,
+            4.68294
+          ],
+          [
+            101.29138,
+            4.68293
+          ],
+          [
+            101.29159,
+            4.68291
+          ],
+          [
+            101.29176,
+            4.68288
+          ],
+          [
+            101.29186,
+            4.68286
+          ],
+          [
+            101.29204,
+            4.68288
+          ],
+          [
+            101.29219,
+            4.68292
+          ],
+          [
+            101.2923,
+            4.68297
+          ],
+          [
+            101.29238,
+            4.68299
+          ],
+          [
+            101.29245,
+            4.68298
+          ],
+          [
+            101.29255,
+            4.68294
+          ],
+          [
+            101.29267,
+            4.68285
+          ],
+          [
+            101.2928,
+            4.68279
+          ],
+          [
+            101.29284560632972,
+            4.6827734158827585
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00036",
+      "segment_order": 37,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29284560632972,
+            4.6827734158827585
+          ],
+          [
+            101.29291,
+            4.68275
+          ],
+          [
+            101.29301,
+            4.68269
+          ],
+          [
+            101.29313,
+            4.68259
+          ],
+          [
+            101.29326,
+            4.68256
+          ],
+          [
+            101.29334,
+            4.68248
+          ],
+          [
+            101.29346,
+            4.6824
+          ],
+          [
+            101.29359,
+            4.68237
+          ],
+          [
+            101.29377,
+            4.68237
+          ],
+          [
+            101.29386,
+            4.68236
+          ],
+          [
+            101.29395,
+            4.68241
+          ],
+          [
+            101.29404,
+            4.68253
+          ],
+          [
+            101.2941,
+            4.68268
+          ],
+          [
+            101.29414,
+            4.68275
+          ],
+          [
+            101.29427,
+            4.68286
+          ],
+          [
+            101.29432,
+            4.68297
+          ],
+          [
+            101.29436,
+            4.6832
+          ],
+          [
+            101.29439805318432,
+            4.683293403296221
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00037",
+      "segment_order": 38,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29439805318432,
+            4.683293403296221
+          ],
+          [
+            101.29447,
+            4.68347
+          ],
+          [
+            101.29455,
+            4.68363
+          ],
+          [
+            101.29456,
+            4.68379
+          ],
+          [
+            101.29461,
+            4.6839
+          ],
+          [
+            101.29467,
+            4.684
+          ],
+          [
+            101.29479,
+            4.68413
+          ],
+          [
+            101.29486,
+            4.68423
+          ],
+          [
+            101.29495,
+            4.68432
+          ],
+          [
+            101.29497,
+            4.68438
+          ],
+          [
+            101.29508,
+            4.68448
+          ],
+          [
+            101.29512,
+            4.68459
+          ],
+          [
+            101.29515,
+            4.68474
+          ],
+          [
+            101.2952,
+            4.68484
+          ],
+          [
+            101.29526,
+            4.68495
+          ],
+          [
+            101.29542,
+            4.68506
+          ],
+          [
+            101.29554962155814,
+            4.685138698827406
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00038",
+      "segment_order": 39,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29554962155814,
+            4.685138698827406
+          ],
+          [
+            101.2957,
+            4.68523
+          ],
+          [
+            101.29589,
+            4.68537
+          ],
+          [
+            101.29604,
+            4.68553
+          ],
+          [
+            101.29618,
+            4.68567
+          ],
+          [
+            101.29627,
+            4.68586
+          ],
+          [
+            101.2963,
+            4.68593
+          ],
+          [
+            101.29637,
+            4.68614
+          ],
+          [
+            101.29639,
+            4.68632
+          ],
+          [
+            101.29639,
+            4.6864
+          ],
+          [
+            101.29642,
+            4.68646
+          ],
+          [
+            101.29652,
+            4.68654
+          ],
+          [
+            101.2966,
+            4.68666
+          ],
+          [
+            101.29665,
+            4.68677
+          ],
+          [
+            101.29667,
+            4.68686
+          ],
+          [
+            101.29667,
+            4.6869678812977185
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.40424054861068726,
+      "risk_class": "uncertain",
+      "confidence": 0.1371646225452423,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.33055,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.226257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.164146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.088817,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088036,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9549248218536377,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00039",
+      "segment_order": 40,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29667,
+            4.6869678812977185
+          ],
+          [
+            101.29667,
+            4.687
+          ],
+          [
+            101.2967,
+            4.68713
+          ],
+          [
+            101.29673,
+            4.68723
+          ],
+          [
+            101.29673,
+            4.68736
+          ],
+          [
+            101.29667,
+            4.68745
+          ],
+          [
+            101.29664,
+            4.68753
+          ],
+          [
+            101.29658,
+            4.68763
+          ],
+          [
+            101.29657,
+            4.68779
+          ],
+          [
+            101.29661,
+            4.68803
+          ],
+          [
+            101.29664,
+            4.68817
+          ],
+          [
+            101.29664,
+            4.68831
+          ],
+          [
+            101.29671,
+            4.68841
+          ],
+          [
+            101.29676,
+            4.68856
+          ],
+          [
+            101.29684,
+            4.68882
+          ],
+          [
+            101.29691,
+            4.68912
+          ],
+          [
+            101.29691120500965,
+            4.689122610855309
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.40424054861068726,
+      "risk_class": "uncertain",
+      "confidence": 0.1371646225452423,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.33055,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.226257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.164146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.088817,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088036,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9549248218536377,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00040",
+      "segment_order": 41,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29691120500965,
+            4.689122610855309
+          ],
+          [
+            101.29703,
+            4.68938
+          ],
+          [
+            101.29713,
+            4.6896
+          ],
+          [
+            101.29723,
+            4.68971
+          ],
+          [
+            101.29713,
+            4.6896
+          ],
+          [
+            101.29703,
+            4.68938
+          ],
+          [
+            101.29691,
+            4.68912
+          ],
+          [
+            101.29684,
+            4.68882
+          ],
+          [
+            101.29676,
+            4.68856
+          ],
+          [
+            101.29671,
+            4.68841
+          ],
+          [
+            101.29664,
+            4.68831
+          ],
+          [
+            101.29664,
+            4.688261349819595
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.40424054861068726,
+      "risk_class": "uncertain",
+      "confidence": 0.1371646225452423,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.33055,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.226257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.164146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.088817,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088036,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9549248218536377,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00041",
+      "segment_order": 42,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29664,
+            4.688261349819595
+          ],
+          [
+            101.29664,
+            4.68817
+          ],
+          [
+            101.29661,
+            4.68803
+          ],
+          [
+            101.29657,
+            4.68779
+          ],
+          [
+            101.29658,
+            4.68763
+          ],
+          [
+            101.29664,
+            4.68753
+          ],
+          [
+            101.29667,
+            4.68745
+          ],
+          [
+            101.29673,
+            4.68736
+          ],
+          [
+            101.29673,
+            4.68723
+          ],
+          [
+            101.2967,
+            4.68713
+          ],
+          [
+            101.29667,
+            4.687
+          ],
+          [
+            101.29667,
+            4.68686
+          ],
+          [
+            101.29665,
+            4.68677
+          ],
+          [
+            101.2966,
+            4.68666
+          ],
+          [
+            101.29652,
+            4.68654
+          ],
+          [
+            101.29642,
+            4.68646
+          ],
+          [
+            101.29639,
+            4.6864
+          ],
+          [
+            101.29639,
+            4.68632
+          ],
+          [
+            101.2963710835748,
+            4.686149752175604
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.40424054861068726,
+      "risk_class": "uncertain",
+      "confidence": 0.1371646225452423,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.33055,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.226257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.164146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.088817,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088036,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9549248218536377,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00042",
+      "segment_order": 43,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2963710835748,
+            4.686149752175604
+          ],
+          [
+            101.29637,
+            4.68614
+          ],
+          [
+            101.2963,
+            4.68593
+          ],
+          [
+            101.29627,
+            4.68586
+          ],
+          [
+            101.29618,
+            4.68567
+          ],
+          [
+            101.29604,
+            4.68553
+          ],
+          [
+            101.29589,
+            4.68537
+          ],
+          [
+            101.2957,
+            4.68523
+          ],
+          [
+            101.29542,
+            4.68506
+          ],
+          [
+            101.29526,
+            4.68495
+          ],
+          [
+            101.2952,
+            4.68484
+          ],
+          [
+            101.29515,
+            4.68474
+          ],
+          [
+            101.29512,
+            4.68459
+          ],
+          [
+            101.29508,
+            4.68448
+          ],
+          [
+            101.29503705769625,
+            4.684440961547511
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.40424054861068726,
+      "risk_class": "uncertain",
+      "confidence": 0.1371646225452423,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.33055,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.226257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.164146,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.088817,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088036,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9549248218536377,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00043",
+      "segment_order": 44,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29503705769625,
+            4.684440961547511
+          ],
+          [
+            101.29497,
+            4.68438
+          ],
+          [
+            101.29495,
+            4.68432
+          ],
+          [
+            101.29486,
+            4.68423
+          ],
+          [
+            101.29479,
+            4.68413
+          ],
+          [
+            101.29467,
+            4.684
+          ],
+          [
+            101.29461,
+            4.6839
+          ],
+          [
+            101.29456,
+            4.68379
+          ],
+          [
+            101.29455,
+            4.68363
+          ],
+          [
+            101.29447,
+            4.68347
+          ],
+          [
+            101.29436,
+            4.6832
+          ],
+          [
+            101.29432,
+            4.68297
+          ],
+          [
+            101.29427,
+            4.68286
+          ],
+          [
+            101.29414,
+            4.68275
+          ],
+          [
+            101.2941,
+            4.68268
+          ],
+          [
+            101.29404,
+            4.68253
+          ],
+          [
+            101.29401369808907,
+            4.682494930790901
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00044",
+      "segment_order": 45,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29401369808907,
+            4.682494930790901
+          ],
+          [
+            101.29395,
+            4.68241
+          ],
+          [
+            101.29386,
+            4.68236
+          ],
+          [
+            101.29377,
+            4.68237
+          ],
+          [
+            101.29359,
+            4.68237
+          ],
+          [
+            101.29346,
+            4.6824
+          ],
+          [
+            101.29334,
+            4.68248
+          ],
+          [
+            101.29326,
+            4.68256
+          ],
+          [
+            101.29313,
+            4.68259
+          ],
+          [
+            101.29301,
+            4.68269
+          ],
+          [
+            101.29291,
+            4.68275
+          ],
+          [
+            101.2928,
+            4.68279
+          ],
+          [
+            101.29267,
+            4.68285
+          ],
+          [
+            101.29255,
+            4.68294
+          ],
+          [
+            101.29245,
+            4.68298
+          ],
+          [
+            101.29238,
+            4.68299
+          ],
+          [
+            101.2923,
+            4.68297
+          ],
+          [
+            101.29219,
+            4.68292
+          ],
+          [
+            101.29204,
+            4.68288
+          ],
+          [
+            101.29200930616535,
+            4.682876589577286
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00045",
+      "segment_order": 46,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.29200930616535,
+            4.682876589577286
+          ],
+          [
+            101.29186,
+            4.68286
+          ],
+          [
+            101.29176,
+            4.68288
+          ],
+          [
+            101.29159,
+            4.68291
+          ],
+          [
+            101.29138,
+            4.68293
+          ],
+          [
+            101.29122,
+            4.68294
+          ],
+          [
+            101.29109,
+            4.6829
+          ],
+          [
+            101.29092,
+            4.68286
+          ],
+          [
+            101.29078,
+            4.6828
+          ],
+          [
+            101.29067,
+            4.68274
+          ],
+          [
+            101.29054,
+            4.68272
+          ],
+          [
+            101.29048,
+            4.68273
+          ],
+          [
+            101.29042,
+            4.68275
+          ],
+          [
+            101.29038,
+            4.6828
+          ],
+          [
+            101.29034,
+            4.68289
+          ],
+          [
+            101.29025,
+            4.68301
+          ],
+          [
+            101.29018,
+            4.68308
+          ],
+          [
+            101.2901,
+            4.68309
+          ],
+          [
+            101.29003,
+            4.68308
+          ],
+          [
+            101.28998376169197,
+            4.683056880847657
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38858744502067566,
+      "risk_class": "uncertain",
+      "confidence": 0.16126848757266998,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.300207,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.293822,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.123976,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.083164,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.071124,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9649930000305176,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00046",
+      "segment_order": 47,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28998376169197,
+            4.683056880847657
+          ],
+          [
+            101.28995,
+            4.68304
+          ],
+          [
+            101.28987,
+            4.68298
+          ],
+          [
+            101.28972,
+            4.68292
+          ],
+          [
+            101.28956,
+            4.68289
+          ],
+          [
+            101.28941,
+            4.68291
+          ],
+          [
+            101.28929,
+            4.68292
+          ],
+          [
+            101.28913,
+            4.68287
+          ],
+          [
+            101.28903,
+            4.68281
+          ],
+          [
+            101.28892,
+            4.68276
+          ],
+          [
+            101.28883,
+            4.68272
+          ],
+          [
+            101.28874,
+            4.6826
+          ],
+          [
+            101.28868,
+            4.68247
+          ],
+          [
+            101.28852,
+            4.68232
+          ],
+          [
+            101.28836,
+            4.68216
+          ],
+          [
+            101.28827,
+            4.68207
+          ],
+          [
+            101.28825,
+            4.68198
+          ],
+          [
+            101.28825,
+            4.681919732922312
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00047",
+      "segment_order": 48,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28825,
+            4.681919732922312
+          ],
+          [
+            101.28825,
+            4.6819
+          ],
+          [
+            101.28827,
+            4.68185
+          ],
+          [
+            101.28829,
+            4.68173
+          ],
+          [
+            101.28824,
+            4.6816
+          ],
+          [
+            101.28819,
+            4.68134
+          ],
+          [
+            101.28816,
+            4.68116
+          ],
+          [
+            101.28809,
+            4.68105
+          ],
+          [
+            101.28804,
+            4.68093
+          ],
+          [
+            101.28795,
+            4.68088
+          ],
+          [
+            101.28788,
+            4.68075
+          ],
+          [
+            101.28782,
+            4.68067
+          ],
+          [
+            101.28771,
+            4.68066
+          ],
+          [
+            101.2876,
+            4.68058
+          ],
+          [
+            101.28744,
+            4.6805
+          ],
+          [
+            101.28722,
+            4.68049
+          ],
+          [
+            101.2871,
+            4.68045
+          ],
+          [
+            101.2870186879139,
+            4.6804056479557
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00048",
+      "segment_order": 49,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2870186879139,
+            4.6804056479557
+          ],
+          [
+            101.28699,
+            4.68039
+          ],
+          [
+            101.28674,
+            4.68036
+          ],
+          [
+            101.28635,
+            4.6803
+          ],
+          [
+            101.28605,
+            4.68024
+          ],
+          [
+            101.28588,
+            4.68018
+          ],
+          [
+            101.28567,
+            4.6801
+          ],
+          [
+            101.28552,
+            4.68008
+          ],
+          [
+            101.28538,
+            4.6801
+          ],
+          [
+            101.28521,
+            4.68014
+          ],
+          [
+            101.28507,
+            4.68012
+          ],
+          [
+            101.28489,
+            4.68009
+          ],
+          [
+            101.2848243193947,
+            4.680059685878782
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00049",
+      "segment_order": 50,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2848243193947,
+            4.680059685878782
+          ],
+          [
+            101.28476,
+            4.68003
+          ],
+          [
+            101.2846,
+            4.67996
+          ],
+          [
+            101.28442,
+            4.67985
+          ],
+          [
+            101.28433,
+            4.67977
+          ],
+          [
+            101.2842,
+            4.67976
+          ],
+          [
+            101.28406,
+            4.67971
+          ],
+          [
+            101.28393,
+            4.67966
+          ],
+          [
+            101.2838,
+            4.67959
+          ],
+          [
+            101.28365,
+            4.67955
+          ],
+          [
+            101.28352,
+            4.67952
+          ],
+          [
+            101.28346,
+            4.67945
+          ],
+          [
+            101.2834,
+            4.67934
+          ],
+          [
+            101.28328,
+            4.67924
+          ],
+          [
+            101.28301,
+            4.67901
+          ],
+          [
+            101.28293230167164,
+            4.678954501201026
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00050",
+      "segment_order": 51,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28293230167164,
+            4.678954501201026
+          ],
+          [
+            101.28287,
+            4.67891
+          ],
+          [
+            101.28278,
+            4.6788
+          ],
+          [
+            101.28269,
+            4.67879
+          ],
+          [
+            101.28241,
+            4.6788
+          ],
+          [
+            101.28216,
+            4.67879
+          ],
+          [
+            101.28193,
+            4.67871
+          ],
+          [
+            101.28159,
+            4.67872
+          ],
+          [
+            101.28137,
+            4.6787
+          ],
+          [
+            101.28126,
+            4.67871
+          ],
+          [
+            101.2812,
+            4.67866
+          ],
+          [
+            101.28118,
+            4.67858
+          ],
+          [
+            101.28119,
+            4.67842
+          ],
+          [
+            101.2810989709525,
+            4.678265250623208
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00051",
+      "segment_order": 52,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2810989709525,
+            4.678265250623208
+          ],
+          [
+            101.28109,
+            4.67825
+          ],
+          [
+            101.28101,
+            4.67808
+          ],
+          [
+            101.28091,
+            4.67796
+          ],
+          [
+            101.28078,
+            4.67774
+          ],
+          [
+            101.28074,
+            4.6775
+          ],
+          [
+            101.28065,
+            4.67727
+          ],
+          [
+            101.28052,
+            4.67709
+          ],
+          [
+            101.2805,
+            4.67697
+          ],
+          [
+            101.28043,
+            4.67686
+          ],
+          [
+            101.28038,
+            4.67678
+          ],
+          [
+            101.28035,
+            4.67667
+          ],
+          [
+            101.28036,
+            4.67643
+          ],
+          [
+            101.2803,
+            4.6763
+          ],
+          [
+            101.28026611974923,
+            4.67622094608905
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.47447341680526733,
+      "risk_class": "uncertain",
+      "confidence": 0.0256819985806942,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.24888,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.200542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.111308,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.10129,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.09837,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.6707254648208618,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00052",
+      "segment_order": 53,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28026611974923,
+            4.67622094608905
+          ],
+          [
+            101.28024,
+            4.67616
+          ],
+          [
+            101.27991,
+            4.67554
+          ],
+          [
+            101.27974,
+            4.67531
+          ],
+          [
+            101.27962,
+            4.67519
+          ],
+          [
+            101.2796,
+            4.67509
+          ],
+          [
+            101.27963,
+            4.67498
+          ],
+          [
+            101.2797,
+            4.67479
+          ],
+          [
+            101.27973,
+            4.67459
+          ],
+          [
+            101.2797,
+            4.6744
+          ],
+          [
+            101.27960868019309,
+            4.674197791890496
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00053",
+      "segment_order": 54,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27960868019309,
+            4.674197791890496
+          ],
+          [
+            101.27956,
+            4.67409
+          ],
+          [
+            101.27951,
+            4.67394
+          ],
+          [
+            101.27948,
+            4.67384
+          ],
+          [
+            101.27943,
+            4.67374
+          ],
+          [
+            101.27942,
+            4.67364
+          ],
+          [
+            101.27948,
+            4.67353
+          ],
+          [
+            101.27958,
+            4.67334
+          ],
+          [
+            101.27961,
+            4.67323
+          ],
+          [
+            101.27959,
+            4.67307
+          ],
+          [
+            101.2796,
+            4.67291
+          ],
+          [
+            101.27967,
+            4.67269
+          ],
+          [
+            101.27973,
+            4.67253
+          ],
+          [
+            101.27976,
+            4.6724
+          ],
+          [
+            101.2798,
+            4.67235
+          ],
+          [
+            101.27991,
+            4.67229
+          ],
+          [
+            101.28004,
+            4.6722
+          ],
+          [
+            101.28004431215578,
+            4.672193223756412
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00054",
+      "segment_order": 55,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.28004431215578,
+            4.672193223756412
+          ],
+          [
+            101.28011,
+            4.67209
+          ],
+          [
+            101.28009,
+            4.67183
+          ],
+          [
+            101.28003,
+            4.67142
+          ],
+          [
+            101.28006,
+            4.67096
+          ],
+          [
+            101.28003,
+            4.67065
+          ],
+          [
+            101.27989,
+            4.67042
+          ],
+          [
+            101.27966,
+            4.67026
+          ],
+          [
+            101.27958416432007,
+            4.67014203339126
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00055",
+      "segment_order": 56,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27958416432007,
+            4.67014203339126
+          ],
+          [
+            101.27957,
+            4.67012
+          ],
+          [
+            101.2795,
+            4.66995
+          ],
+          [
+            101.27948,
+            4.66976
+          ],
+          [
+            101.27928,
+            4.66951
+          ],
+          [
+            101.27919,
+            4.66911
+          ],
+          [
+            101.27907,
+            4.66895
+          ],
+          [
+            101.27903,
+            4.66878
+          ],
+          [
+            101.27896,
+            4.66866
+          ],
+          [
+            101.2789,
+            4.66862
+          ],
+          [
+            101.27884,
+            4.66863
+          ],
+          [
+            101.27875,
+            4.66863
+          ],
+          [
+            101.27871,
+            4.66858
+          ],
+          [
+            101.27868,
+            4.66839
+          ],
+          [
+            101.27863890809965,
+            4.668261587834868
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5045222043991089,
+      "risk_class": "uncertain",
+      "confidence": 0.0012281481176614761,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.251828,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.157892,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.129507,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.095287,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.079914,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1810542792081833,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00056",
+      "segment_order": 57,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27863890809965,
+            4.668261587834868
+          ],
+          [
+            101.2786,
+            4.66814
+          ],
+          [
+            101.27848,
+            4.66801
+          ],
+          [
+            101.27837,
+            4.66786
+          ],
+          [
+            101.27803,
+            4.66737
+          ],
+          [
+            101.27781,
+            4.66716
+          ],
+          [
+            101.27765,
+            4.667
+          ],
+          [
+            101.2774,
+            4.66665
+          ],
+          [
+            101.2772318315682,
+            4.666523873684269
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00057",
+      "segment_order": 58,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2772318315682,
+            4.666523873684269
+          ],
+          [
+            101.2772,
+            4.6665
+          ],
+          [
+            101.27713,
+            4.6664
+          ],
+          [
+            101.2771,
+            4.66627
+          ],
+          [
+            101.27704,
+            4.66618
+          ],
+          [
+            101.27693,
+            4.66617
+          ],
+          [
+            101.27669,
+            4.66622
+          ],
+          [
+            101.27644,
+            4.6663
+          ],
+          [
+            101.27635,
+            4.66631
+          ],
+          [
+            101.27629,
+            4.66624
+          ],
+          [
+            101.27621,
+            4.6662
+          ],
+          [
+            101.27616,
+            4.66609
+          ],
+          [
+            101.27606,
+            4.66597
+          ],
+          [
+            101.27591,
+            4.66593
+          ],
+          [
+            101.27573,
+            4.66571
+          ],
+          [
+            101.27558,
+            4.66568
+          ],
+          [
+            101.27550405275696,
+            4.665626836932454
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00058",
+      "segment_order": 59,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27550405275696,
+            4.665626836932454
+          ],
+          [
+            101.27548,
+            4.66561
+          ],
+          [
+            101.27529,
+            4.66557
+          ],
+          [
+            101.27504,
+            4.66553
+          ],
+          [
+            101.27481,
+            4.66543
+          ],
+          [
+            101.27464,
+            4.66534
+          ],
+          [
+            101.27448,
+            4.66517
+          ],
+          [
+            101.27426,
+            4.66492
+          ],
+          [
+            101.27411,
+            4.66484
+          ],
+          [
+            101.27385,
+            4.66479
+          ],
+          [
+            101.27377,
+            4.66473
+          ],
+          [
+            101.27357,
+            4.66471
+          ],
+          [
+            101.27354185155491,
+            4.66469311093542
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00059",
+      "segment_order": 60,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27354185155491,
+            4.66469311093542
+          ],
+          [
+            101.27347,
+            4.66465
+          ],
+          [
+            101.27337,
+            4.66461
+          ],
+          [
+            101.27333,
+            4.66451
+          ],
+          [
+            101.27335,
+            4.66437
+          ],
+          [
+            101.27333,
+            4.66427
+          ],
+          [
+            101.27329,
+            4.66419
+          ],
+          [
+            101.27332,
+            4.66411
+          ],
+          [
+            101.27336,
+            4.66404
+          ],
+          [
+            101.27336,
+            4.66393
+          ],
+          [
+            101.27324,
+            4.6637
+          ],
+          [
+            101.27306,
+            4.6636
+          ],
+          [
+            101.27293,
+            4.66339
+          ],
+          [
+            101.27284,
+            4.66336
+          ],
+          [
+            101.27282,
+            4.66333
+          ],
+          [
+            101.27287,
+            4.66328
+          ],
+          [
+            101.27288,
+            4.66324
+          ],
+          [
+            101.27287,
+            4.6632
+          ],
+          [
+            101.27278,
+            4.66316
+          ],
+          [
+            101.27271,
+            4.66305
+          ],
+          [
+            101.27268948199446,
+            4.662926891976954
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00060",
+      "segment_order": 61,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27268948199446,
+            4.662926891976954
+          ],
+          [
+            101.27268,
+            4.66287
+          ],
+          [
+            101.27256,
+            4.66273
+          ],
+          [
+            101.27251,
+            4.66262
+          ],
+          [
+            101.27244,
+            4.66241
+          ],
+          [
+            101.27236,
+            4.66232
+          ],
+          [
+            101.27228,
+            4.66221
+          ],
+          [
+            101.27223,
+            4.66212
+          ],
+          [
+            101.27216,
+            4.66205
+          ],
+          [
+            101.27214,
+            4.66199
+          ],
+          [
+            101.27216,
+            4.66187
+          ],
+          [
+            101.27213,
+            4.66177
+          ],
+          [
+            101.27214,
+            4.66162
+          ],
+          [
+            101.27218,
+            4.66142
+          ],
+          [
+            101.27218,
+            4.66131
+          ],
+          [
+            101.27226,
+            4.66111
+          ],
+          [
+            101.27225,
+            4.66092
+          ],
+          [
+            101.27226939142155,
+            4.660865704026747
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5767145156860352,
+      "risk_class": "uncertain",
+      "confidence": 0.09954392910003662,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.153345,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.103548,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.060109,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.055086,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025479,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8650596737861633,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00061",
+      "segment_order": 62,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27226939142155,
+            4.660865704026747
+          ],
+          [
+            101.2723,
+            4.66078
+          ],
+          [
+            101.2723,
+            4.66064
+          ],
+          [
+            101.27238,
+            4.66053
+          ],
+          [
+            101.2724,
+            4.66039
+          ],
+          [
+            101.27236,
+            4.66029
+          ],
+          [
+            101.27229,
+            4.66025
+          ],
+          [
+            101.27224,
+            4.66007
+          ],
+          [
+            101.27215,
+            4.65994
+          ],
+          [
+            101.2721,
+            4.65978
+          ],
+          [
+            101.27201,
+            4.65969
+          ],
+          [
+            101.27199,
+            4.65958
+          ],
+          [
+            101.27198,
+            4.65958
+          ],
+          [
+            101.272,
+            4.65949
+          ],
+          [
+            101.27206,
+            4.6594
+          ],
+          [
+            101.27211,
+            4.65927
+          ],
+          [
+            101.27214,
+            4.65912
+          ],
+          [
+            101.27213,
+            4.659
+          ],
+          [
+            101.2722,
+            4.65884
+          ],
+          [
+            101.27218955936232,
+            4.65883164749053
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00062",
+      "segment_order": 63,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27218955936232,
+            4.65883164749053
+          ],
+          [
+            101.27215,
+            4.6588
+          ],
+          [
+            101.27222,
+            4.6585
+          ],
+          [
+            101.27228,
+            4.6584
+          ],
+          [
+            101.27224,
+            4.65829
+          ],
+          [
+            101.27222,
+            4.65802
+          ],
+          [
+            101.27208,
+            4.65771
+          ],
+          [
+            101.27195,
+            4.65758
+          ],
+          [
+            101.27187,
+            4.65749
+          ],
+          [
+            101.2719,
+            4.65729
+          ],
+          [
+            101.27189,
+            4.6571
+          ],
+          [
+            101.27197,
+            4.6569
+          ],
+          [
+            101.27196,
+            4.65681
+          ],
+          [
+            101.27192212083492,
+            4.65677212083913
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00063",
+      "segment_order": 64,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27192212083492,
+            4.65677212083913
+          ],
+          [
+            101.27187,
+            4.65672
+          ],
+          [
+            101.27169,
+            4.65665
+          ],
+          [
+            101.27157,
+            4.65648
+          ],
+          [
+            101.27154,
+            4.65619
+          ],
+          [
+            101.27143,
+            4.65598
+          ],
+          [
+            101.27127,
+            4.65585
+          ],
+          [
+            101.27111,
+            4.65575
+          ],
+          [
+            101.27106,
+            4.65562
+          ],
+          [
+            101.27103,
+            4.65507
+          ],
+          [
+            101.27101120021165,
+            4.654900801929336
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00064",
+      "segment_order": 65,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27101120021165,
+            4.654900801929336
+          ],
+          [
+            101.271,
+            4.6548
+          ],
+          [
+            101.27095,
+            4.65461
+          ],
+          [
+            101.27089,
+            4.65451
+          ],
+          [
+            101.27078,
+            4.6545
+          ],
+          [
+            101.27071,
+            4.65444
+          ],
+          [
+            101.27063,
+            4.65436
+          ],
+          [
+            101.27054,
+            4.65433
+          ],
+          [
+            101.27042,
+            4.65426
+          ],
+          [
+            101.27035,
+            4.65414
+          ],
+          [
+            101.27031,
+            4.65384
+          ],
+          [
+            101.2704,
+            4.65359
+          ],
+          [
+            101.27041,
+            4.65334
+          ],
+          [
+            101.2705,
+            4.65307
+          ],
+          [
+            101.27049633039228,
+            4.653017402317745
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.6540203094482422,
+      "risk_class": "predicted_gap",
+      "confidence": 0.19727005064487457,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.124788,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.099236,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.080371,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.023809,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.022384,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.853870153427124,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00065",
+      "segment_order": 66,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.27049633039228,
+            4.653017402317745
+          ],
+          [
+            101.27047,
+            4.65264
+          ],
+          [
+            101.2704,
+            4.65248
+          ],
+          [
+            101.27006,
+            4.65208
+          ],
+          [
+            101.26996,
+            4.65207
+          ],
+          [
+            101.26989,
+            4.6521
+          ],
+          [
+            101.26981,
+            4.65208
+          ],
+          [
+            101.26962,
+            4.65186
+          ],
+          [
+            101.26943,
+            4.65188
+          ],
+          [
+            101.2692,
+            4.65183
+          ],
+          [
+            101.26899936838669,
+            4.651857112405192
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.511045515537262,
+      "risk_class": "uncertain",
+      "confidence": 0.009294910356402397,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.1326,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.121129,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.114475,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.076432,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037087,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.5610063672065735,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00066",
+      "segment_order": 67,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26899936838669,
+            4.651857112405192
+          ],
+          [
+            101.26883,
+            4.65188
+          ],
+          [
+            101.26847,
+            4.65186
+          ],
+          [
+            101.26823,
+            4.652
+          ],
+          [
+            101.26792,
+            4.65202
+          ],
+          [
+            101.26785,
+            4.65207
+          ],
+          [
+            101.26767,
+            4.65208
+          ],
+          [
+            101.26746,
+            4.65211
+          ],
+          [
+            101.26686136985967,
+            4.652377081170098
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00067",
+      "segment_order": 68,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26686136985967,
+            4.652377081170098
+          ],
+          [
+            101.26681,
+            4.6524
+          ],
+          [
+            101.26652,
+            4.65243
+          ],
+          [
+            101.26617,
+            4.65208
+          ],
+          [
+            101.2659,
+            4.65181
+          ],
+          [
+            101.26507,
+            4.65143
+          ],
+          [
+            101.26496366955526,
+            4.651379251415354
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00068",
+      "segment_order": 69,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26496366955526,
+            4.651379251415354
+          ],
+          [
+            101.26463,
+            4.65122
+          ],
+          [
+            101.26425,
+            4.65094
+          ],
+          [
+            101.264,
+            4.65094
+          ],
+          [
+            101.26352,
+            4.65104
+          ],
+          [
+            101.2628489220976,
+            4.651005289308218
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00069",
+      "segment_order": 70,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2628489220976,
+            4.651005289308218
+          ],
+          [
+            101.26236,
+            4.65098
+          ],
+          [
+            101.26158,
+            4.65089
+          ],
+          [
+            101.26061316396938,
+            4.650739209148111
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00070",
+      "segment_order": 71,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.26061316396938,
+            4.650739209148111
+          ],
+          [
+            101.26049,
+            4.65072
+          ],
+          [
+            101.26041,
+            4.65071
+          ],
+          [
+            101.25918,
+            4.65058
+          ],
+          [
+            101.25836923784823,
+            4.650603164770837
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48652344942092896,
+      "risk_class": "uncertain",
+      "confidence": 0.006250553764402866,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.133431,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.092335,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.085052,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.05014,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.037213,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.3092060685157776,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00071",
+      "segment_order": 72,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25836923784823,
+            4.650603164770837
+          ],
+          [
+            101.25813,
+            4.65061
+          ],
+          [
+            101.25741,
+            4.65058
+          ],
+          [
+            101.2569,
+            4.65029
+          ],
+          [
+            101.25619474822793,
+            4.650240173002947
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00072",
+      "segment_order": 73,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25619474822793,
+            4.650240173002947
+          ],
+          [
+            101.25506,
+            4.65016
+          ],
+          [
+            101.25433,
+            4.6501
+          ],
+          [
+            101.25395250833795,
+            4.650034158568226
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00073",
+      "segment_order": 74,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25395250833795,
+            4.650034158568226
+          ],
+          [
+            101.25347,
+            4.64995
+          ],
+          [
+            101.25268,
+            4.64998
+          ],
+          [
+            101.25252,
+            4.65003
+          ],
+          [
+            101.25233,
+            4.65007
+          ],
+          [
+            101.25213,
+            4.65009
+          ],
+          [
+            101.25186,
+            4.65013
+          ],
+          [
+            101.25172287104309,
+            4.650125271430194
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00074",
+      "segment_order": 75,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.25172287104309,
+            4.650125271430194
+          ],
+          [
+            101.25157,
+            4.65012
+          ],
+          [
+            101.25141,
+            4.65018
+          ],
+          [
+            101.25113,
+            4.65026
+          ],
+          [
+            101.25101,
+            4.65024
+          ],
+          [
+            101.25084,
+            4.65031
+          ],
+          [
+            101.25055,
+            4.65024
+          ],
+          [
+            101.2504,
+            4.65027
+          ],
+          [
+            101.25024,
+            4.65025
+          ],
+          [
+            101.2501,
+            4.65015
+          ],
+          [
+            101.25003,
+            4.65002
+          ],
+          [
+            101.24997,
+            4.64985
+          ],
+          [
+            101.24986,
+            4.64967
+          ],
+          [
+            101.2498571031886,
+            4.6496592404187735
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00075",
+      "segment_order": 76,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.2498571031886,
+            4.6496592404187735
+          ],
+          [
+            101.24979,
+            4.64941
+          ],
+          [
+            101.24967,
+            4.64904
+          ],
+          [
+            101.24967,
+            4.64879
+          ],
+          [
+            101.24962,
+            4.64855
+          ],
+          [
+            101.24947,
+            4.6483
+          ],
+          [
+            101.24934,
+            4.64816
+          ],
+          [
+            101.24919,
+            4.64809
+          ],
+          [
+            101.24904,
+            4.64794
+          ],
+          [
+            101.24884,
+            4.64788
+          ],
+          [
+            101.24879844488628,
+            4.647857837277706
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00076",
+      "segment_order": 77,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24879844488628,
+            4.647857837277706
+          ],
+          [
+            101.24869,
+            4.6478
+          ],
+          [
+            101.24854,
+            4.64777
+          ],
+          [
+            101.24831,
+            4.64759
+          ],
+          [
+            101.24817,
+            4.64731
+          ],
+          [
+            101.24806,
+            4.64708
+          ],
+          [
+            101.24786,
+            4.64692
+          ],
+          [
+            101.24777,
+            4.6468
+          ],
+          [
+            101.24748,
+            4.64666
+          ],
+          [
+            101.24728,
+            4.64662
+          ],
+          [
+            101.24717,
+            4.64665
+          ],
+          [
+            101.24711756459557,
+            4.646702435406398
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.37647807598114014,
+      "risk_class": "uncertain",
+      "confidence": 0.025835327804088593,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.144821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.099821,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.090411,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.059131,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_grass_fraction",
+          "contribution": -0.051088,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.1394372135400772,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00077",
+      "segment_order": 78,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24711756459557,
+            4.646702435406398
+          ],
+          [
+            101.2471,
+            4.64672
+          ],
+          [
+            101.24687,
+            4.64697
+          ],
+          [
+            101.24676,
+            4.64701
+          ],
+          [
+            101.24666,
+            4.64703
+          ],
+          [
+            101.24608,
+            4.64702
+          ],
+          [
+            101.24582,
+            4.64704
+          ],
+          [
+            101.24563,
+            4.64715
+          ],
+          [
+            101.24553,
+            4.64717
+          ],
+          [
+            101.24541,
+            4.6471
+          ],
+          [
+            101.24537,
+            4.64692
+          ],
+          [
+            101.24538852135204,
+            4.646734786483508
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00078",
+      "segment_order": 79,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24538852135204,
+            4.646734786483508
+          ],
+          [
+            101.24539,
+            4.64672
+          ],
+          [
+            101.24533,
+            4.64663
+          ],
+          [
+            101.24511,
+            4.64665
+          ],
+          [
+            101.2449,
+            4.64674
+          ],
+          [
+            101.24468,
+            4.64666
+          ],
+          [
+            101.24444,
+            4.64671
+          ],
+          [
+            101.24423,
+            4.64669
+          ],
+          [
+            101.24412,
+            4.64679
+          ],
+          [
+            101.24381,
+            4.64716
+          ],
+          [
+            101.24353709560316,
+            4.647396995975682
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00079",
+      "segment_order": 80,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24353709560316,
+            4.647396995975682
+          ],
+          [
+            101.24343,
+            4.64749
+          ],
+          [
+            101.2432,
+            4.64774
+          ],
+          [
+            101.24312,
+            4.64797
+          ],
+          [
+            101.2428,
+            4.64823
+          ],
+          [
+            101.24221,
+            4.64839
+          ],
+          [
+            101.24191,
+            4.64868
+          ],
+          [
+            101.24186121056569,
+            4.6487560541774515
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_korbu__s00080",
+      "segment_order": 81,
+      "segment_length_m": 149.13707207090192,
+      "geometry": {
+        "coordinates": [
+          [
+            101.24186121056569,
+            4.6487560541774515
+          ],
+          [
+            101.24157,
+            4.64921
+          ],
+          [
+            101.24129,
+            4.64948
+          ],
+          [
+            101.24097,
+            4.6496
+          ],
+          [
+            101.2409,
+            4.64963
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.3133082389831543,
+      "risk_class": "uncertain",
+      "confidence": 0.05758284032344818,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.147281,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.099047,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.084119,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.065428,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_elevation_std_m",
+          "contribution": 0.058733,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.20562535524368286,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256-canonical-json-without-integrity",
+    "checksum": "7be6d23dcad846ee7ad2d477046dec6c645d6220509eb80d185b216d7ff1b8d3"
+  }
+}

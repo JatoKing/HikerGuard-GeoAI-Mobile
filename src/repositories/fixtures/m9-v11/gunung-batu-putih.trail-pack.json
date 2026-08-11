@@ -1,0 +1,7991 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "gunung-batu-putih",
+  "name": "Gunung Batu Putih",
+  "pack_version": "2026-08-10T03:15:29.852Z",
+  "generated_at": "2026-08-10T03:15:29.852Z",
+  "stage": "model_backed",
+  "prediction_available": true,
+  "model": {
+    "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+    "validation_level": "cross_country_spatial_validation_planning_only",
+    "intended_use": "offline_hackathon_connectivity_planning_only",
+    "field_validated": false,
+    "label_source": "anatel_mobile_coverage_2026_07 + fcc_bdc_mobile_4g_lte_2025_06",
+    "label_release": "Anatel 2026-07 + FCC BDC 2025-06",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": false,
+    "model_stage": "Candidate"
+  },
+  "segments": [
+    {
+      "segment_id": "trail_gunung_batu_putih__s00000",
+      "segment_order": 1,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3636,
+            4.21701
+          ],
+          [
+            101.36368,
+            4.21697
+          ],
+          [
+            101.36381,
+            4.21696
+          ],
+          [
+            101.36394,
+            4.21696
+          ],
+          [
+            101.364,
+            4.21694
+          ],
+          [
+            101.36404,
+            4.21691
+          ],
+          [
+            101.36412,
+            4.2168
+          ],
+          [
+            101.36431,
+            4.21667
+          ],
+          [
+            101.36448,
+            4.21656
+          ],
+          [
+            101.36463,
+            4.21647
+          ],
+          [
+            101.36484,
+            4.21636
+          ],
+          [
+            101.36501,
+            4.21631
+          ],
+          [
+            101.36516,
+            4.21629
+          ],
+          [
+            101.36529,
+            4.21627
+          ],
+          [
+            101.36545,
+            4.21626
+          ],
+          [
+            101.36561,
+            4.21625
+          ],
+          [
+            101.36563889567532,
+            4.216250000002068
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00001",
+      "segment_order": 2,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36563889567532,
+            4.216250000002068
+          ],
+          [
+            101.36575,
+            4.21625
+          ],
+          [
+            101.36596,
+            4.21629
+          ],
+          [
+            101.36603,
+            4.21631
+          ],
+          [
+            101.36616,
+            4.21641
+          ],
+          [
+            101.3663,
+            4.21646
+          ],
+          [
+            101.36641,
+            4.21648
+          ],
+          [
+            101.36654,
+            4.21647
+          ],
+          [
+            101.36671,
+            4.21651
+          ],
+          [
+            101.36684,
+            4.21651
+          ],
+          [
+            101.36689,
+            4.2165
+          ],
+          [
+            101.36711,
+            4.21637
+          ],
+          [
+            101.36729,
+            4.2163
+          ],
+          [
+            101.36741,
+            4.21625
+          ],
+          [
+            101.36752,
+            4.21623
+          ],
+          [
+            101.36759,
+            4.21614
+          ],
+          [
+            101.36770552666421,
+            4.216060020003815
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00002",
+      "segment_order": 3,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36770552666421,
+            4.216060020003815
+          ],
+          [
+            101.36772,
+            4.21605
+          ],
+          [
+            101.36783,
+            4.21601
+          ],
+          [
+            101.36797,
+            4.21594
+          ],
+          [
+            101.36813,
+            4.21581
+          ],
+          [
+            101.36829,
+            4.21574
+          ],
+          [
+            101.36849,
+            4.21572
+          ],
+          [
+            101.36873,
+            4.21573
+          ],
+          [
+            101.36904,
+            4.21572
+          ],
+          [
+            101.36917,
+            4.21578
+          ],
+          [
+            101.36948,
+            4.21571
+          ],
+          [
+            101.36979,
+            4.21573
+          ],
+          [
+            101.36984474677998,
+            4.215748248926886
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00003",
+      "segment_order": 4,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36984474677998,
+            4.215748248926886
+          ],
+          [
+            101.36985,
+            4.21575
+          ],
+          [
+            101.36993,
+            4.2158
+          ],
+          [
+            101.37,
+            4.2158
+          ],
+          [
+            101.37009,
+            4.21577
+          ],
+          [
+            101.37062,
+            4.21543
+          ],
+          [
+            101.37081,
+            4.21535
+          ],
+          [
+            101.37114,
+            4.21534
+          ],
+          [
+            101.37125,
+            4.2153
+          ],
+          [
+            101.37145,
+            4.21512
+          ],
+          [
+            101.37163,
+            4.21499
+          ],
+          [
+            101.3717979719449,
+            4.214855622464327
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00004",
+      "segment_order": 5,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3717979719449,
+            4.214855622464327
+          ],
+          [
+            101.37188,
+            4.21479
+          ],
+          [
+            101.37201,
+            4.21469
+          ],
+          [
+            101.37217,
+            4.21455
+          ],
+          [
+            101.37223,
+            4.21454
+          ],
+          [
+            101.37242,
+            4.21451
+          ],
+          [
+            101.373,
+            4.21442
+          ],
+          [
+            101.3732,
+            4.21435
+          ],
+          [
+            101.37353,
+            4.21421
+          ],
+          [
+            101.37388069696019,
+            4.214124695338884
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00005",
+      "segment_order": 6,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37388069696019,
+            4.214124695338884
+          ],
+          [
+            101.3739,
+            4.21412
+          ],
+          [
+            101.37405,
+            4.21411
+          ],
+          [
+            101.37422,
+            4.21407
+          ],
+          [
+            101.37436,
+            4.21405
+          ],
+          [
+            101.37458,
+            4.21398
+          ],
+          [
+            101.37479,
+            4.21398
+          ],
+          [
+            101.37494,
+            4.21394
+          ],
+          [
+            101.37519,
+            4.21384
+          ],
+          [
+            101.37538,
+            4.2138
+          ],
+          [
+            101.37557,
+            4.21374
+          ],
+          [
+            101.37566,
+            4.21372
+          ],
+          [
+            101.37583,
+            4.21372
+          ],
+          [
+            101.37592,
+            4.21369
+          ],
+          [
+            101.37604,
+            4.2136
+          ],
+          [
+            101.37604036116733,
+            4.213599772598459
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00006",
+      "segment_order": 7,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37604036116733,
+            4.213599772598459
+          ],
+          [
+            101.37631,
+            4.21343
+          ],
+          [
+            101.37641,
+            4.21331
+          ],
+          [
+            101.37673,
+            4.21308
+          ],
+          [
+            101.37686,
+            4.21291
+          ],
+          [
+            101.37695,
+            4.21284
+          ],
+          [
+            101.37713,
+            4.21277
+          ],
+          [
+            101.37741,
+            4.21276
+          ],
+          [
+            101.3776,
+            4.21276
+          ],
+          [
+            101.3779,
+            4.21284
+          ],
+          [
+            101.37797562713715,
+            4.212874904836306
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.444496750831604,
+      "risk_class": "uncertain",
+      "confidence": 0.002926680026575923,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.160069,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.10829,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.083162,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.044909,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_4g_cell_km",
+          "contribution": 0.03695,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.035153262317180634,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00007",
+      "segment_order": 8,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37797562713715,
+            4.212874904836306
+          ],
+          [
+            101.37803,
+            4.2129
+          ],
+          [
+            101.37806,
+            4.21292
+          ],
+          [
+            101.37867,
+            4.21302
+          ],
+          [
+            101.37883,
+            4.213
+          ],
+          [
+            101.37896,
+            4.2132
+          ],
+          [
+            101.37909,
+            4.21324
+          ],
+          [
+            101.37882,
+            4.21355
+          ],
+          [
+            101.37914,
+            4.21367
+          ],
+          [
+            101.37919,
+            4.21369
+          ],
+          [
+            101.37936,
+            4.2136
+          ],
+          [
+            101.3793650521085,
+            4.213600000000405
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00008",
+      "segment_order": 9,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3793650521085,
+            4.213600000000405
+          ],
+          [
+            101.37949,
+            4.2136
+          ],
+          [
+            101.37962,
+            4.21365
+          ],
+          [
+            101.37978,
+            4.21361
+          ],
+          [
+            101.37988,
+            4.2136
+          ],
+          [
+            101.38012,
+            4.21363
+          ],
+          [
+            101.38019,
+            4.21362
+          ],
+          [
+            101.3803,
+            4.21357
+          ],
+          [
+            101.38045,
+            4.21347
+          ],
+          [
+            101.38062,
+            4.21337
+          ],
+          [
+            101.381,
+            4.21305
+          ],
+          [
+            101.38111,
+            4.21299
+          ],
+          [
+            101.38124,
+            4.21294
+          ],
+          [
+            101.3813870361554,
+            4.21290324097105
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00009",
+      "segment_order": 10,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3813870361554,
+            4.21290324097105
+          ],
+          [
+            101.38148,
+            4.21288
+          ],
+          [
+            101.38177,
+            4.21272
+          ],
+          [
+            101.38209,
+            4.21269
+          ],
+          [
+            101.38215,
+            4.21267
+          ],
+          [
+            101.3822,
+            4.21263
+          ],
+          [
+            101.38233,
+            4.21251
+          ],
+          [
+            101.38239,
+            4.21248
+          ],
+          [
+            101.38257,
+            4.21245
+          ],
+          [
+            101.38287,
+            4.21245
+          ],
+          [
+            101.38331,
+            4.2124
+          ],
+          [
+            101.38339,
+            4.2124
+          ],
+          [
+            101.38351389949621,
+            4.212430974877292
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4611961543560028,
+      "risk_class": "uncertain",
+      "confidence": 0.004696887917816639,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.113763,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.100264,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.079031,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025627,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.024129,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.08069454878568649,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00010",
+      "segment_order": 11,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38351389949621,
+            4.212430974877292
+          ],
+          [
+            101.38355,
+            4.21244
+          ],
+          [
+            101.38379,
+            4.21243
+          ],
+          [
+            101.38391,
+            4.21248
+          ],
+          [
+            101.38407,
+            4.21258
+          ],
+          [
+            101.38425,
+            4.21265
+          ],
+          [
+            101.38459,
+            4.21264
+          ],
+          [
+            101.38468,
+            4.21264
+          ],
+          [
+            101.38501,
+            4.21291
+          ],
+          [
+            101.38505,
+            4.21296
+          ],
+          [
+            101.38509,
+            4.21306
+          ],
+          [
+            101.38515,
+            4.21313
+          ],
+          [
+            101.38519,
+            4.21315
+          ],
+          [
+            101.38531,
+            4.21312
+          ],
+          [
+            101.38543,
+            4.21312
+          ],
+          [
+            101.3854772030018,
+            4.213149501877903
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4611961543560028,
+      "risk_class": "uncertain",
+      "confidence": 0.004696887917816639,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.113763,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.100264,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.079031,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025627,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.024129,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.08069454878568649,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00011",
+      "segment_order": 12,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3854772030018,
+            4.213149501877903
+          ],
+          [
+            101.38551,
+            4.21317
+          ],
+          [
+            101.38569,
+            4.21331
+          ],
+          [
+            101.38576,
+            4.21343
+          ],
+          [
+            101.38587,
+            4.21368
+          ],
+          [
+            101.38593,
+            4.21374
+          ],
+          [
+            101.386,
+            4.21375
+          ],
+          [
+            101.3861,
+            4.21371
+          ],
+          [
+            101.3862,
+            4.21373
+          ],
+          [
+            101.38628,
+            4.21377
+          ],
+          [
+            101.38644,
+            4.21379
+          ],
+          [
+            101.38655,
+            4.21383
+          ],
+          [
+            101.38679,
+            4.21395
+          ],
+          [
+            101.38712,
+            4.214
+          ],
+          [
+            101.38734145941811,
+            4.21409369437667
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00012",
+      "segment_order": 13,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38734145941811,
+            4.21409369437667
+          ],
+          [
+            101.38738,
+            4.21411
+          ],
+          [
+            101.38759,
+            4.21414
+          ],
+          [
+            101.38796,
+            4.21428
+          ],
+          [
+            101.38815,
+            4.21431
+          ],
+          [
+            101.38829,
+            4.21442
+          ],
+          [
+            101.38835,
+            4.2145
+          ],
+          [
+            101.38845,
+            4.21464
+          ],
+          [
+            101.38852,
+            4.21479
+          ],
+          [
+            101.38873,
+            4.21512
+          ],
+          [
+            101.38878,
+            4.21514
+          ],
+          [
+            101.38897,
+            4.21517
+          ],
+          [
+            101.38911412741791,
+            4.215239394699809
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00013",
+      "segment_order": 14,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38911412741791,
+            4.215239394699809
+          ],
+          [
+            101.38924,
+            4.2153
+          ],
+          [
+            101.38944,
+            4.21543
+          ],
+          [
+            101.38965,
+            4.21559
+          ],
+          [
+            101.38981,
+            4.21581
+          ],
+          [
+            101.38993,
+            4.21592
+          ],
+          [
+            101.3901,
+            4.21613
+          ],
+          [
+            101.3902,
+            4.2162
+          ],
+          [
+            101.39054,
+            4.21629
+          ],
+          [
+            101.39073,
+            4.21631
+          ],
+          [
+            101.39092,
+            4.21642
+          ],
+          [
+            101.3909420956294,
+            4.21642679865703
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00014",
+      "segment_order": 15,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3909420956294,
+            4.21642679865703
+          ],
+          [
+            101.39105,
+            4.21646
+          ],
+          [
+            101.39117,
+            4.21652
+          ],
+          [
+            101.39126,
+            4.2166
+          ],
+          [
+            101.39139,
+            4.21678
+          ],
+          [
+            101.39142,
+            4.21683
+          ],
+          [
+            101.39147,
+            4.21698
+          ],
+          [
+            101.3915,
+            4.21703
+          ],
+          [
+            101.39155,
+            4.21707
+          ],
+          [
+            101.39172,
+            4.21716
+          ],
+          [
+            101.39198,
+            4.21725
+          ],
+          [
+            101.39208,
+            4.2173
+          ],
+          [
+            101.39218,
+            4.21739
+          ],
+          [
+            101.39242,
+            4.21763
+          ],
+          [
+            101.39259129404327,
+            4.217844117567191
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00015",
+      "segment_order": 16,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39259129404327,
+            4.217844117567191
+          ],
+          [
+            101.39262,
+            4.21788
+          ],
+          [
+            101.3927,
+            4.21801
+          ],
+          [
+            101.39273,
+            4.21816
+          ],
+          [
+            101.39287,
+            4.21839
+          ],
+          [
+            101.39294,
+            4.21843
+          ],
+          [
+            101.39306,
+            4.21842
+          ],
+          [
+            101.39325,
+            4.21842
+          ],
+          [
+            101.39348,
+            4.2184
+          ],
+          [
+            101.39374,
+            4.21832
+          ],
+          [
+            101.39398,
+            4.21833
+          ],
+          [
+            101.39414,
+            4.21831
+          ],
+          [
+            101.39432,
+            4.21826
+          ],
+          [
+            101.39446625318787,
+            4.218222392059153
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00016",
+      "segment_order": 17,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39446625318787,
+            4.218222392059153
+          ],
+          [
+            101.39467,
+            4.21817
+          ],
+          [
+            101.39499,
+            4.21804
+          ],
+          [
+            101.3953,
+            4.21804
+          ],
+          [
+            101.39542,
+            4.21802
+          ],
+          [
+            101.39567,
+            4.21789
+          ],
+          [
+            101.39581,
+            4.21784
+          ],
+          [
+            101.39592,
+            4.2178
+          ],
+          [
+            101.39599,
+            4.21774
+          ],
+          [
+            101.39604,
+            4.21765
+          ],
+          [
+            101.39613,
+            4.21756
+          ],
+          [
+            101.39628,
+            4.21751
+          ],
+          [
+            101.39641,
+            4.21749
+          ],
+          [
+            101.39651311505341,
+            4.217464221240898
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00017",
+      "segment_order": 18,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39651311505341,
+            4.217464221240898
+          ],
+          [
+            101.39657,
+            4.21745
+          ],
+          [
+            101.39673,
+            4.21746
+          ],
+          [
+            101.39694,
+            4.21753
+          ],
+          [
+            101.39706,
+            4.21766
+          ],
+          [
+            101.39724,
+            4.21783
+          ],
+          [
+            101.39752,
+            4.21814
+          ],
+          [
+            101.39764,
+            4.21826
+          ],
+          [
+            101.39777,
+            4.21834
+          ],
+          [
+            101.39787,
+            4.21836
+          ],
+          [
+            101.39814,
+            4.21835
+          ],
+          [
+            101.39834,
+            4.21826
+          ],
+          [
+            101.39839792264557,
+            4.21826275822692
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00018",
+      "segment_order": 19,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39839792264557,
+            4.21826275822692
+          ],
+          [
+            101.39855,
+            4.21827
+          ],
+          [
+            101.39881,
+            4.21834
+          ],
+          [
+            101.3989,
+            4.21834
+          ],
+          [
+            101.39905,
+            4.21832
+          ],
+          [
+            101.39918,
+            4.21831
+          ],
+          [
+            101.3994,
+            4.21824
+          ],
+          [
+            101.39965,
+            4.21823
+          ],
+          [
+            101.39983,
+            4.21819
+          ],
+          [
+            101.4,
+            4.21818
+          ],
+          [
+            101.40025,
+            4.21811
+          ],
+          [
+            101.40048,
+            4.2181
+          ],
+          [
+            101.40061,
+            4.21808
+          ],
+          [
+            101.40061180991435,
+            4.218079941616025
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00019",
+      "segment_order": 20,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40061180991435,
+            4.218079941616025
+          ],
+          [
+            101.40092,
+            4.21807
+          ],
+          [
+            101.40109,
+            4.21804
+          ],
+          [
+            101.40117,
+            4.21801
+          ],
+          [
+            101.4016,
+            4.21773
+          ],
+          [
+            101.40185,
+            4.2177
+          ],
+          [
+            101.40201,
+            4.21772
+          ],
+          [
+            101.40215,
+            4.21782
+          ],
+          [
+            101.40226,
+            4.21783
+          ],
+          [
+            101.40231,
+            4.21781
+          ],
+          [
+            101.40236,
+            4.21775
+          ],
+          [
+            101.40244,
+            4.21772
+          ],
+          [
+            101.40263,
+            4.21759
+          ],
+          [
+            101.40264982468581,
+            4.217566570830235
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00020",
+      "segment_order": 21,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40264982468581,
+            4.217566570830235
+          ],
+          [
+            101.40274,
+            4.21746
+          ],
+          [
+            101.40278,
+            4.21738
+          ],
+          [
+            101.40289,
+            4.21723
+          ],
+          [
+            101.40294,
+            4.21718
+          ],
+          [
+            101.40308,
+            4.21701
+          ],
+          [
+            101.40319,
+            4.217
+          ],
+          [
+            101.40327,
+            4.21696
+          ],
+          [
+            101.40331,
+            4.21692
+          ],
+          [
+            101.40341,
+            4.21691
+          ],
+          [
+            101.40347,
+            4.21697
+          ],
+          [
+            101.40352,
+            4.21704
+          ],
+          [
+            101.40356,
+            4.21719
+          ],
+          [
+            101.40367,
+            4.21753
+          ],
+          [
+            101.4038,
+            4.21769
+          ],
+          [
+            101.40382,
+            4.21773
+          ],
+          [
+            101.40373,
+            4.21786
+          ],
+          [
+            101.40372,
+            4.21793
+          ],
+          [
+            101.40372,
+            4.217961354246664
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00021",
+      "segment_order": 22,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40372,
+            4.217961354246664
+          ],
+          [
+            101.40372,
+            4.21799
+          ],
+          [
+            101.40381,
+            4.21822
+          ],
+          [
+            101.40385,
+            4.21832
+          ],
+          [
+            101.40391,
+            4.21835
+          ],
+          [
+            101.40399,
+            4.21839
+          ],
+          [
+            101.40405,
+            4.21841
+          ],
+          [
+            101.40412,
+            4.21841
+          ],
+          [
+            101.40417,
+            4.21839
+          ],
+          [
+            101.40431,
+            4.21829
+          ],
+          [
+            101.40437,
+            4.21827
+          ],
+          [
+            101.4047,
+            4.21824
+          ],
+          [
+            101.40484,
+            4.21821
+          ],
+          [
+            101.40506,
+            4.21819
+          ],
+          [
+            101.4055,
+            4.21819
+          ],
+          [
+            101.40565424918485,
+            4.218166862627023
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00022",
+      "segment_order": 23,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40565424918485,
+            4.218166862627023
+          ],
+          [
+            101.4057,
+            4.21816
+          ],
+          [
+            101.40584,
+            4.21816
+          ],
+          [
+            101.40596,
+            4.21821
+          ],
+          [
+            101.40631,
+            4.21844
+          ],
+          [
+            101.40643,
+            4.21848
+          ],
+          [
+            101.40692,
+            4.21849
+          ],
+          [
+            101.40723,
+            4.21854
+          ],
+          [
+            101.40752,
+            4.21862
+          ],
+          [
+            101.40774,
+            4.21879
+          ],
+          [
+            101.40774509744419,
+            4.218796796594433
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00023",
+      "segment_order": 24,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40774509744419,
+            4.218796796594433
+          ],
+          [
+            101.40789,
+            4.21899
+          ],
+          [
+            101.40808,
+            4.21933
+          ],
+          [
+            101.40813,
+            4.21952
+          ],
+          [
+            101.40826,
+            4.21985
+          ],
+          [
+            101.40837,
+            4.22005
+          ],
+          [
+            101.40847,
+            4.22019
+          ],
+          [
+            101.40889,
+            4.22059
+          ],
+          [
+            101.4089736424382,
+            4.2206360033510855
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00024",
+      "segment_order": 25,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4089736424382,
+            4.2206360033510855
+          ],
+          [
+            101.40909,
+            4.2207
+          ],
+          [
+            101.4093,
+            4.2208
+          ],
+          [
+            101.40938,
+            4.22082
+          ],
+          [
+            101.40957,
+            4.22084
+          ],
+          [
+            101.40974,
+            4.22091
+          ],
+          [
+            101.40981,
+            4.22091
+          ],
+          [
+            101.40992,
+            4.22088
+          ],
+          [
+            101.41007,
+            4.22079
+          ],
+          [
+            101.41021,
+            4.22082
+          ],
+          [
+            101.4104,
+            4.22084
+          ],
+          [
+            101.41055,
+            4.22087
+          ],
+          [
+            101.41068,
+            4.22087
+          ],
+          [
+            101.41109,
+            4.22076
+          ],
+          [
+            101.4111169188544,
+            4.220748463354122
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00025",
+      "segment_order": 26,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4111169188544,
+            4.220748463354122
+          ],
+          [
+            101.41137,
+            4.22064
+          ],
+          [
+            101.41185,
+            4.22056
+          ],
+          [
+            101.41215,
+            4.22048
+          ],
+          [
+            101.41223,
+            4.2205
+          ],
+          [
+            101.41228,
+            4.22054
+          ],
+          [
+            101.4124,
+            4.22077
+          ],
+          [
+            101.4125,
+            4.22086
+          ],
+          [
+            101.41269,
+            4.22096
+          ],
+          [
+            101.41279,
+            4.22098
+          ],
+          [
+            101.41299,
+            4.22096
+          ],
+          [
+            101.41311056992488,
+            4.220935886017495
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00026",
+      "segment_order": 27,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41311056992488,
+            4.220935886017495
+          ],
+          [
+            101.41314,
+            4.22093
+          ],
+          [
+            101.41343,
+            4.22085
+          ],
+          [
+            101.41353,
+            4.22079
+          ],
+          [
+            101.41365,
+            4.22071
+          ],
+          [
+            101.41385,
+            4.2207
+          ],
+          [
+            101.41399,
+            4.22072
+          ],
+          [
+            101.41427,
+            4.22084
+          ],
+          [
+            101.4145,
+            4.22091
+          ],
+          [
+            101.41466,
+            4.22093
+          ],
+          [
+            101.41483,
+            4.221
+          ],
+          [
+            101.41506,
+            4.22114
+          ],
+          [
+            101.41516,
+            4.22117
+          ],
+          [
+            101.41521579931933,
+            4.221170000003389
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5219557881355286,
+      "risk_class": "uncertain",
+      "confidence": 0.025784049183130264,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277403,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.19825,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.133516,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.100316,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.088049,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7829073667526245,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00027",
+      "segment_order": 28,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41521579931933,
+            4.221170000003389
+          ],
+          [
+            101.41531,
+            4.22117
+          ],
+          [
+            101.41544,
+            4.2212
+          ],
+          [
+            101.4156,
+            4.22126
+          ],
+          [
+            101.41569,
+            4.22126
+          ],
+          [
+            101.4158,
+            4.22123
+          ],
+          [
+            101.41616,
+            4.22118
+          ],
+          [
+            101.41624,
+            4.22115
+          ],
+          [
+            101.41636,
+            4.22105
+          ],
+          [
+            101.41645,
+            4.221
+          ],
+          [
+            101.41652,
+            4.221
+          ],
+          [
+            101.41666,
+            4.22104
+          ],
+          [
+            101.41694,
+            4.22123
+          ],
+          [
+            101.41708,
+            4.22126
+          ],
+          [
+            101.4173,
+            4.22126
+          ],
+          [
+            101.41732429325455,
+            4.221253374568485
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00028",
+      "segment_order": 29,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41732429325455,
+            4.221253374568485
+          ],
+          [
+            101.41741,
+            4.22123
+          ],
+          [
+            101.4176,
+            4.22116
+          ],
+          [
+            101.41769,
+            4.22117
+          ],
+          [
+            101.41776,
+            4.22122
+          ],
+          [
+            101.41778,
+            4.22124
+          ],
+          [
+            101.41797,
+            4.22148
+          ],
+          [
+            101.41811,
+            4.22156
+          ],
+          [
+            101.41829,
+            4.22142
+          ],
+          [
+            101.41844,
+            4.2217
+          ],
+          [
+            101.41849,
+            4.22176
+          ],
+          [
+            101.41852,
+            4.22182
+          ],
+          [
+            101.41856,
+            4.22198
+          ],
+          [
+            101.41858,
+            4.22204
+          ],
+          [
+            101.41864,
+            4.2221
+          ],
+          [
+            101.41886,
+            4.22228
+          ],
+          [
+            101.41886383776865,
+            4.222282442217884
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00029",
+      "segment_order": 30,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41886383776865,
+            4.222282442217884
+          ],
+          [
+            101.41919,
+            4.22249
+          ],
+          [
+            101.4193,
+            4.22258
+          ],
+          [
+            101.41953,
+            4.22283
+          ],
+          [
+            101.41964,
+            4.2229
+          ],
+          [
+            101.4198,
+            4.22296
+          ],
+          [
+            101.42002,
+            4.22307
+          ],
+          [
+            101.42012,
+            4.2231
+          ],
+          [
+            101.42025,
+            4.2231
+          ],
+          [
+            101.42038,
+            4.22308
+          ],
+          [
+            101.42069,
+            4.22292
+          ],
+          [
+            101.42080692892225,
+            4.222879910105526
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00030",
+      "segment_order": 31,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42080692892225,
+            4.222879910105526
+          ],
+          [
+            101.42104,
+            4.2228
+          ],
+          [
+            101.42112,
+            4.2228
+          ],
+          [
+            101.42154,
+            4.22292
+          ],
+          [
+            101.4218,
+            4.22293
+          ],
+          [
+            101.42196,
+            4.22297
+          ],
+          [
+            101.42233,
+            4.22301
+          ],
+          [
+            101.42253,
+            4.22306
+          ],
+          [
+            101.42272,
+            4.22306
+          ],
+          [
+            101.42300580728184,
+            4.222984345142674
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00031",
+      "segment_order": 32,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42300580728184,
+            4.222984345142674
+          ],
+          [
+            101.42306,
+            4.22297
+          ],
+          [
+            101.42321,
+            4.22297
+          ],
+          [
+            101.42349,
+            4.22306
+          ],
+          [
+            101.42363,
+            4.22304
+          ],
+          [
+            101.42381,
+            4.22297
+          ],
+          [
+            101.42404,
+            4.2229
+          ],
+          [
+            101.42412,
+            4.22291
+          ],
+          [
+            101.42451,
+            4.22301
+          ],
+          [
+            101.42492,
+            4.22302
+          ],
+          [
+            101.425,
+            4.22301
+          ],
+          [
+            101.42519569543813,
+            4.222955205285254
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00032",
+      "segment_order": 33,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42519569543813,
+            4.222955205285254
+          ],
+          [
+            101.42525,
+            4.22294
+          ],
+          [
+            101.42543,
+            4.22292
+          ],
+          [
+            101.4256,
+            4.22289
+          ],
+          [
+            101.4258,
+            4.22289
+          ],
+          [
+            101.42599,
+            4.22292
+          ],
+          [
+            101.42621,
+            4.22287
+          ],
+          [
+            101.42634,
+            4.22282
+          ],
+          [
+            101.42665,
+            4.22262
+          ],
+          [
+            101.42675,
+            4.2226
+          ],
+          [
+            101.42699,
+            4.22256
+          ],
+          [
+            101.42718,
+            4.22246
+          ],
+          [
+            101.42728201590936,
+            4.222340981443494
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00033",
+      "segment_order": 34,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42728201590936,
+            4.222340981443494
+          ],
+          [
+            101.4273,
+            4.22232
+          ],
+          [
+            101.42741,
+            4.22228
+          ],
+          [
+            101.4276,
+            4.22226
+          ],
+          [
+            101.42779,
+            4.22222
+          ],
+          [
+            101.42792,
+            4.22218
+          ],
+          [
+            101.42808,
+            4.22205
+          ],
+          [
+            101.4282,
+            4.22203
+          ],
+          [
+            101.42837,
+            4.22207
+          ],
+          [
+            101.42857,
+            4.22217
+          ],
+          [
+            101.42889,
+            4.22223
+          ],
+          [
+            101.4294243758023,
+            4.222258125054573
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00034",
+      "segment_order": 35,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4294243758023,
+            4.222258125054573
+          ],
+          [
+            101.42946,
+            4.22226
+          ],
+          [
+            101.42971,
+            4.22223
+          ],
+          [
+            101.42992,
+            4.22224
+          ],
+          [
+            101.43002,
+            4.22227
+          ],
+          [
+            101.43016,
+            4.22235
+          ],
+          [
+            101.43026,
+            4.22237
+          ],
+          [
+            101.43036,
+            4.22237
+          ],
+          [
+            101.43047,
+            4.22235
+          ],
+          [
+            101.43067,
+            4.22233
+          ],
+          [
+            101.43079,
+            4.22231
+          ],
+          [
+            101.43113,
+            4.22221
+          ],
+          [
+            101.43132,
+            4.22214
+          ],
+          [
+            101.43152,
+            4.22208
+          ],
+          [
+            101.43160433496597,
+            4.222058916270486
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00035",
+      "segment_order": 36,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43160433496597,
+            4.222058916270486
+          ],
+          [
+            101.4318,
+            4.22201
+          ],
+          [
+            101.43192,
+            4.22203
+          ],
+          [
+            101.43207,
+            4.22208
+          ],
+          [
+            101.43219,
+            4.2221
+          ],
+          [
+            101.43235,
+            4.22217
+          ],
+          [
+            101.43244,
+            4.2222
+          ],
+          [
+            101.43251,
+            4.2222
+          ],
+          [
+            101.43259,
+            4.22217
+          ],
+          [
+            101.43272,
+            4.22218
+          ],
+          [
+            101.43303,
+            4.22234
+          ],
+          [
+            101.43313,
+            4.22237
+          ],
+          [
+            101.43323,
+            4.22235
+          ],
+          [
+            101.43365,
+            4.22213
+          ],
+          [
+            101.43370483556275,
+            4.222094748581365
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00036",
+      "segment_order": 37,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43370483556275,
+            4.222094748581365
+          ],
+          [
+            101.43393,
+            4.22195
+          ],
+          [
+            101.43407,
+            4.22182
+          ],
+          [
+            101.43419,
+            4.22177
+          ],
+          [
+            101.43431,
+            4.22173
+          ],
+          [
+            101.43496,
+            4.22173
+          ],
+          [
+            101.43506,
+            4.2217
+          ],
+          [
+            101.43527,
+            4.22161
+          ],
+          [
+            101.4356,
+            4.22137
+          ],
+          [
+            101.43572,
+            4.22132
+          ],
+          [
+            101.4357370341556,
+            4.221316902883178
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4081615209579468,
+      "risk_class": "uncertain",
+      "confidence": 0.13217996060848236,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.366242,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.264498,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174686,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.124533,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.094436,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9595102071762085,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00037",
+      "segment_order": 38,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4357370341556,
+            4.221316902883178
+          ],
+          [
+            101.43594,
+            4.22128
+          ],
+          [
+            101.43609,
+            4.2212
+          ],
+          [
+            101.43632,
+            4.22111
+          ],
+          [
+            101.43652,
+            4.22105
+          ],
+          [
+            101.43678,
+            4.2209
+          ],
+          [
+            101.43699,
+            4.22082
+          ],
+          [
+            101.43711,
+            4.22079
+          ],
+          [
+            101.43733,
+            4.22076
+          ],
+          [
+            101.43741,
+            4.22077
+          ],
+          [
+            101.43758,
+            4.22083
+          ],
+          [
+            101.43771,
+            4.22083
+          ],
+          [
+            101.43784788292281,
+            4.220750173052433
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4081615209579468,
+      "risk_class": "uncertain",
+      "confidence": 0.13217996060848236,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.366242,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.264498,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174686,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.124533,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.094436,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9595102071762085,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00038",
+      "segment_order": 39,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43784788292281,
+            4.220750173052433
+          ],
+          [
+            101.4379,
+            4.22072
+          ],
+          [
+            101.43797,
+            4.2207
+          ],
+          [
+            101.43823,
+            4.22071
+          ],
+          [
+            101.43842,
+            4.22074
+          ],
+          [
+            101.43857,
+            4.22071
+          ],
+          [
+            101.43862,
+            4.22072
+          ],
+          [
+            101.43879,
+            4.22083
+          ],
+          [
+            101.4389,
+            4.22087
+          ],
+          [
+            101.4391,
+            4.22088
+          ],
+          [
+            101.43926,
+            4.22096
+          ],
+          [
+            101.43936,
+            4.22096
+          ],
+          [
+            101.43945,
+            4.22085
+          ],
+          [
+            101.43959,
+            4.22078
+          ],
+          [
+            101.43974,
+            4.22082
+          ],
+          [
+            101.43989,
+            4.22086
+          ],
+          [
+            101.43994540474266,
+            4.220865036800765
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38698866963386536,
+      "risk_class": "uncertain",
+      "confidence": 0.16083934903144836,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.378013,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.262737,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.10051,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.091979,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9488095045089722,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00039",
+      "segment_order": 40,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43994540474266,
+            4.220865036800765
+          ],
+          [
+            101.44011,
+            4.22088
+          ],
+          [
+            101.44021,
+            4.22091
+          ],
+          [
+            101.44029,
+            4.22095
+          ],
+          [
+            101.44039,
+            4.22103
+          ],
+          [
+            101.44051,
+            4.2212
+          ],
+          [
+            101.4407,
+            4.22135
+          ],
+          [
+            101.44074,
+            4.22141
+          ],
+          [
+            101.44075,
+            4.22152
+          ],
+          [
+            101.44072,
+            4.22174
+          ],
+          [
+            101.44095,
+            4.22195
+          ],
+          [
+            101.44072,
+            4.22174
+          ],
+          [
+            101.44075,
+            4.22152
+          ],
+          [
+            101.4407436667419,
+            4.221450334164513
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4081615209579468,
+      "risk_class": "uncertain",
+      "confidence": 0.13217996060848236,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.366242,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.264498,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174686,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.124533,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.094436,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9595102071762085,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00040",
+      "segment_order": 41,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4407436667419,
+            4.221450334164513
+          ],
+          [
+            101.44074,
+            4.22141
+          ],
+          [
+            101.4407,
+            4.22135
+          ],
+          [
+            101.44051,
+            4.2212
+          ],
+          [
+            101.44039,
+            4.22103
+          ],
+          [
+            101.44029,
+            4.22095
+          ],
+          [
+            101.44021,
+            4.22091
+          ],
+          [
+            101.44011,
+            4.22088
+          ],
+          [
+            101.43989,
+            4.22086
+          ],
+          [
+            101.43974,
+            4.22082
+          ],
+          [
+            101.43959,
+            4.22078
+          ],
+          [
+            101.43945,
+            4.22085
+          ],
+          [
+            101.43936,
+            4.22096
+          ],
+          [
+            101.43926,
+            4.22096
+          ],
+          [
+            101.4391,
+            4.22088
+          ],
+          [
+            101.4389,
+            4.22087
+          ],
+          [
+            101.43884333783575,
+            4.2208493955790995
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4081615209579468,
+      "risk_class": "uncertain",
+      "confidence": 0.13217996060848236,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.366242,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.264498,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174686,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.124533,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.094436,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9595102071762085,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00041",
+      "segment_order": 42,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43884333783575,
+            4.2208493955790995
+          ],
+          [
+            101.43879,
+            4.22083
+          ],
+          [
+            101.43862,
+            4.22072
+          ],
+          [
+            101.43857,
+            4.22071
+          ],
+          [
+            101.43842,
+            4.22074
+          ],
+          [
+            101.43823,
+            4.22071
+          ],
+          [
+            101.43797,
+            4.2207
+          ],
+          [
+            101.4379,
+            4.22072
+          ],
+          [
+            101.43771,
+            4.22083
+          ],
+          [
+            101.43758,
+            4.22083
+          ],
+          [
+            101.43741,
+            4.22077
+          ],
+          [
+            101.43733,
+            4.22076
+          ],
+          [
+            101.43711,
+            4.22079
+          ],
+          [
+            101.43699,
+            4.22082
+          ],
+          [
+            101.43678,
+            4.2209
+          ],
+          [
+            101.4367078579756,
+            4.220941620413263
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.38698866963386536,
+      "risk_class": "uncertain",
+      "confidence": 0.16083934903144836,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.378013,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.262737,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174217,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.10051,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.091979,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9488095045089722,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00042",
+      "segment_order": 43,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4367078579756,
+            4.220941620413263
+          ],
+          [
+            101.43652,
+            4.22105
+          ],
+          [
+            101.43632,
+            4.22111
+          ],
+          [
+            101.43609,
+            4.2212
+          ],
+          [
+            101.43594,
+            4.22128
+          ],
+          [
+            101.43572,
+            4.22132
+          ],
+          [
+            101.4356,
+            4.22137
+          ],
+          [
+            101.43527,
+            4.22161
+          ],
+          [
+            101.43506,
+            4.2217
+          ],
+          [
+            101.43496,
+            4.22173
+          ],
+          [
+            101.4346439417916,
+            4.2217300000680735
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4081615209579468,
+      "risk_class": "uncertain",
+      "confidence": 0.13217996060848236,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.366242,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.264498,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.174686,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.124533,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.094436,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.9595102071762085,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00043",
+      "segment_order": 44,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.4346439417916,
+            4.2217300000680735
+          ],
+          [
+            101.43431,
+            4.22173
+          ],
+          [
+            101.43419,
+            4.22177
+          ],
+          [
+            101.43407,
+            4.22182
+          ],
+          [
+            101.43393,
+            4.22195
+          ],
+          [
+            101.43365,
+            4.22213
+          ],
+          [
+            101.43323,
+            4.22235
+          ],
+          [
+            101.43313,
+            4.22237
+          ],
+          [
+            101.43303,
+            4.22234
+          ],
+          [
+            101.43272,
+            4.22218
+          ],
+          [
+            101.43261057836165,
+            4.222171582952365
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00044",
+      "segment_order": 45,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43261057836165,
+            4.222171582952365
+          ],
+          [
+            101.43259,
+            4.22217
+          ],
+          [
+            101.43251,
+            4.2222
+          ],
+          [
+            101.43244,
+            4.2222
+          ],
+          [
+            101.43235,
+            4.22217
+          ],
+          [
+            101.43219,
+            4.2221
+          ],
+          [
+            101.43207,
+            4.22208
+          ],
+          [
+            101.43192,
+            4.22203
+          ],
+          [
+            101.4318,
+            4.22201
+          ],
+          [
+            101.43152,
+            4.22208
+          ],
+          [
+            101.43132,
+            4.22214
+          ],
+          [
+            101.43113,
+            4.22221
+          ],
+          [
+            101.43079,
+            4.22231
+          ],
+          [
+            101.43067,
+            4.22233
+          ],
+          [
+            101.43047,
+            4.22235
+          ],
+          [
+            101.43044193228737,
+            4.222355103222058
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00045",
+      "segment_order": 46,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.43044193228737,
+            4.222355103222058
+          ],
+          [
+            101.43036,
+            4.22237
+          ],
+          [
+            101.43026,
+            4.22237
+          ],
+          [
+            101.43016,
+            4.22235
+          ],
+          [
+            101.43002,
+            4.22227
+          ],
+          [
+            101.42992,
+            4.22224
+          ],
+          [
+            101.42971,
+            4.22223
+          ],
+          [
+            101.42946,
+            4.22226
+          ],
+          [
+            101.42889,
+            4.22223
+          ],
+          [
+            101.42857,
+            4.22217
+          ],
+          [
+            101.42837,
+            4.22207
+          ],
+          [
+            101.42825373970287,
+            4.222042644640447
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00046",
+      "segment_order": 47,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42825373970287,
+            4.222042644640447
+          ],
+          [
+            101.4282,
+            4.22203
+          ],
+          [
+            101.42808,
+            4.22205
+          ],
+          [
+            101.42792,
+            4.22218
+          ],
+          [
+            101.42779,
+            4.22222
+          ],
+          [
+            101.4276,
+            4.22226
+          ],
+          [
+            101.42741,
+            4.22228
+          ],
+          [
+            101.4273,
+            4.22232
+          ],
+          [
+            101.42718,
+            4.22246
+          ],
+          [
+            101.42699,
+            4.22256
+          ],
+          [
+            101.42675,
+            4.2226
+          ],
+          [
+            101.42665,
+            4.22262
+          ],
+          [
+            101.42634,
+            4.22282
+          ],
+          [
+            101.42622904320932,
+            4.222862675690491
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00047",
+      "segment_order": 48,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42622904320932,
+            4.222862675690491
+          ],
+          [
+            101.42621,
+            4.22287
+          ],
+          [
+            101.42599,
+            4.22292
+          ],
+          [
+            101.4258,
+            4.22289
+          ],
+          [
+            101.4256,
+            4.22289
+          ],
+          [
+            101.42543,
+            4.22292
+          ],
+          [
+            101.42525,
+            4.22294
+          ],
+          [
+            101.425,
+            4.22301
+          ],
+          [
+            101.42492,
+            4.22302
+          ],
+          [
+            101.42451,
+            4.22301
+          ],
+          [
+            101.42412,
+            4.22291
+          ],
+          [
+            101.42404,
+            4.2229
+          ],
+          [
+            101.42401469147539,
+            4.222907702598411
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4425734579563141,
+      "risk_class": "uncertain",
+      "confidence": 0.06413792818784714,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.317658,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.268798,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.111257,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.096116,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.08558,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.744579553604126,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00048",
+      "segment_order": 49,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42401469147539,
+            4.222907702598411
+          ],
+          [
+            101.42381,
+            4.22297
+          ],
+          [
+            101.42363,
+            4.22304
+          ],
+          [
+            101.42349,
+            4.22306
+          ],
+          [
+            101.42321,
+            4.22297
+          ],
+          [
+            101.42306,
+            4.22297
+          ],
+          [
+            101.42272,
+            4.22306
+          ],
+          [
+            101.42253,
+            4.22306
+          ],
+          [
+            101.42233,
+            4.22301
+          ],
+          [
+            101.42196,
+            4.22297
+          ],
+          [
+            101.42182447507456,
+            4.22293611877105
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00049",
+      "segment_order": 50,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.42182447507456,
+            4.22293611877105
+          ],
+          [
+            101.4218,
+            4.22293
+          ],
+          [
+            101.42154,
+            4.22292
+          ],
+          [
+            101.42112,
+            4.2228
+          ],
+          [
+            101.42104,
+            4.2228
+          ],
+          [
+            101.42069,
+            4.22292
+          ],
+          [
+            101.42038,
+            4.22308
+          ],
+          [
+            101.42025,
+            4.2231
+          ],
+          [
+            101.42012,
+            4.2231
+          ],
+          [
+            101.42002,
+            4.22307
+          ],
+          [
+            101.4198,
+            4.22296
+          ],
+          [
+            101.41968786709221,
+            4.222917950164016
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00050",
+      "segment_order": 51,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41968786709221,
+            4.222917950164016
+          ],
+          [
+            101.41964,
+            4.2229
+          ],
+          [
+            101.41953,
+            4.22283
+          ],
+          [
+            101.4193,
+            4.22258
+          ],
+          [
+            101.41919,
+            4.22249
+          ],
+          [
+            101.41886,
+            4.22228
+          ],
+          [
+            101.41864,
+            4.2221
+          ],
+          [
+            101.41858,
+            4.22204
+          ],
+          [
+            101.41856,
+            4.22198
+          ],
+          [
+            101.41852,
+            4.22182
+          ],
+          [
+            101.41849,
+            4.22176
+          ],
+          [
+            101.41844,
+            4.2217
+          ],
+          [
+            101.41829,
+            4.22142
+          ],
+          [
+            101.41817801530702,
+            4.221507099216515
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00051",
+      "segment_order": 52,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41817801530702,
+            4.221507099216515
+          ],
+          [
+            101.41811,
+            4.22156
+          ],
+          [
+            101.41797,
+            4.22148
+          ],
+          [
+            101.41778,
+            4.22124
+          ],
+          [
+            101.41776,
+            4.22122
+          ],
+          [
+            101.41769,
+            4.22117
+          ],
+          [
+            101.4176,
+            4.22116
+          ],
+          [
+            101.41741,
+            4.22123
+          ],
+          [
+            101.4173,
+            4.22126
+          ],
+          [
+            101.41708,
+            4.22126
+          ],
+          [
+            101.41694,
+            4.22123
+          ],
+          [
+            101.41666,
+            4.22104
+          ],
+          [
+            101.41652,
+            4.221
+          ],
+          [
+            101.41645,
+            4.221
+          ],
+          [
+            101.41636,
+            4.22105
+          ],
+          [
+            101.41624,
+            4.22115
+          ],
+          [
+            101.41623735240135,
+            4.22115099284966
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00052",
+      "segment_order": 53,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41623735240135,
+            4.22115099284966
+          ],
+          [
+            101.41616,
+            4.22118
+          ],
+          [
+            101.4158,
+            4.22123
+          ],
+          [
+            101.41569,
+            4.22126
+          ],
+          [
+            101.4156,
+            4.22126
+          ],
+          [
+            101.41544,
+            4.2212
+          ],
+          [
+            101.41531,
+            4.22117
+          ],
+          [
+            101.41516,
+            4.22117
+          ],
+          [
+            101.41506,
+            4.22114
+          ],
+          [
+            101.41483,
+            4.221
+          ],
+          [
+            101.41466,
+            4.22093
+          ],
+          [
+            101.4145,
+            4.22091
+          ],
+          [
+            101.41427,
+            4.22084
+          ],
+          [
+            101.41409614881326,
+            4.2207654923648175
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.48582783341407776,
+      "risk_class": "uncertain",
+      "confidence": 0.01553303562104702,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.277491,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.232819,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.122662,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.098991,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.096643,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.7306828498840332,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00053",
+      "segment_order": 54,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41409614881326,
+            4.2207654923648175
+          ],
+          [
+            101.41399,
+            4.22072
+          ],
+          [
+            101.41385,
+            4.2207
+          ],
+          [
+            101.41365,
+            4.22071
+          ],
+          [
+            101.41353,
+            4.22079
+          ],
+          [
+            101.41343,
+            4.22085
+          ],
+          [
+            101.41314,
+            4.22093
+          ],
+          [
+            101.41299,
+            4.22096
+          ],
+          [
+            101.41279,
+            4.22098
+          ],
+          [
+            101.41269,
+            4.22096
+          ],
+          [
+            101.4125,
+            4.22086
+          ],
+          [
+            101.4124,
+            4.22077
+          ],
+          [
+            101.41228,
+            4.22054
+          ],
+          [
+            101.41223,
+            4.2205
+          ],
+          [
+            101.41215,
+            4.22048
+          ],
+          [
+            101.41212702399008,
+            4.220486126940671
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00054",
+      "segment_order": 55,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.41212702399008,
+            4.220486126940671
+          ],
+          [
+            101.41185,
+            4.22056
+          ],
+          [
+            101.41137,
+            4.22064
+          ],
+          [
+            101.41109,
+            4.22076
+          ],
+          [
+            101.41068,
+            4.22087
+          ],
+          [
+            101.41055,
+            4.22087
+          ],
+          [
+            101.4104,
+            4.22084
+          ],
+          [
+            101.41021,
+            4.22082
+          ],
+          [
+            101.41007,
+            4.22079
+          ],
+          [
+            101.40995610638488,
+            4.220858336173636
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00055",
+      "segment_order": 56,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40995610638488,
+            4.220858336173636
+          ],
+          [
+            101.40992,
+            4.22088
+          ],
+          [
+            101.40981,
+            4.22091
+          ],
+          [
+            101.40974,
+            4.22091
+          ],
+          [
+            101.40957,
+            4.22084
+          ],
+          [
+            101.40938,
+            4.22082
+          ],
+          [
+            101.4093,
+            4.2208
+          ],
+          [
+            101.40909,
+            4.2207
+          ],
+          [
+            101.40889,
+            4.22059
+          ],
+          [
+            101.40847,
+            4.22019
+          ],
+          [
+            101.40837,
+            4.22005
+          ],
+          [
+            101.40826,
+            4.21985
+          ],
+          [
+            101.40821217235447,
+            4.2197285913966045
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00056",
+      "segment_order": 57,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40821217235447,
+            4.2197285913966045
+          ],
+          [
+            101.40813,
+            4.21952
+          ],
+          [
+            101.40808,
+            4.21933
+          ],
+          [
+            101.40789,
+            4.21899
+          ],
+          [
+            101.40774,
+            4.21879
+          ],
+          [
+            101.40752,
+            4.21862
+          ],
+          [
+            101.40723,
+            4.21854
+          ],
+          [
+            101.40692,
+            4.21849
+          ],
+          [
+            101.40661739997097,
+            4.21848382452578
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00057",
+      "segment_order": 58,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40661739997097,
+            4.21848382452578
+          ],
+          [
+            101.40643,
+            4.21848
+          ],
+          [
+            101.40631,
+            4.21844
+          ],
+          [
+            101.40596,
+            4.21821
+          ],
+          [
+            101.40584,
+            4.21816
+          ],
+          [
+            101.4057,
+            4.21816
+          ],
+          [
+            101.4055,
+            4.21819
+          ],
+          [
+            101.40506,
+            4.21819
+          ],
+          [
+            101.40484,
+            4.21821
+          ],
+          [
+            101.4047,
+            4.21824
+          ],
+          [
+            101.40445752978903,
+            4.218262042760357
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00058",
+      "segment_order": 59,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40445752978903,
+            4.218262042760357
+          ],
+          [
+            101.40437,
+            4.21827
+          ],
+          [
+            101.40431,
+            4.21829
+          ],
+          [
+            101.40417,
+            4.21839
+          ],
+          [
+            101.40412,
+            4.21841
+          ],
+          [
+            101.40405,
+            4.21841
+          ],
+          [
+            101.40399,
+            4.21839
+          ],
+          [
+            101.40391,
+            4.21835
+          ],
+          [
+            101.40385,
+            4.21832
+          ],
+          [
+            101.40381,
+            4.21822
+          ],
+          [
+            101.40372,
+            4.21799
+          ],
+          [
+            101.40372,
+            4.21793
+          ],
+          [
+            101.40373,
+            4.21786
+          ],
+          [
+            101.40382,
+            4.21773
+          ],
+          [
+            101.4038,
+            4.21769
+          ],
+          [
+            101.40367,
+            4.21753
+          ],
+          [
+            101.40356,
+            4.21719
+          ],
+          [
+            101.40352,
+            4.21704
+          ],
+          [
+            101.40347,
+            4.21697
+          ],
+          [
+            101.40341,
+            4.21691
+          ],
+          [
+            101.40339740758996,
+            4.216911259241727
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.5898141264915466,
+      "risk_class": "uncertain",
+      "confidence": 0.1150064542889595,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.15401,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.105915,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": 0.079804,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.057942,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "forest_cell_clutter_index",
+          "contribution": 0.03134,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.8536626100540161,
+      "out_of_distribution": false,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00059",
+      "segment_order": 60,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40339740758996,
+            4.216911259241727
+          ],
+          [
+            101.40331,
+            4.21692
+          ],
+          [
+            101.40327,
+            4.21696
+          ],
+          [
+            101.40319,
+            4.217
+          ],
+          [
+            101.40308,
+            4.21701
+          ],
+          [
+            101.40294,
+            4.21718
+          ],
+          [
+            101.40289,
+            4.21723
+          ],
+          [
+            101.40278,
+            4.21738
+          ],
+          [
+            101.40274,
+            4.21746
+          ],
+          [
+            101.40263,
+            4.21759
+          ],
+          [
+            101.40244,
+            4.21772
+          ],
+          [
+            101.40236,
+            4.21775
+          ],
+          [
+            101.40231,
+            4.21781
+          ],
+          [
+            101.40226,
+            4.21783
+          ],
+          [
+            101.40215,
+            4.21782
+          ],
+          [
+            101.40201,
+            4.21772
+          ],
+          [
+            101.40185,
+            4.2177
+          ],
+          [
+            101.4016,
+            4.21773
+          ],
+          [
+            101.40157440523038,
+            4.217746666373958
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00060",
+      "segment_order": 61,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.40157440523038,
+            4.217746666373958
+          ],
+          [
+            101.40117,
+            4.21801
+          ],
+          [
+            101.40109,
+            4.21804
+          ],
+          [
+            101.40092,
+            4.21807
+          ],
+          [
+            101.40061,
+            4.21808
+          ],
+          [
+            101.40048,
+            4.2181
+          ],
+          [
+            101.40025,
+            4.21811
+          ],
+          [
+            101.4,
+            4.21818
+          ],
+          [
+            101.39983,
+            4.21819
+          ],
+          [
+            101.39965,
+            4.21823
+          ],
+          [
+            101.39942443460443,
+            4.218239022619385
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00061",
+      "segment_order": 62,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39942443460443,
+            4.218239022619385
+          ],
+          [
+            101.3994,
+            4.21824
+          ],
+          [
+            101.39918,
+            4.21831
+          ],
+          [
+            101.39905,
+            4.21832
+          ],
+          [
+            101.3989,
+            4.21834
+          ],
+          [
+            101.39881,
+            4.21834
+          ],
+          [
+            101.39855,
+            4.21827
+          ],
+          [
+            101.39834,
+            4.21826
+          ],
+          [
+            101.39814,
+            4.21835
+          ],
+          [
+            101.39787,
+            4.21836
+          ],
+          [
+            101.39777,
+            4.21834
+          ],
+          [
+            101.39764,
+            4.21826
+          ],
+          [
+            101.39752,
+            4.21814
+          ],
+          [
+            101.39736393760234,
+            4.217967216674249
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00062",
+      "segment_order": 63,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39736393760234,
+            4.217967216674249
+          ],
+          [
+            101.39724,
+            4.21783
+          ],
+          [
+            101.39706,
+            4.21766
+          ],
+          [
+            101.39694,
+            4.21753
+          ],
+          [
+            101.39673,
+            4.21746
+          ],
+          [
+            101.39657,
+            4.21745
+          ],
+          [
+            101.39641,
+            4.21749
+          ],
+          [
+            101.39628,
+            4.21751
+          ],
+          [
+            101.39613,
+            4.21756
+          ],
+          [
+            101.39604,
+            4.21765
+          ],
+          [
+            101.39599,
+            4.21774
+          ],
+          [
+            101.39592,
+            4.2178
+          ],
+          [
+            101.39581,
+            4.21784
+          ],
+          [
+            101.39567,
+            4.21789
+          ],
+          [
+            101.3954743431639,
+            4.217991741565334
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00063",
+      "segment_order": 64,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3954743431639,
+            4.217991741565334
+          ],
+          [
+            101.39542,
+            4.21802
+          ],
+          [
+            101.3953,
+            4.21804
+          ],
+          [
+            101.39499,
+            4.21804
+          ],
+          [
+            101.39467,
+            4.21817
+          ],
+          [
+            101.39432,
+            4.21826
+          ],
+          [
+            101.39414,
+            4.21831
+          ],
+          [
+            101.39398,
+            4.21833
+          ],
+          [
+            101.39374,
+            4.21832
+          ],
+          [
+            101.39348,
+            4.2184
+          ],
+          [
+            101.39328835534893,
+            4.218416664757076
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4700159728527069,
+      "risk_class": "uncertain",
+      "confidence": 0.005689442157745361,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.157791,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101277,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.048073,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_elevation_mean_m",
+          "contribution": -0.04646,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.039507,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.12649942934513092,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00064",
+      "segment_order": 65,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.39328835534893,
+            4.218416664757076
+          ],
+          [
+            101.39325,
+            4.21842
+          ],
+          [
+            101.39306,
+            4.21842
+          ],
+          [
+            101.39294,
+            4.21843
+          ],
+          [
+            101.39287,
+            4.21839
+          ],
+          [
+            101.39273,
+            4.21816
+          ],
+          [
+            101.3927,
+            4.21801
+          ],
+          [
+            101.39262,
+            4.21788
+          ],
+          [
+            101.39242,
+            4.21763
+          ],
+          [
+            101.39218,
+            4.21739
+          ],
+          [
+            101.39208,
+            4.2173
+          ],
+          [
+            101.39198,
+            4.21725
+          ],
+          [
+            101.39172,
+            4.21716
+          ],
+          [
+            101.391657939142,
+            4.217127144258382
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00065",
+      "segment_order": 66,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.391657939142,
+            4.217127144258382
+          ],
+          [
+            101.39155,
+            4.21707
+          ],
+          [
+            101.3915,
+            4.21703
+          ],
+          [
+            101.39147,
+            4.21698
+          ],
+          [
+            101.39142,
+            4.21683
+          ],
+          [
+            101.39139,
+            4.21678
+          ],
+          [
+            101.39126,
+            4.2166
+          ],
+          [
+            101.39117,
+            4.21652
+          ],
+          [
+            101.39105,
+            4.21646
+          ],
+          [
+            101.39092,
+            4.21642
+          ],
+          [
+            101.39073,
+            4.21631
+          ],
+          [
+            101.39054,
+            4.21629
+          ],
+          [
+            101.3902,
+            4.2162
+          ],
+          [
+            101.3901,
+            4.21613
+          ],
+          [
+            101.38993,
+            4.21592
+          ],
+          [
+            101.38991011175308,
+            4.215901769110423
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00066",
+      "segment_order": 67,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38991011175308,
+            4.215901769110423
+          ],
+          [
+            101.38981,
+            4.21581
+          ],
+          [
+            101.38965,
+            4.21559
+          ],
+          [
+            101.38944,
+            4.21543
+          ],
+          [
+            101.38924,
+            4.2153
+          ],
+          [
+            101.38897,
+            4.21517
+          ],
+          [
+            101.38878,
+            4.21514
+          ],
+          [
+            101.38873,
+            4.21512
+          ],
+          [
+            101.38852,
+            4.21479
+          ],
+          [
+            101.38845,
+            4.21464
+          ],
+          [
+            101.38835,
+            4.2145
+          ],
+          [
+            101.38830739094544,
+            4.214443187929441
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00067",
+      "segment_order": 68,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38830739094544,
+            4.214443187929441
+          ],
+          [
+            101.38829,
+            4.21442
+          ],
+          [
+            101.38815,
+            4.21431
+          ],
+          [
+            101.38796,
+            4.21428
+          ],
+          [
+            101.38759,
+            4.21414
+          ],
+          [
+            101.38738,
+            4.21411
+          ],
+          [
+            101.38712,
+            4.214
+          ],
+          [
+            101.38679,
+            4.21395
+          ],
+          [
+            101.38655,
+            4.21383
+          ],
+          [
+            101.38644,
+            4.21379
+          ],
+          [
+            101.38628,
+            4.21377
+          ],
+          [
+            101.38620564080746,
+            4.213732820404134
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00068",
+      "segment_order": 69,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38620564080746,
+            4.213732820404134
+          ],
+          [
+            101.3862,
+            4.21373
+          ],
+          [
+            101.3861,
+            4.21371
+          ],
+          [
+            101.386,
+            4.21375
+          ],
+          [
+            101.38593,
+            4.21374
+          ],
+          [
+            101.38587,
+            4.21368
+          ],
+          [
+            101.38576,
+            4.21343
+          ],
+          [
+            101.38569,
+            4.21331
+          ],
+          [
+            101.38551,
+            4.21317
+          ],
+          [
+            101.38543,
+            4.21312
+          ],
+          [
+            101.38531,
+            4.21312
+          ],
+          [
+            101.38519,
+            4.21315
+          ],
+          [
+            101.38515,
+            4.21313
+          ],
+          [
+            101.38509,
+            4.21306
+          ],
+          [
+            101.38505,
+            4.21296
+          ],
+          [
+            101.38501,
+            4.21291
+          ],
+          [
+            101.38468,
+            4.21264
+          ],
+          [
+            101.38459,
+            4.21264
+          ],
+          [
+            101.3845094171353,
+            4.212642370097733
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.45375439524650574,
+      "risk_class": "uncertain",
+      "confidence": 0.01581514999270439,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.11302,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.101448,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.091796,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025542,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": 0.016556,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.22798778116703033,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00069",
+      "segment_order": 70,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3845094171353,
+            4.212642370097733
+          ],
+          [
+            101.38425,
+            4.21265
+          ],
+          [
+            101.38407,
+            4.21258
+          ],
+          [
+            101.38391,
+            4.21248
+          ],
+          [
+            101.38379,
+            4.21243
+          ],
+          [
+            101.38355,
+            4.21244
+          ],
+          [
+            101.38339,
+            4.2124
+          ],
+          [
+            101.38331,
+            4.2124
+          ],
+          [
+            101.38287,
+            4.21245
+          ],
+          [
+            101.38257,
+            4.21245
+          ],
+          [
+            101.38239,
+            4.21248
+          ],
+          [
+            101.38233,
+            4.21251
+          ],
+          [
+            101.38232743568881,
+            4.2125123670570455
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.4611961543560028,
+      "risk_class": "uncertain",
+      "confidence": 0.004696887917816639,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.113763,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.100264,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.079031,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_upload_kbps",
+          "contribution": 0.025627,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": -0.024129,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.08069454878568649,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00070",
+      "segment_order": 71,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38232743568881,
+            4.2125123670570455
+          ],
+          [
+            101.3822,
+            4.21263
+          ],
+          [
+            101.38215,
+            4.21267
+          ],
+          [
+            101.38209,
+            4.21269
+          ],
+          [
+            101.38177,
+            4.21272
+          ],
+          [
+            101.38148,
+            4.21288
+          ],
+          [
+            101.38124,
+            4.21294
+          ],
+          [
+            101.38111,
+            4.21299
+          ],
+          [
+            101.381,
+            4.21305
+          ],
+          [
+            101.38062,
+            4.21337
+          ],
+          [
+            101.38045,
+            4.21347
+          ],
+          [
+            101.38037124079496,
+            4.213522506143522
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.444496750831604,
+      "risk_class": "uncertain",
+      "confidence": 0.002926680026575923,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.160069,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.10829,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.083162,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.044909,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_4g_cell_km",
+          "contribution": 0.03695,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.035153262317180634,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00071",
+      "segment_order": 72,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.38037124079496,
+            4.213522506143522
+          ],
+          [
+            101.3803,
+            4.21357
+          ],
+          [
+            101.38019,
+            4.21362
+          ],
+          [
+            101.38012,
+            4.21363
+          ],
+          [
+            101.37988,
+            4.2136
+          ],
+          [
+            101.37978,
+            4.21361
+          ],
+          [
+            101.37962,
+            4.21365
+          ],
+          [
+            101.37949,
+            4.2136
+          ],
+          [
+            101.37936,
+            4.2136
+          ],
+          [
+            101.37919,
+            4.21369
+          ],
+          [
+            101.37914,
+            4.21367
+          ],
+          [
+            101.37882,
+            4.21355
+          ],
+          [
+            101.37909,
+            4.21324
+          ],
+          [
+            101.37896,
+            4.2132
+          ],
+          [
+            101.37892465322027,
+            4.213145620351242
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00072",
+      "segment_order": 73,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37892465322027,
+            4.213145620351242
+          ],
+          [
+            101.37883,
+            4.213
+          ],
+          [
+            101.37867,
+            4.21302
+          ],
+          [
+            101.37806,
+            4.21292
+          ],
+          [
+            101.37803,
+            4.2129
+          ],
+          [
+            101.3779,
+            4.21284
+          ],
+          [
+            101.3776,
+            4.21276
+          ],
+          [
+            101.37741,
+            4.21276
+          ],
+          [
+            101.37713,
+            4.21277
+          ],
+          [
+            101.37695,
+            4.21284
+          ],
+          [
+            101.37686,
+            4.21291
+          ],
+          [
+            101.37684004079513,
+            4.212936100504921
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.444496750831604,
+      "risk_class": "uncertain",
+      "confidence": 0.002926680026575923,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.160069,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.10829,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.083162,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "operator_count",
+          "contribution": 0.044909,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_4g_cell_km",
+          "contribution": 0.03695,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.035153262317180634,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00073",
+      "segment_order": 74,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37684004079513,
+            4.212936100504921
+          ],
+          [
+            101.37673,
+            4.21308
+          ],
+          [
+            101.37641,
+            4.21331
+          ],
+          [
+            101.37631,
+            4.21343
+          ],
+          [
+            101.37604,
+            4.2136
+          ],
+          [
+            101.37592,
+            4.21369
+          ],
+          [
+            101.37583,
+            4.21372
+          ],
+          [
+            101.37566,
+            4.21372
+          ],
+          [
+            101.37557,
+            4.21374
+          ],
+          [
+            101.37538,
+            4.2138
+          ],
+          [
+            101.37519,
+            4.21384
+          ],
+          [
+            101.37494,
+            4.21394
+          ],
+          [
+            101.37490730549919,
+            4.213948718536368
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00074",
+      "segment_order": 75,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37490730549919,
+            4.213948718536368
+          ],
+          [
+            101.37479,
+            4.21398
+          ],
+          [
+            101.37458,
+            4.21398
+          ],
+          [
+            101.37436,
+            4.21405
+          ],
+          [
+            101.37422,
+            4.21407
+          ],
+          [
+            101.37405,
+            4.21411
+          ],
+          [
+            101.3739,
+            4.21412
+          ],
+          [
+            101.37353,
+            4.21421
+          ],
+          [
+            101.3732,
+            4.21435
+          ],
+          [
+            101.373,
+            4.21442
+          ],
+          [
+            101.37273062764488,
+            4.2144617992150275
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.41202762722969055,
+      "risk_class": "uncertain",
+      "confidence": 0.004259057343006134,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.167464,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.104755,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "opencell_location_quality",
+          "contribution": -0.070161,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "dem_slope_mean_deg",
+          "contribution": 0.056645,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.047654,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0322757214307785,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.75
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00075",
+      "segment_order": 76,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.37273062764488,
+            4.2144617992150275
+          ],
+          [
+            101.37242,
+            4.21451
+          ],
+          [
+            101.37223,
+            4.21454
+          ],
+          [
+            101.37217,
+            4.21455
+          ],
+          [
+            101.37201,
+            4.21469
+          ],
+          [
+            101.37188,
+            4.21479
+          ],
+          [
+            101.37163,
+            4.21499
+          ],
+          [
+            101.37145,
+            4.21512
+          ],
+          [
+            101.37125,
+            4.2153
+          ],
+          [
+            101.37114,
+            4.21534
+          ],
+          [
+            101.37081,
+            4.21535
+          ],
+          [
+            101.3707627637683,
+            4.215369888945551
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00076",
+      "segment_order": 77,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.3707627637683,
+            4.215369888945551
+          ],
+          [
+            101.37062,
+            4.21543
+          ],
+          [
+            101.37009,
+            4.21577
+          ],
+          [
+            101.37,
+            4.2158
+          ],
+          [
+            101.36993,
+            4.2158
+          ],
+          [
+            101.36985,
+            4.21575
+          ],
+          [
+            101.36979,
+            4.21573
+          ],
+          [
+            101.36948,
+            4.21571
+          ],
+          [
+            101.36917,
+            4.21578
+          ],
+          [
+            101.36904,
+            4.21572
+          ],
+          [
+            101.36873,
+            4.21573
+          ],
+          [
+            101.36866588949854,
+            4.215727328736394
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00077",
+      "segment_order": 78,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36866588949854,
+            4.215727328736394
+          ],
+          [
+            101.36849,
+            4.21572
+          ],
+          [
+            101.36829,
+            4.21574
+          ],
+          [
+            101.36813,
+            4.21581
+          ],
+          [
+            101.36797,
+            4.21594
+          ],
+          [
+            101.36783,
+            4.21601
+          ],
+          [
+            101.36772,
+            4.21605
+          ],
+          [
+            101.36759,
+            4.21614
+          ],
+          [
+            101.36752,
+            4.21623
+          ],
+          [
+            101.36741,
+            4.21625
+          ],
+          [
+            101.36729,
+            4.2163
+          ],
+          [
+            101.36711,
+            4.21637
+          ],
+          [
+            101.36689,
+            4.2165
+          ],
+          [
+            101.36684,
+            4.21651
+          ],
+          [
+            101.36671,
+            4.21651
+          ],
+          [
+            101.36663366518223,
+            4.216492038871525
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00078",
+      "segment_order": 79,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36663366518223,
+            4.216492038871525
+          ],
+          [
+            101.36654,
+            4.21647
+          ],
+          [
+            101.36641,
+            4.21648
+          ],
+          [
+            101.3663,
+            4.21646
+          ],
+          [
+            101.36616,
+            4.21641
+          ],
+          [
+            101.36603,
+            4.21631
+          ],
+          [
+            101.36596,
+            4.21629
+          ],
+          [
+            101.36575,
+            4.21625
+          ],
+          [
+            101.36561,
+            4.21625
+          ],
+          [
+            101.36545,
+            4.21626
+          ],
+          [
+            101.36529,
+            4.21627
+          ],
+          [
+            101.36516,
+            4.21629
+          ],
+          [
+            101.36501,
+            4.21631
+          ],
+          [
+            101.36484,
+            4.21636
+          ],
+          [
+            101.36463,
+            4.21647
+          ],
+          [
+            101.36449513257858,
+            4.216550920455115
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    },
+    {
+      "segment_id": "trail_gunung_batu_putih__s00079",
+      "segment_order": 80,
+      "segment_length_m": 116.39004975926218,
+      "geometry": {
+        "coordinates": [
+          [
+            101.36449513257858,
+            4.216550920455115
+          ],
+          [
+            101.36448,
+            4.21656
+          ],
+          [
+            101.36431,
+            4.21667
+          ],
+          [
+            101.36412,
+            4.2168
+          ],
+          [
+            101.36404,
+            4.21691
+          ],
+          [
+            101.364,
+            4.21694
+          ],
+          [
+            101.36394,
+            4.21696
+          ],
+          [
+            101.36381,
+            4.21696
+          ],
+          [
+            101.36368,
+            4.21697
+          ],
+          [
+            101.3636,
+            4.21701
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.25488153100013733,
+      "risk_class": "uncertain",
+      "confidence": 0.011837739497423172,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.273542,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km_4g",
+          "contribution": -0.169777,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.09036,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": 0.078537,
+          "direction": "increases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": 0.052034,
+          "direction": "increases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.031991489231586456,
+      "out_of_distribution": true,
+      "evidence_completeness": 0.7547937631607056
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256-canonical-json-without-integrity",
+    "checksum": "50dd776c86f9b710a8422bc1f02940754286d88d5f4aabfc355a281cb07b092b"
+  }
+}

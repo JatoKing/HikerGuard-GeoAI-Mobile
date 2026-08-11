@@ -1,0 +1,5302 @@
+{
+  "schema_version": "trail-pack-v1",
+  "trail_id": "bukit-tabur",
+  "name": "Bukit Tabur",
+  "pack_version": "2026-08-10T03:15:29.852Z",
+  "generated_at": "2026-08-10T03:15:29.852Z",
+  "stage": "model_backed",
+  "prediction_available": true,
+  "model": {
+    "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+    "validation_level": "cross_country_spatial_validation_planning_only",
+    "intended_use": "offline_hackathon_connectivity_planning_only",
+    "field_validated": false,
+    "label_source": "anatel_mobile_coverage_2026_07 + fcc_bdc_mobile_4g_lte_2025_06",
+    "label_release": "Anatel 2026-07 + FCC BDC 2025-06",
+    "label_resolution_m": 1000,
+    "prediction_support_m": 1000,
+    "approved_for_mobile_warning": false,
+    "model_stage": "Candidate"
+  },
+  "segments": [
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00000",
+      "segment_order": 1,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7671,
+            3.21972
+          ],
+          [
+            101.7671,
+            3.21973
+          ],
+          [
+            101.76703,
+            3.21974
+          ],
+          [
+            101.7668,
+            3.21979
+          ],
+          [
+            101.76675,
+            3.21982
+          ],
+          [
+            101.76673,
+            3.21986
+          ],
+          [
+            101.76674,
+            3.21991
+          ],
+          [
+            101.76676,
+            3.21993
+          ],
+          [
+            101.76678,
+            3.21995
+          ],
+          [
+            101.7668,
+            3.21996
+          ],
+          [
+            101.76683,
+            3.21996
+          ],
+          [
+            101.76685,
+            3.21996
+          ],
+          [
+            101.76689,
+            3.21996
+          ],
+          [
+            101.76696,
+            3.21997
+          ],
+          [
+            101.76699,
+            3.21997
+          ],
+          [
+            101.76702,
+            3.21998
+          ],
+          [
+            101.76704,
+            3.21998
+          ],
+          [
+            101.76707,
+            3.21999
+          ],
+          [
+            101.76709,
+            3.21999
+          ],
+          [
+            101.76711,
+            3.22
+          ],
+          [
+            101.76713,
+            3.22001
+          ],
+          [
+            101.76715,
+            3.22002
+          ],
+          [
+            101.76717,
+            3.22002
+          ],
+          [
+            101.76722,
+            3.22005
+          ],
+          [
+            101.76725,
+            3.22006
+          ],
+          [
+            101.76729,
+            3.22011
+          ],
+          [
+            101.76733,
+            3.22013
+          ],
+          [
+            101.76739,
+            3.22018
+          ],
+          [
+            101.76749,
+            3.22024
+          ],
+          [
+            101.76756,
+            3.22028
+          ],
+          [
+            101.76767,
+            3.22033
+          ],
+          [
+            101.76779,
+            3.22038
+          ],
+          [
+            101.76795,
+            3.22043
+          ],
+          [
+            101.768,
+            3.22043
+          ],
+          [
+            101.7681,
+            3.22046
+          ],
+          [
+            101.76816,
+            3.22049
+          ],
+          [
+            101.7682,
+            3.22052
+          ],
+          [
+            101.76824,
+            3.22061
+          ],
+          [
+            101.76826664739554,
+            3.2206632947914713
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0014051692560315132,
+      "risk_class": "uncertain",
+      "confidence": 5.371746070181871e-8,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.012666,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.001373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000992,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000595,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000582,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 5.3868848937099756e-8,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00001",
+      "segment_order": 2,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76826664739554,
+            3.2206632947914713
+          ],
+          [
+            101.76827,
+            3.22067
+          ],
+          [
+            101.76828,
+            3.22072
+          ],
+          [
+            101.7683,
+            3.22076
+          ],
+          [
+            101.76834,
+            3.22087
+          ],
+          [
+            101.76841,
+            3.22108
+          ],
+          [
+            101.76844,
+            3.2212
+          ],
+          [
+            101.7685,
+            3.22134
+          ],
+          [
+            101.76856,
+            3.22149
+          ],
+          [
+            101.76857,
+            3.22154
+          ],
+          [
+            101.76857,
+            3.22158
+          ],
+          [
+            101.76858,
+            3.22162
+          ],
+          [
+            101.76858,
+            3.22166
+          ],
+          [
+            101.76859,
+            3.22169
+          ],
+          [
+            101.76859,
+            3.22172
+          ],
+          [
+            101.76863,
+            3.22187
+          ],
+          [
+            101.76863,
+            3.22189
+          ],
+          [
+            101.76865,
+            3.22194
+          ],
+          [
+            101.76866,
+            3.22198
+          ],
+          [
+            101.76866,
+            3.22201
+          ],
+          [
+            101.76867,
+            3.22204
+          ],
+          [
+            101.76868,
+            3.2221
+          ],
+          [
+            101.7687,
+            3.22214
+          ],
+          [
+            101.76871,
+            3.22224
+          ],
+          [
+            101.76871,
+            3.22231
+          ],
+          [
+            101.76873,
+            3.22239
+          ],
+          [
+            101.76874,
+            3.22243
+          ],
+          [
+            101.76875,
+            3.22246
+          ],
+          [
+            101.76876,
+            3.22248
+          ],
+          [
+            101.76876,
+            3.2225
+          ],
+          [
+            101.76877,
+            3.22253
+          ],
+          [
+            101.76878,
+            3.22258
+          ],
+          [
+            101.76881,
+            3.22264
+          ],
+          [
+            101.76882,
+            3.2227
+          ],
+          [
+            101.76885,
+            3.22277
+          ],
+          [
+            101.76885,
+            3.2228
+          ],
+          [
+            101.76885859619095,
+            3.222822923177241
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0014051692560315132,
+      "risk_class": "uncertain",
+      "confidence": 5.371746070181871e-8,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.012666,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.001373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000992,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000595,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000582,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 5.3868848937099756e-8,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00002",
+      "segment_order": 3,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76885859619095,
+            3.222822923177241
+          ],
+          [
+            101.76888,
+            3.22288
+          ],
+          [
+            101.76889,
+            3.22295
+          ],
+          [
+            101.76892,
+            3.223
+          ],
+          [
+            101.76893,
+            3.22305
+          ],
+          [
+            101.76893,
+            3.22313
+          ],
+          [
+            101.7689,
+            3.22324
+          ],
+          [
+            101.7689,
+            3.22328
+          ],
+          [
+            101.76891,
+            3.2233
+          ],
+          [
+            101.76893,
+            3.22333
+          ],
+          [
+            101.76894,
+            3.22335
+          ],
+          [
+            101.76896,
+            3.22338
+          ],
+          [
+            101.769,
+            3.22342
+          ],
+          [
+            101.76903,
+            3.22347
+          ],
+          [
+            101.76905,
+            3.22351
+          ],
+          [
+            101.76908,
+            3.22359
+          ],
+          [
+            101.76925,
+            3.2239
+          ],
+          [
+            101.7693,
+            3.22402
+          ],
+          [
+            101.76931,
+            3.22409
+          ],
+          [
+            101.76931,
+            3.22414
+          ],
+          [
+            101.76932,
+            3.22419
+          ],
+          [
+            101.76933,
+            3.22424
+          ],
+          [
+            101.76933,
+            3.22429
+          ],
+          [
+            101.76935,
+            3.2243
+          ],
+          [
+            101.76939,
+            3.22433
+          ],
+          [
+            101.76949,
+            3.22438
+          ],
+          [
+            101.76959,
+            3.2244
+          ],
+          [
+            101.76972,
+            3.2244
+          ],
+          [
+            101.76983,
+            3.22439
+          ],
+          [
+            101.76985,
+            3.22438
+          ],
+          [
+            101.76988,
+            3.22436
+          ],
+          [
+            101.76989,
+            3.22429
+          ],
+          [
+            101.76989257500148,
+            3.224282274996015
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00003",
+      "segment_order": 4,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76989257500148,
+            3.224282274996015
+          ],
+          [
+            101.76991,
+            3.22423
+          ],
+          [
+            101.76992,
+            3.22416
+          ],
+          [
+            101.76994,
+            3.22411
+          ],
+          [
+            101.76997,
+            3.22405
+          ],
+          [
+            101.76999,
+            3.22404
+          ],
+          [
+            101.77007,
+            3.22399
+          ],
+          [
+            101.77012,
+            3.22397
+          ],
+          [
+            101.77015,
+            3.22395
+          ],
+          [
+            101.7702,
+            3.22393
+          ],
+          [
+            101.77023,
+            3.22392
+          ],
+          [
+            101.7703,
+            3.22389
+          ],
+          [
+            101.77034,
+            3.22388
+          ],
+          [
+            101.77039,
+            3.2239
+          ],
+          [
+            101.77041,
+            3.22391
+          ],
+          [
+            101.77043,
+            3.22394
+          ],
+          [
+            101.77047,
+            3.22403
+          ],
+          [
+            101.77051,
+            3.22408
+          ],
+          [
+            101.77054,
+            3.22411
+          ],
+          [
+            101.77056,
+            3.22414
+          ],
+          [
+            101.77058,
+            3.22416
+          ],
+          [
+            101.7706,
+            3.22419
+          ],
+          [
+            101.77064,
+            3.22425
+          ],
+          [
+            101.77069,
+            3.22432
+          ],
+          [
+            101.77078,
+            3.22443
+          ],
+          [
+            101.77083,
+            3.22449
+          ],
+          [
+            101.77084,
+            3.2245
+          ],
+          [
+            101.77088,
+            3.22456
+          ],
+          [
+            101.77096,
+            3.22467
+          ],
+          [
+            101.771,
+            3.22475
+          ],
+          [
+            101.77111,
+            3.22483
+          ],
+          [
+            101.77111,
+            3.22484
+          ],
+          [
+            101.77119,
+            3.2249
+          ],
+          [
+            101.77125,
+            3.22493
+          ],
+          [
+            101.77133,
+            3.22496
+          ],
+          [
+            101.77142147269362,
+            3.2249740727239162
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00004",
+      "segment_order": 5,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77142147269362,
+            3.2249740727239162
+          ],
+          [
+            101.77146,
+            3.22498
+          ],
+          [
+            101.77151,
+            3.22498
+          ],
+          [
+            101.77153,
+            3.22497
+          ],
+          [
+            101.77159,
+            3.22494
+          ],
+          [
+            101.77169,
+            3.2249
+          ],
+          [
+            101.77173,
+            3.22489
+          ],
+          [
+            101.77182,
+            3.22489
+          ],
+          [
+            101.77188,
+            3.22486
+          ],
+          [
+            101.77192,
+            3.22484
+          ],
+          [
+            101.77194,
+            3.22483
+          ],
+          [
+            101.77197,
+            3.22481
+          ],
+          [
+            101.772,
+            3.22479
+          ],
+          [
+            101.77203,
+            3.22475
+          ],
+          [
+            101.77206,
+            3.22472
+          ],
+          [
+            101.77213,
+            3.22467
+          ],
+          [
+            101.77219,
+            3.22464
+          ],
+          [
+            101.77224,
+            3.22463
+          ],
+          [
+            101.7723,
+            3.22463
+          ],
+          [
+            101.77233,
+            3.22464
+          ],
+          [
+            101.77236,
+            3.22464
+          ],
+          [
+            101.77239,
+            3.22465
+          ],
+          [
+            101.77242,
+            3.22465
+          ],
+          [
+            101.77246,
+            3.22466
+          ],
+          [
+            101.77248,
+            3.22466
+          ],
+          [
+            101.77256,
+            3.22469
+          ],
+          [
+            101.77264,
+            3.2247
+          ],
+          [
+            101.77271,
+            3.22471
+          ],
+          [
+            101.77277,
+            3.22471
+          ],
+          [
+            101.77282,
+            3.2247
+          ],
+          [
+            101.7729,
+            3.22469
+          ],
+          [
+            101.77303,
+            3.22469
+          ],
+          [
+            101.77303,
+            3.2247
+          ],
+          [
+            101.77308,
+            3.22469
+          ],
+          [
+            101.77312,
+            3.22468
+          ],
+          [
+            101.77319,
+            3.22468
+          ],
+          [
+            101.77323,
+            3.22468
+          ],
+          [
+            101.77324,
+            3.22468
+          ],
+          [
+            101.77327,
+            3.22468
+          ],
+          [
+            101.77331,
+            3.22467
+          ],
+          [
+            101.77347,
+            3.22467
+          ],
+          [
+            101.77354,
+            3.22466
+          ],
+          [
+            101.77354326369093,
+            3.22465953375855
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00005",
+      "segment_order": 6,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77354326369093,
+            3.22465953375855
+          ],
+          [
+            101.77361,
+            3.22465
+          ],
+          [
+            101.77369,
+            3.22463
+          ],
+          [
+            101.77375,
+            3.22462
+          ],
+          [
+            101.77384,
+            3.22461
+          ],
+          [
+            101.77387,
+            3.2246
+          ],
+          [
+            101.77395,
+            3.2246
+          ],
+          [
+            101.77398,
+            3.22461
+          ],
+          [
+            101.774,
+            3.2246
+          ],
+          [
+            101.77404,
+            3.22461
+          ],
+          [
+            101.77409,
+            3.2246
+          ],
+          [
+            101.77422,
+            3.2246
+          ],
+          [
+            101.77427,
+            3.22458
+          ],
+          [
+            101.77427,
+            3.22459
+          ],
+          [
+            101.77428,
+            3.22459
+          ],
+          [
+            101.77429,
+            3.22459
+          ],
+          [
+            101.77429,
+            3.22458
+          ],
+          [
+            101.7743,
+            3.22458
+          ],
+          [
+            101.77434,
+            3.22459
+          ],
+          [
+            101.77438,
+            3.22464
+          ],
+          [
+            101.77442,
+            3.22467
+          ],
+          [
+            101.77445,
+            3.22469
+          ],
+          [
+            101.77448,
+            3.22471
+          ],
+          [
+            101.77449,
+            3.22472
+          ],
+          [
+            101.77452,
+            3.22472
+          ],
+          [
+            101.77455,
+            3.22473
+          ],
+          [
+            101.7746,
+            3.22474
+          ],
+          [
+            101.77465,
+            3.22476
+          ],
+          [
+            101.7747,
+            3.22477
+          ],
+          [
+            101.77476,
+            3.2248
+          ],
+          [
+            101.77487,
+            3.22487
+          ],
+          [
+            101.77497,
+            3.22493
+          ],
+          [
+            101.77507,
+            3.22497
+          ],
+          [
+            101.77514,
+            3.22501
+          ],
+          [
+            101.77522,
+            3.22501
+          ],
+          [
+            101.77525,
+            3.22501
+          ],
+          [
+            101.7753,
+            3.22501
+          ],
+          [
+            101.77533,
+            3.225
+          ],
+          [
+            101.77535,
+            3.22501
+          ],
+          [
+            101.77538,
+            3.225
+          ],
+          [
+            101.77548,
+            3.225
+          ],
+          [
+            101.77553,
+            3.22501
+          ],
+          [
+            101.77556,
+            3.22501
+          ],
+          [
+            101.77561,
+            3.22501
+          ],
+          [
+            101.7756292707502,
+            3.2250148176881988
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00006",
+      "segment_order": 7,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7756292707502,
+            3.2250148176881988
+          ],
+          [
+            101.77569,
+            3.22503
+          ],
+          [
+            101.77574,
+            3.22506
+          ],
+          [
+            101.77578,
+            3.22508
+          ],
+          [
+            101.77583,
+            3.22511
+          ],
+          [
+            101.77589,
+            3.22513
+          ],
+          [
+            101.77595,
+            3.22515
+          ],
+          [
+            101.77597,
+            3.22515
+          ],
+          [
+            101.77598,
+            3.22517
+          ],
+          [
+            101.77598,
+            3.22519
+          ],
+          [
+            101.77597,
+            3.22523
+          ],
+          [
+            101.77595,
+            3.22527
+          ],
+          [
+            101.77593,
+            3.22529
+          ],
+          [
+            101.77591,
+            3.22531
+          ],
+          [
+            101.77587,
+            3.22534
+          ],
+          [
+            101.77582,
+            3.22538
+          ],
+          [
+            101.7758,
+            3.22539
+          ],
+          [
+            101.77575,
+            3.22542
+          ],
+          [
+            101.77573,
+            3.22544
+          ],
+          [
+            101.77566,
+            3.22548
+          ],
+          [
+            101.7756,
+            3.22553
+          ],
+          [
+            101.77537,
+            3.22563
+          ],
+          [
+            101.7753,
+            3.22567
+          ],
+          [
+            101.77527,
+            3.22571
+          ],
+          [
+            101.77523,
+            3.22575
+          ],
+          [
+            101.77517,
+            3.2258
+          ],
+          [
+            101.77513,
+            3.22584
+          ],
+          [
+            101.77512,
+            3.22585
+          ],
+          [
+            101.77509,
+            3.22587
+          ],
+          [
+            101.77505,
+            3.2259
+          ],
+          [
+            101.77501,
+            3.22593
+          ],
+          [
+            101.77491,
+            3.22599
+          ],
+          [
+            101.77482,
+            3.22608
+          ],
+          [
+            101.77479,
+            3.2261
+          ],
+          [
+            101.77472,
+            3.22616
+          ],
+          [
+            101.77466,
+            3.2262
+          ],
+          [
+            101.77459,
+            3.22626
+          ],
+          [
+            101.77455575366128,
+            3.226305661786943
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00007",
+      "segment_order": 8,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77455575366128,
+            3.226305661786943
+          ],
+          [
+            101.77453,
+            3.22634
+          ],
+          [
+            101.77445,
+            3.22642
+          ],
+          [
+            101.77441,
+            3.22646
+          ],
+          [
+            101.77432,
+            3.22657
+          ],
+          [
+            101.77427,
+            3.22661
+          ],
+          [
+            101.77422,
+            3.22664
+          ],
+          [
+            101.77416,
+            3.22666
+          ],
+          [
+            101.77412,
+            3.22668
+          ],
+          [
+            101.77409,
+            3.22669
+          ],
+          [
+            101.77408,
+            3.2267
+          ],
+          [
+            101.77405,
+            3.22671
+          ],
+          [
+            101.774,
+            3.22673
+          ],
+          [
+            101.77393,
+            3.22678
+          ],
+          [
+            101.77388,
+            3.22681
+          ],
+          [
+            101.77379,
+            3.22685
+          ],
+          [
+            101.77375,
+            3.22686
+          ],
+          [
+            101.77372,
+            3.22686
+          ],
+          [
+            101.7737,
+            3.22687
+          ],
+          [
+            101.77368,
+            3.22688
+          ],
+          [
+            101.77364,
+            3.22689
+          ],
+          [
+            101.7736,
+            3.2269
+          ],
+          [
+            101.7735,
+            3.22693
+          ],
+          [
+            101.77337,
+            3.227
+          ],
+          [
+            101.77333,
+            3.22704
+          ],
+          [
+            101.77329,
+            3.22706
+          ],
+          [
+            101.77322,
+            3.22714
+          ],
+          [
+            101.77315,
+            3.22718
+          ],
+          [
+            101.7731,
+            3.22718
+          ],
+          [
+            101.77305,
+            3.22719
+          ],
+          [
+            101.77302,
+            3.22719
+          ],
+          [
+            101.77298,
+            3.2272
+          ],
+          [
+            101.77293,
+            3.22721
+          ],
+          [
+            101.77289,
+            3.22721
+          ],
+          [
+            101.77286,
+            3.22721
+          ],
+          [
+            101.77284,
+            3.22721
+          ],
+          [
+            101.77281,
+            3.22721
+          ],
+          [
+            101.77277,
+            3.2272
+          ],
+          [
+            101.77272,
+            3.2272
+          ],
+          [
+            101.7727,
+            3.2272
+          ],
+          [
+            101.77266,
+            3.22721
+          ],
+          [
+            101.77263,
+            3.22724
+          ],
+          [
+            101.77262098890793,
+            3.227253516638371
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00008",
+      "segment_order": 9,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77262098890793,
+            3.227253516638371
+          ],
+          [
+            101.77261,
+            3.22727
+          ],
+          [
+            101.77257,
+            3.2273
+          ],
+          [
+            101.77252,
+            3.22732
+          ],
+          [
+            101.77244,
+            3.22738
+          ],
+          [
+            101.77239,
+            3.2274
+          ],
+          [
+            101.77236,
+            3.22742
+          ],
+          [
+            101.77227,
+            3.22748
+          ],
+          [
+            101.77222,
+            3.2275
+          ],
+          [
+            101.77219,
+            3.2275
+          ],
+          [
+            101.77215,
+            3.22752
+          ],
+          [
+            101.77213,
+            3.22754
+          ],
+          [
+            101.77211,
+            3.22757
+          ],
+          [
+            101.77208,
+            3.22761
+          ],
+          [
+            101.77206,
+            3.22765
+          ],
+          [
+            101.77203,
+            3.22769
+          ],
+          [
+            101.77201,
+            3.22773
+          ],
+          [
+            101.77194,
+            3.22781
+          ],
+          [
+            101.77187,
+            3.22787
+          ],
+          [
+            101.77183,
+            3.22792
+          ],
+          [
+            101.7718,
+            3.22795
+          ],
+          [
+            101.77178,
+            3.22797
+          ],
+          [
+            101.77176,
+            3.22799
+          ],
+          [
+            101.77163,
+            3.22812
+          ],
+          [
+            101.77161,
+            3.22813
+          ],
+          [
+            101.77154,
+            3.22816
+          ],
+          [
+            101.77147,
+            3.22818
+          ],
+          [
+            101.77146,
+            3.22818
+          ],
+          [
+            101.77138,
+            3.22818
+          ],
+          [
+            101.77132,
+            3.22819
+          ],
+          [
+            101.77129,
+            3.22821
+          ],
+          [
+            101.77123,
+            3.22822
+          ],
+          [
+            101.77119,
+            3.22822
+          ],
+          [
+            101.77113,
+            3.22824
+          ],
+          [
+            101.77104,
+            3.22825
+          ],
+          [
+            101.77099,
+            3.22828
+          ],
+          [
+            101.77096,
+            3.22831
+          ],
+          [
+            101.77095,
+            3.22834
+          ],
+          [
+            101.77095,
+            3.22842
+          ],
+          [
+            101.77096917572676,
+            3.2284967029072877
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00009",
+      "segment_order": 10,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77096917572676,
+            3.2284967029072877
+          ],
+          [
+            101.77097,
+            3.2285
+          ],
+          [
+            101.77097,
+            3.2286
+          ],
+          [
+            101.77095,
+            3.22864
+          ],
+          [
+            101.77094,
+            3.22865
+          ],
+          [
+            101.77093,
+            3.22867
+          ],
+          [
+            101.77091,
+            3.22869
+          ],
+          [
+            101.7709,
+            3.22871
+          ],
+          [
+            101.77089,
+            3.22875
+          ],
+          [
+            101.77084,
+            3.2288
+          ],
+          [
+            101.77083,
+            3.22886
+          ],
+          [
+            101.77081,
+            3.22891
+          ],
+          [
+            101.7708,
+            3.22897
+          ],
+          [
+            101.77078,
+            3.22903
+          ],
+          [
+            101.77077,
+            3.22909
+          ],
+          [
+            101.77075,
+            3.22915
+          ],
+          [
+            101.77074,
+            3.22921
+          ],
+          [
+            101.77071,
+            3.22926
+          ],
+          [
+            101.77066,
+            3.22929
+          ],
+          [
+            101.77059,
+            3.22933
+          ],
+          [
+            101.77054,
+            3.22932
+          ],
+          [
+            101.7705,
+            3.22929
+          ],
+          [
+            101.77047,
+            3.22926
+          ],
+          [
+            101.77047,
+            3.22924
+          ],
+          [
+            101.77048,
+            3.2291
+          ],
+          [
+            101.77048,
+            3.22908
+          ],
+          [
+            101.77047,
+            3.22901
+          ],
+          [
+            101.77051,
+            3.22896
+          ],
+          [
+            101.77053,
+            3.22891
+          ],
+          [
+            101.77056,
+            3.22887
+          ],
+          [
+            101.77058,
+            3.22885
+          ],
+          [
+            101.77058,
+            3.22883
+          ],
+          [
+            101.77058,
+            3.2288
+          ],
+          [
+            101.77058,
+            3.22876
+          ],
+          [
+            101.77058,
+            3.2287
+          ],
+          [
+            101.7706,
+            3.22865
+          ],
+          [
+            101.7706,
+            3.22861
+          ],
+          [
+            101.77062,
+            3.22855
+          ],
+          [
+            101.77062,
+            3.22852
+          ],
+          [
+            101.7706,
+            3.22847
+          ],
+          [
+            101.7706,
+            3.22845
+          ],
+          [
+            101.77058,
+            3.22843
+          ],
+          [
+            101.77056,
+            3.2284
+          ],
+          [
+            101.77053,
+            3.22836
+          ],
+          [
+            101.77051,
+            3.22834
+          ],
+          [
+            101.77051,
+            3.22832
+          ],
+          [
+            101.77048,
+            3.22828
+          ],
+          [
+            101.77048,
+            3.22824
+          ],
+          [
+            101.77047,
+            3.22822
+          ],
+          [
+            101.77046807169857,
+            3.2282065018907975
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00010",
+      "segment_order": 11,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77046807169857,
+            3.2282065018907975
+          ],
+          [
+            101.77046,
+            3.22815
+          ],
+          [
+            101.77046,
+            3.22808
+          ],
+          [
+            101.77047,
+            3.22803
+          ],
+          [
+            101.77049,
+            3.22799
+          ],
+          [
+            101.77049,
+            3.22796
+          ],
+          [
+            101.7705,
+            3.22794
+          ],
+          [
+            101.7705,
+            3.22779
+          ],
+          [
+            101.77051,
+            3.22775
+          ],
+          [
+            101.77051,
+            3.22772
+          ],
+          [
+            101.77053,
+            3.22766
+          ],
+          [
+            101.77056,
+            3.22762
+          ],
+          [
+            101.77058,
+            3.22759
+          ],
+          [
+            101.77058,
+            3.22757
+          ],
+          [
+            101.77059,
+            3.22756
+          ],
+          [
+            101.77061,
+            3.22753
+          ],
+          [
+            101.77062,
+            3.22751
+          ],
+          [
+            101.77071,
+            3.22742
+          ],
+          [
+            101.77074,
+            3.2274
+          ],
+          [
+            101.77077,
+            3.22736
+          ],
+          [
+            101.77079,
+            3.22735
+          ],
+          [
+            101.77084,
+            3.22728
+          ],
+          [
+            101.77086,
+            3.22725
+          ],
+          [
+            101.77088,
+            3.22722
+          ],
+          [
+            101.77087,
+            3.22718
+          ],
+          [
+            101.77088,
+            3.22716
+          ],
+          [
+            101.77088,
+            3.22714
+          ],
+          [
+            101.77087,
+            3.22711
+          ],
+          [
+            101.7708,
+            3.22712
+          ],
+          [
+            101.77069,
+            3.22718
+          ],
+          [
+            101.77064,
+            3.22719
+          ],
+          [
+            101.77059,
+            3.22717
+          ],
+          [
+            101.77056,
+            3.22718
+          ],
+          [
+            101.77041,
+            3.22726
+          ],
+          [
+            101.77039,
+            3.22726
+          ],
+          [
+            101.77037,
+            3.22726
+          ],
+          [
+            101.77035,
+            3.22729
+          ],
+          [
+            101.77033,
+            3.22732
+          ],
+          [
+            101.77032,
+            3.22733
+          ],
+          [
+            101.77029,
+            3.22734
+          ],
+          [
+            101.77025,
+            3.22736
+          ],
+          [
+            101.77023,
+            3.22736
+          ],
+          [
+            101.77018,
+            3.22737
+          ],
+          [
+            101.77014,
+            3.22739
+          ],
+          [
+            101.77012,
+            3.22741
+          ],
+          [
+            101.77007,
+            3.22744
+          ],
+          [
+            101.77003,
+            3.22745
+          ],
+          [
+            101.76997102078097,
+            3.2274573724030096
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00011",
+      "segment_order": 12,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76997102078097,
+            3.2274573724030096
+          ],
+          [
+            101.76995,
+            3.22746
+          ],
+          [
+            101.76991,
+            3.22749
+          ],
+          [
+            101.76987,
+            3.22753
+          ],
+          [
+            101.76986,
+            3.22757
+          ],
+          [
+            101.76985,
+            3.22762
+          ],
+          [
+            101.76983,
+            3.22765
+          ],
+          [
+            101.76979,
+            3.22768
+          ],
+          [
+            101.76978,
+            3.22768
+          ],
+          [
+            101.76945,
+            3.22786
+          ],
+          [
+            101.76928,
+            3.22795
+          ],
+          [
+            101.76923,
+            3.22797
+          ],
+          [
+            101.76918,
+            3.22798
+          ],
+          [
+            101.76914,
+            3.22799
+          ],
+          [
+            101.76887,
+            3.22811
+          ],
+          [
+            101.7687,
+            3.22818
+          ],
+          [
+            101.76866,
+            3.22821
+          ],
+          [
+            101.76861,
+            3.22823
+          ],
+          [
+            101.76857,
+            3.22823
+          ],
+          [
+            101.76855,
+            3.22823
+          ],
+          [
+            101.76845,
+            3.22822
+          ],
+          [
+            101.76841,
+            3.2282
+          ],
+          [
+            101.76838,
+            3.22817
+          ],
+          [
+            101.76833,
+            3.22815
+          ],
+          [
+            101.76829,
+            3.22815
+          ],
+          [
+            101.76824,
+            3.22816
+          ],
+          [
+            101.76809,
+            3.22823
+          ],
+          [
+            101.76804,
+            3.22823
+          ],
+          [
+            101.7680103023393,
+            3.2282240604681816
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00012",
+      "segment_order": 13,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7680103023393,
+            3.2282240604681816
+          ],
+          [
+            101.76799,
+            3.22822
+          ],
+          [
+            101.76797,
+            3.22822
+          ],
+          [
+            101.76785,
+            3.22823
+          ],
+          [
+            101.76781,
+            3.22826
+          ],
+          [
+            101.7678,
+            3.22828
+          ],
+          [
+            101.76776,
+            3.2283
+          ],
+          [
+            101.76771,
+            3.2283
+          ],
+          [
+            101.7677,
+            3.22829
+          ],
+          [
+            101.7676,
+            3.22825
+          ],
+          [
+            101.76756,
+            3.22825
+          ],
+          [
+            101.76753,
+            3.22825
+          ],
+          [
+            101.76729,
+            3.22836
+          ],
+          [
+            101.76692,
+            3.22845
+          ],
+          [
+            101.76655,
+            3.22852
+          ],
+          [
+            101.76631,
+            3.22862
+          ],
+          [
+            101.76621,
+            3.22866
+          ],
+          [
+            101.76616,
+            3.22869
+          ],
+          [
+            101.76611,
+            3.22871
+          ],
+          [
+            101.76607,
+            3.22872
+          ],
+          [
+            101.76602,
+            3.22872
+          ],
+          [
+            101.76597,
+            3.22872
+          ],
+          [
+            101.76592,
+            3.22874
+          ],
+          [
+            101.7658926122337,
+            3.2287605408250855
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00013",
+      "segment_order": 14,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7658926122337,
+            3.2287605408250855
+          ],
+          [
+            101.76588,
+            3.22877
+          ],
+          [
+            101.76585,
+            3.2288
+          ],
+          [
+            101.76588,
+            3.22877
+          ],
+          [
+            101.76592,
+            3.22874
+          ],
+          [
+            101.76597,
+            3.22872
+          ],
+          [
+            101.76602,
+            3.22872
+          ],
+          [
+            101.76607,
+            3.22872
+          ],
+          [
+            101.76611,
+            3.22871
+          ],
+          [
+            101.76616,
+            3.22869
+          ],
+          [
+            101.76621,
+            3.22866
+          ],
+          [
+            101.76631,
+            3.22862
+          ],
+          [
+            101.76655,
+            3.22852
+          ],
+          [
+            101.76692,
+            3.22845
+          ],
+          [
+            101.76729,
+            3.22836
+          ],
+          [
+            101.76753,
+            3.22825
+          ],
+          [
+            101.76756,
+            3.22825
+          ],
+          [
+            101.7676,
+            3.22825
+          ],
+          [
+            101.7677,
+            3.22829
+          ],
+          [
+            101.76771,
+            3.2283
+          ],
+          [
+            101.76776,
+            3.2283
+          ],
+          [
+            101.7678,
+            3.22828
+          ],
+          [
+            101.76781,
+            3.22826
+          ],
+          [
+            101.76785,
+            3.22823
+          ],
+          [
+            101.76789484844255,
+            3.228226262631477
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00014",
+      "segment_order": 15,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76789484844255,
+            3.228226262631477
+          ],
+          [
+            101.76797,
+            3.22822
+          ],
+          [
+            101.76799,
+            3.22822
+          ],
+          [
+            101.76804,
+            3.22823
+          ],
+          [
+            101.76809,
+            3.22823
+          ],
+          [
+            101.76824,
+            3.22816
+          ],
+          [
+            101.76829,
+            3.22815
+          ],
+          [
+            101.76833,
+            3.22815
+          ],
+          [
+            101.76838,
+            3.22817
+          ],
+          [
+            101.76841,
+            3.2282
+          ],
+          [
+            101.76845,
+            3.22822
+          ],
+          [
+            101.76855,
+            3.22823
+          ],
+          [
+            101.76857,
+            3.22823
+          ],
+          [
+            101.76861,
+            3.22823
+          ],
+          [
+            101.76866,
+            3.22821
+          ],
+          [
+            101.7687,
+            3.22818
+          ],
+          [
+            101.76887,
+            3.22811
+          ],
+          [
+            101.76914,
+            3.22799
+          ],
+          [
+            101.76918,
+            3.22798
+          ],
+          [
+            101.76923,
+            3.22797
+          ],
+          [
+            101.76928,
+            3.22795
+          ],
+          [
+            101.76945,
+            3.22786
+          ],
+          [
+            101.76978,
+            3.22768
+          ],
+          [
+            101.76979,
+            3.22768
+          ],
+          [
+            101.76983,
+            3.22765
+          ],
+          [
+            101.76985,
+            3.22762
+          ],
+          [
+            101.76986,
+            3.22757
+          ],
+          [
+            101.76987,
+            3.22753
+          ],
+          [
+            101.76987808588946,
+            3.227521914110914
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00015",
+      "segment_order": 16,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76987808588946,
+            3.227521914110914
+          ],
+          [
+            101.76991,
+            3.22749
+          ],
+          [
+            101.76995,
+            3.22746
+          ],
+          [
+            101.77003,
+            3.22745
+          ],
+          [
+            101.77007,
+            3.22744
+          ],
+          [
+            101.77012,
+            3.22741
+          ],
+          [
+            101.77014,
+            3.22739
+          ],
+          [
+            101.77018,
+            3.22737
+          ],
+          [
+            101.77023,
+            3.22736
+          ],
+          [
+            101.77025,
+            3.22736
+          ],
+          [
+            101.77029,
+            3.22734
+          ],
+          [
+            101.77032,
+            3.22733
+          ],
+          [
+            101.77033,
+            3.22732
+          ],
+          [
+            101.77035,
+            3.22729
+          ],
+          [
+            101.77037,
+            3.22726
+          ],
+          [
+            101.77039,
+            3.22726
+          ],
+          [
+            101.77041,
+            3.22726
+          ],
+          [
+            101.77056,
+            3.22718
+          ],
+          [
+            101.77059,
+            3.22717
+          ],
+          [
+            101.77064,
+            3.22719
+          ],
+          [
+            101.77069,
+            3.22718
+          ],
+          [
+            101.7708,
+            3.22712
+          ],
+          [
+            101.77087,
+            3.22711
+          ],
+          [
+            101.77088,
+            3.22714
+          ],
+          [
+            101.77088,
+            3.22716
+          ],
+          [
+            101.77087,
+            3.22718
+          ],
+          [
+            101.77088,
+            3.22722
+          ],
+          [
+            101.77086,
+            3.22725
+          ],
+          [
+            101.77084,
+            3.22728
+          ],
+          [
+            101.77079,
+            3.22735
+          ],
+          [
+            101.77077,
+            3.22736
+          ],
+          [
+            101.77074,
+            3.2274
+          ],
+          [
+            101.77071,
+            3.22742
+          ],
+          [
+            101.77062,
+            3.22751
+          ],
+          [
+            101.77061,
+            3.22753
+          ],
+          [
+            101.77059,
+            3.22756
+          ],
+          [
+            101.77058,
+            3.22757
+          ],
+          [
+            101.77058,
+            3.22759
+          ],
+          [
+            101.77056,
+            3.22762
+          ],
+          [
+            101.77053,
+            3.22766
+          ],
+          [
+            101.77051,
+            3.22772
+          ],
+          [
+            101.77051,
+            3.22775
+          ],
+          [
+            101.7705,
+            3.22779
+          ],
+          [
+            101.7705,
+            3.22794
+          ],
+          [
+            101.77049,
+            3.22796
+          ],
+          [
+            101.77049,
+            3.22799
+          ],
+          [
+            101.77047,
+            3.22803
+          ],
+          [
+            101.77046,
+            3.22808
+          ],
+          [
+            101.77046,
+            3.2280903770714966
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00016",
+      "segment_order": 17,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77046,
+            3.2280903770714966
+          ],
+          [
+            101.77046,
+            3.22815
+          ],
+          [
+            101.77047,
+            3.22822
+          ],
+          [
+            101.77048,
+            3.22824
+          ],
+          [
+            101.77048,
+            3.22828
+          ],
+          [
+            101.77051,
+            3.22832
+          ],
+          [
+            101.77051,
+            3.22834
+          ],
+          [
+            101.77053,
+            3.22836
+          ],
+          [
+            101.77056,
+            3.2284
+          ],
+          [
+            101.77058,
+            3.22843
+          ],
+          [
+            101.7706,
+            3.22845
+          ],
+          [
+            101.7706,
+            3.22847
+          ],
+          [
+            101.77062,
+            3.22852
+          ],
+          [
+            101.77062,
+            3.22855
+          ],
+          [
+            101.7706,
+            3.22861
+          ],
+          [
+            101.7706,
+            3.22865
+          ],
+          [
+            101.77058,
+            3.2287
+          ],
+          [
+            101.77058,
+            3.22876
+          ],
+          [
+            101.77058,
+            3.2288
+          ],
+          [
+            101.77058,
+            3.22883
+          ],
+          [
+            101.77058,
+            3.22885
+          ],
+          [
+            101.77056,
+            3.22887
+          ],
+          [
+            101.77053,
+            3.22891
+          ],
+          [
+            101.77051,
+            3.22896
+          ],
+          [
+            101.77047,
+            3.22901
+          ],
+          [
+            101.77048,
+            3.22908
+          ],
+          [
+            101.77048,
+            3.2291
+          ],
+          [
+            101.77047,
+            3.22924
+          ],
+          [
+            101.77047,
+            3.22926
+          ],
+          [
+            101.7705,
+            3.22929
+          ],
+          [
+            101.77054,
+            3.22932
+          ],
+          [
+            101.77059,
+            3.22933
+          ],
+          [
+            101.77066,
+            3.22929
+          ],
+          [
+            101.77071,
+            3.22926
+          ],
+          [
+            101.77074,
+            3.22921
+          ],
+          [
+            101.77075,
+            3.22915
+          ],
+          [
+            101.77077,
+            3.22909
+          ],
+          [
+            101.77078,
+            3.22903
+          ],
+          [
+            101.7708,
+            3.22897
+          ],
+          [
+            101.77081,
+            3.22891
+          ],
+          [
+            101.77083,
+            3.22886
+          ],
+          [
+            101.77084,
+            3.2288
+          ],
+          [
+            101.77089,
+            3.22875
+          ],
+          [
+            101.7709,
+            3.22871
+          ],
+          [
+            101.77091,
+            3.22869
+          ],
+          [
+            101.77093,
+            3.22867
+          ],
+          [
+            101.77094,
+            3.22865
+          ],
+          [
+            101.77095,
+            3.22864
+          ],
+          [
+            101.77096405604568,
+            3.2286118879090107
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00017",
+      "segment_order": 18,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77096405604568,
+            3.2286118879090107
+          ],
+          [
+            101.77097,
+            3.2286
+          ],
+          [
+            101.77097,
+            3.2285
+          ],
+          [
+            101.77095,
+            3.22842
+          ],
+          [
+            101.77095,
+            3.22834
+          ],
+          [
+            101.77096,
+            3.22831
+          ],
+          [
+            101.77099,
+            3.22828
+          ],
+          [
+            101.77104,
+            3.22825
+          ],
+          [
+            101.77113,
+            3.22824
+          ],
+          [
+            101.77119,
+            3.22822
+          ],
+          [
+            101.77123,
+            3.22822
+          ],
+          [
+            101.77129,
+            3.22821
+          ],
+          [
+            101.77132,
+            3.22819
+          ],
+          [
+            101.77138,
+            3.22818
+          ],
+          [
+            101.77146,
+            3.22818
+          ],
+          [
+            101.77147,
+            3.22818
+          ],
+          [
+            101.77154,
+            3.22816
+          ],
+          [
+            101.77161,
+            3.22813
+          ],
+          [
+            101.77163,
+            3.22812
+          ],
+          [
+            101.77176,
+            3.22799
+          ],
+          [
+            101.77178,
+            3.22797
+          ],
+          [
+            101.7718,
+            3.22795
+          ],
+          [
+            101.77183,
+            3.22792
+          ],
+          [
+            101.77187,
+            3.22787
+          ],
+          [
+            101.77194,
+            3.22781
+          ],
+          [
+            101.77201,
+            3.22773
+          ],
+          [
+            101.77203,
+            3.22769
+          ],
+          [
+            101.77206,
+            3.22765
+          ],
+          [
+            101.77208,
+            3.22761
+          ],
+          [
+            101.77211,
+            3.22757
+          ],
+          [
+            101.77213,
+            3.22754
+          ],
+          [
+            101.77215,
+            3.22752
+          ],
+          [
+            101.77219,
+            3.2275
+          ],
+          [
+            101.77222,
+            3.2275
+          ],
+          [
+            101.77227,
+            3.22748
+          ],
+          [
+            101.77236,
+            3.22742
+          ],
+          [
+            101.77239,
+            3.2274
+          ],
+          [
+            101.77244,
+            3.22738
+          ],
+          [
+            101.77252,
+            3.22732
+          ],
+          [
+            101.77252683221703,
+            3.227317267113381
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00018",
+      "segment_order": 19,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77252683221703,
+            3.227317267113381
+          ],
+          [
+            101.77257,
+            3.2273
+          ],
+          [
+            101.77261,
+            3.22727
+          ],
+          [
+            101.77263,
+            3.22724
+          ],
+          [
+            101.77266,
+            3.22721
+          ],
+          [
+            101.7727,
+            3.2272
+          ],
+          [
+            101.77272,
+            3.2272
+          ],
+          [
+            101.77277,
+            3.2272
+          ],
+          [
+            101.77281,
+            3.22721
+          ],
+          [
+            101.77284,
+            3.22721
+          ],
+          [
+            101.77286,
+            3.22721
+          ],
+          [
+            101.77289,
+            3.22721
+          ],
+          [
+            101.77293,
+            3.22721
+          ],
+          [
+            101.77298,
+            3.2272
+          ],
+          [
+            101.77302,
+            3.22719
+          ],
+          [
+            101.77305,
+            3.22719
+          ],
+          [
+            101.7731,
+            3.22718
+          ],
+          [
+            101.77315,
+            3.22718
+          ],
+          [
+            101.77322,
+            3.22714
+          ],
+          [
+            101.77329,
+            3.22706
+          ],
+          [
+            101.77333,
+            3.22704
+          ],
+          [
+            101.77337,
+            3.227
+          ],
+          [
+            101.7735,
+            3.22693
+          ],
+          [
+            101.7736,
+            3.2269
+          ],
+          [
+            101.77364,
+            3.22689
+          ],
+          [
+            101.77368,
+            3.22688
+          ],
+          [
+            101.7737,
+            3.22687
+          ],
+          [
+            101.77372,
+            3.22686
+          ],
+          [
+            101.77375,
+            3.22686
+          ],
+          [
+            101.77379,
+            3.22685
+          ],
+          [
+            101.77388,
+            3.22681
+          ],
+          [
+            101.77393,
+            3.22678
+          ],
+          [
+            101.774,
+            3.22673
+          ],
+          [
+            101.77405,
+            3.22671
+          ],
+          [
+            101.77408,
+            3.2267
+          ],
+          [
+            101.77409,
+            3.22669
+          ],
+          [
+            101.77412,
+            3.22668
+          ],
+          [
+            101.77416,
+            3.22666
+          ],
+          [
+            101.77422,
+            3.22664
+          ],
+          [
+            101.77427,
+            3.22661
+          ],
+          [
+            101.77432,
+            3.22657
+          ],
+          [
+            101.77441,
+            3.22646
+          ],
+          [
+            101.77445,
+            3.22642
+          ],
+          [
+            101.7744780179342,
+            3.226391982067951
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00019",
+      "segment_order": 20,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7744780179342,
+            3.226391982067951
+          ],
+          [
+            101.77453,
+            3.22634
+          ],
+          [
+            101.77459,
+            3.22626
+          ],
+          [
+            101.77466,
+            3.2262
+          ],
+          [
+            101.77472,
+            3.22616
+          ],
+          [
+            101.77479,
+            3.2261
+          ],
+          [
+            101.77482,
+            3.22608
+          ],
+          [
+            101.77491,
+            3.22599
+          ],
+          [
+            101.77501,
+            3.22593
+          ],
+          [
+            101.77505,
+            3.2259
+          ],
+          [
+            101.77509,
+            3.22587
+          ],
+          [
+            101.77512,
+            3.22585
+          ],
+          [
+            101.77513,
+            3.22584
+          ],
+          [
+            101.77517,
+            3.2258
+          ],
+          [
+            101.77523,
+            3.22575
+          ],
+          [
+            101.77527,
+            3.22571
+          ],
+          [
+            101.7753,
+            3.22567
+          ],
+          [
+            101.77537,
+            3.22563
+          ],
+          [
+            101.7756,
+            3.22553
+          ],
+          [
+            101.77566,
+            3.22548
+          ],
+          [
+            101.77573,
+            3.22544
+          ],
+          [
+            101.77575,
+            3.22542
+          ],
+          [
+            101.7758,
+            3.22539
+          ],
+          [
+            101.77582,
+            3.22538
+          ],
+          [
+            101.77587,
+            3.22534
+          ],
+          [
+            101.77591,
+            3.22531
+          ],
+          [
+            101.77593,
+            3.22529
+          ],
+          [
+            101.77595,
+            3.22527
+          ],
+          [
+            101.77597,
+            3.22523
+          ],
+          [
+            101.77598,
+            3.22519
+          ],
+          [
+            101.77598,
+            3.22517
+          ],
+          [
+            101.77597,
+            3.22515
+          ],
+          [
+            101.77595,
+            3.22515
+          ],
+          [
+            101.77589,
+            3.22513
+          ],
+          [
+            101.77583,
+            3.22511
+          ],
+          [
+            101.77578,
+            3.22508
+          ],
+          [
+            101.77574,
+            3.22506
+          ],
+          [
+            101.7757359633738,
+            3.225057578024443
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00020",
+      "segment_order": 21,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.7757359633738,
+            3.225057578024443
+          ],
+          [
+            101.77569,
+            3.22503
+          ],
+          [
+            101.77561,
+            3.22501
+          ],
+          [
+            101.77556,
+            3.22501
+          ],
+          [
+            101.77553,
+            3.22501
+          ],
+          [
+            101.77548,
+            3.225
+          ],
+          [
+            101.77538,
+            3.225
+          ],
+          [
+            101.77535,
+            3.22501
+          ],
+          [
+            101.77533,
+            3.225
+          ],
+          [
+            101.7753,
+            3.22501
+          ],
+          [
+            101.77525,
+            3.22501
+          ],
+          [
+            101.77522,
+            3.22501
+          ],
+          [
+            101.77514,
+            3.22501
+          ],
+          [
+            101.77507,
+            3.22497
+          ],
+          [
+            101.77497,
+            3.22493
+          ],
+          [
+            101.77487,
+            3.22487
+          ],
+          [
+            101.77476,
+            3.2248
+          ],
+          [
+            101.7747,
+            3.22477
+          ],
+          [
+            101.77465,
+            3.22476
+          ],
+          [
+            101.7746,
+            3.22474
+          ],
+          [
+            101.77455,
+            3.22473
+          ],
+          [
+            101.77452,
+            3.22472
+          ],
+          [
+            101.77449,
+            3.22472
+          ],
+          [
+            101.77448,
+            3.22471
+          ],
+          [
+            101.77445,
+            3.22469
+          ],
+          [
+            101.77442,
+            3.22467
+          ],
+          [
+            101.77438,
+            3.22464
+          ],
+          [
+            101.77434,
+            3.22459
+          ],
+          [
+            101.7743,
+            3.22458
+          ],
+          [
+            101.77429,
+            3.22458
+          ],
+          [
+            101.77429,
+            3.22459
+          ],
+          [
+            101.77428,
+            3.22459
+          ],
+          [
+            101.77427,
+            3.22459
+          ],
+          [
+            101.77427,
+            3.22458
+          ],
+          [
+            101.77422,
+            3.2246
+          ],
+          [
+            101.77409,
+            3.2246
+          ],
+          [
+            101.77404,
+            3.22461
+          ],
+          [
+            101.774,
+            3.2246
+          ],
+          [
+            101.77398,
+            3.22461
+          ],
+          [
+            101.77395,
+            3.2246
+          ],
+          [
+            101.77387,
+            3.2246
+          ],
+          [
+            101.77384,
+            3.22461
+          ],
+          [
+            101.77375,
+            3.22462
+          ],
+          [
+            101.77369,
+            3.22463
+          ],
+          [
+            101.77365726237153,
+            3.2246381844079797
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00021",
+      "segment_order": 22,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77365726237153,
+            3.2246381844079797
+          ],
+          [
+            101.77361,
+            3.22465
+          ],
+          [
+            101.77354,
+            3.22466
+          ],
+          [
+            101.77347,
+            3.22467
+          ],
+          [
+            101.77331,
+            3.22467
+          ],
+          [
+            101.77327,
+            3.22468
+          ],
+          [
+            101.77324,
+            3.22468
+          ],
+          [
+            101.77323,
+            3.22468
+          ],
+          [
+            101.77319,
+            3.22468
+          ],
+          [
+            101.77312,
+            3.22468
+          ],
+          [
+            101.77308,
+            3.22469
+          ],
+          [
+            101.77303,
+            3.2247
+          ],
+          [
+            101.77303,
+            3.22469
+          ],
+          [
+            101.7729,
+            3.22469
+          ],
+          [
+            101.77282,
+            3.2247
+          ],
+          [
+            101.77277,
+            3.22471
+          ],
+          [
+            101.77271,
+            3.22471
+          ],
+          [
+            101.77264,
+            3.2247
+          ],
+          [
+            101.77256,
+            3.22469
+          ],
+          [
+            101.77248,
+            3.22466
+          ],
+          [
+            101.77246,
+            3.22466
+          ],
+          [
+            101.77242,
+            3.22465
+          ],
+          [
+            101.77239,
+            3.22465
+          ],
+          [
+            101.77236,
+            3.22464
+          ],
+          [
+            101.77233,
+            3.22464
+          ],
+          [
+            101.7723,
+            3.22463
+          ],
+          [
+            101.77224,
+            3.22463
+          ],
+          [
+            101.77219,
+            3.22464
+          ],
+          [
+            101.77213,
+            3.22467
+          ],
+          [
+            101.77206,
+            3.22472
+          ],
+          [
+            101.77203,
+            3.22475
+          ],
+          [
+            101.772,
+            3.22479
+          ],
+          [
+            101.77197,
+            3.22481
+          ],
+          [
+            101.77194,
+            3.22483
+          ],
+          [
+            101.77192,
+            3.22484
+          ],
+          [
+            101.77188,
+            3.22486
+          ],
+          [
+            101.77182,
+            3.22489
+          ],
+          [
+            101.77173,
+            3.22489
+          ],
+          [
+            101.77169,
+            3.2249
+          ],
+          [
+            101.77159,
+            3.22494
+          ],
+          [
+            101.77153429356414,
+            3.2249678532181076
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00022",
+      "segment_order": 23,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.77153429356414,
+            3.2249678532181076
+          ],
+          [
+            101.77153,
+            3.22497
+          ],
+          [
+            101.77151,
+            3.22498
+          ],
+          [
+            101.77146,
+            3.22498
+          ],
+          [
+            101.77133,
+            3.22496
+          ],
+          [
+            101.77125,
+            3.22493
+          ],
+          [
+            101.77119,
+            3.2249
+          ],
+          [
+            101.77111,
+            3.22484
+          ],
+          [
+            101.77111,
+            3.22483
+          ],
+          [
+            101.771,
+            3.22475
+          ],
+          [
+            101.77096,
+            3.22467
+          ],
+          [
+            101.77088,
+            3.22456
+          ],
+          [
+            101.77084,
+            3.2245
+          ],
+          [
+            101.77083,
+            3.22449
+          ],
+          [
+            101.77078,
+            3.22443
+          ],
+          [
+            101.77069,
+            3.22432
+          ],
+          [
+            101.77064,
+            3.22425
+          ],
+          [
+            101.7706,
+            3.22419
+          ],
+          [
+            101.77058,
+            3.22416
+          ],
+          [
+            101.77056,
+            3.22414
+          ],
+          [
+            101.77054,
+            3.22411
+          ],
+          [
+            101.77051,
+            3.22408
+          ],
+          [
+            101.77047,
+            3.22403
+          ],
+          [
+            101.77043,
+            3.22394
+          ],
+          [
+            101.77041,
+            3.22391
+          ],
+          [
+            101.77039,
+            3.2239
+          ],
+          [
+            101.77034,
+            3.22388
+          ],
+          [
+            101.7703,
+            3.22389
+          ],
+          [
+            101.77023,
+            3.22392
+          ],
+          [
+            101.7702,
+            3.22393
+          ],
+          [
+            101.77015,
+            3.22395
+          ],
+          [
+            101.77012,
+            3.22397
+          ],
+          [
+            101.77007,
+            3.22399
+          ],
+          [
+            101.76999,
+            3.22404
+          ],
+          [
+            101.76997,
+            3.22405
+          ],
+          [
+            101.76994,
+            3.22411
+          ],
+          [
+            101.76992,
+            3.22416
+          ],
+          [
+            101.76991870689059,
+            3.2241690517663835
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00023",
+      "segment_order": 24,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76991870689059,
+            3.2241690517663835
+          ],
+          [
+            101.76991,
+            3.22423
+          ],
+          [
+            101.76989,
+            3.22429
+          ],
+          [
+            101.76988,
+            3.22436
+          ],
+          [
+            101.76985,
+            3.22438
+          ],
+          [
+            101.76983,
+            3.22439
+          ],
+          [
+            101.76972,
+            3.2244
+          ],
+          [
+            101.76959,
+            3.2244
+          ],
+          [
+            101.76949,
+            3.22438
+          ],
+          [
+            101.76939,
+            3.22433
+          ],
+          [
+            101.76935,
+            3.2243
+          ],
+          [
+            101.76933,
+            3.22429
+          ],
+          [
+            101.76933,
+            3.22424
+          ],
+          [
+            101.76932,
+            3.22419
+          ],
+          [
+            101.76931,
+            3.22414
+          ],
+          [
+            101.76931,
+            3.22409
+          ],
+          [
+            101.7693,
+            3.22402
+          ],
+          [
+            101.76925,
+            3.2239
+          ],
+          [
+            101.76908,
+            3.22359
+          ],
+          [
+            101.76905,
+            3.22351
+          ],
+          [
+            101.76903,
+            3.22347
+          ],
+          [
+            101.769,
+            3.22342
+          ],
+          [
+            101.76896,
+            3.22338
+          ],
+          [
+            101.76894,
+            3.22335
+          ],
+          [
+            101.76893,
+            3.22333
+          ],
+          [
+            101.76891,
+            3.2233
+          ],
+          [
+            101.7689,
+            3.22328
+          ],
+          [
+            101.7689,
+            3.22324
+          ],
+          [
+            101.76893,
+            3.22313
+          ],
+          [
+            101.76893,
+            3.22305
+          ],
+          [
+            101.76892,
+            3.223
+          ],
+          [
+            101.76889,
+            3.22295
+          ],
+          [
+            101.76888787744105,
+            3.222935142088101
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.011815122328698635,
+      "risk_class": "uncertain",
+      "confidence": 0.0000019508802324708086,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.029488,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "distance_to_nearest_cell_km",
+          "contribution": -0.012753,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.01104,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_5km",
+          "contribution": -0.008968,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "cell_count_10km",
+          "contribution": -0.007221,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 0.0000019980957404186483,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00024",
+      "segment_order": 25,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76888787744105,
+            3.222935142088101
+          ],
+          [
+            101.76888,
+            3.22288
+          ],
+          [
+            101.76885,
+            3.2228
+          ],
+          [
+            101.76885,
+            3.22277
+          ],
+          [
+            101.76882,
+            3.2227
+          ],
+          [
+            101.76881,
+            3.22264
+          ],
+          [
+            101.76878,
+            3.22258
+          ],
+          [
+            101.76877,
+            3.22253
+          ],
+          [
+            101.76876,
+            3.2225
+          ],
+          [
+            101.76876,
+            3.22248
+          ],
+          [
+            101.76875,
+            3.22246
+          ],
+          [
+            101.76874,
+            3.22243
+          ],
+          [
+            101.76873,
+            3.22239
+          ],
+          [
+            101.76871,
+            3.22231
+          ],
+          [
+            101.76871,
+            3.22224
+          ],
+          [
+            101.7687,
+            3.22214
+          ],
+          [
+            101.76868,
+            3.2221
+          ],
+          [
+            101.76867,
+            3.22204
+          ],
+          [
+            101.76866,
+            3.22201
+          ],
+          [
+            101.76866,
+            3.22198
+          ],
+          [
+            101.76865,
+            3.22194
+          ],
+          [
+            101.76863,
+            3.22189
+          ],
+          [
+            101.76863,
+            3.22187
+          ],
+          [
+            101.76859,
+            3.22172
+          ],
+          [
+            101.76859,
+            3.22169
+          ],
+          [
+            101.76858,
+            3.22166
+          ],
+          [
+            101.76858,
+            3.22162
+          ],
+          [
+            101.76857,
+            3.22158
+          ],
+          [
+            101.76857,
+            3.22154
+          ],
+          [
+            101.76856,
+            3.22149
+          ],
+          [
+            101.7685,
+            3.22134
+          ],
+          [
+            101.76844,
+            3.2212
+          ],
+          [
+            101.76841,
+            3.22108
+          ],
+          [
+            101.76834,
+            3.22087
+          ],
+          [
+            101.76830458766877,
+            3.2207726160904198
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0014051692560315132,
+      "risk_class": "uncertain",
+      "confidence": 5.371746070181871e-8,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.012666,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.001373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000992,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000595,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000582,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 5.3868848937099756e-8,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00025",
+      "segment_order": 26,
+      "segment_length_m": 250,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76830458766877,
+            3.2207726160904198
+          ],
+          [
+            101.7683,
+            3.22076
+          ],
+          [
+            101.76828,
+            3.22072
+          ],
+          [
+            101.76827,
+            3.22067
+          ],
+          [
+            101.76824,
+            3.22061
+          ],
+          [
+            101.7682,
+            3.22052
+          ],
+          [
+            101.76816,
+            3.22049
+          ],
+          [
+            101.7681,
+            3.22046
+          ],
+          [
+            101.768,
+            3.22043
+          ],
+          [
+            101.76795,
+            3.22043
+          ],
+          [
+            101.76779,
+            3.22038
+          ],
+          [
+            101.76767,
+            3.22033
+          ],
+          [
+            101.76756,
+            3.22028
+          ],
+          [
+            101.76749,
+            3.22024
+          ],
+          [
+            101.76739,
+            3.22018
+          ],
+          [
+            101.76733,
+            3.22013
+          ],
+          [
+            101.76729,
+            3.22011
+          ],
+          [
+            101.76725,
+            3.22006
+          ],
+          [
+            101.76722,
+            3.22005
+          ],
+          [
+            101.76717,
+            3.22002
+          ],
+          [
+            101.76715,
+            3.22002
+          ],
+          [
+            101.76713,
+            3.22001
+          ],
+          [
+            101.76711,
+            3.22
+          ],
+          [
+            101.76709,
+            3.21999
+          ],
+          [
+            101.76707,
+            3.21999
+          ],
+          [
+            101.76704,
+            3.21998
+          ],
+          [
+            101.76702,
+            3.21998
+          ],
+          [
+            101.76699,
+            3.21997
+          ],
+          [
+            101.76696,
+            3.21997
+          ],
+          [
+            101.76689,
+            3.21996
+          ],
+          [
+            101.76685,
+            3.21996
+          ],
+          [
+            101.76683,
+            3.21996
+          ],
+          [
+            101.7668,
+            3.21996
+          ],
+          [
+            101.76678,
+            3.21995
+          ],
+          [
+            101.76676,
+            3.21993
+          ],
+          [
+            101.76674,
+            3.21991
+          ],
+          [
+            101.76673,
+            3.21986
+          ],
+          [
+            101.76675,
+            3.21982
+          ],
+          [
+            101.7668,
+            3.21979
+          ],
+          [
+            101.76699534493092,
+            3.2197475337143215
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0014051692560315132,
+      "risk_class": "uncertain",
+      "confidence": 5.371746070181871e-8,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.012666,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.001373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000992,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000595,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000582,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 5.3868848937099756e-8,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    },
+    {
+      "segment_id": "trail_bukit_tabur_extreme_tiara_kemensah__s00026",
+      "segment_order": 27,
+      "segment_length_m": 12.904906278292401,
+      "geometry": {
+        "coordinates": [
+          [
+            101.76699534493092,
+            3.2197475337143215
+          ],
+          [
+            101.76703,
+            3.21974
+          ],
+          [
+            101.7671,
+            3.21973
+          ],
+          [
+            101.7671,
+            3.21972
+          ]
+        ],
+        "type": "LineString"
+      },
+      "risk_score": 0.0014051692560315132,
+      "risk_class": "uncertain",
+      "confidence": 5.371746070181871e-8,
+      "model_version": "connectivity-m8-20260809T025000Z-a64af811",
+      "top_factors": [
+        {
+          "feature": "distance_to_nearest_ookla_km",
+          "contribution": -0.012666,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "evidence_completeness",
+          "contribution": -0.001373,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "ookla_download_kbps",
+          "contribution": -0.000992,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "worldcover_built_fraction",
+          "contribution": -0.000595,
+          "direction": "decreases_risk"
+        },
+        {
+          "feature": "terrain_cell_obstruction_index",
+          "contribution": -0.000582,
+          "direction": "decreases_risk"
+        }
+      ],
+      "warning_eligible": false,
+      "domain_similarity": 5.3868848937099756e-8,
+      "out_of_distribution": true,
+      "evidence_completeness": 1
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256-canonical-json-without-integrity",
+    "checksum": "abb69bd7da5a2822835bcbbdd6c66210b07f739e7ec26b20b33a04aea7b94eed"
+  }
+}

@@ -8,6 +8,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "import:m9-v11": "node scripts/import-m9-v11-packs.mjs",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
     "test": "jest"
