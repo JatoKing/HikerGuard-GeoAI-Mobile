@@ -36,9 +36,17 @@ describe('OfflinePackStatus', () => {
     expect(screen.getByText('None — geometry only')).toBeTruthy();
   });
 
-  it('shows the real model version for a model-backed pack', () => {
-    render(<OfflinePackStatus pack={makePack({ modelVersion: 'connectivity-transfer-v0.1.0' })} />);
-    expect(screen.getByText('connectivity-transfer-v0.1.0')).toBeTruthy();
+  it('shows short labels for the bundled M9 v11 model metadata', () => {
+    render(
+      <OfflinePackStatus
+        pack={makePack({
+          modelVersion: 'connectivity-m8-20260809T025000Z-a64af811',
+          validationLevel: 'cross_country_spatial_validation_planning_only',
+        })}
+      />
+    );
+    expect(screen.getByText('1.0.11')).toBeTruthy();
+    expect(screen.getByText('cross-country')).toBeTruthy();
   });
 
   it('discloses the planning-prediction disclaimer required by Section 3', () => {

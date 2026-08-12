@@ -21,21 +21,29 @@ describe('FixtureTrailRepository bundled packs', () => {
     const repository = new FixtureTrailRepository();
     const summaries = await repository.listTrails();
 
-    expect(summaries).toHaveLength(10);
+    expect(summaries).toHaveLength(6);
     for (const summary of summaries) {
       const pack = await repository.getTrailPack(summary.trailId);
       expect(pack.trailId).toBe(summary.trailId);
       expect(pack.predictionAvailable).toBe(summary.predictionAvailable);
+      expect(pack.segments.some((segment) => segment.riskClass !== 'uncertain')).toBe(true);
     }
   });
 
-  it('exposes nine M9 v11 model-backed packs and one route-only pack', async () => {
+  it('lists only M9 v11 packs with at least one non-uncertain segment', async () => {
     const repository = new FixtureTrailRepository();
     const summaries = await repository.listTrails();
     const packs = await Promise.all(summaries.map((summary) => repository.getTrailPack(summary.trailId)));
 
-    expect(packs.filter((pack) => pack.stage === 'model_backed')).toHaveLength(9);
-    expect(packs.filter((pack) => pack.stage === 'route_only')).toHaveLength(1);
-    expect(packs.flatMap((pack) => pack.segments)).toHaveLength(620);
+    expect(summaries.map((summary) => summary.trailId).sort()).toEqual([
+      'bukit-kerinchi',
+      'bukit-wawasan-puchong',
+      'gunung-korbu',
+      'gunung-tahan',
+      'jalan-bukit-larut',
+      'jalan-kledang',
+    ]);
+    expect(packs.every((pack) => pack.stage === 'model_backed')).toBe(true);
+    expect(packs.flatMap((pack) => pack.segments)).toHaveLength(450);
   });
 });
