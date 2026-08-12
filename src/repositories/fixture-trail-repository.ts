@@ -32,7 +32,13 @@ const FIXTURE_PACKS: Record<string, unknown> = {
 
 export class FixtureTrailRepository implements TrailRepository {
   async listTrails(): Promise<TrailSummary[]> {
-    return trailSummariesFixture.map(parseTrailSummary);
+    return trailSummariesFixture.map(parseTrailSummary).filter((summary) => {
+      const raw = FIXTURE_PACKS[summary.trailId];
+      if (!raw) return false;
+
+      const pack = parseTrailPack(raw);
+      return pack.segments.some((segment) => segment.riskClass !== 'uncertain');
+    });
   }
 
   async getTrailPack(trailId: string): Promise<TrailPack> {

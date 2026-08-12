@@ -182,9 +182,7 @@ export default function TrailDetailScreen() {
                       </Text>
                       <Text className="text-[11px] text-[rgba(15,27,46,0.5)]">
                         {segment.segmentLengthM.toFixed(0)}m
-                        {segment.confidence !== null
-                          ? ` · confidence ${Math.round(segment.confidence * 100)}%`
-                          : ' · no prediction yet'}
+                        {segment.confidence === null ? ' · no prediction yet' : null}
                       </Text>
                     </View>
                   </View>

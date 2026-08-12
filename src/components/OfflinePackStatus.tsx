@@ -11,6 +11,19 @@ function formatAge(fromIso: string): string {
   return `${days} days ago`;
 }
 
+function formatModelVersion(modelVersion: string | null): string {
+  if (modelVersion === null) return 'None — geometry only';
+  if (modelVersion.startsWith('connectivity-m8-')) return '1.0.11';
+  return modelVersion;
+}
+
+function formatValidationLevel(validationLevel: string): string {
+  if (validationLevel === 'cross_country_spatial_validation_planning_only') {
+    return 'cross-country';
+  }
+  return validationLevel.replace(/_/g, ' ');
+}
+
 /**
  * Surfaces the fields the handoff contract requires a downloaded pack to
  * disclose (Section 8 model info + WP2 definition of done): model version,
@@ -52,12 +65,14 @@ export function OfflinePackStatus({
       <View className="flex-row justify-between mb-1.5">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Model version</Text>
         <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
-          {model.modelVersion ?? 'None — geometry only'}
+          {formatModelVersion(model.modelVersion)}
         </Text>
       </View>
       <View className="flex-row justify-between mb-1.5">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Validation level</Text>
-        <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">{model.validationLevel}</Text>
+        <Text className="text-[12.5px] font-semibold text-[#0F1B2E]">
+          {formatValidationLevel(model.validationLevel)}
+        </Text>
       </View>
       <View className="flex-row justify-between">
         <Text className="text-[12.5px] text-[rgba(15,27,46,0.6)]">Field-validated</Text>

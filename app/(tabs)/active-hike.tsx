@@ -508,8 +508,7 @@ export default function ActiveHikeScreen() {
               </View>
               <Text className="text-[12px] text-[#0F1B2E] mb-1">
                 About {Math.round(gapWarning.distanceToGapM)}m away · roughly{' '}
-                {Math.round(gapWarning.gapGroup.totalLengthM)}m long · confidence{' '}
-                {Math.round(gapWarning.gapGroup.averageConfidence * 100)}%
+                {Math.round(gapWarning.gapGroup.totalLengthM)}m long
               </Text>
               {gapWarning.distanceToNextCoveredM !== null && (
                 <Text className="text-[12px] text-[#0F1B2E] mb-2">
